@@ -638,9 +638,20 @@ def _build_header_elements(section: dict) -> list[dict]:
                 for txt, href in nav_items[:8]
             ],
         }
-        link_color = to_hex(first_link_node.get("styles", {}).get("color")) if first_link_node else None
-        if link_color:
-            icon_list_settings["text_color"] = link_color
+        if first_link_node:
+            from .styles import apply_typography as _at
+            link_styles = first_link_node.get("styles", {})
+            link_color = to_hex(link_styles.get("color"))
+            if link_color:
+                icon_list_settings["text_color"] = link_color
+            # Apply typography (font-size, font-weight, etc.) with icon_list prefix
+            tmp: dict = {}
+            _at(tmp, link_styles)
+            for k, v in tmp.items():
+                if k == "typography_typography":
+                    icon_list_settings["icon_typography_typography"] = v
+                elif k.startswith("typography_"):
+                    icon_list_settings["icon_" + k] = v
         if links_parent:
             from .widgets import _apply_margin as _am
             _am(icon_list_settings, links_parent.get("styles", {}))
