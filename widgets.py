@@ -209,6 +209,11 @@ def heading_widget(node: dict) -> dict:
 
     apply_typography(settings, styles)
     _apply_margin(settings, styles)
+    # Apply max-width if set (constrains heading width for readability)
+    mw = px_to_int(styles.get("max-width"))
+    if mw:
+        settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
+        settings["_element_width"] = "initial"
     return {"widgetType": "heading", "settings": settings}
 
 
@@ -284,6 +289,13 @@ def button_widget(node: dict, text: str) -> dict:
             settings["button_hover_text_color"] = text_hex
 
     apply_typography(settings, styles)
+
+    # Read padding from CSS (if not already set by ghost text-link path)
+    if "_padding" not in settings:
+        from .styles import css_padding_to_elementor as _pad
+        p = _pad(styles)
+        if any(p[k] != "0" for k in ("top", "right", "bottom", "left")):
+            settings["text_padding"] = p
     return {"widgetType": "button", "settings": settings}
 
 
@@ -313,9 +325,18 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
     for child in node.get("children", []):
         child_tag = child.get("tag", "")
         child_children = child.get("children", [])
-        # If child is a div with multiple children, wrap in a column container
-        # so its contents stay stacked vertically (e.g., name + role under avatar)
-        if child_tag == "div" and len(child_children) >= 2 and not _is_inline_flex_row(child):
+        # If child is a div with multiple children, decide: merge into single
+        # text-editor (similar-sized text) or emit as separate widgets
+        # (very different sizes like stat num + desc)
+        child_children_sizes = [
+            px_to_int(gc.get("styles", {}).get("font-size", "16")) or 16
+            for gc in child_children if (gc.get("text") or "").strip()
+        ]
+        size_diff = (max(child_children_sizes) - min(child_children_sizes)) if child_children_sizes else 0
+        # Only merge if font sizes are close (e.g., name 16 + role 14)
+        # Don't merge if big number + small label (56 vs 15)
+        should_merge = size_diff <= 6
+        if child_tag == "div" and len(child_children) >= 2 and not _is_inline_flex_row(child) and should_merge:
             # Merge child div's text content into a single text-editor widget
             # (avoids nested container width issues in Elementor row flex)
             parts = []

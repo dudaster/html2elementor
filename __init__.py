@@ -113,7 +113,14 @@ def _apply_globals_to_element(el: dict, color_map: dict, font_map: dict, typo_ma
         size = str(size_obj.get("size", "16")) if isinstance(size_obj, dict) else "16"
         key = (family, str(weight), str(size))
         global_id = typo_map.get(key)
-        if global_id:
+        # Don't replace with global if widget has unique letter-spacing or text-transform,
+        # since Elementor ignores these when typography_typography is a global ref.
+        has_unique_typo = (
+            settings.get("typography_letter_spacing")
+            or settings.get("typography_text_transform")
+            or settings.get("typography_font_style")
+        )
+        if global_id and not has_unique_typo:
             globals_dict["typography_typography"] = f"globals/typography?id={global_id}"
             # Remove per-widget values — global handles them
             for k in ("typography_typography", "typography_font_family",

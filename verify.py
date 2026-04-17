@@ -36,18 +36,26 @@ def _iter_html(tree: dict):
 
 
 def _find_html_node(tree: dict, target_text: str, target_tags: set[str]) -> dict | None:
-    """Find the HTML node whose text starts with target_text and tag in target_tags."""
+    """Find the HTML node whose text matches target_text and tag in target_tags.
+    Prefers leaf nodes (direct text match) over ancestors."""
     target_text = re.sub(r"\s+", " ", target_text.strip().lower())[:60]
     if not target_text:
         return None
-    best = None
+    # Pass 1: look for direct text match (leaf)
+    for node in _iter_html(tree):
+        if target_tags and node.get("tag") not in target_tags:
+            continue
+        direct = re.sub(r"\s+", " ", (node.get("text") or "").strip().lower())[:60]
+        if direct and (target_text == direct or target_text in direct):
+            return node
+    # Pass 2: fallback to "text contained in all_text"
     for node in _iter_html(tree):
         if target_tags and node.get("tag") not in target_tags:
             continue
         txt = re.sub(r"\s+", " ", _all_text(node).lower())[:60]
         if txt and (target_text in txt or txt in target_text):
             return node
-    return best
+    return None
 
 
 def _close(a: int | None, b: int | None, tol: int) -> bool:
@@ -153,7 +161,13 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
 
     if wtype == "heading":
         title = _strip_html(s.get("title", ""))
-        node = _find_html_node(html_tree, title, {"h1", "h2", "h3", "h4", "h5", "h6"})
+        # Headings emitted with header_size: "div" (emojis, numbers) — also search div/span
+        header_size = s.get("header_size", "")
+        if header_size == "div":
+            tags = {"div", "span", "p"}
+        else:
+            tags = {"h1", "h2", "h3", "h4", "h5", "h6"}
+        node = _find_html_node(html_tree, title, tags)
         if not node:
             return
         tag = node.get("tag", "")
