@@ -9,7 +9,10 @@ from .widgets import walk_and_emit, is_hero_bg_image, is_icon_box, _iter
 def map_section(section: dict) -> tuple[dict[str, Any], list[dict]]:
     container = _section_settings(section)
 
-    if section.get("tag") in ("header", "nav", "footer"):
+    sec_tag = section.get("tag", "")
+    sec_display = section.get("styles", {}).get("display", "")
+    is_nav_row = sec_tag in ("header", "nav") or (sec_tag == "footer" and sec_display == "flex")
+    if is_nav_row:
         container["flex_direction"] = "row"
         container["flex_direction_tablet"] = "row"
         container["flex_direction_mobile"] = "column"
