@@ -1,0 +1,1361 @@
+[
+  {
+    "id": "0d36c22",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "space-between",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "20",
+        "right": "60",
+        "bottom": "20",
+        "left": "60",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "flex_wrap": "wrap",
+      "_title": "nav",
+      "__globals__": {
+        "background_color": "globals/colors?id=fd7de3a",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "b15470e",
+        "elType": "widget",
+        "settings": {
+          "title": "La Pergola",
+          "header_size": "h4",
+          "align": "left",
+          "typography_typography": "custom",
+          "typography_font_family": "Playfair Display",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "28",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "__globals__": {
+            "title_color": "globals/colors?id=primary"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "a9aa09e",
+        "elType": "widget",
+        "settings": {
+          "view": "inline",
+          "space_between": {
+            "unit": "px",
+            "size": 20,
+            "sizes": []
+          },
+          "icon_list": [
+            {
+              "text": "Meniu",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Despre",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Galerie",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Contact",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            }
+          ],
+          "__globals__": {
+            "text_color": "globals/colors?id=primary",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "icon-list"
+      },
+      {
+        "id": "e590421",
+        "elType": "widget",
+        "settings": {
+          "text": "Rezervă masă",
+          "link": {
+            "url": "#",
+            "is_external": false,
+            "nofollow": false
+          },
+          "size": "md",
+          "align": "left",
+          "border_radius": {
+            "unit": "px",
+            "top": "6",
+            "right": "6",
+            "bottom": "6",
+            "left": "6",
+            "isLinked": true
+          },
+          "button_background_hover_color": "#7a3c10",
+          "typography_typography": "custom",
+          "typography_font_family": "Lora",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "14",
+            "sizes": []
+          },
+          "typography_font_weight": "600",
+          "__globals__": {
+            "button_text_color": "globals/colors?id=25a8170",
+            "button_hover_text_color": "globals/colors?id=25a8170",
+            "background_color": "globals/colors?id=primary"
+          }
+        },
+        "elements": [],
+        "widgetType": "button"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "88a6da5",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "center",
+      "flex_align_items": "stretch",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "_title": "hero",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "874681c",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 50,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "background_background": "classic",
+          "background_image": {
+            "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200",
+            "id": ""
+          },
+          "background_size": "cover",
+          "background_position": "center center",
+          "min_height": {
+            "unit": "vh",
+            "size": 60,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "isInner": true
+      },
+      {
+        "id": "39f61d4",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_justify_content": "center",
+          "flex_gap": {
+            "unit": "px",
+            "size": 20,
+            "column": "20",
+            "row": "20"
+          },
+          "padding": {
+            "unit": "px",
+            "top": "80",
+            "right": "60",
+            "bottom": "80",
+            "left": "60",
+            "isLinked": false
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 50,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "6c6c580",
+            "elType": "widget",
+            "settings": {
+              "title": "Restaurant italian autentic",
+              "header_size": "h6",
+              "align": "left",
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "14",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 3,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "16",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=primary"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "9857abc",
+            "elType": "widget",
+            "settings": {
+              "title": "O experiență culinară de neuitat",
+              "header_size": "h1",
+              "align": "left",
+              "typography_typography": "custom",
+              "typography_font_family": "Playfair Display",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "56",
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.1,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "24",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "7a82c08",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Descoperă gusturile autentice ale Italiei într-un ambient rafinat. Fiecare fel de mâncare este pregătit cu pasiune și ingrediente proaspete.</p>",
+              "align": "left",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "18",
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.7,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "32",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "bd3b942",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "row",
+              "flex_direction_tablet": "row",
+              "flex_direction_mobile": "column",
+              "flex_wrap": "wrap",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "unit": "px",
+                "size": 16,
+                "column": "16",
+                "row": "16"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "c3b419f",
+                "elType": "widget",
+                "settings": {
+                  "text": "Vezi meniul",
+                  "link": {
+                    "url": "#",
+                    "is_external": false,
+                    "nofollow": false
+                  },
+                  "size": "md",
+                  "align": "left",
+                  "border_radius": {
+                    "unit": "px",
+                    "top": "6",
+                    "right": "6",
+                    "bottom": "6",
+                    "left": "6",
+                    "isLinked": true
+                  },
+                  "button_background_hover_color": "#7a3c10",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Lora",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "16",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "600",
+                  "__globals__": {
+                    "button_text_color": "globals/colors?id=25a8170",
+                    "button_hover_text_color": "globals/colors?id=25a8170",
+                    "background_color": "globals/colors?id=primary"
+                  }
+                },
+                "elements": [],
+                "widgetType": "button"
+              },
+              {
+                "id": "1bbd25c",
+                "elType": "widget",
+                "settings": {
+                  "text": "Rezervă o masă →",
+                  "link": {
+                    "url": "#",
+                    "is_external": false,
+                    "nofollow": false
+                  },
+                  "size": "md",
+                  "align": "left",
+                  "border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                  },
+                  "background_color": "#ffffff00",
+                  "border_border": "none",
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                  },
+                  "button_hover_text_color": "#763a10",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Lora",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "16",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "600",
+                  "__globals__": {
+                    "button_text_color": "globals/colors?id=primary"
+                  }
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "d65d365",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "100",
+        "right": "60",
+        "bottom": "100",
+        "left": "60",
+        "isLinked": false
+      },
+      "_title": "content",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "5041c26",
+        "elType": "widget",
+        "settings": {
+          "title": "Povestea noastră",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Playfair Display",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "42",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "eaef83e",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Din 2008, La Pergola aduce în București cele mai bune rețete italiene, transmise din generație în generație. Bucătarul nostru, Marco, a crescut în Toscana și aduce în fiecare preparat o bucată din Italia.</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Lora",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "18",
+            "sizes": []
+          },
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.8,
+            "sizes": []
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "14dedf1",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "100",
+        "right": "60",
+        "bottom": "100",
+        "left": "60",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "_title": "features",
+      "__globals__": {
+        "background_color": "globals/colors?id=9c3c0ed",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "eeb26bd",
+        "elType": "widget",
+        "settings": {
+          "title": "Din meniul nostru",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Playfair Display",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "42",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "60e9048",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Preparate selecte, ingrediente de cea mai bună calitate</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Lora",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "18",
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "48",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "b550e9e",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_direction_tablet": "row",
+          "flex_direction_mobile": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "stretch",
+          "flex_gap": {
+            "unit": "px",
+            "size": 16,
+            "column": "16",
+            "row": "16"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 16,
+            "column": "16",
+            "row": "16"
+          },
+          "width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "3acba2e",
+            "elType": "widget",
+            "settings": {
+              "title_text": "Pasta Carbonara",
+              "description_text": "Spaghetti cu guanciale, ou, pecorino romano și piper negru proaspăt.",
+              "position": "top",
+              "text_align": "center",
+              "selected_icon": {
+                "value": "fas fa-star",
+                "library": "fa-solid"
+              },
+              "title_size": "h3",
+              "__globals__": {
+                "title_color": "globals/colors?id=primary",
+                "description_color": "globals/colors?id=text",
+                "_background_color": "globals/colors?id=25a8170",
+                "_background_hover_color": "globals/colors?id=25a8170",
+                "typography_typography": "globals/typography?id=text"
+              },
+              "_background_background": "classic",
+              "_border_radius": {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "32",
+                "right": "32",
+                "bottom": "32",
+                "left": "32",
+                "isLinked": true
+              },
+              "_box_shadow_hover_box_shadow_type": "yes",
+              "_box_shadow_hover_box_shadow": {
+                "horizontal": 0,
+                "vertical": 12,
+                "blur": 32,
+                "spread": 0,
+                "color": "#00000020"
+              },
+              "_background_hover_background": "classic",
+              "_background_hover_transition": {
+                "unit": "px",
+                "size": 0.3,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_width_tablet": "initial",
+              "_element_width_mobile": "initial",
+              "_element_custom_width": {
+                "unit": "%",
+                "size": 32,
+                "sizes": []
+              },
+              "_element_custom_width_tablet": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              },
+              "_element_custom_width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          },
+          {
+            "id": "4a1f9d9",
+            "elType": "widget",
+            "settings": {
+              "title_text": "Pizza Margherita",
+              "description_text": "Aluat dospit 72h, sos San Marzano, mozzarella di bufala, busuioc.",
+              "position": "top",
+              "text_align": "center",
+              "selected_icon": {
+                "value": "fas fa-star",
+                "library": "fa-solid"
+              },
+              "title_size": "h3",
+              "__globals__": {
+                "title_color": "globals/colors?id=primary",
+                "description_color": "globals/colors?id=text",
+                "_background_color": "globals/colors?id=25a8170",
+                "_background_hover_color": "globals/colors?id=25a8170",
+                "typography_typography": "globals/typography?id=text"
+              },
+              "_background_background": "classic",
+              "_border_radius": {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "32",
+                "right": "32",
+                "bottom": "32",
+                "left": "32",
+                "isLinked": true
+              },
+              "_box_shadow_hover_box_shadow_type": "yes",
+              "_box_shadow_hover_box_shadow": {
+                "horizontal": 0,
+                "vertical": 12,
+                "blur": 32,
+                "spread": 0,
+                "color": "#00000020"
+              },
+              "_background_hover_background": "classic",
+              "_background_hover_transition": {
+                "unit": "px",
+                "size": 0.3,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_width_tablet": "initial",
+              "_element_width_mobile": "initial",
+              "_element_custom_width": {
+                "unit": "%",
+                "size": 32,
+                "sizes": []
+              },
+              "_element_custom_width_tablet": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              },
+              "_element_custom_width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          },
+          {
+            "id": "f028abe",
+            "elType": "widget",
+            "settings": {
+              "title_text": "Ossobuco alla Milanese",
+              "description_text": "Fluier de vitel gătit lent cu legume, vin alb și gremolata de lămâie.",
+              "position": "top",
+              "text_align": "center",
+              "selected_icon": {
+                "value": "fas fa-star",
+                "library": "fa-solid"
+              },
+              "title_size": "h3",
+              "__globals__": {
+                "title_color": "globals/colors?id=primary",
+                "description_color": "globals/colors?id=text",
+                "_background_color": "globals/colors?id=25a8170",
+                "_background_hover_color": "globals/colors?id=25a8170",
+                "typography_typography": "globals/typography?id=text"
+              },
+              "_background_background": "classic",
+              "_border_radius": {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "32",
+                "right": "32",
+                "bottom": "32",
+                "left": "32",
+                "isLinked": true
+              },
+              "_box_shadow_hover_box_shadow_type": "yes",
+              "_box_shadow_hover_box_shadow": {
+                "horizontal": 0,
+                "vertical": 12,
+                "blur": 32,
+                "spread": 0,
+                "color": "#00000020"
+              },
+              "_background_hover_background": "classic",
+              "_background_hover_transition": {
+                "unit": "px",
+                "size": 0.3,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_width_tablet": "initial",
+              "_element_width_mobile": "initial",
+              "_element_custom_width": {
+                "unit": "%",
+                "size": 32,
+                "sizes": []
+              },
+              "_element_custom_width_tablet": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              },
+              "_element_custom_width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "46545d9",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "100",
+        "right": "60",
+        "bottom": "100",
+        "left": "60",
+        "isLinked": false
+      },
+      "_title": "testimonials",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "89e80c8",
+        "elType": "widget",
+        "settings": {
+          "title": "Ce spun oaspeții noștri",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Playfair Display",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "42",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "48",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "3520891",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "center",
+          "flex_gap": {
+            "unit": "px",
+            "size": 8,
+            "column": "8",
+            "row": "8"
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "8326545",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Cea mai bună carbonara pe care am mâncat-o în afara Italiei. Absolut extraordinar.</p>",
+              "align": "center",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "16",
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.7,
+                "sizes": []
+              },
+              "typography_font_style": "italic",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "16",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "b446984",
+            "elType": "widget",
+            "settings": {
+              "title": "— Maria D.",
+              "header_size": "h6",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "15",
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "2ad9338",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Ambianța este perfectă pentru o seară romantică. Vom reveni cu siguranță.</p>",
+              "align": "center",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "16",
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.7,
+                "sizes": []
+              },
+              "typography_font_style": "italic",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "16",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "978a99f",
+            "elType": "widget",
+            "settings": {
+              "title": "— Andrei & Elena",
+              "header_size": "h6",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "15",
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "4701020",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Pizza făcută ca la carte. Aluatul este incredibil. Locul numărul 1 în București.</p>",
+              "align": "center",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "16",
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.7,
+                "sizes": []
+              },
+              "typography_font_style": "italic",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "16",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "a4e26da",
+            "elType": "widget",
+            "settings": {
+              "title": "— George P.",
+              "header_size": "h6",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Lora",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "15",
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "b82a6de",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "100",
+        "right": "60",
+        "bottom": "100",
+        "left": "60",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "_title": "cta",
+      "__globals__": {
+        "background_color": "globals/colors?id=primary",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "a6fba59",
+        "elType": "widget",
+        "settings": {
+          "title": "Rezervă o masă",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Playfair Display",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "42",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=25a8170"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "51fb714",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Alătură-te nouă pentru o seară specială. Locuri limitate în weekend.</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=25a8170"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Lora",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "18",
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "32",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "3e783df",
+        "elType": "widget",
+        "settings": {
+          "text": "Sună: 021 234 5678",
+          "link": {
+            "url": "#",
+            "is_external": false,
+            "nofollow": false
+          },
+          "size": "md",
+          "align": "center",
+          "border_radius": {
+            "unit": "px",
+            "top": "6",
+            "right": "6",
+            "bottom": "6",
+            "left": "6",
+            "isLinked": true
+          },
+          "button_background_hover_color": "#e0e0e0",
+          "typography_typography": "custom",
+          "typography_font_family": "Lora",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "16",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "__globals__": {
+            "button_text_color": "globals/colors?id=primary",
+            "button_hover_text_color": "globals/colors?id=primary",
+            "background_color": "globals/colors?id=25a8170"
+          }
+        },
+        "elements": [],
+        "widgetType": "button"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "ce1b553",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "space-between",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "48",
+        "right": "60",
+        "bottom": "48",
+        "left": "60",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "flex_wrap": "wrap",
+      "_title": "footer",
+      "__globals__": {
+        "background_color": "globals/colors?id=text",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [],
+    "isInner": false
+  }
+]

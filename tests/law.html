@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Popescu & Asociații — Cabinet de Avocatură</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'EB Garamond', serif; color: #1c1c1c; background: #ffffff; }
+
+    /* Nav */
+    header { padding: 24px 60px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0ddd8; }
+    header .logo { font-size: 22px; font-weight: 700; color: #1c1c1c; letter-spacing: 1px; }
+    header .logo span { color: #8b734a; }
+    header nav a { font-family: 'Inter', sans-serif; color: #666; text-decoration: none; margin-left: 36px; font-size: 14px; font-weight: 500; }
+    header .cta { font-family: 'Inter', sans-serif; background: #1c1c1c; color: #fff; padding: 12px 28px; font-size: 13px; font-weight: 600; text-decoration: none; letter-spacing: 0.5px; }
+
+    /* Hero */
+    .hero { display: flex; min-height: 80vh; }
+    .hero-content { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 80px 80px 80px 60px; }
+    .hero-content .tagline { font-family: 'Inter', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: #8b734a; font-weight: 600; margin-bottom: 24px; }
+    .hero-content h1 { font-size: 56px; font-weight: 400; line-height: 1.15; margin-bottom: 24px; color: #1c1c1c; }
+    .hero-content p { font-family: 'Inter', sans-serif; font-size: 17px; color: #777; line-height: 1.7; margin-bottom: 40px; max-width: 500px; }
+    .hero-content .btn { font-family: 'Inter', sans-serif; display: inline-block; background: #8b734a; color: #fff; padding: 16px 40px; font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: 0.5px; }
+    .hero-content .btn-text { font-family: 'Inter', sans-serif; color: #8b734a; margin-left: 24px; font-size: 14px; font-weight: 600; text-decoration: none; }
+    .hero-image { flex: 1; background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200') center/cover; }
+
+    /* Expertise */
+    .expertise { padding: 100px 60px; background: #f9f7f4; }
+    .expertise .header { text-align: center; margin-bottom: 64px; }
+    .expertise .header .tagline { font-family: 'Inter', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: #8b734a; font-weight: 600; margin-bottom: 16px; }
+    .expertise .header h2 { font-size: 42px; font-weight: 400; }
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1100px; margin: 0 auto; }
+    .expertise-card { padding: 40px; background: #ffffff; border: 1px solid #e8e4de; }
+    .expertise-card .number { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; color: #8b734a; margin-bottom: 20px; }
+    .expertise-card h3 { font-size: 24px; font-weight: 400; margin-bottom: 12px; }
+    .expertise-card p { font-family: 'Inter', sans-serif; font-size: 15px; color: #888; line-height: 1.6; }
+
+    /* Stats */
+    .stats { display: flex; padding: 60px; background: #1c1c1c; }
+    .stat { flex: 1; text-align: center; padding: 20px; }
+    .stat .number { font-size: 56px; font-weight: 400; color: #8b734a; margin-bottom: 8px; }
+    .stat .label { font-family: 'Inter', sans-serif; font-size: 14px; color: #999; text-transform: uppercase; letter-spacing: 2px; }
+
+    /* About — text left, image right */
+    .about { display: flex; min-height: 50vh; }
+    .about-text { flex: 1; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+    .about-text .tagline { font-family: 'Inter', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: #8b734a; font-weight: 600; margin-bottom: 16px; }
+    .about-text h2 { font-size: 38px; font-weight: 400; margin-bottom: 20px; }
+    .about-text p { font-family: 'Inter', sans-serif; font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 32px; }
+    .about-text .btn-outline { font-family: 'Inter', sans-serif; display: inline-block; border: 1px solid #1c1c1c; color: #1c1c1c; padding: 14px 36px; font-size: 13px; font-weight: 600; text-decoration: none; letter-spacing: 0.5px; }
+    .about-image { flex: 1; background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200') center/cover; }
+
+    /* Testimonials */
+    .testimonials { padding: 100px 60px; text-align: center; }
+    .testimonials .tagline { font-family: 'Inter', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: #8b734a; font-weight: 600; margin-bottom: 16px; }
+    .testimonials h2 { font-size: 42px; font-weight: 400; margin-bottom: 48px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 900px; margin: 0 auto; }
+    .testimonial-card { padding: 40px; border: 1px solid #e8e4de; text-align: left; }
+    .testimonial-card .stars { color: #8b734a; font-size: 18px; margin-bottom: 16px; }
+    .testimonial-card blockquote { font-size: 18px; font-style: italic; color: #444; line-height: 1.7; margin-bottom: 20px; }
+    .testimonial-card .author { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #1c1c1c; }
+    .testimonial-card .role { font-family: 'Inter', sans-serif; font-size: 13px; color: #999; }
+
+    /* CTA */
+    .cta { padding: 100px 60px; text-align: center; background: #8b734a; }
+    .cta h2 { font-size: 42px; font-weight: 400; color: #fff; margin-bottom: 16px; }
+    .cta p { font-family: 'Inter', sans-serif; font-size: 17px; color: #d4c5a9; margin-bottom: 40px; }
+    .cta .btn-white { font-family: 'Inter', sans-serif; display: inline-block; background: #fff; color: #8b734a; padding: 16px 48px; font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: 0.5px; }
+
+    /* Footer */
+    footer { padding: 48px 60px; background: #1c1c1c; display: flex; justify-content: space-between; align-items: center; }
+    footer .brand { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+    footer .brand span { color: #8b734a; }
+    footer nav a { font-family: 'Inter', sans-serif; color: #777; text-decoration: none; margin-left: 24px; font-size: 13px; }
+    footer .copy { font-family: 'Inter', sans-serif; font-size: 12px; color: #555; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Popescu <span>&</span> Asociații</div>
+    <nav>
+      <a href="#">Arii de practică</a>
+      <a href="#">Echipă</a>
+      <a href="#">Cazuri</a>
+      <a href="#">Contact</a>
+    </nav>
+    <a href="#" class="cta">Consultație gratuită</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="tagline">Cabinet de avocatură</div>
+      <h1>Dreptatea ta este misiunea noastră</h1>
+      <p>Cu peste 20 de ani de experiență, oferim servicii juridice de excelență în drept civil, comercial și penal. Fiecare client primește atenția pe care o merită.</p>
+      <div>
+        <a href="#" class="btn">Solicită o consultație</a>
+        <a href="#" class="btn-text">Află mai mult →</a>
+      </div>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <section class="expertise">
+    <div class="header">
+      <div class="tagline">Arii de practică</div>
+      <h2>Experiență dovedită în domenii cheie</h2>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="number">01</div>
+        <h3>Drept Civil</h3>
+        <p>Contracte, proprietăți, succesiuni, litigii civile și recuperare creanțe.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="number">02</div>
+        <h3>Drept Comercial</h3>
+        <p>Înființări societăți, fuziuni, achiziții, insolvență și dreptul concurenței.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="number">03</div>
+        <h3>Drept Penal</h3>
+        <p>Apărare în procesele penale, asistență la audieri și căi de atac.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <div class="number">500+</div>
+      <div class="label">Cazuri câștigate</div>
+    </div>
+    <div class="stat">
+      <div class="number">98%</div>
+      <div class="label">Rată de succes</div>
+    </div>
+    <div class="stat">
+      <div class="number">20</div>
+      <div class="label">Ani experiență</div>
+    </div>
+    <div class="stat">
+      <div class="number">12</div>
+      <div class="label">Avocați în echipă</div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <div class="tagline">Despre cabinet</div>
+      <h2>Tradiție și inovație în practica juridică</h2>
+      <p>Fondat în 2004, cabinetul Popescu & Asociații reunește o echipă de profesioniști dedicați. Combinăm experiența vastă cu abordări moderne pentru a obține cele mai bune rezultate.</p>
+      <a href="#" class="btn-outline">Cunoaște echipa</a>
+    </div>
+    <div class="about-image"></div>
+  </section>
+
+  <section class="testimonials">
+    <div class="tagline">Ce spun clienții</div>
+    <h2>Încredere construită prin rezultate</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>Profesionalism desăvârșit. Au rezolvat un litigiu comercial complex în timp record. Recomand cu cea mai mare încredere.</blockquote>
+        <div class="author">Andrei Ionescu</div>
+        <div class="role">Director General, TechCorp SRL</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>M-au ghidat cu răbdare prin întregul proces de succesiune. Echipă excepțională, mereu disponibilă.</blockquote>
+        <div class="author">Elena Marinescu</div>
+        <div class="role">Client particular</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ai nevoie de consiliere juridică?</h2>
+    <p>Prima consultație este gratuită. Contactează-ne și discutăm despre cazul tău.</p>
+    <a href="#" class="btn-white">Programează o întâlnire</a>
+  </section>
+
+  <footer>
+    <div class="brand">Popescu <span>&</span> Asociații</div>
+    <nav>
+      <a href="#">Arii de practică</a>
+      <a href="#">Echipă</a>
+      <a href="#">Contact</a>
+      <a href="#">GDPR</a>
+    </nav>
+    <div class="copy">© 2026 Popescu & Asociații. Toate drepturile rezervate.</div>
+  </footer>
+</body>
+</html>

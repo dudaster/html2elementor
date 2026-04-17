@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CloudSync — Sync Everything, Everywhere</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #ffffff; }
+
+    /* Nav */
+    nav { padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; background: #ffffff; border-bottom: 1px solid #e5e7eb; }
+    nav .logo { font-size: 24px; font-weight: 800; color: #6366f1; }
+    nav a { color: #6b7280; text-decoration: none; margin-left: 32px; font-size: 15px; font-weight: 500; }
+    nav .cta-nav { background: #6366f1; color: #ffffff; padding: 10px 24px; border-radius: 8px; font-weight: 600; }
+
+    /* Hero */
+    .hero { padding: 120px 60px 100px; text-align: center; background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%); }
+    .hero .badge { display: inline-block; background: #e0e7ff; color: #4338ca; padding: 6px 16px; border-radius: 99px; font-size: 14px; font-weight: 600; margin-bottom: 24px; }
+    .hero h1 { font-size: 64px; font-weight: 800; line-height: 1.1; max-width: 800px; margin: 0 auto 24px; }
+    .hero h1 span { color: #6366f1; }
+    .hero p { font-size: 20px; color: #6b7280; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
+    .hero .buttons { display: flex; justify-content: center; gap: 16px; }
+    .hero .btn-primary { background: #6366f1; color: #fff; padding: 16px 32px; border-radius: 12px; font-size: 18px; font-weight: 600; text-decoration: none; }
+    .hero .btn-secondary { background: #ffffff; color: #1a1a2e; padding: 16px 32px; border-radius: 12px; font-size: 18px; font-weight: 600; text-decoration: none; border: 2px solid #e5e7eb; }
+
+    /* Logos */
+    .logos { padding: 60px; text-align: center; }
+    .logos p { font-size: 14px; color: #9ca3af; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
+    .logos .logo-row { display: flex; justify-content: center; gap: 48px; align-items: center; }
+    .logos .logo-row span { font-size: 20px; font-weight: 700; color: #d1d5db; }
+
+    /* Features */
+    .features { padding: 100px 60px; background: #f9fafb; }
+    .features .section-header { text-align: center; margin-bottom: 64px; }
+    .features .section-header h2 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+    .features .section-header p { font-size: 18px; color: #6b7280; max-width: 600px; margin: 0 auto; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto; }
+    .feature-card { background: #ffffff; padding: 32px; border-radius: 16px; border: 1px solid #e5e7eb; }
+    .feature-card .icon-wrap { width: 48px; height: 48px; background: #eef2ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #6366f1; }
+    .feature-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { font-size: 15px; color: #6b7280; line-height: 1.6; }
+
+    /* Pricing */
+    .pricing { padding: 100px 60px; text-align: center; }
+    .pricing h2 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+    .pricing .subtitle { font-size: 18px; color: #6b7280; margin-bottom: 48px; }
+    .pricing-grid { display: flex; justify-content: center; gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .price-card { flex: 1; padding: 40px; border-radius: 16px; border: 2px solid #e5e7eb; text-align: left; }
+    .price-card.featured { border-color: #6366f1; background: #fafaff; }
+    .price-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .price-card .price { font-size: 48px; font-weight: 800; margin-bottom: 8px; }
+    .price-card .price span { font-size: 16px; font-weight: 400; color: #6b7280; }
+    .price-card p { font-size: 15px; color: #6b7280; margin-bottom: 24px; }
+    .price-card ul { list-style: none; margin-bottom: 32px; }
+    .price-card ul li { padding: 8px 0; font-size: 15px; color: #4b5563; }
+    .price-card .btn { display: block; text-align: center; padding: 14px; border-radius: 10px; font-weight: 600; text-decoration: none; font-size: 16px; }
+    .price-card .btn-outline { border: 2px solid #e5e7eb; color: #1a1a2e; }
+    .price-card.featured .btn { background: #6366f1; color: #fff; }
+
+    /* CTA */
+    .cta { padding: 100px 60px; text-align: center; background: #1a1a2e; }
+    .cta h2 { font-size: 48px; font-weight: 800; color: #ffffff; margin-bottom: 16px; }
+    .cta p { font-size: 18px; color: #9ca3af; margin-bottom: 40px; }
+    .cta .btn-primary { background: #6366f1; color: #fff; padding: 16px 32px; border-radius: 12px; font-size: 18px; font-weight: 600; text-decoration: none; }
+
+    /* Footer */
+    footer { padding: 48px 60px; background: #111827; color: #9ca3af; text-align: center; }
+    footer p { font-size: 14px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">CloudSync</div>
+    <div>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Docs</a>
+      <a href="#" class="cta-nav">Get Started</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="badge">✨ Now with AI-powered sync</div>
+    <h1>Sync your data <span>everywhere</span>, effortlessly</h1>
+    <p>CloudSync keeps your files, databases, and APIs in perfect harmony across all your environments.</p>
+    <div class="buttons">
+      <a href="#" class="btn-primary">Start Free Trial</a>
+      <a href="#" class="btn-secondary">Watch Demo</a>
+    </div>
+  </section>
+
+  <section class="logos">
+    <p>Trusted by 10,000+ teams worldwide</p>
+    <div class="logo-row">
+      <span>Stripe</span>
+      <span>Vercel</span>
+      <span>Linear</span>
+      <span>Notion</span>
+      <span>Figma</span>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="section-header">
+      <h2>Everything you need to stay in sync</h2>
+      <p>Powerful features designed for modern development teams.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon-wrap"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="currentColor"/></svg></div>
+        <h3>Real-time Sync</h3>
+        <p>Changes propagate instantly across all connected services with zero latency.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="currentColor"/></svg></div>
+        <h3>Version Control</h3>
+        <p>Every change is tracked. Roll back to any point in time with one click.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="currentColor"/></svg></div>
+        <h3>Team Collaboration</h3>
+        <p>Work together seamlessly with built-in conflict resolution and permissions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Simple, transparent pricing</h2>
+    <p class="subtitle">No hidden fees. Cancel anytime.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">$0 <span>/month</span></div>
+        <p>Perfect for small projects</p>
+        <ul>
+          <li>✓ 3 sync connections</li>
+          <li>✓ 1GB storage</li>
+          <li>✓ Community support</li>
+        </ul>
+        <a href="#" class="btn btn-outline">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <h3>Pro</h3>
+        <div class="price">$29 <span>/month</span></div>
+        <p>For growing teams</p>
+        <ul>
+          <li>✓ Unlimited connections</li>
+          <li>✓ 100GB storage</li>
+          <li>✓ Priority support</li>
+          <li>✓ Advanced analytics</li>
+        </ul>
+        <a href="#" class="btn">Start Free Trial</a>
+      </div>
+      <div class="price-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <p>For large organizations</p>
+        <ul>
+          <li>✓ Everything in Pro</li>
+          <li>✓ Unlimited storage</li>
+          <li>✓ Dedicated support</li>
+          <li>✓ Custom integrations</li>
+        </ul>
+        <a href="#" class="btn btn-outline">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to sync smarter?</h2>
+    <p>Join thousands of teams who ship faster with CloudSync.</p>
+    <a href="#" class="btn-primary">Start Free Trial</a>
+  </section>
+
+  <footer>
+    <p>© 2026 CloudSync. All rights reserved.</p>
+  </footer>
+</body>
+</html>

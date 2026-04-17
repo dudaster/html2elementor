@@ -1,0 +1,1183 @@
+[
+  {
+    "id": "4aa025d",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "space-between",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "16",
+        "right": "40",
+        "bottom": "16",
+        "left": "40",
+        "isLinked": false
+      },
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "flex_wrap": "wrap",
+      "_title": "nav",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "33ee4a1",
+        "elType": "widget",
+        "settings": {
+          "image": {
+            "url": "https://rovetcons.lovable.app/assets/logo-rovetcons-DLajDEF_.png",
+            "id": ""
+          },
+          "image_size": "full",
+          "align": "left",
+          "width": {
+            "unit": "px",
+            "size": 80,
+            "sizes": []
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "image"
+      },
+      {
+        "id": "0ebb302",
+        "elType": "widget",
+        "settings": {
+          "view": "inline",
+          "space_between": {
+            "unit": "px",
+            "size": 20,
+            "sizes": []
+          },
+          "icon_list": [
+            {
+              "text": "Acasă",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Despre noi",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Servicii",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Contact",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            }
+          ],
+          "__globals__": {
+            "text_color": "globals/colors?id=primary",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "icon-list"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "f3c3e15",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "40",
+        "bottom": "0",
+        "left": "40",
+        "isLinked": false
+      },
+      "_title": "hero",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "7143a7f",
+        "elType": "widget",
+        "settings": {
+          "image": {
+            "url": "https://rovetcons.lovable.app/assets/hero-vet-CJXSamOT.jpg",
+            "id": ""
+          },
+          "image_size": "full",
+          "align": "center",
+          "alt": "",
+          "width": {
+            "unit": "%",
+            "size": "100",
+            "sizes": []
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "image"
+      },
+      {
+        "id": "2b2bdd0",
+        "elType": "widget",
+        "settings": {
+          "title": "Cabinet veterinar cu suflet",
+          "header_size": "h1",
+          "align": "left",
+          "typography_typography": "custom",
+          "typography_font_family": "Baloo 2",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "60",
+            "sizes": []
+          },
+          "typography_font_weight": "800",
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.0,
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=25a8170"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "0ad2e84",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Oferim servicii veterinare complete pentru câini și pisici într-un mediu calm și profesionist.</p>",
+          "align": "left",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Nunito",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "20",
+            "sizes": []
+          },
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.4,
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "292035c",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_direction_tablet": "row",
+          "flex_direction_mobile": "column",
+          "flex_wrap": "wrap",
+          "flex_justify_content": "center",
+          "flex_align_items": "center",
+          "flex_gap": {
+            "unit": "px",
+            "size": 16,
+            "column": "16",
+            "row": "16"
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "2540c74",
+            "elType": "widget",
+            "settings": {
+              "text": "Programează vizită",
+              "link": {
+                "url": "#",
+                "is_external": false,
+                "nofollow": false
+              },
+              "size": "md",
+              "align": "left",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "button_background_hover_color": "#dcbc61",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "16",
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "__globals__": {
+                "button_text_color": "globals/colors?id=text",
+                "button_hover_text_color": "globals/colors?id=text",
+                "background_color": "globals/colors?id=secondary"
+              }
+            },
+            "elements": [],
+            "widgetType": "button"
+          },
+          {
+            "id": "f2faf86",
+            "elType": "widget",
+            "settings": {
+              "text": "Vezi serviciile",
+              "link": {
+                "url": "#",
+                "is_external": false,
+                "nofollow": false
+              },
+              "size": "md",
+              "align": "left",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "background_color": "#ffffff00",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "2",
+                "right": "2",
+                "bottom": "2",
+                "left": "2",
+                "isLinked": true
+              },
+              "button_background_hover_color": "#00000010",
+              "button_hover_text_color": "#ce5c58",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "16",
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "__globals__": {
+                "button_text_color": "globals/colors?id=primary",
+                "border_color": "globals/colors?id=primary"
+              }
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "a564c87",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "96",
+        "right": "40",
+        "bottom": "96",
+        "left": "40",
+        "isLinked": false
+      },
+      "_title": "content",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "ff7d8ff",
+        "elType": "widget",
+        "settings": {
+          "title": "Despre cabinetul nostru",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Baloo 2",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "36",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "df5ead8",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Suntem un cabinet veterinar modern din București, dedicat sănătății și bunăstării animalelor de companie. Echipa noastră oferă consultații, tratamente și intervenții cu profesionalism.</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Nunito",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "18",
+            "sizes": []
+          },
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.6,
+            "sizes": []
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "1568881",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "96",
+        "right": "40",
+        "bottom": "96",
+        "left": "40",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "_title": "features",
+      "__globals__": {
+        "background_color": "globals/colors?id=25a8170",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "9de0e45",
+        "elType": "widget",
+        "settings": {
+          "title": "De ce să ne alegi",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Baloo 2",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "36",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "48",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "3f16bc9",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "center",
+          "flex_gap": {
+            "unit": "px",
+            "size": 8,
+            "column": "8",
+            "row": "8"
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "517dbd7",
+            "elType": "widget",
+            "settings": {
+              "title_text": "Îngrijire cu suflet",
+              "description_text": "Fiecare pacient primește atenție individuală și tratament personalizat.",
+              "position": "top",
+              "text_align": "left",
+              "selected_icon": {
+                "value": "fas fa-star",
+                "library": "fa-solid"
+              },
+              "title_size": "h3",
+              "__globals__": {
+                "title_color": "globals/colors?id=primary",
+                "description_color": "globals/colors?id=text",
+                "_background_color": "globals/colors?id=fd7de3a",
+                "_border_color": "globals/colors?id=0705546",
+                "_background_hover_color": "globals/colors?id=fd7de3a",
+                "icon_color": "globals/colors?id=primary",
+                "typography_typography": "globals/typography?id=text"
+              },
+              "_background_background": "classic",
+              "_border_border": "solid",
+              "_border_width": {
+                "unit": "px",
+                "top": "2",
+                "right": "2",
+                "bottom": "2",
+                "left": "2",
+                "isLinked": false
+              },
+              "_border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "24",
+                "right": "24",
+                "bottom": "24",
+                "left": "24",
+                "isLinked": true
+              },
+              "view": "stacked",
+              "shape": "square",
+              "icon_padding": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "icon_size": {
+                "unit": "px",
+                "size": 20,
+                "sizes": []
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": true
+              },
+              "_box_shadow_hover_box_shadow_type": "yes",
+              "_box_shadow_hover_box_shadow": {
+                "horizontal": 0,
+                "vertical": 12,
+                "blur": 32,
+                "spread": 0,
+                "color": "#00000020"
+              },
+              "_background_hover_background": "classic",
+              "_border_hover_border": "solid",
+              "_border_hover_color": "#c6c6c6",
+              "_background_hover_transition": {
+                "unit": "px",
+                "size": 0.3,
+                "sizes": []
+              },
+              "icon_hover_color": "#da625d"
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          },
+          {
+            "id": "b3e5242",
+            "elType": "widget",
+            "settings": {
+              "title_text": "Servicii complete",
+              "description_text": "De la consultații de rutină la intervenții specializate.",
+              "position": "top",
+              "text_align": "left",
+              "selected_icon": {
+                "value": "fas fa-star",
+                "library": "fa-solid"
+              },
+              "title_size": "h3",
+              "__globals__": {
+                "title_color": "globals/colors?id=primary",
+                "description_color": "globals/colors?id=text",
+                "_background_color": "globals/colors?id=fd7de3a",
+                "_border_color": "globals/colors?id=0705546",
+                "_background_hover_color": "globals/colors?id=fd7de3a",
+                "icon_color": "globals/colors?id=accent",
+                "typography_typography": "globals/typography?id=text"
+              },
+              "_background_background": "classic",
+              "_border_border": "solid",
+              "_border_width": {
+                "unit": "px",
+                "top": "2",
+                "right": "2",
+                "bottom": "2",
+                "left": "2",
+                "isLinked": false
+              },
+              "_border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "24",
+                "right": "24",
+                "bottom": "24",
+                "left": "24",
+                "isLinked": true
+              },
+              "view": "stacked",
+              "shape": "square",
+              "icon_padding": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "icon_size": {
+                "unit": "px",
+                "size": 20,
+                "sizes": []
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": true
+              },
+              "_box_shadow_hover_box_shadow_type": "yes",
+              "_box_shadow_hover_box_shadow": {
+                "horizontal": 0,
+                "vertical": 12,
+                "blur": 32,
+                "spread": 0,
+                "color": "#00000020"
+              },
+              "_background_hover_background": "classic",
+              "_border_hover_border": "solid",
+              "_border_hover_color": "#c6c6c6",
+              "_background_hover_transition": {
+                "unit": "px",
+                "size": 0.3,
+                "sizes": []
+              },
+              "icon_hover_color": "#0056b3"
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          },
+          {
+            "id": "915e2df",
+            "elType": "widget",
+            "settings": {
+              "title_text": "Locație centrală",
+              "description_text": "Cabinet accesibil în Sector 2, aproape de Circul de Stat.",
+              "position": "top",
+              "text_align": "left",
+              "selected_icon": {
+                "value": "fas fa-star",
+                "library": "fa-solid"
+              },
+              "title_size": "h3",
+              "__globals__": {
+                "title_color": "globals/colors?id=primary",
+                "description_color": "globals/colors?id=text",
+                "_background_color": "globals/colors?id=fd7de3a",
+                "_border_color": "globals/colors?id=0705546",
+                "_background_hover_color": "globals/colors?id=fd7de3a",
+                "icon_color": "globals/colors?id=c1832cb",
+                "typography_typography": "globals/typography?id=text"
+              },
+              "_background_background": "classic",
+              "_border_border": "solid",
+              "_border_width": {
+                "unit": "px",
+                "top": "2",
+                "right": "2",
+                "bottom": "2",
+                "left": "2",
+                "isLinked": false
+              },
+              "_border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "24",
+                "right": "24",
+                "bottom": "24",
+                "left": "24",
+                "isLinked": true
+              },
+              "view": "stacked",
+              "shape": "square",
+              "icon_padding": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "icon_size": {
+                "unit": "px",
+                "size": 20,
+                "sizes": []
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": true
+              },
+              "_box_shadow_hover_box_shadow_type": "yes",
+              "_box_shadow_hover_box_shadow": {
+                "horizontal": 0,
+                "vertical": 12,
+                "blur": 32,
+                "spread": 0,
+                "color": "#00000020"
+              },
+              "_background_hover_background": "classic",
+              "_border_hover_border": "solid",
+              "_border_hover_color": "#c6c6c6",
+              "_background_hover_transition": {
+                "unit": "px",
+                "size": 0.3,
+                "sizes": []
+              },
+              "icon_hover_color": "#417c24"
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          },
+          {
+            "id": "e5d3688",
+            "elType": "widget",
+            "settings": {
+              "title_text": "Program flexibil",
+              "description_text": "Luni-Vineri 09:00-20:00, Sâmbătă 09:00-14:00.",
+              "position": "top",
+              "text_align": "left",
+              "selected_icon": {
+                "value": "fas fa-star",
+                "library": "fa-solid"
+              },
+              "title_size": "h3",
+              "__globals__": {
+                "title_color": "globals/colors?id=primary",
+                "description_color": "globals/colors?id=text",
+                "_background_color": "globals/colors?id=fd7de3a",
+                "_border_color": "globals/colors?id=0705546",
+                "_background_hover_color": "globals/colors?id=fd7de3a",
+                "icon_color": "globals/colors?id=c900e1b",
+                "typography_typography": "globals/typography?id=text"
+              },
+              "_background_background": "classic",
+              "_border_border": "solid",
+              "_border_width": {
+                "unit": "px",
+                "top": "2",
+                "right": "2",
+                "bottom": "2",
+                "left": "2",
+                "isLinked": false
+              },
+              "_border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
+                "isLinked": true
+              },
+              "_padding": {
+                "unit": "px",
+                "top": "24",
+                "right": "24",
+                "bottom": "24",
+                "left": "24",
+                "isLinked": true
+              },
+              "view": "stacked",
+              "shape": "square",
+              "icon_padding": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "icon_size": {
+                "unit": "px",
+                "size": 20,
+                "sizes": []
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": true
+              },
+              "_box_shadow_hover_box_shadow_type": "yes",
+              "_box_shadow_hover_box_shadow": {
+                "horizontal": 0,
+                "vertical": 12,
+                "blur": 32,
+                "spread": 0,
+                "color": "#00000020"
+              },
+              "_background_hover_background": "classic",
+              "_border_hover_border": "solid",
+              "_border_hover_color": "#c6c6c6",
+              "_background_hover_transition": {
+                "unit": "px",
+                "size": 0.3,
+                "sizes": []
+              },
+              "icon_hover_color": "#c16408"
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "08632d7",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "96",
+        "right": "40",
+        "bottom": "96",
+        "left": "40",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "background_color": "#f7d36e66",
+      "_title": "testimonials",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "4ef0f66",
+        "elType": "widget",
+        "settings": {
+          "title": "Ce spun clienții noștri",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Baloo 2",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "36",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "32",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "132532a",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Un cabinet cu oameni dedicați și foarte empatici.</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Nunito",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "18",
+            "sizes": []
+          },
+          "typography_font_style": "italic",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "5eff715",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Echipa de oameni sufletiști, cărora le pasă de animăluțe.</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Nunito",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "18",
+            "sizes": []
+          },
+          "typography_font_style": "italic",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "e5e4e26",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "96",
+        "right": "40",
+        "bottom": "96",
+        "left": "40",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "_title": "cta",
+      "__globals__": {
+        "background_color": "globals/colors?id=c1832cb",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "4dc761a",
+        "elType": "widget",
+        "settings": {
+          "title": "Ai nevoie de o consultație?",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Baloo 2",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "36",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=25a8170"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "65bd332",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Contactează-ne și programează o vizită pentru companionul tău.</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=25a8170"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Nunito",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "18",
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "24",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "169a079",
+        "elType": "widget",
+        "settings": {
+          "text": "Contactează-ne",
+          "link": {
+            "url": "#",
+            "is_external": false,
+            "nofollow": false
+          },
+          "size": "md",
+          "align": "center",
+          "border_radius": {
+            "unit": "px",
+            "top": "8",
+            "right": "8",
+            "bottom": "8",
+            "left": "8",
+            "isLinked": true
+          },
+          "button_background_hover_color": "#dcbc61",
+          "typography_typography": "custom",
+          "typography_font_family": "Nunito",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "16",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "__globals__": {
+            "button_text_color": "globals/colors?id=text",
+            "button_hover_text_color": "globals/colors?id=text",
+            "background_color": "globals/colors?id=secondary"
+          }
+        },
+        "elements": [],
+        "widgetType": "button"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "24b7f25",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "space-between",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "48",
+        "right": "40",
+        "bottom": "48",
+        "left": "40",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "flex_wrap": "wrap",
+      "_title": "footer",
+      "__globals__": {
+        "background_color": "globals/colors?id=accent",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [],
+    "isInner": false
+  }
+]

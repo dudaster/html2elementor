@@ -1,0 +1,2329 @@
+[
+  {
+    "id": "3056b1a",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "10",
+        "right": "40",
+        "bottom": "10",
+        "left": "40",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "_title": "content",
+      "__globals__": {
+        "background_color": "globals/colors?id=text",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "2b3c5fb",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Transport gratuit pentru comenzi peste 200 lei</p>",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Jost",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "13",
+            "sizes": []
+          },
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": 2,
+            "sizes": []
+          },
+          "typography_text_transform": "uppercase",
+          "__globals__": {
+            "text_color": "globals/colors?id=c900e1b"
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "8bf8da2",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "space-between",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "20",
+        "right": "60",
+        "bottom": "20",
+        "left": "60",
+        "isLinked": false
+      },
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "flex_wrap": "wrap",
+      "_title": "nav",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "b1392e2",
+        "elType": "widget",
+        "settings": {
+          "title": "BOTANICA",
+          "header_size": "h4",
+          "align": "left",
+          "typography_typography": "custom",
+          "typography_font_family": "Cormorant Garamond",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "32",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": 3,
+            "sizes": []
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "1eb030a",
+        "elType": "widget",
+        "settings": {
+          "view": "inline",
+          "space_between": {
+            "unit": "px",
+            "size": 20,
+            "sizes": []
+          },
+          "icon_list": [
+            {
+              "text": "Produse",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Ingrediente",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Despre noi",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Blog",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            }
+          ],
+          "__globals__": {
+            "text_color": "globals/colors?id=primary",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "icon-list"
+      },
+      {
+        "id": "d5a57c3",
+        "elType": "widget",
+        "settings": {
+          "text": "Coș (0)",
+          "link": {
+            "url": "#",
+            "is_external": false,
+            "nofollow": false
+          },
+          "size": "md",
+          "align": "left",
+          "border_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "background_color": "#ffffff00",
+          "border_border": "solid",
+          "border_width": {
+            "unit": "px",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+          },
+          "button_background_hover_color": "#00000010",
+          "button_hover_text_color": "#262320",
+          "typography_typography": "custom",
+          "typography_font_family": "Jost",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "14",
+            "sizes": []
+          },
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": 1,
+            "sizes": []
+          },
+          "typography_text_transform": "uppercase",
+          "__globals__": {
+            "button_text_color": "globals/colors?id=text",
+            "border_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "button"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "e45da00",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "center",
+      "flex_align_items": "stretch",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "_title": "hero",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "ef43b9a",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_justify_content": "center",
+          "flex_gap": {
+            "unit": "px",
+            "size": 20,
+            "column": "20",
+            "row": "20"
+          },
+          "padding": {
+            "unit": "px",
+            "top": "80",
+            "right": "60",
+            "bottom": "80",
+            "left": "60",
+            "isLinked": false
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 50,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "2146a12",
+            "elType": "widget",
+            "settings": {
+              "title": "Colecția de primăvară",
+              "header_size": "h6",
+              "align": "left",
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "12",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 4,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "24",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=accent"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "ad7fdfb",
+            "elType": "widget",
+            "settings": {
+              "title": "Frumusețe pură, direct din natură",
+              "header_size": "h1",
+              "align": "left",
+              "typography_typography": "custom",
+              "typography_font_family": "Cormorant Garamond",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "72",
+                "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.1,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "24",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "73c79b5",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Descoperă gama noastră de cosmetice 100% naturale, create cu ingrediente organice certificate și multă grijă pentru pielea ta.</p>",
+              "align": "left",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "17",
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.7,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "36",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "0ce8d6a",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "row",
+              "flex_direction_tablet": "row",
+              "flex_direction_mobile": "column",
+              "flex_wrap": "wrap",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "unit": "px",
+                "size": 16,
+                "column": "16",
+                "row": "16"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "d43a6e9",
+                "elType": "widget",
+                "settings": {
+                  "text": "Descoperă colecția",
+                  "link": {
+                    "url": "#",
+                    "is_external": false,
+                    "nofollow": false
+                  },
+                  "size": "md",
+                  "align": "left",
+                  "border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                  },
+                  "button_background_hover_color": "#272421",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Jost",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "13",
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 2,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "__globals__": {
+                    "button_text_color": "globals/colors?id=734bfa4",
+                    "button_hover_text_color": "globals/colors?id=734bfa4",
+                    "background_color": "globals/colors?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "button"
+              },
+              {
+                "id": "92b19d0",
+                "elType": "widget",
+                "settings": {
+                  "text": "Află povestea noastră",
+                  "link": {
+                    "url": "#",
+                    "is_external": false,
+                    "nofollow": false
+                  },
+                  "size": "md",
+                  "align": "left",
+                  "border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                  },
+                  "background_color": "#ffffff00",
+                  "border_border": "none",
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                  },
+                  "button_hover_text_color": "#262320",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Jost",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "13",
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 2,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "__globals__": {
+                    "button_text_color": "globals/colors?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "e949f77",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 50,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "background_background": "classic",
+          "background_image": {
+            "url": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=1200",
+            "id": ""
+          },
+          "background_size": "cover",
+          "background_position": "center center",
+          "min_height": {
+            "unit": "vh",
+            "size": 60,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "2973a03",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "center",
+      "flex_align_items": "stretch",
+      "flex_gap": {
+        "unit": "px",
+        "size": 24,
+        "column": "0",
+        "row": "0"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "40",
+        "bottom": "0",
+        "left": "40",
+        "isLinked": false
+      },
+      "border_border": "solid",
+      "border_width": {
+        "unit": "px",
+        "top": "1",
+        "right": "0",
+        "bottom": "1",
+        "left": "0",
+        "isLinked": false
+      },
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "flex_wrap": "nowrap",
+      "flex_wrap_tablet": "wrap",
+      "_title": "content",
+      "__globals__": {
+        "border_color": "globals/colors?id=0705546",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "8e52b8b",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "_element_width": "initial",
+          "_element_width_tablet": "initial",
+          "_element_width_mobile": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "_element_custom_width_tablet": {
+            "unit": "%",
+            "size": 47,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "border_border": "solid",
+          "border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_border_border": "solid",
+          "_border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "__globals__": {
+            "border_color": "globals/colors?id=0705546",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "f4c0622",
+            "elType": "widget",
+            "settings": {
+              "title": "100% Natural",
+              "header_size": "h4",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "13",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 2,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "8",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "956cf29",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Ingrediente organice certificate</p>",
+              "align": "center",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "14",
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "5fb9e28",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "_element_width": "initial",
+          "_element_width_tablet": "initial",
+          "_element_width_mobile": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "_element_custom_width_tablet": {
+            "unit": "%",
+            "size": 47,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "border_border": "solid",
+          "border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_border_border": "solid",
+          "_border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "__globals__": {
+            "border_color": "globals/colors?id=0705546",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "3e26fe6",
+            "elType": "widget",
+            "settings": {
+              "title": "Cruelty Free",
+              "header_size": "h4",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "13",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 2,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "8",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "1f85f5f",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Netestat pe animale</p>",
+              "align": "center",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "14",
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "aae5eff",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "_element_width": "initial",
+          "_element_width_tablet": "initial",
+          "_element_width_mobile": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "_element_custom_width_tablet": {
+            "unit": "%",
+            "size": 47,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "border_border": "solid",
+          "border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_border_border": "solid",
+          "_border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "__globals__": {
+            "border_color": "globals/colors?id=0705546",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "4777083",
+            "elType": "widget",
+            "settings": {
+              "title": "Eco Packaging",
+              "header_size": "h4",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "13",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 2,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "8",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "c461f14",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Ambalaje 100% reciclabile</p>",
+              "align": "center",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "14",
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "5efd76b",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "_element_width": "initial",
+          "_element_width_tablet": "initial",
+          "_element_width_mobile": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "_element_custom_width_tablet": {
+            "unit": "%",
+            "size": 47,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "border_border": "solid",
+          "border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_border_border": "solid",
+          "_border_width": {
+            "unit": "px",
+            "top": "0",
+            "right": "1",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          },
+          "_padding": {
+            "unit": "px",
+            "top": "40",
+            "right": "32",
+            "bottom": "40",
+            "left": "32",
+            "isLinked": false
+          },
+          "__globals__": {
+            "border_color": "globals/colors?id=0705546",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "1ad60d9",
+            "elType": "widget",
+            "settings": {
+              "title": "Handmade",
+              "header_size": "h4",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "13",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 2,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "8",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "d4113ad",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Făcut manual, în loturi mici</p>",
+              "align": "center",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "14",
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "764c609",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "100",
+        "right": "60",
+        "bottom": "100",
+        "left": "60",
+        "isLinked": false
+      },
+      "_title": "features",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "f9ca0bf",
+        "elType": "widget",
+        "settings": {
+          "title": "Cele mai iubite produse",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Cormorant Garamond",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "48",
+            "sizes": []
+          },
+          "typography_font_weight": "400",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "12",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "e3bd6e2",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Alese cu grijă, create cu pasiune</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Jost",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "15",
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "64",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "50c18e8",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_direction_tablet": "row",
+          "flex_direction_mobile": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "stretch",
+          "flex_gap": {
+            "unit": "px",
+            "size": 16,
+            "column": "16",
+            "row": "16"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 16,
+            "column": "16",
+            "row": "16"
+          },
+          "width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "798f3d7",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "492c78e",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400",
+                    "id": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "alt": "Serum",
+                  "width": {
+                    "unit": "%",
+                    "size": "100",
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "ca084f8",
+                "elType": "widget",
+                "settings": {
+                  "title": "Serum Vitamina C",
+                  "header_size": "h3",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cormorant Garamond",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "22",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "4",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "fe62d11",
+                "elType": "widget",
+                "settings": {
+                  "title": "189 lei",
+                  "header_size": "h6",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Jost",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "15",
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=accent"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "86362f3",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "a189882",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400",
+                    "id": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "alt": "Cremă",
+                  "width": {
+                    "unit": "%",
+                    "size": "100",
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "9a7d733",
+                "elType": "widget",
+                "settings": {
+                  "title": "Cremă de noapte",
+                  "header_size": "h3",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cormorant Garamond",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "22",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "4",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "ab3be8a",
+                "elType": "widget",
+                "settings": {
+                  "title": "159 lei",
+                  "header_size": "h6",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Jost",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "15",
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=accent"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "6242e5e",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "eaff9a3",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://images.unsplash.com/photo-1617897903246-719242758050?w=400",
+                    "id": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "alt": "Ulei",
+                  "width": {
+                    "unit": "%",
+                    "size": "100",
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "55a40c3",
+                "elType": "widget",
+                "settings": {
+                  "title": "Ulei de argan pur",
+                  "header_size": "h3",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cormorant Garamond",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "22",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "4",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "50e2f49",
+                "elType": "widget",
+                "settings": {
+                  "title": "129 lei",
+                  "header_size": "h6",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Jost",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "15",
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=accent"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "a0b50fc",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "d374a94",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400",
+                    "id": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "alt": "Balsam",
+                  "width": {
+                    "unit": "%",
+                    "size": "100",
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "11b1261",
+                "elType": "widget",
+                "settings": {
+                  "title": "Balsam de buze",
+                  "header_size": "h3",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cormorant Garamond",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "22",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "4",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "bc8d267",
+                "elType": "widget",
+                "settings": {
+                  "title": "49 lei",
+                  "header_size": "h6",
+                  "align": "center",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Jost",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "15",
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=accent"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "a2e54cf",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "center",
+      "flex_align_items": "stretch",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      },
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "_title": "content",
+      "__globals__": {
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "376d338",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 50,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "background_background": "classic",
+          "background_image": {
+            "url": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=1200",
+            "id": ""
+          },
+          "background_size": "cover",
+          "background_position": "center center",
+          "min_height": {
+            "unit": "vh",
+            "size": 60,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "isInner": true
+      },
+      {
+        "id": "8293e15",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_justify_content": "center",
+          "flex_gap": {
+            "unit": "px",
+            "size": 20,
+            "column": "20",
+            "row": "20"
+          },
+          "padding": {
+            "unit": "px",
+            "top": "80",
+            "right": "60",
+            "bottom": "80",
+            "left": "60",
+            "isLinked": false
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "unit": "%",
+            "size": 50,
+            "sizes": []
+          },
+          "_element_custom_width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "b627bc8",
+            "elType": "widget",
+            "settings": {
+              "title": "Povestea noastră",
+              "header_size": "h6",
+              "align": "left",
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "12",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 4,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "24",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=accent"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "ca8bba0",
+            "elType": "widget",
+            "settings": {
+              "title": "Născuți din dragostea pentru natură",
+              "header_size": "h2",
+              "align": "left",
+              "typography_typography": "custom",
+              "typography_font_family": "Cormorant Garamond",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "42",
+                "sizes": []
+              },
+              "typography_font_weight": "400",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "20",
+                "left": "0",
+                "isLinked": false
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "162dcca",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Fiecare produs Botanica este creat manual din ingrediente atent selectate. Credem că frumusețea autentică vine din armonia cu natura.</p>",
+              "align": "left",
+              "__globals__": {
+                "text_color": "globals/colors?id=text"
+              },
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "16",
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.8,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "32",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "c229f61",
+            "elType": "widget",
+            "settings": {
+              "text": "Citește mai mult",
+              "link": {
+                "url": "#",
+                "is_external": false,
+                "nofollow": false
+              },
+              "size": "md",
+              "align": "left",
+              "border_radius": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "background_color": "#ffffff00",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "button_background_hover_color": "#00000010",
+              "button_hover_text_color": "#262320",
+              "typography_typography": "custom",
+              "typography_font_family": "Jost",
+              "typography_font_size": {
+                "unit": "px",
+                "size": "13",
+                "sizes": []
+              },
+              "typography_letter_spacing": {
+                "unit": "px",
+                "size": 2,
+                "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "__globals__": {
+                "button_text_color": "globals/colors?id=text",
+                "border_color": "globals/colors?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "30248bb",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "120",
+        "right": "60",
+        "bottom": "120",
+        "left": "60",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "_title": "testimonials",
+      "__globals__": {
+        "background_color": "globals/colors?id=text",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "99c368b",
+        "elType": "widget",
+        "settings": {
+          "title": "★★★★★",
+          "header_size": "h6",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Cormorant Garamond",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "24",
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "32",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=c900e1b"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "54c0625",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>„De când folosesc serumul cu vitamina C, pielea mea arată mai luminoasă ca niciodată. Produse excepționale, cu rezultate vizibile.\"</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=25a8170"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Cormorant Garamond",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "32",
+            "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.5,
+            "sizes": []
+          },
+          "typography_font_style": "italic",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "32",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "20aeb15",
+        "elType": "widget",
+        "settings": {
+          "title": "Ana-Maria T. — Clientă verificată",
+          "header_size": "h6",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Jost",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "14",
+            "sizes": []
+          },
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": 2,
+            "sizes": []
+          },
+          "typography_text_transform": "uppercase",
+          "__globals__": {
+            "title_color": "globals/colors?id=primary"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "e1273a5",
+    "elType": "container",
+    "settings": {
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "60",
+        "bottom": "80",
+        "left": "60",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "_title": "content",
+      "__globals__": {
+        "background_color": "globals/colors?id=fd7de3a",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "0d2ef1e",
+        "elType": "widget",
+        "settings": {
+          "title": "Rămâi aproape de natură",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Cormorant Garamond",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "42",
+            "sizes": []
+          },
+          "typography_font_weight": "400",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "12",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "c26ab5a",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Abonează-te și primești 10% reducere la prima comandă</p>",
+          "align": "center",
+          "__globals__": {
+            "text_color": "globals/colors?id=text"
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Jost",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "15",
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "32",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "d5b1a10",
+        "elType": "widget",
+        "settings": {
+          "text": "Abonează-te",
+          "link": {
+            "url": "#",
+            "is_external": false,
+            "nofollow": false
+          },
+          "size": "md",
+          "align": "center",
+          "border_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "button_background_hover_color": "#272421",
+          "typography_typography": "custom",
+          "typography_font_family": "Jost",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "13",
+            "sizes": []
+          },
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": 2,
+            "sizes": []
+          },
+          "typography_text_transform": "uppercase",
+          "__globals__": {
+            "button_text_color": "globals/colors?id=734bfa4",
+            "button_hover_text_color": "globals/colors?id=734bfa4",
+            "background_color": "globals/colors?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "button"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "1c2a8be",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "row",
+      "flex_justify_content": "space-between",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "unit": "px",
+        "size": 20,
+        "column": "20",
+        "row": "20"
+      },
+      "padding": {
+        "unit": "px",
+        "top": "48",
+        "right": "60",
+        "bottom": "48",
+        "left": "60",
+        "isLinked": false
+      },
+      "background_background": "classic",
+      "flex_direction_tablet": "row",
+      "flex_direction_mobile": "column",
+      "flex_wrap": "wrap",
+      "_title": "footer",
+      "__globals__": {
+        "background_color": "globals/colors?id=text",
+        "typography_typography": "globals/typography?id=text"
+      }
+    },
+    "elements": [
+      {
+        "id": "8a76870",
+        "elType": "widget",
+        "settings": {
+          "title": "BOTANICA",
+          "header_size": "h4",
+          "align": "left",
+          "typography_typography": "custom",
+          "typography_font_family": "Cormorant Garamond",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "24",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": 3,
+            "sizes": []
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=734bfa4"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "49f73f1",
+        "elType": "widget",
+        "settings": {
+          "view": "inline",
+          "space_between": {
+            "unit": "px",
+            "size": 20,
+            "sizes": []
+          },
+          "icon_list": [
+            {
+              "text": "Termeni",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Confidențialitate",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            },
+            {
+              "text": "Contact",
+              "link": {
+                "url": "#",
+                "is_external": false
+              },
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              }
+            }
+          ],
+          "__globals__": {
+            "text_color": "globals/colors?id=primary",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "icon-list"
+      }
+    ],
+    "isInner": false
+  }
+]

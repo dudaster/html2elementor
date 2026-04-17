@@ -1,0 +1,6 @@
+beautifulsoup4>=4.12
+tinycss2>=1.2
+cssselect2>=0.7
+
+# Optional — for --url mode (fetch live pages):
+# playwright>=1.40

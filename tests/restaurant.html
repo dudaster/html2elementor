@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>La Pergola — Restaurant Italian Autentic</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Lora', serif; color: #2c2c2c; background: #fefcf8; }
+
+    /* Nav */
+    header { padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; background: #fefcf8; }
+    header .logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #8b4513; }
+    header nav a { color: #555; text-decoration: none; margin-left: 28px; font-size: 15px; }
+    header .reserve-btn { background: #8b4513; color: #fff; padding: 12px 28px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; }
+
+    /* Hero — split layout: image left, text right */
+    .hero { display: flex; min-height: 80vh; }
+    .hero-image { flex: 1; background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200') center/cover; }
+    .hero-content { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 80px 60px; background: #fefcf8; }
+    .hero-content .tagline { font-size: 14px; text-transform: uppercase; letter-spacing: 3px; color: #8b4513; margin-bottom: 16px; }
+    .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; line-height: 1.1; color: #2c2c2c; margin-bottom: 24px; }
+    .hero-content p { font-size: 18px; color: #666; line-height: 1.7; margin-bottom: 32px; max-width: 480px; }
+    .hero-content .btn-warm { background: #8b4513; color: #fff; padding: 16px 36px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 16px; display: inline-block; }
+    .hero-content .btn-text { color: #8b4513; text-decoration: none; margin-left: 24px; font-weight: 600; font-size: 16px; }
+
+    /* About */
+    .about { padding: 100px 60px; text-align: center; max-width: 800px; margin: 0 auto; }
+    .about h2 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; margin-bottom: 24px; }
+    .about p { font-size: 18px; color: #666; line-height: 1.8; }
+
+    /* Menu highlights */
+    .menu { padding: 100px 60px; background: #f5f0e8; }
+    .menu h2 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; text-align: center; margin-bottom: 16px; }
+    .menu .subtitle { text-align: center; font-size: 18px; color: #666; margin-bottom: 48px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1100px; margin: 0 auto; }
+    .menu-card { background: #fff; padding: 32px; border-radius: 12px; text-align: center; }
+    .menu-card .emoji { font-size: 48px; margin-bottom: 16px; }
+    .menu-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    .menu-card .price { font-size: 20px; color: #8b4513; font-weight: 700; margin-bottom: 12px; }
+    .menu-card p { font-size: 15px; color: #888; line-height: 1.5; }
+
+    /* Testimonials */
+    .testimonials { padding: 100px 60px; text-align: center; }
+    .testimonials h2 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; margin-bottom: 48px; }
+    .testimonials-grid { display: flex; gap: 32px; max-width: 1000px; margin: 0 auto; }
+    .testimonial-card { flex: 1; padding: 32px; border: 1px solid #e8dfd2; border-radius: 12px; }
+    .testimonial-card blockquote { font-style: italic; font-size: 16px; color: #555; line-height: 1.7; margin-bottom: 16px; }
+    .testimonial-card .author { font-weight: 700; font-size: 15px; color: #2c2c2c; }
+
+    /* CTA */
+    .cta { padding: 100px 60px; background: #8b4513; text-align: center; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: #fff; margin-bottom: 16px; }
+    .cta p { font-size: 18px; color: #d4a574; margin-bottom: 32px; }
+    .cta .btn-light { background: #fff; color: #8b4513; padding: 16px 36px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 16px; }
+
+    /* Footer */
+    footer { padding: 48px 60px; background: #2c2c2c; color: #999; text-align: center; }
+    footer p { font-size: 14px; }
+    footer .hours { font-size: 16px; color: #ccc; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">La Pergola</div>
+    <nav>
+      <a href="#">Meniu</a>
+      <a href="#">Despre</a>
+      <a href="#">Galerie</a>
+      <a href="#">Contact</a>
+    </nav>
+    <a href="#" class="reserve-btn">Rezervă masă</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-content">
+      <div class="tagline">Restaurant italian autentic</div>
+      <h1>O experiență culinară de neuitat</h1>
+      <p>Descoperă gusturile autentice ale Italiei într-un ambient rafinat. Fiecare fel de mâncare este pregătit cu pasiune și ingrediente proaspete.</p>
+      <div>
+        <a href="#" class="btn-warm">Vezi meniul</a>
+        <a href="#" class="btn-text">Rezervă o masă →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Povestea noastră</h2>
+    <p>Din 2008, La Pergola aduce în București cele mai bune rețete italiene, transmise din generație în generație. Bucătarul nostru, Marco, a crescut în Toscana și aduce în fiecare preparat o bucată din Italia.</p>
+  </section>
+
+  <section class="menu">
+    <h2>Din meniul nostru</h2>
+    <p class="subtitle">Preparate selecte, ingrediente de cea mai bună calitate</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="emoji">🍝</div>
+        <h3>Pasta Carbonara</h3>
+        <div class="price">45 lei</div>
+        <p>Spaghetti cu guanciale, ou, pecorino romano și piper negru proaspăt.</p>
+      </div>
+      <div class="menu-card">
+        <div class="emoji">🍕</div>
+        <h3>Pizza Margherita</h3>
+        <div class="price">38 lei</div>
+        <p>Aluat dospit 72h, sos San Marzano, mozzarella di bufala, busuioc.</p>
+      </div>
+      <div class="menu-card">
+        <div class="emoji">🥩</div>
+        <h3>Ossobuco alla Milanese</h3>
+        <div class="price">72 lei</div>
+        <p>Fluier de vitel gătit lent cu legume, vin alb și gremolata de lămâie.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Ce spun oaspeții noștri</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <blockquote>Cea mai bună carbonara pe care am mâncat-o în afara Italiei. Absolut extraordinar.</blockquote>
+        <div class="author">— Maria D.</div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>Ambianța este perfectă pentru o seară romantică. Vom reveni cu siguranță.</blockquote>
+        <div class="author">— Andrei & Elena</div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>Pizza făcută ca la carte. Aluatul este incredibil. Locul numărul 1 în București.</blockquote>
+        <div class="author">— George P.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Rezervă o masă</h2>
+    <p>Alătură-te nouă pentru o seară specială. Locuri limitate în weekend.</p>
+    <a href="#" class="btn-light">Sună: 021 234 5678</a>
+  </section>
+
+  <footer>
+    <p class="hours">Luni-Vineri: 12:00-23:00 | Sâmbătă-Duminică: 11:00-24:00</p>
+    <p>© 2026 La Pergola. Toate drepturile rezervate.</p>
+  </footer>
+</body>
+</html>
