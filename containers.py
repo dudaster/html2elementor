@@ -211,6 +211,47 @@ def map_section(section: dict) -> tuple[dict[str, Any], list[dict]]:
             if lum < 0.4:
                 _invert_text_colors(elements)
 
+    # If section has horizontal margin, wrap in a transparent outer section
+    # with padding, and move bg/radius to inner container (prevents overflow)
+    sec_styles = section.get("styles", {})
+    ml = px_to_int(sec_styles.get("margin-left", "0"))
+    mr = px_to_int(sec_styles.get("margin-right", "0"))
+    if ml or mr:
+        # Move bg, gradient, radius, padding from section to inner container
+        inner_settings: dict[str, Any] = {
+            "content_width": "full",
+            "flex_direction": container.get("flex_direction", "column"),
+            "flex_justify_content": container.get("flex_justify_content", "center"),
+            "flex_align_items": container.get("flex_align_items", "center"),
+            "flex_gap": container.get("flex_gap", {"unit": "px", "size": 20, "column": "20", "row": "20"}),
+        }
+        # Move styling keys to inner
+        for key in list(container.keys()):
+            if key.startswith("background") or key.startswith("border"):
+                inner_settings[key] = container.pop(key)
+        # Move padding to inner
+        if "padding" in container:
+            inner_settings["padding"] = container.pop("padding")
+        # Outer becomes transparent wrapper with margin as padding
+        mt = px_to_int(sec_styles.get("margin-top", "0"))
+        mb = px_to_int(sec_styles.get("margin-bottom", "0"))
+        container["content_width"] = "full"
+        container["flex_direction"] = "column"
+        container["padding"] = {
+            "unit": "px",
+            "top": str(mt or 0), "right": str(mr or 0),
+            "bottom": str(mb or 0), "left": str(ml or 0),
+            "isLinked": False,
+        }
+        container.pop("margin", None)
+        # Wrap elements in inner container
+        inner = {
+            "__inner_container__": True,
+            "settings": inner_settings,
+            "children": elements,
+        }
+        return container, [inner]
+
     return container, elements
 
 
@@ -305,16 +346,15 @@ def _section_settings(section: dict) -> dict[str, Any]:
             "isLinked": True,
         }
 
-    # Section margin (e.g., CTA with margin: 0 48px 48px)
+    # Section margin — only top/bottom applied directly.
+    # Left/right margin handled in map_section via wrapper approach.
     mt = px_to_int(styles.get("margin-top", "0"))
-    mr = px_to_int(styles.get("margin-right", "0"))
     mb = px_to_int(styles.get("margin-bottom", "0"))
-    ml = px_to_int(styles.get("margin-left", "0"))
-    if mt or mr or mb or ml:
+    if mt or mb:
         settings["margin"] = {
             "unit": "px",
-            "top": str(mt or 0), "right": str(mr or 0),
-            "bottom": str(mb or 0), "left": str(ml or 0),
+            "top": str(mt or 0), "right": "0",
+            "bottom": str(mb or 0), "left": "0",
             "isLinked": False,
         }
 
