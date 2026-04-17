@@ -597,9 +597,14 @@ def _build_header_elements(section: dict) -> list[dict]:
             },
         })
     elif logo_text:
-        from .styles import apply_typography
+        from .styles import apply_typography, px_to_int as _px
+        from .widgets import _all_text_html, _apply_margin
+        # Preserve ALL text including child spans (e.g., "Code<span>Academy</span>")
+        full_text = _all_text_html(logo_text).strip()
+        if not full_text:
+            full_text = logo_text.get("text", "").strip()
         logo_settings: dict = {
-            "title": logo_text["text"].strip(),
+            "title": full_text,
             "header_size": "h4",
             "align": "left",
         }
@@ -607,21 +612,31 @@ def _build_header_elements(section: dict) -> list[dict]:
         color = to_hex(logo_text.get("styles", {}).get("color"))
         if color:
             logo_settings["title_color"] = color
+        _apply_margin(logo_settings, logo_text.get("styles", {}))
         elements.append({"widgetType": "heading", "settings": logo_settings})
     if nav_items:
-        elements.append({
-            "widgetType": "icon-list",
-            "settings": {
-                "view": "inline",
-                "space_between": {"unit": "px", "size": 20, "sizes": []},
-                "icon_list": [
-                    {"text": txt, "link": {"url": href, "is_external": False},
-                     "selected_icon": {"value": "", "library": ""}}
-                    for txt, href in nav_items[:8]
-                ],
-                "__globals__": {"text_color": "globals/colors?id=primary"},
-            },
-        })
+        # Find the parent div of nav links (for margin-bottom)
+        links_parent = None
+        for n in _iter(section):
+            if n.get("tag") == "div" and any(
+                c.get("tag") == "a" for c in n.get("children", [])
+            ):
+                links_parent = n
+                break
+        icon_list_settings: dict = {
+            "view": "inline",
+            "space_between": {"unit": "px", "size": 20, "sizes": []},
+            "icon_list": [
+                {"text": txt, "link": {"url": href, "is_external": False},
+                 "selected_icon": {"value": "", "library": ""}}
+                for txt, href in nav_items[:8]
+            ],
+            "__globals__": {"text_color": "globals/colors?id=primary"},
+        }
+        if links_parent:
+            from .widgets import _apply_margin as _am
+            _am(icon_list_settings, links_parent.get("styles", {}))
+        elements.append({"widgetType": "icon-list", "settings": icon_list_settings})
     # Emit button-like links in nav as actual button widgets
     for n in _iter(section):
         if n.get("tag") == "a" and looks_like_button(n):
