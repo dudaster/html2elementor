@@ -155,6 +155,23 @@ def _ancestor_bg_is_dark(node: dict, tree: dict) -> bool:
     return False
 
 
+def _check_max_width(widget: dict, node: dict, label: str, issues: list):
+    """Check if widget's _element_custom_width matches CSS max-width."""
+    s = widget.get("settings", {})
+    css_mw = px_to_int(node.get("styles", {}).get("max-width", ""))
+    if not css_mw:
+        return
+    ecw = s.get("_element_custom_width")
+    el_mw = None
+    if isinstance(ecw, dict) and ecw.get("unit") == "px":
+        try:
+            el_mw = int(float(ecw.get("size")))
+        except (ValueError, TypeError):
+            pass
+    if el_mw is None or not _close(el_mw, css_mw, SPACING_TOLERANCE):
+        issues.append(f"{label}.max-width: elementor={el_mw} vs css={css_mw}px")
+
+
 def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
     wtype = widget.get("widgetType")
     s = widget.get("settings", {})
@@ -179,6 +196,7 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
         css_size = px_to_int(css.get("font-size", ""))
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
             issues.append(f"heading[{tag}]\"{title[:30]}\".font-size: elementor={el_size}px vs css={css_size}px")
+        _check_max_width(widget, node, f"heading[{tag}]\"{title[:30]}\"", issues)
 
     elif wtype == "text-editor":
         text = _strip_html(s.get("editor", ""))[:40]
@@ -196,6 +214,7 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
         css_size = px_to_int(css.get("font-size", ""))
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
             issues.append(f"text\"{text[:30]}\".font-size: elementor={el_size}px vs css={css_size}px")
+        _check_max_width(widget, node, f"text\"{text[:30]}\"", issues)
 
     elif wtype == "button":
         text = s.get("text", "")

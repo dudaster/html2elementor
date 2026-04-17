@@ -19,7 +19,8 @@ def map_section(section: dict) -> tuple[dict[str, Any], list[dict]]:
             container["flex_direction_mobile"] = "column"
             container["flex_justify_content"] = "space-between"
             container["flex_align_items"] = "center"
-            container["flex_wrap"] = "wrap"
+            container["flex_wrap"] = "nowrap"
+            container["flex_wrap_tablet"] = "wrap"
             container["content_width"] = "full"
         # Non-flex footer: column with center alignment
         # Nav padding often lives on the inner container, not the header tag.
@@ -684,8 +685,7 @@ def _build_header_elements(section: dict) -> list[dict]:
                 "flex_align_items": "center",
                 "flex_justify_content": "flex-end",
                 "flex_gap": {"unit": "px", "size": 20, "column": "20", "row": "20"},
-                "_flex_size": "none",
-                "_element_custom_width": {"unit": "%", "size": 70, "sizes": []},
+                "_flex_size": "shrink",
             },
             "children": [nav_icon_list, nav_cta],
         })

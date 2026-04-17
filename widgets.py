@@ -227,6 +227,11 @@ def text_widget(node: dict) -> dict:
     }
     apply_typography(settings, styles)
     _apply_margin(settings, styles)
+    # Apply max-width to widget (constrains text width like CSS max-width)
+    mw = px_to_int(styles.get("max-width"))
+    if mw:
+        settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
+        settings["_element_width"] = "initial"
     return {"widgetType": "text-editor", "settings": settings}
 
 
