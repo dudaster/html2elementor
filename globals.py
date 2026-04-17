@@ -82,7 +82,7 @@ def build_kit(capture: dict) -> tuple[dict[str, Any], dict[str, str], dict[str, 
 
     # --- assign system typography ---
     system_typo = _assign_system_fonts(fonts, font_roles)
-    custom_typo = _build_custom_typography(system_typo)
+    custom_typo_list, typo_map = _build_custom_typography_from_tree(capture, system_typo)
 
     # --- build kit settings ---
     # Extract body/page background
@@ -108,7 +108,7 @@ def build_kit(capture: dict) -> tuple[dict[str, Any], dict[str, str], dict[str, 
             }
             for role, (family, weight, size) in system_typo.items()
         ],
-        "custom_typography": _build_custom_typography(system_typo),
+        "custom_typography": custom_typo_list,
     }
 
     # Body/page background
@@ -130,7 +130,7 @@ def build_kit(capture: dict) -> tuple[dict[str, Any], dict[str, str], dict[str, 
         if family not in font_map:
             font_map[family] = role
 
-    return kit_settings, color_map, font_map
+    return kit_settings, color_map, font_map, typo_map
 
 
 def _assign_system_colors(colors: Counter, roles: dict) -> dict[str, str]:
@@ -236,20 +236,88 @@ def _assign_system_fonts(fonts: Counter, roles: dict) -> dict[str, tuple[str, st
     }
 
 
-def _build_custom_typography(system: dict) -> list:
-    """Build custom typography entries for special text styles (e.g. italic review)."""
-    body_font = system.get("text", ("Inter", "400", 16))[0]
-    return [
-        {
-            "_id": short_id("Review"),
-            "title": "Review",
-            "typography_typography": "custom",
-            "typography_font_family": body_font,
-            "typography_font_weight": "400",
-            "typography_font_style": "italic",
-            "typography_font_size": {"unit": "px", "size": "16", "sizes": []},
-        },
-    ]
+def _build_custom_typography_from_tree(capture: dict, system_typo: dict) -> tuple[list, dict]:
+    """Scan headings in parsed tree, create custom typography globals for each unique combo.
+
+    Returns (custom_typo_list, typo_map) where typo_map maps
+    (family, weight, size) → global_id for widget reference.
+    """
+    from .sections import iter_tree
+
+    HEADING_TAGS = {"h1", "h2", "h3", "h4", "h5", "h6"}
+    seen: dict[tuple, str] = {}  # (family, weight, size) → global_id
+    custom_list: list[dict] = []
+
+    # Section classifiers for naming
+    section_names = []
+    for sec in capture.get("sections", []):
+        cls = " ".join(sec.get("classes", []))
+        section_names.append(cls)
+
+    sec_idx = 0
+    for sec in capture.get("sections", []):
+        sec_cls = " ".join(sec.get("classes", []))
+        for node in iter_tree(sec):
+            tag = node.get("tag", "")
+            if tag not in HEADING_TAGS:
+                continue
+            styles = node.get("styles", {})
+            family = (styles.get("font-family") or "").split(",")[0].strip().strip('"').strip("'")
+            weight = styles.get("font-weight") or "400"
+            size_raw = styles.get("font-size") or ""
+            import re
+            size_match = re.match(r"(\d+)", str(size_raw))
+            size = size_match.group(1) if size_match else "16"
+
+            if not family:
+                continue
+
+            key = (family, str(weight), str(size))
+            if key in seen:
+                continue
+
+            # Check if it matches a system typography
+            matches_system = False
+            for role, (sys_fam, sys_w, sys_s) in system_typo.items():
+                if sys_fam == family and str(sys_w) == str(weight) and str(sys_s) == str(size):
+                    seen[key] = role
+                    matches_system = True
+                    break
+            if matches_system:
+                continue
+
+            # Name based on tag + context
+            text = (node.get("text") or "")[:20].strip()
+            if tag == "h1":
+                name = "Hero Heading"
+            elif tag == "h2":
+                name = f"Section Title"
+            elif tag == "h3":
+                name = "Card Title"
+            elif tag in ("h4", "h5", "h6"):
+                name = "Small Heading"
+            else:
+                name = "Heading"
+
+            # Deduplicate names
+            base = name
+            counter = 2
+            while name in {e["title"] for e in custom_list}:
+                name = f"{base} {counter}"
+                counter += 1
+
+            gid = short_id(name)
+            seen[key] = gid
+            custom_list.append({
+                "_id": gid,
+                "title": name,
+                "typography_typography": "custom",
+                "typography_font_family": family,
+                "typography_font_weight": str(weight),
+                "typography_font_size": {"unit": "px", "size": str(size), "sizes": []},
+            })
+
+    return custom_list, seen
 
 
 def _is_neutral(hex_color: str) -> bool:

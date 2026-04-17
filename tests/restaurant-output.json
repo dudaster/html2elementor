@@ -1,6 +1,6 @@
 [
   {
-    "id": "73ff861",
+    "id": "0667591",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -33,7 +33,7 @@
     },
     "elements": [
       {
-        "id": "51568b3",
+        "id": "e1182c9",
         "elType": "widget",
         "settings": {
           "title": "La Pergola",
@@ -55,7 +55,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "3a2e8a4",
+        "id": "3f85b9e",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -119,7 +119,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "c880e87",
+        "id": "b078ec8",
         "elType": "widget",
         "settings": {
           "text": "Rezervă masă",
@@ -160,7 +160,7 @@
     "isInner": false
   },
   {
-    "id": "e243fb6",
+    "id": "581d030",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -190,7 +190,7 @@
     },
     "elements": [
       {
-        "id": "d4889d0",
+        "id": "81cfef2",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -234,7 +234,7 @@
         "isInner": true
       },
       {
-        "id": "a3c9850",
+        "id": "1bb76d9",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -271,7 +271,7 @@
         },
         "elements": [
           {
-            "id": "1dc5e5c",
+            "id": "26c2606",
             "elType": "widget",
             "settings": {
               "editor": "<p>Restaurant italian autentic</p>",
@@ -305,20 +305,12 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f3fedef",
+            "id": "8f840f6",
             "elType": "widget",
             "settings": {
               "title": "O experiență culinară de neuitat",
               "header_size": "h1",
               "align": "left",
-              "typography_typography": "custom",
-              "typography_font_family": "Playfair Display",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "56",
-                "sizes": []
-              },
-              "typography_font_weight": "700",
               "typography_line_height": {
                 "unit": "em",
                 "size": 1.1,
@@ -333,14 +325,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "title_color": "globals/colors?id=text"
+                "title_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=107f65d"
               }
             },
             "elements": [],
             "widgetType": "heading"
           },
           {
-            "id": "02ec7b7",
+            "id": "e3cb963",
             "elType": "widget",
             "settings": {
               "editor": "<p>Descoperă gusturile autentice ale Italiei într-un ambient rafinat. Fiecare fel de mâncare este pregătit cu pasiune și ingrediente proaspete.</p>",
@@ -373,7 +366,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "fe34a1d",
+            "id": "7faaef7",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -403,7 +396,7 @@
             },
             "elements": [
               {
-                "id": "0fab28e",
+                "id": "7a9541d",
                 "elType": "widget",
                 "settings": {
                   "text": "Vezi meniul",
@@ -441,7 +434,7 @@
                 "widgetType": "button"
               },
               {
-                "id": "a4234b6",
+                "id": "775bb92",
                 "elType": "widget",
                 "settings": {
                   "text": "Rezervă o masă →",
@@ -496,7 +489,7 @@
     "isInner": false
   },
   {
-    "id": "95666bc",
+    "id": "9358a6f",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -524,20 +517,12 @@
     },
     "elements": [
       {
-        "id": "66a4c7e",
+        "id": "9226ece",
         "elType": "widget",
         "settings": {
           "title": "Povestea noastră",
           "header_size": "h2",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Playfair Display",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "42",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -547,14 +532,15 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=text"
+            "title_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=fdbf1fe"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "bb311ae",
+        "id": "d9aa93e",
         "elType": "widget",
         "settings": {
           "editor": "<p>Din 2008, La Pergola aduce în București cele mai bune rețete italiene, transmise din generație în generație. Bucătarul nostru, Marco, a crescut în Toscana și aduce în fiecare preparat o bucată din Italia.</p>",
@@ -582,7 +568,7 @@
     "isInner": false
   },
   {
-    "id": "d043fdf",
+    "id": "4ce5bfc",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -612,20 +598,12 @@
     },
     "elements": [
       {
-        "id": "73d2d15",
+        "id": "7a5a2da",
         "elType": "widget",
         "settings": {
           "title": "Din meniul nostru",
           "header_size": "h2",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Playfair Display",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "42",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -635,14 +613,15 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=text"
+            "title_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=fdbf1fe"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "bd70abd",
+        "id": "183cda9",
         "elType": "widget",
         "settings": {
           "editor": "<p>Preparate selecte, ingrediente de cea mai bună calitate</p>",
@@ -670,7 +649,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "68554da",
+        "id": "3547481",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -710,7 +689,7 @@
         },
         "elements": [
           {
-            "id": "c2a209e",
+            "id": "4ee17de",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -746,7 +725,7 @@
             },
             "elements": [
               {
-                "id": "dd3c2f7",
+                "id": "afbf38d",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>🍝</p>",
@@ -774,20 +753,12 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "c5a32c3",
+                "id": "97c7c26",
                 "elType": "widget",
                 "settings": {
                   "title": "Pasta Carbonara",
                   "header_size": "h3",
                   "align": "center",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Playfair Display",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "24",
-                    "sizes": []
-                  },
-                  "typography_font_weight": "700",
                   "_margin": {
                     "unit": "px",
                     "top": "0",
@@ -797,14 +768,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "title_color": "globals/colors?id=text"
+                    "title_color": "globals/colors?id=text",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
                 },
                 "elements": [],
                 "widgetType": "heading"
               },
               {
-                "id": "d9de77a",
+                "id": "0bc0665",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>45 lei</p>",
@@ -833,7 +805,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "89c18f2",
+                "id": "c5a53c7",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Spaghetti cu guanciale, ou, pecorino romano și piper negru proaspăt.</p>",
@@ -861,7 +833,7 @@
             "isInner": true
           },
           {
-            "id": "2fb5ac7",
+            "id": "9fcf649",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -897,7 +869,7 @@
             },
             "elements": [
               {
-                "id": "0a90d65",
+                "id": "7332e9c",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>🍕</p>",
@@ -925,20 +897,12 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "958c4ae",
+                "id": "19439d5",
                 "elType": "widget",
                 "settings": {
                   "title": "Pizza Margherita",
                   "header_size": "h3",
                   "align": "center",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Playfair Display",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "24",
-                    "sizes": []
-                  },
-                  "typography_font_weight": "700",
                   "_margin": {
                     "unit": "px",
                     "top": "0",
@@ -948,14 +912,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "title_color": "globals/colors?id=text"
+                    "title_color": "globals/colors?id=text",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
                 },
                 "elements": [],
                 "widgetType": "heading"
               },
               {
-                "id": "e017be0",
+                "id": "458c6f4",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>38 lei</p>",
@@ -984,7 +949,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "4bcdac4",
+                "id": "c7abaca",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Aluat dospit 72h, sos San Marzano, mozzarella di bufala, busuioc.</p>",
@@ -1012,7 +977,7 @@
             "isInner": true
           },
           {
-            "id": "6041263",
+            "id": "80f60b5",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1048,7 +1013,7 @@
             },
             "elements": [
               {
-                "id": "77aabaa",
+                "id": "85d2c2b",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>🥩</p>",
@@ -1076,20 +1041,12 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "ce0750c",
+                "id": "c09f8d4",
                 "elType": "widget",
                 "settings": {
                   "title": "Ossobuco alla Milanese",
                   "header_size": "h3",
                   "align": "center",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Playfair Display",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "24",
-                    "sizes": []
-                  },
-                  "typography_font_weight": "700",
                   "_margin": {
                     "unit": "px",
                     "top": "0",
@@ -1099,14 +1056,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "title_color": "globals/colors?id=text"
+                    "title_color": "globals/colors?id=text",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
                 },
                 "elements": [],
                 "widgetType": "heading"
               },
               {
-                "id": "3fb6855",
+                "id": "0eb8ef5",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>72 lei</p>",
@@ -1135,7 +1093,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "e1f5bee",
+                "id": "b02f4de",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Fluier de vitel gătit lent cu legume, vin alb și gremolata de lămâie.</p>",
@@ -1169,7 +1127,7 @@
     "isInner": false
   },
   {
-    "id": "5e3929d",
+    "id": "7fc81e5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1197,20 +1155,12 @@
     },
     "elements": [
       {
-        "id": "d97ea58",
+        "id": "1812070",
         "elType": "widget",
         "settings": {
           "title": "Ce spun oaspeții noștri",
           "header_size": "h2",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Playfair Display",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "42",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -1220,14 +1170,15 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=text"
+            "title_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=fdbf1fe"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "6cd240d",
+        "id": "3c6bf3f",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1254,7 +1205,7 @@
         },
         "elements": [
           {
-            "id": "683dc8c",
+            "id": "a8f4910",
             "elType": "widget",
             "settings": {
               "editor": "<p>Cea mai bună carbonara pe care am mâncat-o în afara Italiei. Absolut extraordinar.</p>",
@@ -1288,7 +1239,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "8ffd15b",
+            "id": "d4a1e0f",
             "elType": "widget",
             "settings": {
               "editor": "<p>— Maria D.</p>",
@@ -1309,7 +1260,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "9c0ae30",
+            "id": "9bd898e",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ambianța este perfectă pentru o seară romantică. Vom reveni cu siguranță.</p>",
@@ -1343,7 +1294,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "e3e5a44",
+            "id": "244ba46",
             "elType": "widget",
             "settings": {
               "editor": "<p>— Andrei &amp; Elena</p>",
@@ -1364,7 +1315,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f3afebd",
+            "id": "272a876",
             "elType": "widget",
             "settings": {
               "editor": "<p>Pizza făcută ca la carte. Aluatul este incredibil. Locul numărul 1 în București.</p>",
@@ -1398,7 +1349,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "e3303dc",
+            "id": "60a53fe",
             "elType": "widget",
             "settings": {
               "editor": "<p>— George P.</p>",
@@ -1425,7 +1376,7 @@
     "isInner": false
   },
   {
-    "id": "fe71977",
+    "id": "37d5de9",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1455,20 +1406,12 @@
     },
     "elements": [
       {
-        "id": "5dc62da",
+        "id": "fce0ea1",
         "elType": "widget",
         "settings": {
           "title": "Rezervă o masă",
           "header_size": "h2",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Playfair Display",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "42",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -1478,14 +1421,15 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=25a8170"
+            "title_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=fdbf1fe"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "bbd73d8",
+        "id": "51629e3",
         "elType": "widget",
         "settings": {
           "editor": "<p>Alătură-te nouă pentru o seară specială. Locuri limitate în weekend.</p>",
@@ -1513,7 +1457,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "56b772f",
+        "id": "eaa3c99",
         "elType": "widget",
         "settings": {
           "text": "Sună: 021 234 5678",
@@ -1554,7 +1498,7 @@
     "isInner": false
   },
   {
-    "id": "c117c29",
+    "id": "4d0e680",
     "elType": "container",
     "settings": {
       "content_width": "full",

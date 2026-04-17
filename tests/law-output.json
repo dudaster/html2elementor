@@ -1,6 +1,6 @@
 [
   {
-    "id": "047ee78",
+    "id": "aad395d",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -41,7 +41,7 @@
     },
     "elements": [
       {
-        "id": "21b6c95",
+        "id": "5de475f",
         "elType": "widget",
         "settings": {
           "title": "Popescu Asociații",
@@ -68,7 +68,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "dd8e8b4",
+        "id": "a7a1ef3",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -132,7 +132,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "b139e60",
+        "id": "8d7906a",
         "elType": "widget",
         "settings": {
           "text": "Consultație gratuită",
@@ -173,7 +173,7 @@
     "isInner": false
   },
   {
-    "id": "a2ccc4c",
+    "id": "1919c20",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -203,7 +203,7 @@
     },
     "elements": [
       {
-        "id": "cb6979a",
+        "id": "a80f4a2",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -240,7 +240,7 @@
         },
         "elements": [
           {
-            "id": "6a62373",
+            "id": "1abe386",
             "elType": "widget",
             "settings": {
               "editor": "<p>Cabinet de avocatură</p>",
@@ -275,20 +275,12 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "06f62d8",
+            "id": "19f96b6",
             "elType": "widget",
             "settings": {
               "title": "Dreptatea ta este misiunea noastră",
               "header_size": "h1",
               "align": "left",
-              "typography_typography": "custom",
-              "typography_font_family": "EB Garamond",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "56",
-                "sizes": []
-              },
-              "typography_font_weight": "400",
               "typography_line_height": {
                 "unit": "em",
                 "size": 1.15,
@@ -303,14 +295,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "title_color": "globals/colors?id=text"
+                "title_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=107f65d"
               }
             },
             "elements": [],
             "widgetType": "heading"
           },
           {
-            "id": "9989ce4",
+            "id": "2e749b3",
             "elType": "widget",
             "settings": {
               "editor": "<p>Cu peste 20 de ani de experiență, oferim servicii juridice de excelență în drept civil, comercial și penal. Fiecare client primește atenția pe care o merită.</p>",
@@ -343,7 +336,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "6bcd8bd",
+            "id": "e6c0440",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -373,7 +366,7 @@
             },
             "elements": [
               {
-                "id": "6c8dfd4",
+                "id": "d673e1e",
                 "elType": "widget",
                 "settings": {
                   "text": "Solicită o consultație",
@@ -411,7 +404,7 @@
                 "widgetType": "button"
               },
               {
-                "id": "d682c2c",
+                "id": "e3e34cf",
                 "elType": "widget",
                 "settings": {
                   "text": "Află mai mult →",
@@ -463,7 +456,7 @@
         "isInner": true
       },
       {
-        "id": "76de634",
+        "id": "5c5fcf5",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -510,7 +503,7 @@
     "isInner": false
   },
   {
-    "id": "744c72e",
+    "id": "948295b",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -540,7 +533,7 @@
     },
     "elements": [
       {
-        "id": "515c25c",
+        "id": "e99cac9",
         "elType": "widget",
         "settings": {
           "editor": "<p>Arii de practică</p>",
@@ -575,20 +568,12 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "62c8668",
+        "id": "8621e27",
         "elType": "widget",
         "settings": {
           "title": "Experiență dovedită în domenii cheie",
           "header_size": "h2",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "EB Garamond",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "42",
-            "sizes": []
-          },
-          "typography_font_weight": "400",
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -598,17 +583,18 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=text"
+            "title_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=fdbf1fe"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "a5041c2",
+        "id": "4f8beb1",
         "elType": "container",
         "settings": {
-          "content_width": "full",
+          "content_width": "boxed",
           "flex_direction": "row",
           "flex_direction_tablet": "row",
           "flex_direction_mobile": "column",
@@ -616,19 +602,19 @@
           "flex_align_items": "stretch",
           "flex_gap": {
             "unit": "px",
-            "size": 16,
-            "column": "16",
-            "row": "16"
+            "size": 32,
+            "column": "32",
+            "row": "32"
           },
           "flex_gap_tablet": {
             "unit": "px",
-            "size": 16,
-            "column": "16",
-            "row": "16"
+            "size": 32,
+            "column": "32",
+            "row": "32"
           },
-          "width": {
-            "unit": "%",
-            "size": 100,
+          "boxed_width": {
+            "unit": "px",
+            "size": 1100,
             "sizes": []
           },
           "padding": {
@@ -645,37 +631,29 @@
         },
         "elements": [
           {
-            "id": "81b19c8",
-            "elType": "widget",
+            "id": "379470c",
+            "elType": "container",
             "settings": {
-              "title_text": "Drept Civil",
-              "description_text": "Contracte, proprietăți, succesiuni, litigii civile și recuperare creanțe.",
-              "position": "top",
-              "text_align": "left",
-              "selected_icon": {
-                "value": "fas fa-star",
-                "library": "fa-solid"
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
               },
-              "title_size": "h3",
-              "__globals__": {
-                "title_color": "globals/colors?id=primary",
-                "description_color": "globals/colors?id=text",
-                "_background_color": "globals/colors?id=25a8170",
-                "_border_color": "globals/colors?id=0705546",
-                "_background_hover_color": "globals/colors?id=25a8170",
-                "typography_typography": "globals/typography?id=text"
-              },
-              "_background_background": "classic",
-              "_border_border": "solid",
-              "_border_width": {
+              "background_background": "classic",
+              "border_border": "solid",
+              "border_width": {
                 "unit": "px",
                 "top": "1",
                 "right": "1",
                 "bottom": "1",
                 "left": "1",
-                "isLinked": false
+                "isLinked": true
               },
-              "_padding": {
+              "padding": {
                 "unit": "px",
                 "top": "40",
                 "right": "40",
@@ -683,76 +661,117 @@
                 "left": "40",
                 "isLinked": true
               },
-              "_box_shadow_hover_box_shadow_type": "yes",
-              "_box_shadow_hover_box_shadow": {
-                "horizontal": 0,
-                "vertical": 12,
-                "blur": 32,
-                "spread": 0,
-                "color": "#00000020"
-              },
-              "_background_hover_background": "classic",
-              "_border_hover_border": "solid",
-              "_border_hover_color": "#c5c1bc",
-              "_background_hover_transition": {
-                "unit": "px",
-                "size": 0.3,
-                "sizes": []
-              },
-              "_element_width": "initial",
-              "_element_width_tablet": "initial",
-              "_element_width_mobile": "initial",
-              "_element_custom_width": {
-                "unit": "%",
-                "size": 32,
-                "sizes": []
-              },
-              "_element_custom_width_tablet": {
-                "unit": "%",
-                "size": 47,
-                "sizes": []
-              },
-              "_element_custom_width_mobile": {
-                "unit": "%",
-                "size": 100,
-                "sizes": []
+              "__globals__": {
+                "background_color": "globals/colors?id=25a8170",
+                "border_color": "globals/colors?id=0705546",
+                "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [],
-            "widgetType": "icon-box"
+            "elements": [
+              {
+                "id": "40073cd",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>01</p>",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "48",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "20",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=primary"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "088acc6",
+                "elType": "widget",
+                "settings": {
+                  "title": "Drept Civil",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=text",
+                    "typography_typography": "globals/typography?id=c5a24ec"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "9e5a2ba",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Contracte, proprietăți, succesiuni, litigii civile și recuperare creanțe.</p>",
+                  "align": "left",
+                  "__globals__": {
+                    "text_color": "globals/colors?id=text"
+                  },
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "15",
+                    "sizes": []
+                  },
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
           },
           {
-            "id": "0179171",
-            "elType": "widget",
+            "id": "de55e50",
+            "elType": "container",
             "settings": {
-              "title_text": "Drept Comercial",
-              "description_text": "Înființări societăți, fuziuni, achiziții, insolvență și dreptul concurenței.",
-              "position": "top",
-              "text_align": "left",
-              "selected_icon": {
-                "value": "fas fa-star",
-                "library": "fa-solid"
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
               },
-              "title_size": "h3",
-              "__globals__": {
-                "title_color": "globals/colors?id=primary",
-                "description_color": "globals/colors?id=text",
-                "_background_color": "globals/colors?id=25a8170",
-                "_border_color": "globals/colors?id=0705546",
-                "_background_hover_color": "globals/colors?id=25a8170",
-                "typography_typography": "globals/typography?id=text"
-              },
-              "_background_background": "classic",
-              "_border_border": "solid",
-              "_border_width": {
+              "background_background": "classic",
+              "border_border": "solid",
+              "border_width": {
                 "unit": "px",
                 "top": "1",
                 "right": "1",
                 "bottom": "1",
                 "left": "1",
-                "isLinked": false
+                "isLinked": true
               },
-              "_padding": {
+              "padding": {
                 "unit": "px",
                 "top": "40",
                 "right": "40",
@@ -760,76 +779,117 @@
                 "left": "40",
                 "isLinked": true
               },
-              "_box_shadow_hover_box_shadow_type": "yes",
-              "_box_shadow_hover_box_shadow": {
-                "horizontal": 0,
-                "vertical": 12,
-                "blur": 32,
-                "spread": 0,
-                "color": "#00000020"
-              },
-              "_background_hover_background": "classic",
-              "_border_hover_border": "solid",
-              "_border_hover_color": "#c5c1bc",
-              "_background_hover_transition": {
-                "unit": "px",
-                "size": 0.3,
-                "sizes": []
-              },
-              "_element_width": "initial",
-              "_element_width_tablet": "initial",
-              "_element_width_mobile": "initial",
-              "_element_custom_width": {
-                "unit": "%",
-                "size": 32,
-                "sizes": []
-              },
-              "_element_custom_width_tablet": {
-                "unit": "%",
-                "size": 47,
-                "sizes": []
-              },
-              "_element_custom_width_mobile": {
-                "unit": "%",
-                "size": 100,
-                "sizes": []
+              "__globals__": {
+                "background_color": "globals/colors?id=25a8170",
+                "border_color": "globals/colors?id=0705546",
+                "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [],
-            "widgetType": "icon-box"
+            "elements": [
+              {
+                "id": "2c0a492",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>02</p>",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "48",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "20",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=primary"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "bbe842f",
+                "elType": "widget",
+                "settings": {
+                  "title": "Drept Comercial",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=text",
+                    "typography_typography": "globals/typography?id=c5a24ec"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "9016372",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Înființări societăți, fuziuni, achiziții, insolvență și dreptul concurenței.</p>",
+                  "align": "left",
+                  "__globals__": {
+                    "text_color": "globals/colors?id=text"
+                  },
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "15",
+                    "sizes": []
+                  },
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
           },
           {
-            "id": "18c697d",
-            "elType": "widget",
+            "id": "bcab839",
+            "elType": "container",
             "settings": {
-              "title_text": "Drept Penal",
-              "description_text": "Apărare în procesele penale, asistență la audieri și căi de atac.",
-              "position": "top",
-              "text_align": "left",
-              "selected_icon": {
-                "value": "fas fa-star",
-                "library": "fa-solid"
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
               },
-              "title_size": "h3",
-              "__globals__": {
-                "title_color": "globals/colors?id=primary",
-                "description_color": "globals/colors?id=text",
-                "_background_color": "globals/colors?id=25a8170",
-                "_border_color": "globals/colors?id=0705546",
-                "_background_hover_color": "globals/colors?id=25a8170",
-                "typography_typography": "globals/typography?id=text"
-              },
-              "_background_background": "classic",
-              "_border_border": "solid",
-              "_border_width": {
+              "background_background": "classic",
+              "border_border": "solid",
+              "border_width": {
                 "unit": "px",
                 "top": "1",
                 "right": "1",
                 "bottom": "1",
                 "left": "1",
-                "isLinked": false
+                "isLinked": true
               },
-              "_padding": {
+              "padding": {
                 "unit": "px",
                 "top": "40",
                 "right": "40",
@@ -837,43 +897,92 @@
                 "left": "40",
                 "isLinked": true
               },
-              "_box_shadow_hover_box_shadow_type": "yes",
-              "_box_shadow_hover_box_shadow": {
-                "horizontal": 0,
-                "vertical": 12,
-                "blur": 32,
-                "spread": 0,
-                "color": "#00000020"
-              },
-              "_background_hover_background": "classic",
-              "_border_hover_border": "solid",
-              "_border_hover_color": "#c5c1bc",
-              "_background_hover_transition": {
-                "unit": "px",
-                "size": 0.3,
-                "sizes": []
-              },
-              "_element_width": "initial",
-              "_element_width_tablet": "initial",
-              "_element_width_mobile": "initial",
-              "_element_custom_width": {
-                "unit": "%",
-                "size": 32,
-                "sizes": []
-              },
-              "_element_custom_width_tablet": {
-                "unit": "%",
-                "size": 47,
-                "sizes": []
-              },
-              "_element_custom_width_mobile": {
-                "unit": "%",
-                "size": 100,
-                "sizes": []
+              "__globals__": {
+                "background_color": "globals/colors?id=25a8170",
+                "border_color": "globals/colors?id=0705546",
+                "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [],
-            "widgetType": "icon-box"
+            "elements": [
+              {
+                "id": "d5fcfa3",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>03</p>",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "48",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "20",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=primary"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "cc61160",
+                "elType": "widget",
+                "settings": {
+                  "title": "Drept Penal",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=text",
+                    "typography_typography": "globals/typography?id=c5a24ec"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "67e785b",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Apărare în procesele penale, asistență la audieri și căi de atac.</p>",
+                  "align": "left",
+                  "__globals__": {
+                    "text_color": "globals/colors?id=text"
+                  },
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "15",
+                    "sizes": []
+                  },
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
           }
         ],
         "isInner": true
@@ -882,7 +991,7 @@
     "isInner": false
   },
   {
-    "id": "e0e54c9",
+    "id": "2981ddd",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -916,7 +1025,7 @@
     },
     "elements": [
       {
-        "id": "a41fe0e",
+        "id": "3148045",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -962,19 +1071,11 @@
         },
         "elements": [
           {
-            "id": "21208ed",
+            "id": "387a9d5",
             "elType": "widget",
             "settings": {
               "editor": "<p>500+</p>",
               "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "EB Garamond",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "56",
-                "sizes": []
-              },
-              "typography_font_weight": "400",
               "_margin": {
                 "unit": "px",
                 "top": "0",
@@ -984,14 +1085,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "text_color": "globals/colors?id=primary"
+                "text_color": "globals/colors?id=primary",
+                "typography_typography": "globals/typography?id=107f65d"
               }
             },
             "elements": [],
             "widgetType": "text-editor"
           },
           {
-            "id": "8d52877",
+            "id": "eb61f32",
             "elType": "widget",
             "settings": {
               "editor": "<p>Cazuri câștigate</p>",
@@ -1020,7 +1122,7 @@
         "isInner": true
       },
       {
-        "id": "3cbdc08",
+        "id": "bcb7580",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1066,19 +1168,11 @@
         },
         "elements": [
           {
-            "id": "6c5e5a4",
+            "id": "a9257a0",
             "elType": "widget",
             "settings": {
               "editor": "<p>98%</p>",
               "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "EB Garamond",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "56",
-                "sizes": []
-              },
-              "typography_font_weight": "400",
               "_margin": {
                 "unit": "px",
                 "top": "0",
@@ -1088,14 +1182,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "text_color": "globals/colors?id=primary"
+                "text_color": "globals/colors?id=primary",
+                "typography_typography": "globals/typography?id=107f65d"
               }
             },
             "elements": [],
             "widgetType": "text-editor"
           },
           {
-            "id": "bb3246e",
+            "id": "229fd7f",
             "elType": "widget",
             "settings": {
               "editor": "<p>Rată de succes</p>",
@@ -1124,7 +1219,7 @@
         "isInner": true
       },
       {
-        "id": "fb70074",
+        "id": "b0e0cf9",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1170,19 +1265,11 @@
         },
         "elements": [
           {
-            "id": "2f8a2de",
+            "id": "e0a91e2",
             "elType": "widget",
             "settings": {
               "editor": "<p>20</p>",
               "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "EB Garamond",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "56",
-                "sizes": []
-              },
-              "typography_font_weight": "400",
               "_margin": {
                 "unit": "px",
                 "top": "0",
@@ -1192,14 +1279,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "text_color": "globals/colors?id=primary"
+                "text_color": "globals/colors?id=primary",
+                "typography_typography": "globals/typography?id=107f65d"
               }
             },
             "elements": [],
             "widgetType": "text-editor"
           },
           {
-            "id": "79a9276",
+            "id": "1d0eb6d",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ani experiență</p>",
@@ -1228,7 +1316,7 @@
         "isInner": true
       },
       {
-        "id": "c2b2ee2",
+        "id": "43a726d",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1274,19 +1362,11 @@
         },
         "elements": [
           {
-            "id": "c409a44",
+            "id": "c67839d",
             "elType": "widget",
             "settings": {
               "editor": "<p>12</p>",
               "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "EB Garamond",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "56",
-                "sizes": []
-              },
-              "typography_font_weight": "400",
               "_margin": {
                 "unit": "px",
                 "top": "0",
@@ -1296,14 +1376,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "text_color": "globals/colors?id=primary"
+                "text_color": "globals/colors?id=primary",
+                "typography_typography": "globals/typography?id=107f65d"
               }
             },
             "elements": [],
             "widgetType": "text-editor"
           },
           {
-            "id": "e76a7e4",
+            "id": "f502372",
             "elType": "widget",
             "settings": {
               "editor": "<p>Avocați în echipă</p>",
@@ -1335,7 +1416,7 @@
     "isInner": false
   },
   {
-    "id": "628abdb",
+    "id": "64b0cd4",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -1365,7 +1446,7 @@
     },
     "elements": [
       {
-        "id": "11f9088",
+        "id": "d7533f8",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1402,7 +1483,7 @@
         },
         "elements": [
           {
-            "id": "5312c44",
+            "id": "cf593a6",
             "elType": "widget",
             "settings": {
               "editor": "<p>Despre cabinet</p>",
@@ -1437,20 +1518,12 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "3701bfb",
+            "id": "3b56a10",
             "elType": "widget",
             "settings": {
               "title": "Tradiție și inovație în practica juridică",
               "header_size": "h2",
               "align": "left",
-              "typography_typography": "custom",
-              "typography_font_family": "EB Garamond",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "38",
-                "sizes": []
-              },
-              "typography_font_weight": "400",
               "_margin": {
                 "unit": "px",
                 "top": "0",
@@ -1460,14 +1533,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "title_color": "globals/colors?id=text"
+                "title_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=099f00b"
               }
             },
             "elements": [],
             "widgetType": "heading"
           },
           {
-            "id": "6fd6907",
+            "id": "37b8ace",
             "elType": "widget",
             "settings": {
               "editor": "<p>Fondat în 2004, cabinetul Popescu & Asociații reunește o echipă de profesioniști dedicați. Combinăm experiența vastă cu abordări moderne pentru a obține cele mai bune rezultate.</p>",
@@ -1500,7 +1574,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "00b0ca7",
+            "id": "9d3b920",
             "elType": "widget",
             "settings": {
               "text": "Cunoaște echipa",
@@ -1551,7 +1625,7 @@
         "isInner": true
       },
       {
-        "id": "b6c3611",
+        "id": "73455b0",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1598,7 +1672,7 @@
     "isInner": false
   },
   {
-    "id": "16594ad",
+    "id": "af59646",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1626,7 +1700,7 @@
     },
     "elements": [
       {
-        "id": "a4e4742",
+        "id": "5be2449",
         "elType": "widget",
         "settings": {
           "editor": "<p>Ce spun clienții</p>",
@@ -1661,20 +1735,12 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "03496ce",
+        "id": "bf1d091",
         "elType": "widget",
         "settings": {
           "title": "Încredere construită prin rezultate",
           "header_size": "h2",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "EB Garamond",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "42",
-            "sizes": []
-          },
-          "typography_font_weight": "400",
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -1684,17 +1750,18 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=text"
+            "title_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=fdbf1fe"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "28dbf2a",
+        "id": "9b7c489",
         "elType": "container",
         "settings": {
-          "content_width": "full",
+          "content_width": "boxed",
           "flex_direction": "row",
           "flex_direction_tablet": "row",
           "flex_direction_mobile": "column",
@@ -1702,19 +1769,19 @@
           "flex_align_items": "stretch",
           "flex_gap": {
             "unit": "px",
-            "size": 16,
-            "column": "16",
-            "row": "16"
+            "size": 32,
+            "column": "32",
+            "row": "32"
           },
           "flex_gap_tablet": {
             "unit": "px",
-            "size": 16,
-            "column": "16",
-            "row": "16"
+            "size": 32,
+            "column": "32",
+            "row": "32"
           },
-          "width": {
-            "unit": "%",
-            "size": 100,
+          "boxed_width": {
+            "unit": "px",
+            "size": 900,
             "sizes": []
           },
           "padding": {
@@ -1731,7 +1798,7 @@
         },
         "elements": [
           {
-            "id": "dd777f8",
+            "id": "b9c16e0",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1767,7 +1834,7 @@
             },
             "elements": [
               {
-                "id": "b359df4",
+                "id": "cb3315c",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>★★★★★</p>",
@@ -1795,7 +1862,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "214dc44",
+                "id": "8572c19",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Profesionalism desăvârșit. Au rezolvat un litigiu comercial complex în timp record. Recomand cu cea mai mare încredere.</p>",
@@ -1829,7 +1896,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "c66eecf",
+                "id": "6300629",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Andrei Ionescu</p>",
@@ -1850,7 +1917,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "fdf19ac",
+                "id": "2bc79b1",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Director General, TechCorp SRL</p>",
@@ -1873,7 +1940,7 @@
             "isInner": true
           },
           {
-            "id": "b2dae2b",
+            "id": "34c2f67",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1909,7 +1976,7 @@
             },
             "elements": [
               {
-                "id": "f8146d8",
+                "id": "3650043",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>★★★★★</p>",
@@ -1937,7 +2004,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "d3b79d5",
+                "id": "1a88a58",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>M-au ghidat cu răbdare prin întregul proces de succesiune. Echipă excepțională, mereu disponibilă.</p>",
@@ -1971,7 +2038,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "d154d9d",
+                "id": "dad6b2d",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Elena Marinescu</p>",
@@ -1992,7 +2059,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "f26a450",
+                "id": "c506fe7",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Client particular</p>",
@@ -2021,7 +2088,7 @@
     "isInner": false
   },
   {
-    "id": "a0b375b",
+    "id": "bd9330c",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2051,20 +2118,12 @@
     },
     "elements": [
       {
-        "id": "3b5178b",
+        "id": "b1d9de7",
         "elType": "widget",
         "settings": {
           "title": "Ai nevoie de consiliere juridică?",
           "header_size": "h2",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "EB Garamond",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "42",
-            "sizes": []
-          },
-          "typography_font_weight": "400",
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -2074,14 +2133,15 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=25a8170"
+            "title_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=fdbf1fe"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "11928a0",
+        "id": "f2e118a",
         "elType": "widget",
         "settings": {
           "editor": "<p>Prima consultație este gratuită. Contactează-ne și discutăm despre cazul tău.</p>",
@@ -2109,7 +2169,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "6ca2fdc",
+        "id": "e1b24a8",
         "elType": "widget",
         "settings": {
           "text": "Programează o întâlnire",
@@ -2150,7 +2210,7 @@
     "isInner": false
   },
   {
-    "id": "fd7e5f8",
+    "id": "7b0881a",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -2183,7 +2243,7 @@
     },
     "elements": [
       {
-        "id": "5a042e1",
+        "id": "daa492a",
         "elType": "widget",
         "settings": {
           "title": "Popescu Asociații",
@@ -2210,7 +2270,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "f7a234c",
+        "id": "557dab0",
         "elType": "widget",
         "settings": {
           "view": "inline",

@@ -34,7 +34,7 @@ def convert(html: str) -> dict[str, Any]:
     capture = parse_html(html)
 
     # Build globals kit from all colors/fonts in the HTML
-    kit_settings, color_map, font_map = build_kit(capture)
+    kit_settings, color_map, font_map, typo_map = build_kit(capture)
 
     sections = detect_sections(capture)
 
@@ -48,7 +48,7 @@ def convert(html: str) -> dict[str, Any]:
     layout = build_layout(mapped)
 
     # Post-pass: replace literal colors/fonts with __globals__ refs
-    _apply_globals(layout, color_map, font_map)
+    _apply_globals(layout, color_map, font_map, typo_map)
 
     return {
         "layout": layout,
@@ -63,13 +63,13 @@ def convert_to_json(html: str, indent: int = 2) -> str:
     return json.dumps(result["layout"], indent=indent, ensure_ascii=False)
 
 
-def _apply_globals(layout: list[dict], color_map: dict, font_map: dict) -> None:
+def _apply_globals(layout: list[dict], color_map: dict, font_map: dict, typo_map: dict | None = None) -> None:
     """Recursively walk layout and replace literal color/font values with globals refs."""
     for element in layout:
-        _apply_globals_to_element(element, color_map, font_map)
+        _apply_globals_to_element(element, color_map, font_map, typo_map)
 
 
-def _apply_globals_to_element(el: dict, color_map: dict, font_map: dict) -> None:
+def _apply_globals_to_element(el: dict, color_map: dict, font_map: dict, typo_map: dict | None = None) -> None:
     settings = el.get("settings", {})
     globals_dict = settings.setdefault("__globals__", {})
 
@@ -100,20 +100,32 @@ def _apply_globals_to_element(el: dict, color_map: dict, font_map: dict) -> None
                 globals_dict[field] = f"globals/colors?id={global_id}"
                 del settings[field]
 
-    # Typography → globals ref based on widget type + tag
+    # Typography → globals ref
     widget_type = el.get("widgetType", "")
     header_size = settings.get("header_size", "")
-    if widget_type == "heading":
-        typo_role = "primary" if header_size in ("h1", "h2") else "secondary"
-    elif widget_type == "button":
-        typo_role = "accent"
-    else:
-        typo_role = "text"
-    # Only set globals ref if we have custom typography that overrides
-    if settings.get("typography_typography") == "custom":
-        # Keep per-widget custom values (extracted from HTML), they're more precise
-        pass
-    else:
+
+    if settings.get("typography_typography") == "custom" and typo_map:
+        # Try to match per-widget typography to a global (system or custom)
+        import re
+        family = settings.get("typography_font_family", "")
+        weight = settings.get("typography_font_weight", "400")
+        size_obj = settings.get("typography_font_size", {})
+        size = str(size_obj.get("size", "16")) if isinstance(size_obj, dict) else "16"
+        key = (family, str(weight), str(size))
+        global_id = typo_map.get(key)
+        if global_id:
+            globals_dict["typography_typography"] = f"globals/typography?id={global_id}"
+            # Remove per-widget values — global handles them
+            for k in ("typography_typography", "typography_font_family",
+                       "typography_font_weight", "typography_font_size"):
+                settings.pop(k, None)
+    elif settings.get("typography_typography") != "custom":
+        if widget_type == "heading":
+            typo_role = "primary" if header_size in ("h1", "h2") else "secondary"
+        elif widget_type == "button":
+            typo_role = "accent"
+        else:
+            typo_role = "text"
         globals_dict["typography_typography"] = f"globals/typography?id={typo_role}"
 
     # Clean empty __globals__
@@ -122,4 +134,4 @@ def _apply_globals_to_element(el: dict, color_map: dict, font_map: dict) -> None
 
     # Recurse into children
     for child in el.get("elements", []):
-        _apply_globals_to_element(child, color_map, font_map)
+        _apply_globals_to_element(child, color_map, font_map, typo_map)
