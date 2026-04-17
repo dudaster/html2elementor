@@ -1,6 +1,6 @@
 [
   {
-    "id": "8d75057",
+    "id": "3eed530",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -34,27 +34,50 @@
     },
     "elements": [
       {
-        "id": "93d2c97",
-        "elType": "widget",
+        "id": "360584c",
+        "elType": "container",
         "settings": {
-          "title": "maya.design",
-          "header_size": "h4",
-          "align": "left",
-          "typography_line_height": {
-            "unit": "em",
-            "size": 1.5,
-            "sizes": []
+          "flex_direction": "row",
+          "flex_align_items": "center",
+          "_flex_size": "shrink",
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
           },
           "__globals__": {
-            "title_color": "globals/colors?id=text",
-            "typography_typography": "globals/typography?id=9dffbf6"
+            "typography_typography": "globals/typography?id=text"
           }
         },
-        "elements": [],
-        "widgetType": "heading"
+        "elements": [
+          {
+            "id": "4cf20c0",
+            "elType": "widget",
+            "settings": {
+              "title": "maya.design",
+              "header_size": "h4",
+              "align": "left",
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.5,
+                "sizes": []
+              },
+              "__globals__": {
+                "title_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=9dffbf6"
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          }
+        ],
+        "isInner": true
       },
       {
-        "id": "232e7ae",
+        "id": "679ddb3",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -81,7 +104,7 @@
         },
         "elements": [
           {
-            "id": "a4ba0d3",
+            "id": "54a4135",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -147,7 +170,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "33af9d9",
+            "id": "ce01a31",
             "elType": "widget",
             "settings": {
               "text": "Book a call",
@@ -197,7 +220,7 @@
     "isInner": false
   },
   {
-    "id": "966bedc",
+    "id": "552fdea",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -225,7 +248,7 @@
     },
     "elements": [
       {
-        "id": "7305649",
+        "id": "4458939",
         "elType": "widget",
         "settings": {
           "title": "Available for new projects",
@@ -263,7 +286,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "c79b95b",
+        "id": "b5230a2",
         "elType": "widget",
         "settings": {
           "title": "Designing products that people love",
@@ -309,7 +332,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "57c84e7",
+        "id": "746732f",
         "elType": "widget",
         "settings": {
           "editor": "<p>Hi, I'm Maya — a product designer and developer helping startups ship beautiful, usable software.</p>",
@@ -342,7 +365,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "e0ec744",
+        "id": "a3bdb92",
         "elType": "widget",
         "settings": {
           "text": "View my work",
@@ -389,7 +412,7 @@
     "isInner": false
   },
   {
-    "id": "d5fb42d",
+    "id": "9ae4bfb",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -419,7 +442,7 @@
     },
     "elements": [
       {
-        "id": "195c78f",
+        "id": "cbf16f9",
         "elType": "widget",
         "settings": {
           "title": "What I do",
@@ -459,7 +482,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "6d5e20a",
+        "id": "36dbb6c",
         "elType": "widget",
         "settings": {
           "editor": "<p>End-to-end product work from strategy to shipped pixels.</p>",
@@ -492,7 +515,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "a72d69e",
+        "id": "0b2947a",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -532,7 +555,7 @@
         },
         "elements": [
           {
-            "id": "87bfedf",
+            "id": "a8509b6",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -578,7 +601,7 @@
             },
             "elements": [
               {
-                "id": "a4cc54b",
+                "id": "74b5160",
                 "elType": "widget",
                 "settings": {
                   "title": "Product Design",
@@ -606,7 +629,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "9fba7db",
+                "id": "c7d7aba",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>From user research to polished interfaces. I work closely with founders to turn ideas into products.</p>",
@@ -628,7 +651,7 @@
             "isInner": true
           },
           {
-            "id": "a27d28c",
+            "id": "7c56c52",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -674,7 +697,7 @@
             },
             "elements": [
               {
-                "id": "e02fabc",
+                "id": "3456262",
                 "elType": "widget",
                 "settings": {
                   "title": "Web Development",
@@ -702,7 +725,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "bba6daa",
+                "id": "cf30ae1",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Modern frontend with React, Next.js, and TypeScript. Clean code, fast sites, happy teams.</p>",
@@ -724,7 +747,7 @@
             "isInner": true
           },
           {
-            "id": "3ea5cb5",
+            "id": "7d4de4d",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -770,7 +793,7 @@
             },
             "elements": [
               {
-                "id": "53f80f7",
+                "id": "f9e1859",
                 "elType": "widget",
                 "settings": {
                   "title": "Brand Systems",
@@ -798,7 +821,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c1e5db9",
+                "id": "1fd3608",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Visual identity, component libraries, and design tokens that scale across your product.</p>",
@@ -826,7 +849,7 @@
     "isInner": false
   },
   {
-    "id": "387241d",
+    "id": "604e5a7",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -856,7 +879,7 @@
     },
     "elements": [
       {
-        "id": "b675680",
+        "id": "eb6bfec",
         "elType": "widget",
         "settings": {
           "editor": "<p>Track record</p>",
@@ -895,7 +918,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "c2613b3",
+        "id": "281a6fc",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -922,7 +945,7 @@
         },
         "elements": [
           {
-            "id": "8a8438f",
+            "id": "ac8ddfb",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -954,7 +977,7 @@
             },
             "elements": [
               {
-                "id": "ef6b0c0",
+                "id": "fecb439",
                 "elType": "widget",
                 "settings": {
                   "title": "47",
@@ -982,7 +1005,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c9a7b3f",
+                "id": "a8061cf",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Projects shipped</p>",
@@ -1004,7 +1027,7 @@
             "isInner": true
           },
           {
-            "id": "8e1480d",
+            "id": "e3a9c7e",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1036,7 +1059,7 @@
             },
             "elements": [
               {
-                "id": "084c763",
+                "id": "19a2072",
                 "elType": "widget",
                 "settings": {
                   "title": "12",
@@ -1064,7 +1087,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "2eca4d2",
+                "id": "75adf7b",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Startups helped</p>",
@@ -1086,7 +1109,7 @@
             "isInner": true
           },
           {
-            "id": "e23c8f7",
+            "id": "736894b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1118,7 +1141,7 @@
             },
             "elements": [
               {
-                "id": "d484996",
+                "id": "530a83d",
                 "elType": "widget",
                 "settings": {
                   "title": "8y",
@@ -1146,7 +1169,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "bebdcff",
+                "id": "9622169",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Experience</p>",
@@ -1174,7 +1197,7 @@
     "isInner": false
   },
   {
-    "id": "3e5c049",
+    "id": "de0f960",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -1202,7 +1225,7 @@
     },
     "elements": [
       {
-        "id": "a9e6e29",
+        "id": "c42dd5b",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1239,7 +1262,7 @@
         },
         "elements": [
           {
-            "id": "47dbb82",
+            "id": "0c4bee6",
             "elType": "widget",
             "settings": {
               "title": "Let's work together",
@@ -1279,7 +1302,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "a093aa5",
+            "id": "3c0ce9f",
             "elType": "widget",
             "settings": {
               "editor": "<p>Got a project in mind? I'd love to hear about it.</p>",
@@ -1306,7 +1329,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "072f6a5",
+            "id": "142243d",
             "elType": "widget",
             "settings": {
               "text": "Start a project",
@@ -1356,7 +1379,7 @@
     "isInner": false
   },
   {
-    "id": "b82cfe5",
+    "id": "b778920",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1386,7 +1409,7 @@
     },
     "elements": [
       {
-        "id": "e0efecb",
+        "id": "a891f7f",
         "elType": "widget",
         "settings": {
           "title": "maya.design",
@@ -1414,7 +1437,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "dc2d492",
+        "id": "18dc220",
         "elType": "widget",
         "settings": {
           "editor": "© 2026 Maya Chen. Crafted with care.",

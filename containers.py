@@ -678,6 +678,18 @@ def _build_header_elements(section: dict) -> list[dict]:
         or section.get("styles", {}).get("display") == "flex"
     )
     if is_flex_header and nav_icon_list and nav_cta:
+        # Wrap logo in its own container too for symmetry
+        if elements and elements[0].get("widgetType") in ("heading", "image"):
+            logo_widget = elements.pop(0)
+            elements.insert(0, {
+                "__inner_container__": True,
+                "settings": {
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "_flex_size": "shrink",
+                },
+                "children": [logo_widget],
+            })
         elements.append({
             "__inner_container__": True,
             "settings": {
