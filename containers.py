@@ -655,16 +655,45 @@ def _build_header_elements(section: dict) -> list[dict]:
         if links_parent:
             from .widgets import _apply_margin as _am
             _am(icon_list_settings, links_parent.get("styles", {}))
-        elements.append({"widgetType": "icon-list", "settings": icon_list_settings})
+        nav_icon_list = {"widgetType": "icon-list", "settings": icon_list_settings}
+    else:
+        nav_icon_list = None
 
-    # Emit button-like links in nav as actual button widgets
+    nav_cta = None
     for n in _iter(section):
         if n.get("tag") == "a" and looks_like_button(n):
             from .widgets import button_widget
             txt = (n.get("text") or _first_text(n)).strip()
             if txt:
-                elements.append(button_widget(n, txt))
+                nav_cta = button_widget(n, txt)
                 break
+
+    # For flex-row headers with BOTH nav + CTA: group them in a nested row
+    # so they stay together on the right (HTML <nav> semantics).
+    # Use _element_custom_width: auto + content_width not set so container shrinks.
+    sec_tag_local = section.get("tag", "")
+    is_flex_header = (
+        sec_tag_local in ("header", "nav")
+        or section.get("styles", {}).get("display") == "flex"
+    )
+    if is_flex_header and nav_icon_list and nav_cta:
+        elements.append({
+            "__inner_container__": True,
+            "settings": {
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_justify_content": "flex-end",
+                "flex_gap": {"unit": "px", "size": 20, "column": "20", "row": "20"},
+                "_flex_size": "none",
+                "_element_custom_width": {"unit": "%", "size": 70, "sizes": []},
+            },
+            "children": [nav_icon_list, nav_cta],
+        })
+    else:
+        if nav_icon_list:
+            elements.append(nav_icon_list)
+        if nav_cta:
+            elements.append(nav_cta)
 
     # Emit remaining text divs (copyright, taglines) not captured above
     collected_texts = set()
