@@ -75,9 +75,16 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
         cards = _emit_card_grid(node, consumed)
         if cards:
             grid_cols = _get_grid_columns(node)
-            if grid_cols:
+            grid_max_width = px_to_int(node.get("styles", {}).get("max-width"))
+            grid_gap = px_to_int(node.get("styles", {}).get("gap"))
+            if grid_cols or grid_max_width or grid_gap:
                 for card in cards:
-                    card["_grid_cols"] = grid_cols
+                    if grid_cols:
+                        card["_grid_cols"] = grid_cols
+                    if grid_max_width:
+                        card["_grid_max_width"] = grid_max_width
+                    if grid_gap:
+                        card["_grid_gap"] = grid_gap
             out.extend(cards)
             return
 

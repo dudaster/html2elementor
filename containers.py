@@ -405,13 +405,14 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                     break
             if len(group) >= 2:
                 grid_cols = group[0].get("_grid_cols") if group else None
+                grid_max_width = group[0].get("_grid_max_width") if group else None
+                grid_gap = group[0].get("_grid_gap") if group else None
                 if grid_cols and grid_cols < len(group):
-                    # Multi-row grid: split into rows of grid_cols items
                     for chunk_start in range(0, len(group), grid_cols):
                         chunk = group[chunk_start:chunk_start + grid_cols]
-                        out.append(_wrap_row(chunk))
+                        out.append(_wrap_row(chunk, grid_max_width, grid_gap))
                 else:
-                    out.append(_wrap_row(group))
+                    out.append(_wrap_row(group, grid_max_width, grid_gap))
                 i = j
                 continue
         # Group 2+ consecutive buttons into an inline row
@@ -448,7 +449,7 @@ def _wrap_buttons(buttons: list[dict], parent_align: str = "flex-start") -> dict
     }
 
 
-def _wrap_row(widgets: list[dict]) -> dict:
+def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None = None) -> dict:
     n = max(len(widgets), 1)
     desktop_pct = int((100 - (n - 1) * 2) / n)
 
@@ -469,19 +470,26 @@ def _wrap_row(widgets: list[dict]) -> dict:
         w_copy["settings"] = s
         widgets_with_widths.append(w_copy)
 
+    gap_px = gap or 16
+    gap_str = str(gap_px)
+    row_settings: dict = {
+        "content_width": "boxed" if max_width else "full",
+        "flex_direction": "row",
+        "flex_direction_tablet": "row",
+        "flex_direction_mobile": "column",
+        "flex_justify_content": "center",
+        "flex_align_items": "stretch",
+        "flex_gap": {"unit": "px", "size": gap_px, "column": gap_str, "row": gap_str},
+        "flex_gap_tablet": {"unit": "px", "size": gap_px, "column": gap_str, "row": gap_str},
+    }
+    if max_width:
+        row_settings["boxed_width"] = {"unit": "px", "size": max_width, "sizes": []}
+    else:
+        row_settings["width"] = {"unit": "%", "size": 100, "sizes": []}
+
     return {
         "__inner_container__": True,
-        "settings": {
-            "content_width": "full",
-            "flex_direction": "row",
-            "flex_direction_tablet": "row",
-            "flex_direction_mobile": "column",
-            "flex_justify_content": "center",
-            "flex_align_items": "stretch",
-            "flex_gap": {"unit": "px", "size": 16, "column": "16", "row": "16"},
-            "flex_gap_tablet": {"unit": "px", "size": 16, "column": "16", "row": "16"},
-            "width": {"unit": "%", "size": 100, "sizes": []},
-        },
+        "settings": row_settings,
         "children": widgets_with_widths,
     }
 
