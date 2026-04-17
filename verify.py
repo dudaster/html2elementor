@@ -198,13 +198,16 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
 
     if wtype == "heading":
         title = _strip_html(s.get("title", ""))
-        # Headings emitted with header_size: "div" (emojis, numbers) — also search div/span
+        # Try h1-h6 first, fall back to div/span/p (for badges, short-text headings)
         header_size = s.get("header_size", "")
         if header_size == "div":
             tags = {"div", "span", "p"}
         else:
             tags = {"h1", "h2", "h3", "h4", "h5", "h6"}
         node = _find_html_node(html_tree, title, tags)
+        if not node and (s.get("_background_background") or s.get("_border_radius")):
+            # Fallback for badges (heading widget with bg/radius styling, source is usually a div)
+            node = _find_html_node(html_tree, title, {"div", "span"})
         if not node:
             return
         tag = node.get("tag", "")
