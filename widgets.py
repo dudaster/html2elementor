@@ -146,12 +146,9 @@ def is_icon_box(node: dict) -> bool:
         t = c.get("tag")
         if t == "svg" or (t == "i" and "icon" in " ".join(c.get("classes", [])).lower()):
             has_icon = True
-        # Emoji/icon in a div/span: short text (1-4 chars) or has "icon" class
-        if t in ("div", "span") and not c.get("children"):
-            txt = (c.get("text") or "").strip()
-            cls = " ".join(c.get("classes", [])).lower()
-            if (txt and len(txt) <= 4) or "icon" in cls:
-                has_icon = True
+        # Only real icon elements (font-awesome <i>, not emoji divs)
+        if t == "i" and "icon" in " ".join(c.get("classes", [])).lower():
+            has_icon = True
         if t in HEADING_TAGS:
             has_heading = True
         if t in TEXT_TAGS:
