@@ -294,6 +294,30 @@ def _section_settings(section: dict) -> dict[str, Any]:
             if bc:
                 settings["border_color"] = bc
 
+    # Section border-radius
+    br = styles.get("border-radius") or styles.get("border-top-left-radius") or ""
+    br_val = px_to_int(br) if br else None
+    if br_val:
+        settings["border_radius"] = {
+            "unit": "px",
+            "top": str(br_val), "right": str(br_val),
+            "bottom": str(br_val), "left": str(br_val),
+            "isLinked": True,
+        }
+
+    # Section margin (e.g., CTA with margin: 0 48px 48px)
+    mt = px_to_int(styles.get("margin-top", "0"))
+    mr = px_to_int(styles.get("margin-right", "0"))
+    mb = px_to_int(styles.get("margin-bottom", "0"))
+    ml = px_to_int(styles.get("margin-left", "0"))
+    if mt or mr or mb or ml:
+        settings["margin"] = {
+            "unit": "px",
+            "top": str(mt or 0), "right": str(mr or 0),
+            "bottom": str(mb or 0), "left": str(ml or 0),
+            "isLinked": False,
+        }
+
     return settings
 
 
