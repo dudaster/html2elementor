@@ -630,9 +630,16 @@ def _build_header_elements(section: dict) -> list[dict]:
             if n.get("tag") == "a" and n.get("href") and not looks_like_button(n):
                 first_link_node = n
                 break
+        # Read spacing between links from CSS (margin-left or margin-right)
+        spacing = 20
+        if first_link_node:
+            ls = first_link_node.get("styles", {})
+            ml = px_to_int(ls.get("margin-left"))
+            mr = px_to_int(ls.get("margin-right"))
+            spacing = ml or mr or 20
         icon_list_settings: dict = {
             "view": "inline",
-            "space_between": {"unit": "px", "size": 20, "sizes": []},
+            "space_between": {"unit": "px", "size": spacing, "sizes": []},
             "icon_list": [
                 {"text": txt, "link": {"url": href, "is_external": False},
                  "selected_icon": {"value": "", "library": ""}}

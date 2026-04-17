@@ -241,6 +241,18 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
                                    "nav-link.color", issues)
                         _cmp_size(s.get("icon_typography_font_size"),
                                   css.get("font-size", ""), "nav-link.font-size", issues)
+                        # Check spacing between links (CSS margin-left/right → space_between)
+                        css_spacing = (px_to_int(css.get("margin-left", "")) or
+                                       px_to_int(css.get("margin-right", "")))
+                        sb = s.get("space_between")
+                        el_spacing = None
+                        if isinstance(sb, dict):
+                            try:
+                                el_spacing = int(float(sb.get("size")))
+                            except (ValueError, TypeError):
+                                pass
+                        if css_spacing and el_spacing is not None and not _close(el_spacing, css_spacing, SPACING_TOLERANCE):
+                            issues.append(f"nav-link.spacing: elementor={el_spacing}px vs css={css_spacing}px")
                         break
 
 
