@@ -155,6 +155,26 @@ def _ancestor_bg_is_dark(node: dict, tree: dict) -> bool:
     return False
 
 
+def _check_margin(widget: dict, node: dict, label: str, issues: list):
+    """Check if widget's _margin matches CSS margin properties."""
+    css = node.get("styles", {})
+    css_mb = px_to_int(css.get("margin-bottom", ""))
+    css_mt = px_to_int(css.get("margin-top", ""))
+    s = widget.get("settings", {})
+    m = s.get("_margin") or {}
+    def parse_side(v):
+        try:
+            return int(float(v))
+        except (ValueError, TypeError):
+            return 0
+    el_mb = parse_side(m.get("bottom", "0")) if m else 0
+    el_mt = parse_side(m.get("top", "0")) if m else 0
+    if css_mb and not _close(el_mb, css_mb, SPACING_TOLERANCE):
+        issues.append(f"{label}.margin-bottom: elementor={el_mb}px vs css={css_mb}px")
+    if css_mt and not _close(el_mt, css_mt, SPACING_TOLERANCE):
+        issues.append(f"{label}.margin-top: elementor={el_mt}px vs css={css_mt}px")
+
+
 def _check_max_width(widget: dict, node: dict, label: str, issues: list):
     """Check if widget's _element_custom_width matches CSS max-width."""
     s = widget.get("settings", {})
@@ -199,6 +219,7 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
             issues.append(f"heading[{tag}]\"{title[:30]}\".font-size: elementor={el_size}px vs css={css_size}px")
         _check_max_width(widget, node, f"heading[{tag}]\"{title[:30]}\"", issues)
+        _check_margin(widget, node, f"heading[{tag}]\"{title[:30]}\"", issues)
 
     elif wtype == "text-editor":
         text = _strip_html(s.get("editor", ""))[:40]
@@ -217,6 +238,7 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
             issues.append(f"text\"{text[:30]}\".font-size: elementor={el_size}px vs css={css_size}px")
         _check_max_width(widget, node, f"text\"{text[:30]}\"", issues)
+        _check_margin(widget, node, f"text\"{text[:30]}\"", issues)
 
     elif wtype == "button":
         text = s.get("text", "")

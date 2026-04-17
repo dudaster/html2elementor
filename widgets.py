@@ -691,6 +691,7 @@ def _badge_widget(node: dict) -> dict:
     # Badge wrapper styling (bg, border, radius)
     from .styles import apply_card_styling
     apply_card_styling(settings, styles)
+    _apply_margin(settings, styles)
     return {"widgetType": "heading", "settings": settings}
 
 
