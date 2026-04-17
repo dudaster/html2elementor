@@ -1,6 +1,6 @@
 [
   {
-    "id": "979617c",
+    "id": "fd3c0a0",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -33,7 +33,7 @@
     },
     "elements": [
       {
-        "id": "9b27154",
+        "id": "2a3d03d",
         "elType": "widget",
         "settings": {
           "title": "La Pergola",
@@ -48,7 +48,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "899b906",
+        "id": "bd912fc",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -112,7 +112,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "f3509fb",
+        "id": "195f008",
         "elType": "widget",
         "settings": {
           "text": "Rezervă masă",
@@ -146,7 +146,7 @@
     "isInner": false
   },
   {
-    "id": "89a841d",
+    "id": "1a0d1fe",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -176,7 +176,7 @@
     },
     "elements": [
       {
-        "id": "a4a48c6",
+        "id": "dbf765b",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -220,7 +220,7 @@
         "isInner": true
       },
       {
-        "id": "c567af0",
+        "id": "cbfc88a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -257,7 +257,7 @@
         },
         "elements": [
           {
-            "id": "176ecec",
+            "id": "3e6f018",
             "elType": "widget",
             "settings": {
               "editor": "<p>Restaurant italian autentic</p>",
@@ -285,7 +285,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "8f65b9f",
+            "id": "6852dae",
             "elType": "widget",
             "settings": {
               "title": "O experiență culinară de neuitat",
@@ -313,7 +313,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "7277131",
+            "id": "7765794",
             "elType": "widget",
             "settings": {
               "editor": "<p>Descoperă gusturile autentice ale Italiei într-un ambient rafinat. Fiecare fel de mâncare este pregătit cu pasiune și ingrediente proaspete.</p>",
@@ -340,7 +340,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "e24f324",
+            "id": "9288962",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -370,7 +370,7 @@
             },
             "elements": [
               {
-                "id": "1dc49d1",
+                "id": "5f0a64f",
                 "elType": "widget",
                 "settings": {
                   "text": "Vezi meniul",
@@ -401,7 +401,7 @@
                 "widgetType": "button"
               },
               {
-                "id": "a6571d3",
+                "id": "b050916",
                 "elType": "widget",
                 "settings": {
                   "text": "Rezervă o masă →",
@@ -449,7 +449,7 @@
     "isInner": false
   },
   {
-    "id": "c003e7d",
+    "id": "ff5ad12",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -477,7 +477,7 @@
     },
     "elements": [
       {
-        "id": "39a00ad",
+        "id": "6de9f2f",
         "elType": "widget",
         "settings": {
           "title": "Povestea noastră",
@@ -500,7 +500,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "6425638",
+        "id": "8b96890",
         "elType": "widget",
         "settings": {
           "editor": "<p>Din 2008, La Pergola aduce în București cele mai bune rețete italiene, transmise din generație în generație. Bucătarul nostru, Marco, a crescut în Toscana și aduce în fiecare preparat o bucată din Italia.</p>",
@@ -522,7 +522,7 @@
     "isInner": false
   },
   {
-    "id": "27e8698",
+    "id": "7593bb5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -552,7 +552,7 @@
     },
     "elements": [
       {
-        "id": "b3ce80e",
+        "id": "d46764c",
         "elType": "widget",
         "settings": {
           "title": "Din meniul nostru",
@@ -575,7 +575,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "289636f",
+        "id": "b146044",
         "elType": "widget",
         "settings": {
           "editor": "<p>Preparate selecte, ingrediente de cea mai bună calitate</p>",
@@ -597,7 +597,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "bca0370",
+        "id": "f4c7c25",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -637,7 +637,7 @@
         },
         "elements": [
           {
-            "id": "538510c",
+            "id": "6eb68bc",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -673,7 +673,7 @@
             },
             "elements": [
               {
-                "id": "68ed9ce",
+                "id": "f0248ac",
                 "elType": "widget",
                 "settings": {
                   "title": "🍝",
@@ -696,7 +696,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ebedbc9",
+                "id": "356c1bf",
                 "elType": "widget",
                 "settings": {
                   "title": "Pasta Carbonara",
@@ -719,7 +719,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "7230c8f",
+                "id": "ac30f47",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>45 lei</p>",
@@ -741,7 +741,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "08259ac",
+                "id": "97ecb0d",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Spaghetti cu guanciale, ou, pecorino romano și piper negru proaspăt.</p>",
@@ -763,7 +763,7 @@
             "isInner": true
           },
           {
-            "id": "188fba0",
+            "id": "14f2ae8",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -799,7 +799,7 @@
             },
             "elements": [
               {
-                "id": "9604c66",
+                "id": "90dcf50",
                 "elType": "widget",
                 "settings": {
                   "title": "🍕",
@@ -822,7 +822,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "472924b",
+                "id": "414bb12",
                 "elType": "widget",
                 "settings": {
                   "title": "Pizza Margherita",
@@ -845,7 +845,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d54ee05",
+                "id": "2e0932b",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>38 lei</p>",
@@ -867,7 +867,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "fb32dea",
+                "id": "0620111",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Aluat dospit 72h, sos San Marzano, mozzarella di bufala, busuioc.</p>",
@@ -889,7 +889,7 @@
             "isInner": true
           },
           {
-            "id": "14978fc",
+            "id": "9523001",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -925,7 +925,7 @@
             },
             "elements": [
               {
-                "id": "19d8220",
+                "id": "310762e",
                 "elType": "widget",
                 "settings": {
                   "title": "🥩",
@@ -948,7 +948,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "294b8d5",
+                "id": "2f6825f",
                 "elType": "widget",
                 "settings": {
                   "title": "Ossobuco alla Milanese",
@@ -971,7 +971,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "23fdeb3",
+                "id": "eaad465",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>72 lei</p>",
@@ -993,7 +993,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "c285e7a",
+                "id": "121d4a4",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Fluier de vitel gătit lent cu legume, vin alb și gremolata de lămâie.</p>",
@@ -1021,7 +1021,7 @@
     "isInner": false
   },
   {
-    "id": "ea964e9",
+    "id": "51ef7be",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1049,7 +1049,7 @@
     },
     "elements": [
       {
-        "id": "7eb1e26",
+        "id": "ce1bb67",
         "elType": "widget",
         "settings": {
           "title": "Ce spun oaspeții noștri",
@@ -1072,7 +1072,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "f8673df",
+        "id": "b56d5cb",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1099,7 +1099,7 @@
         },
         "elements": [
           {
-            "id": "f1ff446",
+            "id": "0fd15f3",
             "elType": "widget",
             "settings": {
               "editor": "<p>Cea mai bună carbonara pe care am mâncat-o în afara Italiei. Absolut extraordinar.</p>",
@@ -1127,7 +1127,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "b52e980",
+            "id": "0be4b1d",
             "elType": "widget",
             "settings": {
               "editor": "<p>— Maria D.</p>",
@@ -1141,7 +1141,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "859062d",
+            "id": "7f622c4",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ambianța este perfectă pentru o seară romantică. Vom reveni cu siguranță.</p>",
@@ -1169,7 +1169,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f8eae63",
+            "id": "79fb154",
             "elType": "widget",
             "settings": {
               "editor": "<p>— Andrei &amp; Elena</p>",
@@ -1183,7 +1183,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "a5b4c3b",
+            "id": "db8ceee",
             "elType": "widget",
             "settings": {
               "editor": "<p>Pizza făcută ca la carte. Aluatul este incredibil. Locul numărul 1 în București.</p>",
@@ -1211,7 +1211,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "d529cd8",
+            "id": "f254055",
             "elType": "widget",
             "settings": {
               "editor": "<p>— George P.</p>",
@@ -1231,7 +1231,7 @@
     "isInner": false
   },
   {
-    "id": "0a5ddfc",
+    "id": "fa05b90",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1261,7 +1261,7 @@
     },
     "elements": [
       {
-        "id": "6ac89a2",
+        "id": "bd511b9",
         "elType": "widget",
         "settings": {
           "title": "Rezervă o masă",
@@ -1284,7 +1284,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "d64b587",
+        "id": "8ebad6b",
         "elType": "widget",
         "settings": {
           "editor": "<p>Alătură-te nouă pentru o seară specială. Locuri limitate în weekend.</p>",
@@ -1306,7 +1306,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "cc54cf1",
+        "id": "60d6037",
         "elType": "widget",
         "settings": {
           "text": "Sună: 021 234 5678",
@@ -1340,7 +1340,7 @@
     "isInner": false
   },
   {
-    "id": "a801a03",
+    "id": "3276e10",
     "elType": "container",
     "settings": {
       "content_width": "full",

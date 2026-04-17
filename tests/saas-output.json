@@ -1,6 +1,6 @@
 [
   {
-    "id": "63e7998",
+    "id": "a23dc32",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -43,7 +43,7 @@
     },
     "elements": [
       {
-        "id": "6be78ec",
+        "id": "aa45e55",
         "elType": "widget",
         "settings": {
           "title": "CloudSync",
@@ -58,7 +58,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "7f7c0dc",
+        "id": "55187d4",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -111,7 +111,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "8115d98",
+        "id": "ecc45b2",
         "elType": "widget",
         "settings": {
           "text": "Get Started",
@@ -145,7 +145,7 @@
     "isInner": false
   },
   {
-    "id": "08a2a5f",
+    "id": "13d369e",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -182,7 +182,7 @@
     },
     "elements": [
       {
-        "id": "3ea8e55",
+        "id": "89f2a9d",
         "elType": "widget",
         "settings": {
           "title": "✨ Now with AI-powered sync",
@@ -215,7 +215,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "183a14b",
+        "id": "a6fa1b5",
         "elType": "widget",
         "settings": {
           "title": "Sync your data everywhere , effortlessly",
@@ -243,7 +243,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "2816bce",
+        "id": "2d451e0",
         "elType": "widget",
         "settings": {
           "editor": "<p>CloudSync keeps your files, databases, and APIs in perfect harmony across all your environments.</p>",
@@ -270,7 +270,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "2df1ed3",
+        "id": "4613a05",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -297,7 +297,7 @@
         },
         "elements": [
           {
-            "id": "868f903",
+            "id": "760702a",
             "elType": "widget",
             "settings": {
               "text": "Start Free Trial",
@@ -328,7 +328,7 @@
             "widgetType": "button"
           },
           {
-            "id": "06fb01d",
+            "id": "ae5e737",
             "elType": "widget",
             "settings": {
               "text": "Watch Demo",
@@ -365,7 +365,7 @@
     "isInner": false
   },
   {
-    "id": "c6d701e",
+    "id": "b77cf1d",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -393,7 +393,7 @@
     },
     "elements": [
       {
-        "id": "f5729bb",
+        "id": "a57e488",
         "elType": "widget",
         "settings": {
           "editor": "<p>Trusted by 10,000+ teams worldwide</p>",
@@ -421,7 +421,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "d4e652e",
+        "id": "de192a6",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -448,7 +448,7 @@
         },
         "elements": [
           {
-            "id": "9d42caf",
+            "id": "c4046ec",
             "elType": "widget",
             "settings": {
               "editor": "<p>Stripe</p>",
@@ -462,7 +462,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "10185be",
+            "id": "f069f0d",
             "elType": "widget",
             "settings": {
               "editor": "<p>Vercel</p>",
@@ -476,7 +476,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f31f413",
+            "id": "1c075ac",
             "elType": "widget",
             "settings": {
               "editor": "<p>Linear</p>",
@@ -490,7 +490,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "92296f6",
+            "id": "f6ecb72",
             "elType": "widget",
             "settings": {
               "editor": "<p>Notion</p>",
@@ -504,7 +504,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "a3c05f8",
+            "id": "419b494",
             "elType": "widget",
             "settings": {
               "editor": "<p>Figma</p>",
@@ -524,7 +524,7 @@
     "isInner": false
   },
   {
-    "id": "1ad55de",
+    "id": "dca59de",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -554,7 +554,7 @@
     },
     "elements": [
       {
-        "id": "53a6126",
+        "id": "c5ccc55",
         "elType": "widget",
         "settings": {
           "title": "Everything you need to stay in sync",
@@ -577,7 +577,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "6a2612d",
+        "id": "3f80f0d",
         "elType": "widget",
         "settings": {
           "editor": "<p>Powerful features designed for modern development teams.</p>",
@@ -599,7 +599,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "f424c66",
+        "id": "efaa2e6",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -639,7 +639,7 @@
         },
         "elements": [
           {
-            "id": "0a93ffe",
+            "id": "ae8648e",
             "elType": "widget",
             "settings": {
               "title_text": "Real-time Sync",
@@ -748,7 +748,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "0ea4f55",
+            "id": "4146333",
             "elType": "widget",
             "settings": {
               "title_text": "Version Control",
@@ -857,7 +857,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "9aa7308",
+            "id": "1108c25",
             "elType": "widget",
             "settings": {
               "title_text": "Team Collaboration",
@@ -972,7 +972,7 @@
     "isInner": false
   },
   {
-    "id": "118de0b",
+    "id": "d290c77",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1000,7 +1000,7 @@
     },
     "elements": [
       {
-        "id": "84df64b",
+        "id": "091e1c5",
         "elType": "widget",
         "settings": {
           "title": "Simple, transparent pricing",
@@ -1023,7 +1023,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "9d0cb6f",
+        "id": "e9447fd",
         "elType": "widget",
         "settings": {
           "editor": "<p>No hidden fees. Cancel anytime.</p>",
@@ -1045,7 +1045,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "3f20360",
+        "id": "d2771f8",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1072,7 +1072,7 @@
         },
         "elements": [
           {
-            "id": "31c71aa",
+            "id": "a0688db",
             "elType": "widget",
             "settings": {
               "title": "Starter",
@@ -1095,7 +1095,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "31a15e0",
+            "id": "ef51113",
             "elType": "widget",
             "settings": {
               "editor": "<p>/month</p>",
@@ -1117,7 +1117,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "84f1636",
+            "id": "f73f86b",
             "elType": "widget",
             "settings": {
               "editor": "<p>Perfect for small projects</p>",
@@ -1139,7 +1139,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "11b4d05",
+            "id": "3d63539",
             "elType": "widget",
             "settings": {
               "text": "Get Started",
@@ -1180,7 +1180,7 @@
             "widgetType": "button"
           },
           {
-            "id": "1b9531c",
+            "id": "001394a",
             "elType": "widget",
             "settings": {
               "title": "Pro",
@@ -1203,7 +1203,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "c4cb55f",
+            "id": "7a69c2e",
             "elType": "widget",
             "settings": {
               "editor": "<p>/month</p>",
@@ -1225,7 +1225,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "1607563",
+            "id": "7587e8d",
             "elType": "widget",
             "settings": {
               "editor": "<p>For growing teams</p>",
@@ -1247,7 +1247,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f27638f",
+            "id": "25ad37e",
             "elType": "widget",
             "settings": {
               "text": "Start Free Trial",
@@ -1278,7 +1278,7 @@
             "widgetType": "button"
           },
           {
-            "id": "9ba38a8",
+            "id": "2f2a3db",
             "elType": "widget",
             "settings": {
               "title": "Enterprise",
@@ -1301,7 +1301,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "c0f6d15",
+            "id": "fbf1e87",
             "elType": "widget",
             "settings": {
               "editor": "<p>Custom</p>",
@@ -1323,7 +1323,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "0f5c44d",
+            "id": "90b2646",
             "elType": "widget",
             "settings": {
               "editor": "<p>For large organizations</p>",
@@ -1345,7 +1345,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "ff726a1",
+            "id": "1753e3f",
             "elType": "widget",
             "settings": {
               "text": "Contact Sales",
@@ -1392,7 +1392,7 @@
     "isInner": false
   },
   {
-    "id": "54b64ea",
+    "id": "4f10e58",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1422,7 +1422,7 @@
     },
     "elements": [
       {
-        "id": "910799e",
+        "id": "180730c",
         "elType": "widget",
         "settings": {
           "title": "Ready to sync smarter?",
@@ -1445,7 +1445,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "c9634fa",
+        "id": "0c7be9d",
         "elType": "widget",
         "settings": {
           "editor": "<p>Join thousands of teams who ship faster with CloudSync.</p>",
@@ -1467,7 +1467,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "50e604b",
+        "id": "4668124",
         "elType": "widget",
         "settings": {
           "text": "Start Free Trial",
@@ -1501,7 +1501,7 @@
     "isInner": false
   },
   {
-    "id": "94ed692",
+    "id": "87386c3",
     "elType": "container",
     "settings": {
       "content_width": "full",

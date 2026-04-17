@@ -566,6 +566,11 @@ def _leaf_text_widget(node: dict) -> dict:
     _apply_margin(settings, styles)
     if color_hex:
         settings["text_color"] = color_hex
+    # max-width on the widget
+    mw = px_to_int(styles.get("max-width"))
+    if mw:
+        settings["_element_width"] = "initial"
+        settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
     return {"widgetType": "text-editor", "settings": settings}
 
 
