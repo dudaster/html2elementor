@@ -617,11 +617,17 @@ def _build_header_elements(section: dict) -> list[dict]:
     if nav_items:
         # Find the parent div of nav links (for margin-bottom)
         links_parent = None
+        first_link_node = None
         for n in _iter(section):
             if n.get("tag") == "div" and any(
                 c.get("tag") == "a" for c in n.get("children", [])
             ):
                 links_parent = n
+                break
+        # Read link color from the first nav <a> (non-button) in CSS
+        for n in _iter(section):
+            if n.get("tag") == "a" and n.get("href") and not looks_like_button(n):
+                first_link_node = n
                 break
         icon_list_settings: dict = {
             "view": "inline",
@@ -631,8 +637,10 @@ def _build_header_elements(section: dict) -> list[dict]:
                  "selected_icon": {"value": "", "library": ""}}
                 for txt, href in nav_items[:8]
             ],
-            "__globals__": {"text_color": "globals/colors?id=primary"},
         }
+        link_color = to_hex(first_link_node.get("styles", {}).get("color")) if first_link_node else None
+        if link_color:
+            icon_list_settings["text_color"] = link_color
         if links_parent:
             from .widgets import _apply_margin as _am
             _am(icon_list_settings, links_parent.get("styles", {}))
