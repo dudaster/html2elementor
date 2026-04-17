@@ -1,6 +1,6 @@
 [
   {
-    "id": "1fe411b",
+    "id": "9bc5589",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -43,7 +43,7 @@
     },
     "elements": [
       {
-        "id": "ba14487",
+        "id": "fe75e3e",
         "elType": "widget",
         "settings": {
           "title": "Code",
@@ -58,7 +58,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b35f025",
+        "id": "5c258e6",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -122,7 +122,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "7035c45",
+        "id": "9f06b64",
         "elType": "widget",
         "settings": {
           "text": "Începe gratuit",
@@ -156,7 +156,7 @@
     "isInner": false
   },
   {
-    "id": "4eb8fcc",
+    "id": "7c2ecac",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -193,7 +193,7 @@
     },
     "elements": [
       {
-        "id": "f21bd6a",
+        "id": "90d7392",
         "elType": "widget",
         "settings": {
           "title": "🚀 Peste 10.000 de studenți activi",
@@ -236,7 +236,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "72ede80",
+        "id": "6f57c58",
         "elType": "widget",
         "settings": {
           "title": "Învață să programezi de la zero",
@@ -269,7 +269,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "e4a1eef",
+        "id": "9b8bb8b",
         "elType": "widget",
         "settings": {
           "editor": "<p>Cursuri practice de programare, cu mentori dedicați și proiecte reale. De la începător la junior developer în 6 luni.</p>",
@@ -296,7 +296,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "e6f0347",
+        "id": "35eb1ed",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -323,7 +323,7 @@
         },
         "elements": [
           {
-            "id": "a5b3e4c",
+            "id": "c638467",
             "elType": "widget",
             "settings": {
               "text": "Începe gratuit",
@@ -354,7 +354,7 @@
             "widgetType": "button"
           },
           {
-            "id": "5a9b7e8",
+            "id": "6f18013",
             "elType": "widget",
             "settings": {
               "text": "Vezi cursurile",
@@ -391,7 +391,7 @@
     "isInner": false
   },
   {
-    "id": "6d8895e",
+    "id": "47f4d44",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -429,7 +429,7 @@
     },
     "elements": [
       {
-        "id": "9c94774",
+        "id": "b59fc73",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -456,12 +456,12 @@
         },
         "elements": [
           {
-            "id": "c69c64a",
+            "id": "d03ee5f",
             "elType": "widget",
             "settings": {
               "image": {
-                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-214.jpg",
-                "id": 723
+                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-219.jpg",
+                "id": 731
               },
               "image_size": "custom",
               "align": "center",
@@ -501,65 +501,12 @@
             "widgetType": "image"
           },
           {
-            "id": "05fd515",
+            "id": "10eb497",
             "elType": "widget",
             "settings": {
               "image": {
-                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-215.jpg",
-                "id": 724
-              },
-              "image_size": "custom",
-              "align": "center",
-              "alt": "",
-              "image_custom_dimension": {
-                "width": 40,
-                "height": 40
-              },
-              "width": {
-                "unit": "px",
-                "size": "40",
-                "sizes": []
-              },
-              "image_border_radius": {
-                "unit": "px",
-                "top": "20",
-                "right": "20",
-                "bottom": "20",
-                "left": "20",
-                "isLinked": true
-              },
-              "image_border_border": "solid",
-              "image_border_width": {
-                "unit": "px",
-                "top": "3",
-                "right": "3",
-                "bottom": "3",
-                "left": "3",
-                "isLinked": true
-              },
-              "image_border_color": "#ffffff",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "-12",
-                "isLinked": false
-              },
-              "__globals__": {
-                "typography_typography": "globals/typography?id=text"
-              }
-            },
-            "elements": [],
-            "widgetType": "image"
-          },
-          {
-            "id": "3512148",
-            "elType": "widget",
-            "settings": {
-              "image": {
-                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-216.jpg",
-                "id": 725
+                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-220.jpg",
+                "id": 732
               },
               "image_size": "custom",
               "align": "center",
@@ -607,12 +554,65 @@
             "widgetType": "image"
           },
           {
-            "id": "944eda8",
+            "id": "e7db2b9",
             "elType": "widget",
             "settings": {
               "image": {
-                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-217.jpg",
-                "id": 726
+                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-221.jpg",
+                "id": 733
+              },
+              "image_size": "custom",
+              "align": "center",
+              "alt": "",
+              "image_custom_dimension": {
+                "width": 40,
+                "height": 40
+              },
+              "width": {
+                "unit": "px",
+                "size": "40",
+                "sizes": []
+              },
+              "image_border_radius": {
+                "unit": "px",
+                "top": "20",
+                "right": "20",
+                "bottom": "20",
+                "left": "20",
+                "isLinked": true
+              },
+              "image_border_border": "solid",
+              "image_border_width": {
+                "unit": "px",
+                "top": "3",
+                "right": "3",
+                "bottom": "3",
+                "left": "3",
+                "isLinked": true
+              },
+              "image_border_color": "#ffffff",
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "-12",
+                "isLinked": false
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [],
+            "widgetType": "image"
+          },
+          {
+            "id": "ac85d1a",
+            "elType": "widget",
+            "settings": {
+              "image": {
+                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-222.jpg",
+                "id": 734
               },
               "image_size": "custom",
               "align": "center",
@@ -663,7 +663,7 @@
         "isInner": true
       },
       {
-        "id": "e066542",
+        "id": "53add64",
         "elType": "widget",
         "settings": {
           "editor": "<p><strong>4.9/5</strong> din 2.847 recenzii · Înscrie-te alături de 10.000+ studenți</p>",
@@ -680,7 +680,7 @@
     "isInner": false
   },
   {
-    "id": "c693178",
+    "id": "fe5d1aa",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -708,7 +708,7 @@
     },
     "elements": [
       {
-        "id": "0aa833f",
+        "id": "7b016be",
         "elType": "widget",
         "settings": {
           "title": "Cursuri populare",
@@ -741,7 +741,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "ab34227",
+        "id": "4755403",
         "elType": "widget",
         "settings": {
           "title": "Alege-ți parcursul",
@@ -756,7 +756,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a935ece",
+        "id": "f17cd9d",
         "elType": "widget",
         "settings": {
           "editor": "<p>Cursuri structurate, de la fundamente până la nivel avansat</p>",
@@ -778,7 +778,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "506375e",
+        "id": "271445f",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -818,7 +818,7 @@
         },
         "elements": [
           {
-            "id": "a8f71ef",
+            "id": "7a9cea4",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -864,12 +864,12 @@
             },
             "elements": [
               {
-                "id": "c6eeeef",
+                "id": "91002e0",
                 "elType": "widget",
                 "settings": {
                   "image": {
-                    "url": "http://localhost:8090/wp-content/uploads/2026/04/python-44.jpg",
-                    "id": 727
+                    "url": "http://localhost:8090/wp-content/uploads/2026/04/python-45.jpg",
+                    "id": 735
                   },
                   "image_size": "full",
                   "align": "center",
@@ -887,7 +887,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "ba7d550",
+                "id": "3c1add2",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -913,7 +913,7 @@
                 },
                 "elements": [
                   {
-                    "id": "fa9ac0d",
+                    "id": "ed1cb41",
                     "elType": "widget",
                     "settings": {
                       "title": "Începător",
@@ -946,7 +946,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "535543d",
+                    "id": "9b57be2",
                     "elType": "widget",
                     "settings": {
                       "title": "Python Fundamentals",
@@ -969,7 +969,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "2e15450",
+                    "id": "b25507a",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Învață bazele programării cu cel mai popular limbaj pentru începători.</p>",
@@ -996,7 +996,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "487eced",
+                    "id": "622d82f",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1023,7 +1023,7 @@
                     },
                     "elements": [
                       {
-                        "id": "81f60b0",
+                        "id": "2505981",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>299 lei</p>",
@@ -1037,7 +1037,7 @@
                         "widgetType": "text-editor"
                       },
                       {
-                        "id": "b8a9ba9",
+                        "id": "2d4cdf2",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>12 săptămâni</p>",
@@ -1060,7 +1060,7 @@
             "isInner": true
           },
           {
-            "id": "c753fe0",
+            "id": "a705a17",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1106,12 +1106,12 @@
             },
             "elements": [
               {
-                "id": "84891b7",
+                "id": "0a7617e",
                 "elType": "widget",
                 "settings": {
                   "image": {
-                    "url": "http://localhost:8090/wp-content/uploads/2026/04/react-44.jpg",
-                    "id": 728
+                    "url": "http://localhost:8090/wp-content/uploads/2026/04/react-45.jpg",
+                    "id": 736
                   },
                   "image_size": "full",
                   "align": "center",
@@ -1129,7 +1129,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "28baccf",
+                "id": "69677d2",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1155,7 +1155,7 @@
                 },
                 "elements": [
                   {
-                    "id": "fead268",
+                    "id": "cd0139d",
                     "elType": "widget",
                     "settings": {
                       "title": "Intermediar",
@@ -1188,7 +1188,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "a000120",
+                    "id": "13e8ba8",
                     "elType": "widget",
                     "settings": {
                       "title": "React & Next.js",
@@ -1211,7 +1211,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "f441474",
+                    "id": "2554a08",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Construiește aplicații web moderne cu React și framework-ul Next.js.</p>",
@@ -1238,7 +1238,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "103f5ef",
+                    "id": "868e8e0",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1265,7 +1265,7 @@
                     },
                     "elements": [
                       {
-                        "id": "24b4f7a",
+                        "id": "2939da2",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>499 lei</p>",
@@ -1279,7 +1279,7 @@
                         "widgetType": "text-editor"
                       },
                       {
-                        "id": "9fef804",
+                        "id": "0be5cbe",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>16 săptămâni</p>",
@@ -1302,7 +1302,7 @@
             "isInner": true
           },
           {
-            "id": "7cd3df7",
+            "id": "b2b9b3c",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1348,12 +1348,12 @@
             },
             "elements": [
               {
-                "id": "b6eba0b",
+                "id": "27ad6da",
                 "elType": "widget",
                 "settings": {
                   "image": {
-                    "url": "http://localhost:8090/wp-content/uploads/2026/04/full-stack-44.jpg",
-                    "id": 729
+                    "url": "http://localhost:8090/wp-content/uploads/2026/04/full-stack-45.jpg",
+                    "id": 737
                   },
                   "image_size": "full",
                   "align": "center",
@@ -1371,7 +1371,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "421d474",
+                "id": "51f7db4",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1397,7 +1397,7 @@
                 },
                 "elements": [
                   {
-                    "id": "e1bb785",
+                    "id": "02a9173",
                     "elType": "widget",
                     "settings": {
                       "title": "Avansat",
@@ -1430,7 +1430,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "289ff99",
+                    "id": "ffd13eb",
                     "elType": "widget",
                     "settings": {
                       "title": "Full Stack Developer",
@@ -1453,7 +1453,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "399640c",
+                    "id": "e290bab",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Parcurs complet: frontend, backend, baze de date și deployment.</p>",
@@ -1480,7 +1480,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "b4fdfa1",
+                    "id": "046bb61",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1507,7 +1507,7 @@
                     },
                     "elements": [
                       {
-                        "id": "846b4b3",
+                        "id": "1c378c4",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>799 lei</p>",
@@ -1521,7 +1521,7 @@
                         "widgetType": "text-editor"
                       },
                       {
-                        "id": "94076e7",
+                        "id": "4a04c7e",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>24 săptămâni</p>",
@@ -1550,7 +1550,7 @@
     "isInner": false
   },
   {
-    "id": "57c5987",
+    "id": "4752dd1",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1580,7 +1580,7 @@
     },
     "elements": [
       {
-        "id": "a6f54bb",
+        "id": "54c7295",
         "elType": "widget",
         "settings": {
           "title": "De ce CodeAcademy?",
@@ -1595,7 +1595,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "3fa94ce",
+        "id": "2a2668e",
         "elType": "widget",
         "settings": {
           "editor": "<p>Tot ce ai nevoie pentru a deveni developer</p>",
@@ -1617,7 +1617,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "509d09f",
+        "id": "48cd76b",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1657,7 +1657,7 @@
         },
         "elements": [
           {
-            "id": "fee9eec",
+            "id": "a7d1102",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1693,7 +1693,7 @@
             },
             "elements": [
               {
-                "id": "690d825",
+                "id": "2ee1fd4",
                 "elType": "widget",
                 "settings": {
                   "title": "👨‍💻",
@@ -1716,7 +1716,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ef1b44f",
+                "id": "9b9822b",
                 "elType": "widget",
                 "settings": {
                   "title": "Mentori din industrie",
@@ -1739,7 +1739,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "02f04c8",
+                "id": "07ea111",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Fiecare student are acces la un mentor cu experiență în companii tech de top.</p>",
@@ -1761,7 +1761,7 @@
             "isInner": true
           },
           {
-            "id": "e06aa9c",
+            "id": "6d9bd75",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1797,7 +1797,7 @@
             },
             "elements": [
               {
-                "id": "c405be2",
+                "id": "54b0708",
                 "elType": "widget",
                 "settings": {
                   "title": "🎯",
@@ -1820,7 +1820,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "2a6a2cf",
+                "id": "58d3caf",
                 "elType": "widget",
                 "settings": {
                   "title": "Proiecte practice",
@@ -1843,7 +1843,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "6eecf89",
+                "id": "103dc06",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Construiești proiecte reale pe care le poți arăta la interviuri de angajare.</p>",
@@ -1868,7 +1868,7 @@
         "isInner": true
       },
       {
-        "id": "ca4f0d5",
+        "id": "0d97012",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1908,7 +1908,7 @@
         },
         "elements": [
           {
-            "id": "853b68a",
+            "id": "51f9b4e",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1944,7 +1944,7 @@
             },
             "elements": [
               {
-                "id": "623c12b",
+                "id": "d8df745",
                 "elType": "widget",
                 "settings": {
                   "title": "🏆",
@@ -1967,7 +1967,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "9539c44",
+                "id": "21e9a7e",
                 "elType": "widget",
                 "settings": {
                   "title": "Certificare recunoscută",
@@ -1990,7 +1990,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d006ec2",
+                "id": "e8a3ae2",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Primești o certificare la finalul fiecărui curs, validată de partenerii noștri.</p>",
@@ -2012,7 +2012,7 @@
             "isInner": true
           },
           {
-            "id": "f76c6c5",
+            "id": "797f269",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2048,7 +2048,7 @@
             },
             "elements": [
               {
-                "id": "b918209",
+                "id": "3d165ab",
                 "elType": "widget",
                 "settings": {
                   "title": "💼",
@@ -2071,7 +2071,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "eba7d13",
+                "id": "9e1c13e",
                 "elType": "widget",
                 "settings": {
                   "title": "Asistență la angajare",
@@ -2094,7 +2094,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "90ee94c",
+                "id": "a2ead41",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Te ajutăm cu CV-ul, portofoliul și pregătirea pentru interviuri tehnice.</p>",
@@ -2122,7 +2122,7 @@
     "isInner": false
   },
   {
-    "id": "b124116",
+    "id": "8a49753",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2150,7 +2150,7 @@
     },
     "elements": [
       {
-        "id": "53ccd89",
+        "id": "9e85088",
         "elType": "widget",
         "settings": {
           "editor": "<p>„Am trecut de la contabilitate la frontend development în 8 luni. Cursurile sunt extrem de bine structurate, iar mentorii sunt mereu disponibili.\"</p>",
@@ -2184,7 +2184,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "7ee2cc3",
+        "id": "b29135f",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2211,12 +2211,12 @@
         },
         "elements": [
           {
-            "id": "a66ffaa",
+            "id": "369e044",
             "elType": "widget",
             "settings": {
               "image": {
-                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-218.jpg",
-                "id": 730
+                "url": "http://localhost:8090/wp-content/uploads/2026/04/image-223.jpg",
+                "id": 738
               },
               "image_size": "custom",
               "align": "center",
@@ -2246,7 +2246,7 @@
             "widgetType": "image"
           },
           {
-            "id": "405c9a9",
+            "id": "600fcc9",
             "elType": "widget",
             "settings": {
               "editor": "<strong>Alexandra Dumitrescu</strong><br>Junior Frontend Developer la Endava",
@@ -2264,7 +2264,7 @@
     "isInner": false
   },
   {
-    "id": "f9af89e",
+    "id": "48c694f",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -2292,7 +2292,7 @@
     },
     "elements": [
       {
-        "id": "446894c",
+        "id": "1f5d688",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2336,7 +2336,7 @@
         },
         "elements": [
           {
-            "id": "9030a30",
+            "id": "6ddcf30",
             "elType": "widget",
             "settings": {
               "title": "Gata să începi?",
@@ -2359,7 +2359,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "949ea24",
+            "id": "db4c686",
             "elType": "widget",
             "settings": {
               "editor": "<p>Prima lecție este gratuită. Alege un curs și fă primul pas spre cariera ta în tech.</p>",
@@ -2381,7 +2381,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "e7b9d66",
+            "id": "2d3d082",
             "elType": "widget",
             "settings": {
               "text": "Începe gratuit acum",
@@ -2418,7 +2418,7 @@
     "isInner": false
   },
   {
-    "id": "930d4dd",
+    "id": "95285ed",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2448,7 +2448,7 @@
     },
     "elements": [
       {
-        "id": "88d65a5",
+        "id": "6dd97c1",
         "elType": "widget",
         "settings": {
           "title": "Code",
@@ -2463,7 +2463,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "c6afe2e",
+        "id": "f54bce8",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -2536,6 +2536,19 @@
         },
         "elements": [],
         "widgetType": "icon-list"
+      },
+      {
+        "id": "8acf9ad",
+        "elType": "widget",
+        "settings": {
+          "editor": "© 2026 CodeAcademy. Toate drepturile rezervate.",
+          "__globals__": {
+            "text_color": "globals/colors?id=a9fbe14",
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
       }
     ],
     "isInner": false

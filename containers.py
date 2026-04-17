@@ -630,6 +630,25 @@ def _build_header_elements(section: dict) -> list[dict]:
             if txt:
                 elements.append(button_widget(n, txt))
                 break  # usually just one CTA in nav
+
+    # Emit remaining text divs (copyright, taglines) not captured above
+    collected_texts = set()
+    if logo_text:
+        collected_texts.add(logo_text.get("text", "").strip())
+    for txt, _ in nav_items:
+        collected_texts.add(txt)
+    for child in section.get("children", []):
+        tag = child.get("tag", "")
+        txt = (child.get("text") or "").strip()
+        if tag == "div" and txt and txt not in collected_texts:
+            from .styles import apply_typography
+            settings: dict = {"editor": txt}
+            apply_typography(settings, child.get("styles", {}))
+            color = to_hex(child.get("styles", {}).get("color"))
+            if color:
+                settings["text_color"] = color
+            elements.append({"widgetType": "text-editor", "settings": settings})
+
     return elements
 
 
