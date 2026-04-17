@@ -74,6 +74,10 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
     if tag == "div" and _is_card_grid(node):
         cards = _emit_card_grid(node, consumed)
         if cards:
+            grid_cols = _get_grid_columns(node)
+            if grid_cols:
+                for card in cards:
+                    card["_grid_cols"] = grid_cols
             out.extend(cards)
             return
 

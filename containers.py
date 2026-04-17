@@ -404,7 +404,14 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                 else:
                     break
             if len(group) >= 2:
-                out.append(_wrap_row(group))
+                grid_cols = group[0].get("_grid_cols") if group else None
+                if grid_cols and grid_cols < len(group):
+                    # Multi-row grid: split into rows of grid_cols items
+                    for chunk_start in range(0, len(group), grid_cols):
+                        chunk = group[chunk_start:chunk_start + grid_cols]
+                        out.append(_wrap_row(chunk))
+                else:
+                    out.append(_wrap_row(group))
                 i = j
                 continue
         # Group 2+ consecutive buttons into an inline row

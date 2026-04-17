@@ -1,6 +1,6 @@
 [
   {
-    "id": "49358bf",
+    "id": "b3cfef4",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -41,7 +41,7 @@
     },
     "elements": [
       {
-        "id": "19fc1a0",
+        "id": "9c86e48",
         "elType": "widget",
         "settings": {
           "title": "Nova",
@@ -63,7 +63,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a5d4621",
+        "id": "2587b84",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -127,7 +127,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "05dd9a8",
+        "id": "9135142",
         "elType": "widget",
         "settings": {
           "text": "Let's Talk",
@@ -168,7 +168,7 @@
     "isInner": false
   },
   {
-    "id": "bf5da96",
+    "id": "e5bc83c",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -196,11 +196,10 @@
     },
     "elements": [
       {
-        "id": "c7be3be",
+        "id": "8d03ea3",
         "elType": "widget",
         "settings": {
-          "title": "Creative Design Agency",
-          "header_size": "h6",
+          "editor": "<p>Creative Design Agency</p>",
           "align": "center",
           "typography_typography": "custom",
           "typography_font_family": "DM Sans",
@@ -225,14 +224,14 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=accent"
+            "text_color": "globals/colors?id=accent"
           }
         },
         "elements": [],
-        "widgetType": "heading"
+        "widgetType": "text-editor"
       },
       {
-        "id": "9e3dc28",
+        "id": "c4d656c",
         "elType": "widget",
         "settings": {
           "title": "We craft digital experiences that matter",
@@ -272,7 +271,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "698ab7b",
+        "id": "4c57d27",
         "elType": "widget",
         "settings": {
           "editor": "<p>Strategy, design, and development for brands that want to stand out in a crowded digital world.</p>",
@@ -305,7 +304,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "76c6828",
+        "id": "580bd47",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -335,7 +334,7 @@
         },
         "elements": [
           {
-            "id": "bcf8695",
+            "id": "e2fd160",
             "elType": "widget",
             "settings": {
               "text": "Start a Project",
@@ -373,7 +372,7 @@
             "widgetType": "button"
           },
           {
-            "id": "3323517",
+            "id": "cd2133b",
             "elType": "widget",
             "settings": {
               "text": "Our Work",
@@ -427,7 +426,7 @@
     "isInner": false
   },
   {
-    "id": "7c1c84a",
+    "id": "8ea66c7",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -471,7 +470,7 @@
     },
     "elements": [
       {
-        "id": "74b4d85",
+        "id": "4726376",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -509,11 +508,10 @@
         },
         "elements": [
           {
-            "id": "71265ce",
+            "id": "d5f0a2f",
             "elType": "widget",
             "settings": {
-              "title": "150+",
-              "header_size": "h6",
+              "editor": "<p>150+</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -524,18 +522,17 @@
               },
               "typography_font_weight": "800",
               "__globals__": {
-                "title_color": "globals/colors?id=text"
+                "text_color": "globals/colors?id=text"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           },
           {
-            "id": "095e47e",
+            "id": "2e39495",
             "elType": "widget",
             "settings": {
-              "title": "Projects",
-              "header_size": "h6",
+              "editor": "<p>Projects</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -559,17 +556,17 @@
                 "isLinked": false
               },
               "__globals__": {
-                "title_color": "globals/colors?id=c900e1b"
+                "text_color": "globals/colors?id=c900e1b"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
       },
       {
-        "id": "ba72425",
+        "id": "496a23e",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -607,11 +604,10 @@
         },
         "elements": [
           {
-            "id": "bd822bb",
+            "id": "9fe6583",
             "elType": "widget",
             "settings": {
-              "title": "50+",
-              "header_size": "h6",
+              "editor": "<p>50+</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -622,18 +618,17 @@
               },
               "typography_font_weight": "800",
               "__globals__": {
-                "title_color": "globals/colors?id=text"
+                "text_color": "globals/colors?id=text"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           },
           {
-            "id": "8cab3f4",
+            "id": "8157f37",
             "elType": "widget",
             "settings": {
-              "title": "Clients",
-              "header_size": "h6",
+              "editor": "<p>Clients</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -657,17 +652,17 @@
                 "isLinked": false
               },
               "__globals__": {
-                "title_color": "globals/colors?id=c900e1b"
+                "text_color": "globals/colors?id=c900e1b"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
       },
       {
-        "id": "d5f9c6f",
+        "id": "1b48846",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -705,11 +700,10 @@
         },
         "elements": [
           {
-            "id": "c10a9b3",
+            "id": "cd2585b",
             "elType": "widget",
             "settings": {
-              "title": "12",
-              "header_size": "h6",
+              "editor": "<p>12</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -720,18 +714,17 @@
               },
               "typography_font_weight": "800",
               "__globals__": {
-                "title_color": "globals/colors?id=text"
+                "text_color": "globals/colors?id=text"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           },
           {
-            "id": "ef2a0bb",
+            "id": "cdb0c3d",
             "elType": "widget",
             "settings": {
-              "title": "Awards",
-              "header_size": "h6",
+              "editor": "<p>Awards</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -755,17 +748,17 @@
                 "isLinked": false
               },
               "__globals__": {
-                "title_color": "globals/colors?id=c900e1b"
+                "text_color": "globals/colors?id=c900e1b"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
       },
       {
-        "id": "66dc44c",
+        "id": "1402e82",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -803,11 +796,10 @@
         },
         "elements": [
           {
-            "id": "9c64f49",
+            "id": "6308c92",
             "elType": "widget",
             "settings": {
-              "title": "8yr",
-              "header_size": "h6",
+              "editor": "<p>8yr</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -818,18 +810,17 @@
               },
               "typography_font_weight": "800",
               "__globals__": {
-                "title_color": "globals/colors?id=text"
+                "text_color": "globals/colors?id=text"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           },
           {
-            "id": "d011187",
+            "id": "742e381",
             "elType": "widget",
             "settings": {
-              "title": "Experience",
-              "header_size": "h6",
+              "editor": "<p>Experience</p>",
               "align": "center",
               "typography_typography": "custom",
               "typography_font_family": "DM Sans",
@@ -853,11 +844,11 @@
                 "isLinked": false
               },
               "__globals__": {
-                "title_color": "globals/colors?id=c900e1b"
+                "text_color": "globals/colors?id=c900e1b"
               }
             },
             "elements": [],
-            "widgetType": "heading"
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
@@ -866,7 +857,7 @@
     "isInner": false
   },
   {
-    "id": "0e94933",
+    "id": "e5751a1",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -894,11 +885,10 @@
     },
     "elements": [
       {
-        "id": "8a7683e",
+        "id": "06ecc2c",
         "elType": "widget",
         "settings": {
-          "title": "What we do",
-          "header_size": "h6",
+          "editor": "<p>What we do</p>",
           "align": "center",
           "typography_typography": "custom",
           "typography_font_family": "DM Sans",
@@ -923,14 +913,14 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=accent"
+            "text_color": "globals/colors?id=accent"
           }
         },
         "elements": [],
-        "widgetType": "heading"
+        "widgetType": "text-editor"
       },
       {
-        "id": "7192265",
+        "id": "e2a3140",
         "elType": "widget",
         "settings": {
           "title": "Services built for growth",
@@ -965,7 +955,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b6ed7de",
+        "id": "f47ca58",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -979,6 +969,17 @@
             "size": 16,
             "column": "16",
             "row": "16"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 16,
+            "column": "16",
+            "row": "16"
+          },
+          "width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
           },
           "padding": {
             "unit": "px",
@@ -994,7 +995,7 @@
         },
         "elements": [
           {
-            "id": "8e261e4",
+            "id": "51cb33a",
             "elType": "widget",
             "settings": {
               "title_text": "Brand Strategy",
@@ -1075,7 +1076,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "1dc1254",
+            "id": "f62e74d",
             "elType": "widget",
             "settings": {
               "title_text": "Web Design",
@@ -1159,7 +1160,7 @@
         "isInner": true
       },
       {
-        "id": "20209b5",
+        "id": "c8c1832",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1173,6 +1174,17 @@
             "size": 16,
             "column": "16",
             "row": "16"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 16,
+            "column": "16",
+            "row": "16"
+          },
+          "width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
           },
           "padding": {
             "unit": "px",
@@ -1188,7 +1200,7 @@
         },
         "elements": [
           {
-            "id": "c21d165",
+            "id": "d3e6c9a",
             "elType": "widget",
             "settings": {
               "title_text": "Product Design",
@@ -1269,7 +1281,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "d686544",
+            "id": "292177e",
             "elType": "widget",
             "settings": {
               "title_text": "Development",
@@ -1356,7 +1368,7 @@
     "isInner": false
   },
   {
-    "id": "12d3510",
+    "id": "dce83eb",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1386,11 +1398,10 @@
     },
     "elements": [
       {
-        "id": "820b6dd",
+        "id": "a40b114",
         "elType": "widget",
         "settings": {
-          "title": "Selected Work",
-          "header_size": "h6",
+          "editor": "<p>Selected Work</p>",
           "align": "center",
           "typography_typography": "custom",
           "typography_font_family": "DM Sans",
@@ -1415,14 +1426,14 @@
             "isLinked": false
           },
           "__globals__": {
-            "title_color": "globals/colors?id=accent"
+            "text_color": "globals/colors?id=accent"
           }
         },
         "elements": [],
-        "widgetType": "heading"
+        "widgetType": "text-editor"
       },
       {
-        "id": "f90765f",
+        "id": "2bc9906",
         "elType": "widget",
         "settings": {
           "title": "Projects we're proud of",
@@ -1452,7 +1463,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b1b2f33",
+        "id": "f82db4d",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1492,7 +1503,7 @@
         },
         "elements": [
           {
-            "id": "4a09229",
+            "id": "82e55e4",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1528,7 +1539,7 @@
             },
             "elements": [
               {
-                "id": "176c933",
+                "id": "e3421e6",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1551,7 +1562,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "47864a5",
+                "id": "22c88f2",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1577,11 +1588,10 @@
                 },
                 "elements": [
                   {
-                    "id": "095b55b",
+                    "id": "b037aaa",
                     "elType": "widget",
                     "settings": {
-                      "title": "Branding",
-                      "header_size": "h6",
+                      "editor": "<p>Branding</p>",
                       "align": "left",
                       "typography_typography": "custom",
                       "typography_font_family": "DM Sans",
@@ -1605,14 +1615,14 @@
                         "isLinked": false
                       },
                       "__globals__": {
-                        "title_color": "globals/colors?id=accent"
+                        "text_color": "globals/colors?id=accent"
                       }
                     },
                     "elements": [],
-                    "widgetType": "heading"
+                    "widgetType": "text-editor"
                   },
                   {
-                    "id": "2015f0f",
+                    "id": "f56a3f0",
                     "elType": "widget",
                     "settings": {
                       "title": "Luxe Fashion Rebrand",
@@ -1640,7 +1650,7 @@
             "isInner": true
           },
           {
-            "id": "7b9e346",
+            "id": "c07da8d",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1676,7 +1686,7 @@
             },
             "elements": [
               {
-                "id": "409bd1a",
+                "id": "24844c7",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1699,7 +1709,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "25edb6b",
+                "id": "80aac57",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1725,11 +1735,10 @@
                 },
                 "elements": [
                   {
-                    "id": "36d36b5",
+                    "id": "4702a16",
                     "elType": "widget",
                     "settings": {
-                      "title": "Web Design",
-                      "header_size": "h6",
+                      "editor": "<p>Web Design</p>",
                       "align": "left",
                       "typography_typography": "custom",
                       "typography_font_family": "DM Sans",
@@ -1753,14 +1762,14 @@
                         "isLinked": false
                       },
                       "__globals__": {
-                        "title_color": "globals/colors?id=accent"
+                        "text_color": "globals/colors?id=accent"
                       }
                     },
                     "elements": [],
-                    "widgetType": "heading"
+                    "widgetType": "text-editor"
                   },
                   {
-                    "id": "d966fd7",
+                    "id": "bbcd929",
                     "elType": "widget",
                     "settings": {
                       "title": "Fintech Dashboard",
@@ -1788,7 +1797,7 @@
             "isInner": true
           },
           {
-            "id": "6bd80e3",
+            "id": "fad89ba",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1824,7 +1833,7 @@
             },
             "elements": [
               {
-                "id": "69515e7",
+                "id": "2ab03bf",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1847,7 +1856,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "c9fbbce",
+                "id": "0a2bc74",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1873,11 +1882,10 @@
                 },
                 "elements": [
                   {
-                    "id": "99aec89",
+                    "id": "d6abe3e",
                     "elType": "widget",
                     "settings": {
-                      "title": "Development",
-                      "header_size": "h6",
+                      "editor": "<p>Development</p>",
                       "align": "left",
                       "typography_typography": "custom",
                       "typography_font_family": "DM Sans",
@@ -1901,14 +1909,14 @@
                         "isLinked": false
                       },
                       "__globals__": {
-                        "title_color": "globals/colors?id=accent"
+                        "text_color": "globals/colors?id=accent"
                       }
                     },
                     "elements": [],
-                    "widgetType": "heading"
+                    "widgetType": "text-editor"
                   },
                   {
-                    "id": "6737338",
+                    "id": "44cdc07",
                     "elType": "widget",
                     "settings": {
                       "title": "E-commerce Platform",
@@ -1942,7 +1950,7 @@
     "isInner": false
   },
   {
-    "id": "af249f7",
+    "id": "68876cf",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1972,7 +1980,7 @@
     },
     "elements": [
       {
-        "id": "8acc955",
+        "id": "d421a9f",
         "elType": "widget",
         "settings": {
           "title": "Ready to start your project?",
@@ -2002,7 +2010,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "754e275",
+        "id": "c9881ae",
         "elType": "widget",
         "settings": {
           "editor": "<p>Let's create something extraordinary together.</p>",
@@ -2030,7 +2038,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "4dcfdc7",
+        "id": "97a3a7f",
         "elType": "widget",
         "settings": {
           "text": "Get in Touch",
@@ -2071,7 +2079,7 @@
     "isInner": false
   },
   {
-    "id": "15e8fe0",
+    "id": "5abc4eb",
     "elType": "container",
     "settings": {
       "content_width": "full",
