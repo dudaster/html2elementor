@@ -189,9 +189,11 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
             return
         tag = node.get("tag", "")
         css = node.get("styles", {})
-        # Color: resolve global if needed
+        # Color: resolve global, skip check on dark bg (inversion to white is intentional)
         el_color = _resolved_color(s, "title_color", kit_maps)
-        _cmp_color(el_color, css.get("color", ""), f"heading[{tag}]\"{title[:30]}\".color", issues)
+        is_dark_bg = _ancestor_bg_is_dark(node, html_tree)
+        if not (is_dark_bg and el_color and to_hex(el_color).lower().startswith("#ffffff")):
+            _cmp_color(el_color, css.get("color", ""), f"heading[{tag}]\"{title[:30]}\".color", issues)
         el_size = _resolved_typo_size(s, "typography_font_size", kit_maps)
         css_size = px_to_int(css.get("font-size", ""))
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
@@ -230,30 +232,47 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
 
     elif wtype == "icon-list":
         items = s.get("icon_list", [])
-        if items:
-            first_text = items[0].get("text", "")
-            for node in _iter_html(html_tree):
-                if node.get("tag") == "a":
-                    atext = _all_text(node).strip().lower()
-                    if first_text.lower() in atext:
-                        css = node.get("styles", {})
-                        _cmp_color(s.get("text_color"), css.get("color", ""),
-                                   "nav-link.color", issues)
-                        _cmp_size(s.get("icon_typography_font_size"),
-                                  css.get("font-size", ""), "nav-link.font-size", issues)
-                        # Check spacing between links (CSS margin-left/right → space_between)
-                        css_spacing = (px_to_int(css.get("margin-left", "")) or
-                                       px_to_int(css.get("margin-right", "")))
-                        sb = s.get("space_between")
-                        el_spacing = None
-                        if isinstance(sb, dict):
-                            try:
-                                el_spacing = int(float(sb.get("size")))
-                            except (ValueError, TypeError):
-                                pass
-                        if css_spacing and el_spacing is not None and not _close(el_spacing, css_spacing, SPACING_TOLERANCE):
-                            issues.append(f"nav-link.spacing: elementor={el_spacing}px vs css={css_spacing}px")
-                        break
+        # Match by finding a sibling group where ALL items appear as <a> descendants
+        # (prevents header match when checking footer icon-list with same first link)
+        target_texts = {(it.get("text") or "").strip().lower() for it in items if it.get("text")}
+        if not target_texts:
+            return
+        best_node = None
+        best_overlap = 0
+        for node in _iter_html(html_tree):
+            if node.get("tag") not in ("nav", "div", "ul"):
+                continue
+            link_texts = {
+                _all_text(a).strip().lower()
+                for a in _iter_html(node)
+                if a.get("tag") == "a"
+            }
+            overlap = len(target_texts & link_texts)
+            # Pick the container with MAXIMUM overlap (favors exact match)
+            if overlap > best_overlap and overlap >= min(2, len(target_texts)):
+                best_overlap = overlap
+                best_node = node
+        if not best_node:
+            return
+        # Find first <a> inside best_node to get per-link styling
+        for a in _iter_html(best_node):
+            if a.get("tag") == "a":
+                css = a.get("styles", {})
+                _cmp_color(s.get("text_color"), css.get("color", ""), "nav-link.color", issues)
+                _cmp_size(s.get("icon_typography_font_size"),
+                          css.get("font-size", ""), "nav-link.font-size", issues)
+                css_spacing = (px_to_int(css.get("margin-left", "")) or
+                               px_to_int(css.get("margin-right", "")))
+                sb = s.get("space_between")
+                el_spacing = None
+                if isinstance(sb, dict):
+                    try:
+                        el_spacing = int(float(sb.get("size")))
+                    except (ValueError, TypeError):
+                        pass
+                if css_spacing and el_spacing is not None and not _close(el_spacing, css_spacing, SPACING_TOLERANCE):
+                    issues.append(f"nav-link.spacing: elementor={el_spacing}px vs css={css_spacing}px")
+                break
 
 
 def _check_container(container: dict, html_tree: dict, issues: list, kit_maps: dict, depth: int = 0):

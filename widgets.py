@@ -1,5 +1,6 @@
 """Map HTML tree nodes to Elementor widget specs."""
 from __future__ import annotations
+import re
 from typing import Any, Iterator
 from .colors import to_hex
 from .styles import (
@@ -219,15 +220,38 @@ def heading_widget(node: dict) -> dict:
 
 def text_widget(node: dict) -> dict:
     rich_text = _all_text_html(node).strip()
+    # Strip HTML tags for length check (we care about visible chars)
+    plain_text = re.sub(r"<[^>]+>", "", rich_text)
     styles = node.get("styles", {})
-    settings: dict[str, Any] = {
+
+    # Short text (≤50 chars) → heading widget with div tag (better typography control)
+    if len(plain_text) <= 50:
+        settings: dict[str, Any] = {
+            "title": rich_text,
+            "header_size": "div",
+            "align": text_align(styles),
+            "__globals__": {"title_color": "globals/colors?id=text"},
+        }
+        color_hex = to_hex(styles.get("color"))
+        if color_hex:
+            settings["title_color"] = color_hex
+            del settings["__globals__"]["title_color"]
+        apply_typography(settings, styles)
+        _apply_margin(settings, styles)
+        mw = px_to_int(styles.get("max-width"))
+        if mw:
+            settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
+            settings["_element_width"] = "initial"
+        return {"widgetType": "heading", "settings": settings}
+
+    # Longer paragraphs → text-editor
+    settings = {
         "editor": f"<p>{rich_text}</p>",
         "align": text_align(styles),
         "__globals__": {"text_color": "globals/colors?id=text"},
     }
     apply_typography(settings, styles)
     _apply_margin(settings, styles)
-    # Apply max-width to widget (constrains text width like CSS max-width)
     mw = px_to_int(styles.get("max-width"))
     if mw:
         settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
@@ -621,8 +645,8 @@ def _leaf_text_widget(node: dict) -> dict:
     styles = node.get("styles", {})
     color_hex = to_hex(styles.get("color"))
 
-    # Emoji or very short text (≤4 chars) → heading with div tag
-    if len(text) <= 4 and text:
+    # Short text (≤50 chars) → heading with div tag (better typography control)
+    if len(text) <= 50 and text:
         settings: dict[str, Any] = {
             "title": text,
             "header_size": "div",
