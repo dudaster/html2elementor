@@ -11,15 +11,17 @@ def map_section(section: dict) -> tuple[dict[str, Any], list[dict]]:
 
     sec_tag = section.get("tag", "")
     sec_display = section.get("styles", {}).get("display", "")
-    is_nav_row = sec_tag in ("header", "nav") or (sec_tag == "footer" and sec_display == "flex")
-    if is_nav_row:
-        container["flex_direction"] = "row"
-        container["flex_direction_tablet"] = "row"
-        container["flex_direction_mobile"] = "column"
-        container["flex_justify_content"] = "space-between"
-        container["flex_align_items"] = "center"
-        container["flex_wrap"] = "wrap"
-        container["content_width"] = "full"
+    if sec_tag in ("header", "nav", "footer"):
+        is_flex_row = sec_display == "flex" or sec_tag in ("header", "nav")
+        if is_flex_row:
+            container["flex_direction"] = "row"
+            container["flex_direction_tablet"] = "row"
+            container["flex_direction_mobile"] = "column"
+            container["flex_justify_content"] = "space-between"
+            container["flex_align_items"] = "center"
+            container["flex_wrap"] = "wrap"
+            container["content_width"] = "full"
+        # Non-flex footer: column with center alignment
         # Nav padding often lives on the inner container, not the header tag.
         # Walk children to find it.
         inner = _find_content_wrapper(section)
