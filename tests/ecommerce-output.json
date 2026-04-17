@@ -1,6 +1,6 @@
 [
   {
-    "id": "52748c4",
+    "id": "4854fff",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -30,7 +30,7 @@
     },
     "elements": [
       {
-        "id": "0564a8c",
+        "id": "f89d743",
         "elType": "widget",
         "settings": {
           "editor": "<p>Transport gratuit pentru comenzi peste 200 lei</p>",
@@ -53,7 +53,7 @@
     "isInner": false
   },
   {
-    "id": "e620db4",
+    "id": "564b6e1",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -84,7 +84,7 @@
     },
     "elements": [
       {
-        "id": "ae84aae",
+        "id": "57142a1",
         "elType": "widget",
         "settings": {
           "title": "BOTANICA",
@@ -104,7 +104,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "50af03b",
+        "id": "18bc828",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -168,7 +168,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "f804a58",
+        "id": "e9e8674",
         "elType": "widget",
         "settings": {
           "text": "Coș (0)",
@@ -218,7 +218,7 @@
     "isInner": false
   },
   {
-    "id": "8bebcdc",
+    "id": "a16171f",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -248,7 +248,7 @@
     },
     "elements": [
       {
-        "id": "710aeec",
+        "id": "7f0a079",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -285,7 +285,7 @@
         },
         "elements": [
           {
-            "id": "be78bcf",
+            "id": "0dd1daa",
             "elType": "widget",
             "settings": {
               "editor": "<p>Colecția de primăvară</p>",
@@ -313,7 +313,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "4f72a69",
+            "id": "c793e54",
             "elType": "widget",
             "settings": {
               "title": "Frumusețe pură, direct din natură",
@@ -341,7 +341,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "e10f7dc",
+            "id": "4cea7b2",
             "elType": "widget",
             "settings": {
               "editor": "<p>Descoperă gama noastră de cosmetice 100% naturale, create cu ingrediente organice certificate și multă grijă pentru pielea ta.</p>",
@@ -368,7 +368,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "3029ca2",
+            "id": "e72b2e6",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -398,7 +398,7 @@
             },
             "elements": [
               {
-                "id": "9061280",
+                "id": "b5f399b",
                 "elType": "widget",
                 "settings": {
                   "text": "Descoperă colecția",
@@ -435,7 +435,7 @@
                 "widgetType": "button"
               },
               {
-                "id": "02f16a1",
+                "id": "01a0d4e",
                 "elType": "widget",
                 "settings": {
                   "text": "Află povestea noastră",
@@ -486,7 +486,7 @@
         "isInner": true
       },
       {
-        "id": "fa1e41a",
+        "id": "6a0d77d",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -533,7 +533,7 @@
     "isInner": false
   },
   {
-    "id": "0cf6e00",
+    "id": "35e5f5c",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -575,7 +575,7 @@
     },
     "elements": [
       {
-        "id": "0351f8b",
+        "id": "9ca3630",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -640,7 +640,7 @@
         },
         "elements": [
           {
-            "id": "cb1934c",
+            "id": "02adfe4",
             "elType": "widget",
             "settings": {
               "title": "100% Natural",
@@ -669,7 +669,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "7270b42",
+            "id": "959ba9b",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ingrediente organice certificate</p>",
@@ -686,7 +686,7 @@
         "isInner": true
       },
       {
-        "id": "6f5b0e1",
+        "id": "5ff9268",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -751,7 +751,7 @@
         },
         "elements": [
           {
-            "id": "a6af625",
+            "id": "a0f091c",
             "elType": "widget",
             "settings": {
               "title": "Cruelty Free",
@@ -780,7 +780,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "aa92a63",
+            "id": "4f1ec6c",
             "elType": "widget",
             "settings": {
               "editor": "<p>Netestat pe animale</p>",
@@ -797,7 +797,7 @@
         "isInner": true
       },
       {
-        "id": "5484a1f",
+        "id": "3f7ee6b",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -862,7 +862,7 @@
         },
         "elements": [
           {
-            "id": "66cfc09",
+            "id": "25e8576",
             "elType": "widget",
             "settings": {
               "title": "Eco Packaging",
@@ -891,7 +891,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "68fe3f4",
+            "id": "efcea17",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ambalaje 100% reciclabile</p>",
@@ -908,7 +908,7 @@
         "isInner": true
       },
       {
-        "id": "33e05ee",
+        "id": "52c6e57",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -973,7 +973,7 @@
         },
         "elements": [
           {
-            "id": "ca82eb2",
+            "id": "e9bd352",
             "elType": "widget",
             "settings": {
               "title": "Handmade",
@@ -1002,7 +1002,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "52360d0",
+            "id": "40d62fc",
             "elType": "widget",
             "settings": {
               "editor": "<p>Făcut manual, în loturi mici</p>",
@@ -1022,7 +1022,7 @@
     "isInner": false
   },
   {
-    "id": "3eedb79",
+    "id": "64a0b9c",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1050,7 +1050,7 @@
     },
     "elements": [
       {
-        "id": "561767f",
+        "id": "2e1f205",
         "elType": "widget",
         "settings": {
           "title": "Cele mai iubite produse",
@@ -1073,7 +1073,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "1d6a29c",
+        "id": "1c1c25c",
         "elType": "widget",
         "settings": {
           "editor": "<p>Alese cu grijă, create cu pasiune</p>",
@@ -1095,7 +1095,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "788e5d8",
+        "id": "351a398",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1135,7 +1135,7 @@
         },
         "elements": [
           {
-            "id": "a3498f2",
+            "id": "b70cb28",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1161,7 +1161,7 @@
             },
             "elements": [
               {
-                "id": "6984525",
+                "id": "1ddbef8",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1184,7 +1184,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "18de655",
+                "id": "0feb247",
                 "elType": "widget",
                 "settings": {
                   "title": "Serum Vitamina C",
@@ -1207,7 +1207,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8c0ded0",
+                "id": "33f41e3",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>189 lei</p>",
@@ -1229,7 +1229,7 @@
             "isInner": true
           },
           {
-            "id": "4584bb9",
+            "id": "88474b9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1255,7 +1255,7 @@
             },
             "elements": [
               {
-                "id": "6c02a08",
+                "id": "05ec3a5",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1278,7 +1278,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "1269e00",
+                "id": "c42b803",
                 "elType": "widget",
                 "settings": {
                   "title": "Cremă de noapte",
@@ -1301,7 +1301,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "dde3414",
+                "id": "b12e042",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>159 lei</p>",
@@ -1323,7 +1323,7 @@
             "isInner": true
           },
           {
-            "id": "3e40aac",
+            "id": "d2db5a0",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1349,7 +1349,7 @@
             },
             "elements": [
               {
-                "id": "a2b20c6",
+                "id": "b9b51ff",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1372,7 +1372,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "db29792",
+                "id": "268c695",
                 "elType": "widget",
                 "settings": {
                   "title": "Ulei de argan pur",
@@ -1395,7 +1395,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d7e6652",
+                "id": "ae18a01",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>129 lei</p>",
@@ -1417,7 +1417,7 @@
             "isInner": true
           },
           {
-            "id": "bfb1d04",
+            "id": "26d28af",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1443,7 +1443,7 @@
             },
             "elements": [
               {
-                "id": "b882559",
+                "id": "c38005f",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1466,7 +1466,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "6a9ea3f",
+                "id": "992f7fd",
                 "elType": "widget",
                 "settings": {
                   "title": "Balsam de buze",
@@ -1489,7 +1489,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "be98b4d",
+                "id": "f6c7db3",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>49 lei</p>",
@@ -1517,7 +1517,7 @@
     "isInner": false
   },
   {
-    "id": "374d18a",
+    "id": "9972007",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -1547,7 +1547,7 @@
     },
     "elements": [
       {
-        "id": "f8ad3da",
+        "id": "6417b1c",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1591,7 +1591,7 @@
         "isInner": true
       },
       {
-        "id": "e4bbb47",
+        "id": "25769aa",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1628,7 +1628,7 @@
         },
         "elements": [
           {
-            "id": "fa9ca08",
+            "id": "ebab4c9",
             "elType": "widget",
             "settings": {
               "editor": "<p>Povestea noastră</p>",
@@ -1656,7 +1656,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "a3eb7ab",
+            "id": "f5b4ff7",
             "elType": "widget",
             "settings": {
               "title": "Născuți din dragostea pentru natură",
@@ -1679,7 +1679,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "e67f880",
+            "id": "9633ec3",
             "elType": "widget",
             "settings": {
               "editor": "<p>Fiecare produs Botanica este creat manual din ingrediente atent selectate. Credem că frumusețea autentică vine din armonia cu natura.</p>",
@@ -1706,7 +1706,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "488dd94",
+            "id": "51c091a",
             "elType": "widget",
             "settings": {
               "text": "Citește mai mult",
@@ -1759,7 +1759,7 @@
     "isInner": false
   },
   {
-    "id": "8bbd199",
+    "id": "2893d7a",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1789,7 +1789,7 @@
     },
     "elements": [
       {
-        "id": "cdf396d",
+        "id": "3472ce5",
         "elType": "widget",
         "settings": {
           "editor": "<p>★★★★★</p>",
@@ -1811,7 +1811,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "14dcbd2",
+        "id": "fc0bd12",
         "elType": "widget",
         "settings": {
           "editor": "<p>„De când folosesc serumul cu vitamina C, pielea mea arată mai luminoasă ca niciodată. Produse excepționale, cu rezultate vizibile.\"</p>",
@@ -1839,7 +1839,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "8661ee4",
+        "id": "0def62b",
         "elType": "widget",
         "settings": {
           "editor": "<p>Ana-Maria T. — Clientă verificată</p>",
@@ -1862,7 +1862,7 @@
     "isInner": false
   },
   {
-    "id": "7d05290",
+    "id": "1e8bdfe",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1892,7 +1892,7 @@
     },
     "elements": [
       {
-        "id": "24e2005",
+        "id": "743f04c",
         "elType": "widget",
         "settings": {
           "title": "Rămâi aproape de natură",
@@ -1915,7 +1915,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "02d87b5",
+        "id": "3c199c1",
         "elType": "widget",
         "settings": {
           "editor": "<p>Abonează-te și primești 10% reducere la prima comandă</p>",
@@ -1937,7 +1937,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "ac51bec",
+        "id": "45597a1",
         "elType": "widget",
         "settings": {
           "text": "Abonează-te",
@@ -1977,7 +1977,7 @@
     "isInner": false
   },
   {
-    "id": "07ae3fb",
+    "id": "91a750c",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -2010,7 +2010,7 @@
     },
     "elements": [
       {
-        "id": "f97479d",
+        "id": "c79c9e2",
         "elType": "widget",
         "settings": {
           "title": "BOTANICA",
@@ -2030,7 +2030,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "cf54170",
+        "id": "ae5f80b",
         "elType": "widget",
         "settings": {
           "view": "inline",

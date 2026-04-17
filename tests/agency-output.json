@@ -1,6 +1,6 @@
 [
   {
-    "id": "3fbc09d",
+    "id": "6c0bdaf",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -41,7 +41,7 @@
     },
     "elements": [
       {
-        "id": "158c6d8",
+        "id": "8bc7743",
         "elType": "widget",
         "settings": {
           "title": "Nova",
@@ -56,7 +56,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "3255428",
+        "id": "cff9fc2",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -120,7 +120,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "662a8a0",
+        "id": "cb54603",
         "elType": "widget",
         "settings": {
           "text": "Let's Talk",
@@ -154,7 +154,7 @@
     "isInner": false
   },
   {
-    "id": "b517b7d",
+    "id": "b4a5f78",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -182,7 +182,7 @@
     },
     "elements": [
       {
-        "id": "384d8f5",
+        "id": "654519a",
         "elType": "widget",
         "settings": {
           "editor": "<p>Creative Design Agency</p>",
@@ -210,7 +210,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "7c10135",
+        "id": "eed1e45",
         "elType": "widget",
         "settings": {
           "title": "We craft digital experiences that matter",
@@ -243,7 +243,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "2587f86",
+        "id": "f80ae76",
         "elType": "widget",
         "settings": {
           "editor": "<p>Strategy, design, and development for brands that want to stand out in a crowded digital world.</p>",
@@ -270,7 +270,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "0680f9e",
+        "id": "2a89da0",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -300,7 +300,7 @@
         },
         "elements": [
           {
-            "id": "049a2db",
+            "id": "81f2ce8",
             "elType": "widget",
             "settings": {
               "text": "Start a Project",
@@ -331,7 +331,7 @@
             "widgetType": "button"
           },
           {
-            "id": "f3e3659",
+            "id": "7fa83f2",
             "elType": "widget",
             "settings": {
               "text": "Our Work",
@@ -378,7 +378,7 @@
     "isInner": false
   },
   {
-    "id": "6a63b2e",
+    "id": "67229e8",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -422,7 +422,7 @@
     },
     "elements": [
       {
-        "id": "a4608cd",
+        "id": "2676ba3",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -460,21 +460,22 @@
         },
         "elements": [
           {
-            "id": "1954038",
+            "id": "e0a3cb3",
             "elType": "widget",
             "settings": {
-              "editor": "<p>150+</p>",
+              "title": "150+",
+              "header_size": "div",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text",
+                "title_color": "globals/colors?id=text",
                 "typography_typography": "globals/typography?id=0d96bbc"
               }
             },
             "elements": [],
-            "widgetType": "text-editor"
+            "widgetType": "heading"
           },
           {
-            "id": "15097e6",
+            "id": "aac8ac0",
             "elType": "widget",
             "settings": {
               "editor": "<p>Projects</p>",
@@ -505,7 +506,7 @@
         "isInner": true
       },
       {
-        "id": "084e6cb",
+        "id": "6674a63",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -543,21 +544,22 @@
         },
         "elements": [
           {
-            "id": "f0a6c5f",
+            "id": "5e99fdd",
             "elType": "widget",
             "settings": {
-              "editor": "<p>50+</p>",
+              "title": "50+",
+              "header_size": "div",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text",
+                "title_color": "globals/colors?id=text",
                 "typography_typography": "globals/typography?id=0d96bbc"
               }
             },
             "elements": [],
-            "widgetType": "text-editor"
+            "widgetType": "heading"
           },
           {
-            "id": "518c2e6",
+            "id": "2b07c57",
             "elType": "widget",
             "settings": {
               "editor": "<p>Clients</p>",
@@ -588,7 +590,7 @@
         "isInner": true
       },
       {
-        "id": "6dfe11a",
+        "id": "b22b13f",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -626,21 +628,22 @@
         },
         "elements": [
           {
-            "id": "9a0895b",
+            "id": "5fbbefa",
             "elType": "widget",
             "settings": {
-              "editor": "<p>12</p>",
+              "title": "12",
+              "header_size": "div",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text",
+                "title_color": "globals/colors?id=text",
                 "typography_typography": "globals/typography?id=0d96bbc"
               }
             },
             "elements": [],
-            "widgetType": "text-editor"
+            "widgetType": "heading"
           },
           {
-            "id": "420c020",
+            "id": "1fc271a",
             "elType": "widget",
             "settings": {
               "editor": "<p>Awards</p>",
@@ -671,7 +674,7 @@
         "isInner": true
       },
       {
-        "id": "d9734bb",
+        "id": "126e7b4",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -709,21 +712,22 @@
         },
         "elements": [
           {
-            "id": "349b13d",
+            "id": "deb9805",
             "elType": "widget",
             "settings": {
-              "editor": "<p>8yr</p>",
+              "title": "8yr",
+              "header_size": "div",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text",
+                "title_color": "globals/colors?id=text",
                 "typography_typography": "globals/typography?id=0d96bbc"
               }
             },
             "elements": [],
-            "widgetType": "text-editor"
+            "widgetType": "heading"
           },
           {
-            "id": "125863e",
+            "id": "daf7655",
             "elType": "widget",
             "settings": {
               "editor": "<p>Experience</p>",
@@ -757,7 +761,7 @@
     "isInner": false
   },
   {
-    "id": "176aace",
+    "id": "fea0ae3",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -785,7 +789,7 @@
     },
     "elements": [
       {
-        "id": "5f8e326",
+        "id": "57da825",
         "elType": "widget",
         "settings": {
           "editor": "<p>What we do</p>",
@@ -813,7 +817,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "e5cc615",
+        "id": "a5a6b05",
         "elType": "widget",
         "settings": {
           "title": "Services built for growth",
@@ -841,7 +845,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "6755763",
+        "id": "3e394fa",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -881,7 +885,7 @@
         },
         "elements": [
           {
-            "id": "eebcdd1",
+            "id": "541c8d1",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -925,10 +929,11 @@
             },
             "elements": [
               {
-                "id": "48c6a2d",
+                "id": "b3c2b49",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>01</p>",
+                  "title": "01",
+                  "header_size": "div",
                   "align": "left",
                   "_margin": {
                     "unit": "px",
@@ -939,15 +944,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent",
+                    "title_color": "globals/colors?id=accent",
                     "typography_typography": "globals/typography?id=fdbf1fe"
                   }
                 },
                 "elements": [],
-                "widgetType": "text-editor"
+                "widgetType": "heading"
               },
               {
-                "id": "174db12",
+                "id": "a829cd6",
                 "elType": "widget",
                 "settings": {
                   "title": "Brand Strategy",
@@ -970,7 +975,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "a9f76f1",
+                "id": "bb48040",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We define your brand's positioning, messaging, and visual identity to create lasting impressions.</p>",
@@ -992,7 +997,7 @@
             "isInner": true
           },
           {
-            "id": "a2fc511",
+            "id": "ac068b3",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1036,10 +1041,11 @@
             },
             "elements": [
               {
-                "id": "b8b9cac",
+                "id": "f5770fd",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>02</p>",
+                  "title": "02",
+                  "header_size": "div",
                   "align": "left",
                   "_margin": {
                     "unit": "px",
@@ -1050,15 +1056,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent",
+                    "title_color": "globals/colors?id=accent",
                     "typography_typography": "globals/typography?id=fdbf1fe"
                   }
                 },
                 "elements": [],
-                "widgetType": "text-editor"
+                "widgetType": "heading"
               },
               {
-                "id": "11ae432",
+                "id": "da58801",
                 "elType": "widget",
                 "settings": {
                   "title": "Web Design",
@@ -1081,7 +1087,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "78c900e",
+                "id": "2e8d821",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Beautiful, responsive websites that convert visitors into customers.</p>",
@@ -1106,7 +1112,7 @@
         "isInner": true
       },
       {
-        "id": "59e3466",
+        "id": "f10b633",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1146,7 +1152,7 @@
         },
         "elements": [
           {
-            "id": "4894886",
+            "id": "f680cef",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1190,10 +1196,11 @@
             },
             "elements": [
               {
-                "id": "ab693f9",
+                "id": "4b9431f",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>03</p>",
+                  "title": "03",
+                  "header_size": "div",
                   "align": "left",
                   "_margin": {
                     "unit": "px",
@@ -1204,15 +1211,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent",
+                    "title_color": "globals/colors?id=accent",
                     "typography_typography": "globals/typography?id=fdbf1fe"
                   }
                 },
                 "elements": [],
-                "widgetType": "text-editor"
+                "widgetType": "heading"
               },
               {
-                "id": "99f9c48",
+                "id": "18a9f52",
                 "elType": "widget",
                 "settings": {
                   "title": "Product Design",
@@ -1235,7 +1242,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "81e9657",
+                "id": "373d4c3",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>User-centered product design from wireframes to pixel-perfect interfaces.</p>",
@@ -1257,7 +1264,7 @@
             "isInner": true
           },
           {
-            "id": "7e2acf7",
+            "id": "4ec78e4",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1301,10 +1308,11 @@
             },
             "elements": [
               {
-                "id": "508026c",
+                "id": "6c006cb",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>04</p>",
+                  "title": "04",
+                  "header_size": "div",
                   "align": "left",
                   "_margin": {
                     "unit": "px",
@@ -1315,15 +1323,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent",
+                    "title_color": "globals/colors?id=accent",
                     "typography_typography": "globals/typography?id=fdbf1fe"
                   }
                 },
                 "elements": [],
-                "widgetType": "text-editor"
+                "widgetType": "heading"
               },
               {
-                "id": "cefc811",
+                "id": "57e61e9",
                 "elType": "widget",
                 "settings": {
                   "title": "Development",
@@ -1346,7 +1354,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "278337d",
+                "id": "8ca2aa6",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Full-stack development with modern frameworks and scalable architecture.</p>",
@@ -1374,7 +1382,7 @@
     "isInner": false
   },
   {
-    "id": "1e9e019",
+    "id": "96871e5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1404,7 +1412,7 @@
     },
     "elements": [
       {
-        "id": "19cf527",
+        "id": "eb959f7",
         "elType": "widget",
         "settings": {
           "editor": "<p>Selected Work</p>",
@@ -1432,7 +1440,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "d8a0f01",
+        "id": "66bb8fb",
         "elType": "widget",
         "settings": {
           "title": "Projects we're proud of",
@@ -1455,7 +1463,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "0714efa",
+        "id": "35d5c8a",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1495,7 +1503,7 @@
         },
         "elements": [
           {
-            "id": "a2d7044",
+            "id": "4e9f8ff",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1531,7 +1539,7 @@
             },
             "elements": [
               {
-                "id": "2053e2d",
+                "id": "6aaa573",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1554,7 +1562,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "1922b34",
+                "id": "c7090ed",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1580,7 +1588,7 @@
                 },
                 "elements": [
                   {
-                    "id": "689d4c3",
+                    "id": "d1a7a47",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Branding</p>",
@@ -1608,7 +1616,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "4e1f033",
+                    "id": "0b21ba4",
                     "elType": "widget",
                     "settings": {
                       "title": "Luxe Fashion Rebrand",
@@ -1629,7 +1637,7 @@
             "isInner": true
           },
           {
-            "id": "1de9c25",
+            "id": "6bc53bf",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1665,7 +1673,7 @@
             },
             "elements": [
               {
-                "id": "d950d68",
+                "id": "a5bafde",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1688,7 +1696,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "c260caa",
+                "id": "b72d895",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1714,7 +1722,7 @@
                 },
                 "elements": [
                   {
-                    "id": "c603d5b",
+                    "id": "c9db3cc",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Web Design</p>",
@@ -1742,7 +1750,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "330c347",
+                    "id": "683d513",
                     "elType": "widget",
                     "settings": {
                       "title": "Fintech Dashboard",
@@ -1763,7 +1771,7 @@
             "isInner": true
           },
           {
-            "id": "0d478a5",
+            "id": "b710266",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1799,7 +1807,7 @@
             },
             "elements": [
               {
-                "id": "40822e5",
+                "id": "e82cc28",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1822,7 +1830,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "f5dc461",
+                "id": "95ee177",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1848,7 +1856,7 @@
                 },
                 "elements": [
                   {
-                    "id": "0b3f1ee",
+                    "id": "b9597c7",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Development</p>",
@@ -1876,7 +1884,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "b3ef85b",
+                    "id": "63f9d56",
                     "elType": "widget",
                     "settings": {
                       "title": "E-commerce Platform",
@@ -1903,7 +1911,7 @@
     "isInner": false
   },
   {
-    "id": "b0949b0",
+    "id": "d6387ff",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1933,7 +1941,7 @@
     },
     "elements": [
       {
-        "id": "47ed985",
+        "id": "cdb111b",
         "elType": "widget",
         "settings": {
           "title": "Ready to start your project?",
@@ -1956,7 +1964,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "2430b2f",
+        "id": "2abc499",
         "elType": "widget",
         "settings": {
           "editor": "<p>Let's create something extraordinary together.</p>",
@@ -1978,7 +1986,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "e8e0e9f",
+        "id": "5b80e9b",
         "elType": "widget",
         "settings": {
           "text": "Get in Touch",
@@ -2012,7 +2020,7 @@
     "isInner": false
   },
   {
-    "id": "f5507a2",
+    "id": "f3c824e",
     "elType": "container",
     "settings": {
       "content_width": "full",

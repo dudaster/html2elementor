@@ -50,7 +50,7 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
 
     # Leaf div/span with text but no children — emit as text-editor
     # Catches: badges/pills, taglines, prices, emoji decorations, etc.
-    if tag in ("div", "span") and text and len(text) <= 80 and not node.get("children"):
+    if tag in ("div", "span") and text and not node.get("children"):
         styles = node.get("styles", {})
         has_bg = bool(styles.get("background-color") or styles.get("background"))
         has_radius = bool(styles.get("border-radius") or styles.get("border-top-left-radius"))
