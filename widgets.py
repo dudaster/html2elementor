@@ -316,21 +316,27 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
         # If child is a div with multiple children, wrap in a column container
         # so its contents stay stacked vertically (e.g., name + role under avatar)
         if child_tag == "div" and len(child_children) >= 2 and not _is_inline_flex_row(child):
-            inner_widgets: list[dict] = []
-            for grandchild in child_children:
-                _walk(grandchild, inner_widgets, consumed)
-            if inner_widgets:
+            # Merge child div's text content into a single text-editor widget
+            # (avoids nested container width issues in Elementor row flex)
+            parts = []
+            for gc in child_children:
+                gc_text = (gc.get("text") or "").strip()
+                gc_styles = gc.get("styles", {})
+                gc_weight = gc_styles.get("font-weight", "400")
+                if gc_text:
+                    if gc_weight in ("700", "800", "900", "bold"):
+                        parts.append(f"<strong>{gc_text}</strong>")
+                    else:
+                        parts.append(gc_text)
+            if parts:
+                html_content = "<br>".join(parts)
                 child_widgets.append({
-                    "__inner_container__": True,
-                    "settings": {
-                        "content_width": "full",
-                        "_element_width": "initial",
-                        "flex_direction": "column",
-                        "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
-                    },
-                    "children": inner_widgets,
+                    "widgetType": "text-editor",
+                    "settings": {"editor": html_content},
                 })
             consumed.add(id(child))
+            for gc in child_children:
+                consumed.add(id(gc))
         else:
             _walk(child, child_widgets, consumed)
     return {
