@@ -297,7 +297,8 @@ def _section_settings(section: dict) -> dict[str, Any]:
     raw_gap = (w_styles.get("gap") or w_styles.get("row-gap") or
                styles.get("gap") or styles.get("row-gap") or "")
     gap_val = px_to_int(raw_gap) if raw_gap else None
-    gap_px = gap_val or 20
+    # Only use default gap if section is flex/grid; otherwise margins handle spacing
+    gap_px = gap_val if gap_val is not None else (20 if is_flex else 0)
     gap_str = str(gap_px)
 
     settings: dict[str, Any] = {
