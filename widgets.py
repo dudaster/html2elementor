@@ -358,6 +358,28 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
             consumed.add(id(child))
             for gc in child_children:
                 consumed.add(id(gc))
+        elif child_tag == "div" and len(child_children) >= 2 and not _is_inline_flex_row(child):
+            # Different-sized content (e.g., stat num 56px + desc 15px):
+            # emit as nested column container so num stacks above desc.
+            # _flex_size: none → column takes content width; row's justify-content
+            # centers them with gap.
+            inner_widgets: list[dict] = []
+            for gc in child_children:
+                _walk(gc, inner_widgets, consumed)
+            if inner_widgets:
+                child_widgets.append({
+                    "__inner_container__": True,
+                    "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "flex_gap": {"unit": "px", "size": 8, "column": "8", "row": "8"},
+                        "_element_custom_width": {"unit": "%", "size": 30, "sizes": []},
+                        "_element_width": "initial",
+                    },
+                    "children": inner_widgets,
+                })
+            consumed.add(id(child))
         else:
             _walk(child, child_widgets, consumed)
     return {

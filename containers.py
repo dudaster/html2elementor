@@ -655,52 +655,16 @@ def _build_header_elements(section: dict) -> list[dict]:
         if links_parent:
             from .widgets import _apply_margin as _am
             _am(icon_list_settings, links_parent.get("styles", {}))
-        nav_icon_list = {"widgetType": "icon-list", "settings": icon_list_settings}
-    else:
-        nav_icon_list = None
+        elements.append({"widgetType": "icon-list", "settings": icon_list_settings})
 
     # Emit button-like links in nav as actual button widgets
-    nav_cta = None
     for n in _iter(section):
         if n.get("tag") == "a" and looks_like_button(n):
             from .widgets import button_widget
             txt = (n.get("text") or _first_text(n)).strip()
             if txt:
-                nav_cta = button_widget(n, txt)
+                elements.append(button_widget(n, txt))
                 break
-
-    # For flex-row headers: group icon-list + CTA in a nested row so they stay together
-    # on the right (like HTML <nav> containing links + button with flex layout)
-    sec_tag_local = section.get("tag", "")
-    is_flex_header = (
-        sec_tag_local in ("header", "nav")
-        or section.get("styles", {}).get("display") == "flex"
-    )
-    if is_flex_header and (nav_icon_list or nav_cta):
-        group_children = []
-        if nav_icon_list:
-            group_children.append(nav_icon_list)
-        if nav_cta:
-            group_children.append(nav_cta)
-        if len(group_children) > 1:
-            elements.append({
-                "__inner_container__": True,
-                "settings": {
-                    "content_width": "full",
-                    "flex_direction": "row",
-                    "flex_align_items": "center",
-                    "flex_gap": {"unit": "px", "size": 20, "column": "20", "row": "20"},
-                    "_flex_size": "none",
-                },
-                "children": group_children,
-            })
-        else:
-            elements.extend(group_children)
-    else:
-        if nav_icon_list:
-            elements.append(nav_icon_list)
-        if nav_cta:
-            elements.append(nav_cta)
 
     # Emit remaining text divs (copyright, taglines) not captured above
     collected_texts = set()
