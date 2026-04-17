@@ -267,16 +267,8 @@ def _build_custom_typography_from_tree(capture: dict, system_typo: dict) -> tupl
             key = (family, str(weight), str(size))
             if key in seen:
                 continue
-
-            # Check if a SIMILAR global already exists (same family+weight, size within ±2px)
-            similar_match = None
-            for (f, w, s), gid in seen.items():
-                if f == family and w == str(weight) and abs(int(s) - int(size)) <= 2:
-                    similar_match = gid
-                    break
-            if similar_match:
-                seen[key] = similar_match
-                continue
+            # No ±2px consolidation — each unique (family, weight, size) gets its own
+            # global to preserve exact CSS sizes (avoid 14px → 17px drift).
 
             # Check if it matches a system typography
             matches_system = False
