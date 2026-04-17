@@ -1,6 +1,6 @@
 [
   {
-    "id": "00e9058",
+    "id": "10c3d1c",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -33,7 +33,7 @@
     },
     "elements": [
       {
-        "id": "749d8cf",
+        "id": "497ea0c",
         "elType": "widget",
         "settings": {
           "title": "IronPulse",
@@ -54,7 +54,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "7e2d491",
+        "id": "d6306d2",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -118,7 +118,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "26704fc",
+        "id": "70b89cb",
         "elType": "widget",
         "settings": {
           "text": "Înscrie-te",
@@ -158,7 +158,7 @@
     "isInner": false
   },
   {
-    "id": "2484ba9",
+    "id": "23d424f",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -186,7 +186,7 @@
     },
     "elements": [
       {
-        "id": "c71ec2d",
+        "id": "94fc125",
         "elType": "widget",
         "settings": {
           "image": {
@@ -209,7 +209,7 @@
         "widgetType": "image"
       },
       {
-        "id": "f186cf9",
+        "id": "9d04f05",
         "elType": "widget",
         "settings": {
           "editor": "<p>Transformă-te acum</p>",
@@ -237,7 +237,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "1e44946",
+        "id": "9ea9a80",
         "elType": "widget",
         "settings": {
           "title": "Puterea ta începe aici",
@@ -266,7 +266,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "f043435",
+        "id": "0a9bcb2",
         "elType": "widget",
         "settings": {
           "editor": "<p>Antrenamente personalizate, echipamente de ultimă generație și o comunitate care te motivează să fii cea mai bună versiune a ta.</p>",
@@ -293,7 +293,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "37299b7",
+        "id": "6ce309a",
         "elType": "widget",
         "settings": {
           "text": "Începe acum",
@@ -333,7 +333,7 @@
     "isInner": false
   },
   {
-    "id": "e52c5a7",
+    "id": "ac69274",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -367,7 +367,7 @@
     },
     "elements": [
       {
-        "id": "1a233ba",
+        "id": "ff5d3b9",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -432,7 +432,7 @@
         },
         "elements": [
           {
-            "id": "4f2899c",
+            "id": "28bcd4b",
             "elType": "widget",
             "settings": {
               "editor": "<p>2000+</p>",
@@ -446,7 +446,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "18196bc",
+            "id": "6af6124",
             "elType": "widget",
             "settings": {
               "editor": "<p>Membri activi</p>",
@@ -477,7 +477,7 @@
         "isInner": true
       },
       {
-        "id": "0085223",
+        "id": "e72a710",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -542,21 +542,22 @@
         },
         "elements": [
           {
-            "id": "ff105fd",
+            "id": "eb156c7",
             "elType": "widget",
             "settings": {
-              "editor": "<p>15</p>",
+              "title": "15",
+              "header_size": "div",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=25a8170",
+                "title_color": "globals/colors?id=25a8170",
                 "typography_typography": "globals/typography?id=48e47ce"
               }
             },
             "elements": [],
-            "widgetType": "text-editor"
+            "widgetType": "heading"
           },
           {
-            "id": "2dc87d3",
+            "id": "645b004",
             "elType": "widget",
             "settings": {
               "editor": "<p>Antrenori certificați</p>",
@@ -587,7 +588,7 @@
         "isInner": true
       },
       {
-        "id": "d44c2a1",
+        "id": "d4318a7",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -652,21 +653,22 @@
         },
         "elements": [
           {
-            "id": "72b352c",
+            "id": "5394653",
             "elType": "widget",
             "settings": {
-              "editor": "<p>50+</p>",
+              "title": "50+",
+              "header_size": "div",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=25a8170",
+                "title_color": "globals/colors?id=25a8170",
                 "typography_typography": "globals/typography?id=48e47ce"
               }
             },
             "elements": [],
-            "widgetType": "text-editor"
+            "widgetType": "heading"
           },
           {
-            "id": "5afb177",
+            "id": "181bf0f",
             "elType": "widget",
             "settings": {
               "editor": "<p>Clase pe săptămână</p>",
@@ -697,7 +699,7 @@
         "isInner": true
       },
       {
-        "id": "1e10c1c",
+        "id": "9dd066a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -762,21 +764,22 @@
         },
         "elements": [
           {
-            "id": "b063147",
+            "id": "ff15a4f",
             "elType": "widget",
             "settings": {
-              "editor": "<p>10</p>",
+              "title": "10",
+              "header_size": "div",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=25a8170",
+                "title_color": "globals/colors?id=25a8170",
                 "typography_typography": "globals/typography?id=48e47ce"
               }
             },
             "elements": [],
-            "widgetType": "text-editor"
+            "widgetType": "heading"
           },
           {
-            "id": "85a92b3",
+            "id": "91de22f",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ani de experiență</p>",
@@ -810,7 +813,7 @@
     "isInner": false
   },
   {
-    "id": "8416acf",
+    "id": "6360fec",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -838,7 +841,7 @@
     },
     "elements": [
       {
-        "id": "2f3f217",
+        "id": "b2805f6",
         "elType": "widget",
         "settings": {
           "title": "Programele noastre",
@@ -862,7 +865,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b689fe6",
+        "id": "70152a7",
         "elType": "widget",
         "settings": {
           "editor": "<p>Alege programul care ți se potrivește cel mai bine</p>",
@@ -884,7 +887,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "d1064ba",
+        "id": "c81802b",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -924,7 +927,7 @@
         },
         "elements": [
           {
-            "id": "fd9c457",
+            "id": "3469ae4",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -960,7 +963,7 @@
             },
             "elements": [
               {
-                "id": "1dc3b26",
+                "id": "28384c5",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -983,7 +986,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "17c3810",
+                "id": "6ac05b1",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1009,7 +1012,7 @@
                 },
                 "elements": [
                   {
-                    "id": "8a21fe2",
+                    "id": "1a95077",
                     "elType": "widget",
                     "settings": {
                       "title": "Strength Training",
@@ -1033,7 +1036,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "345ad24",
+                    "id": "7749983",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Dezvoltă forță și masă musculară cu programe structurate și ghidate.</p>",
@@ -1060,7 +1063,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "42b4c8e",
+                    "id": "a7daa8d",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>149 lei/lună</p>",
@@ -1080,7 +1083,7 @@
             "isInner": true
           },
           {
-            "id": "b0ef719",
+            "id": "c37008f",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1116,7 +1119,7 @@
             },
             "elements": [
               {
-                "id": "a93e342",
+                "id": "f8c669e",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1139,7 +1142,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "dcbb55d",
+                "id": "3c4d005",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1165,7 +1168,7 @@
                 },
                 "elements": [
                   {
-                    "id": "c93fbab",
+                    "id": "27c921a",
                     "elType": "widget",
                     "settings": {
                       "title": "HIIT & Cardio",
@@ -1189,7 +1192,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "cc05ac9",
+                    "id": "2104664",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Antrenamente intense de interval pentru arderea maximă de calorii.</p>",
@@ -1216,7 +1219,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "f49be88",
+                    "id": "167f527",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>129 lei/lună</p>",
@@ -1236,7 +1239,7 @@
             "isInner": true
           },
           {
-            "id": "029ade0",
+            "id": "aa0c36a",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1272,7 +1275,7 @@
             },
             "elements": [
               {
-                "id": "03161a2",
+                "id": "ed7d30c",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1295,7 +1298,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "486e7c2",
+                "id": "1d1e007",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1321,7 +1324,7 @@
                 },
                 "elements": [
                   {
-                    "id": "b795f8b",
+                    "id": "6c04ab4",
                     "elType": "widget",
                     "settings": {
                       "title": "Yoga & Mobility",
@@ -1345,7 +1348,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "3a0f695",
+                    "id": "c349905",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Flexibilitate, echilibru și relaxare mentală pentru corp și minte.</p>",
@@ -1372,7 +1375,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "5781128",
+                    "id": "12c2f40",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>99 lei/lună</p>",
@@ -1398,7 +1401,7 @@
     "isInner": false
   },
   {
-    "id": "16498af",
+    "id": "d38121d",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1428,7 +1431,7 @@
     },
     "elements": [
       {
-        "id": "a7f49ef",
+        "id": "a4183af",
         "elType": "widget",
         "settings": {
           "title": "Echipa noastră",
@@ -1452,7 +1455,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "863c8c2",
+        "id": "cbeea37",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1479,7 +1482,7 @@
         },
         "elements": [
           {
-            "id": "f21edd3",
+            "id": "29fe556",
             "elType": "widget",
             "settings": {
               "image": {
@@ -1514,7 +1517,7 @@
             "widgetType": "image"
           },
           {
-            "id": "065b83a",
+            "id": "5803690",
             "elType": "widget",
             "settings": {
               "title": "Alex Marinescu",
@@ -1538,7 +1541,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "76cbaf1",
+            "id": "0707e69",
             "elType": "widget",
             "settings": {
               "editor": "<p>Head Coach</p>",
@@ -1558,7 +1561,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "ecb4458",
+            "id": "67d5ebc",
             "elType": "widget",
             "settings": {
               "image": {
@@ -1593,7 +1596,7 @@
             "widgetType": "image"
           },
           {
-            "id": "d649c3c",
+            "id": "4196006",
             "elType": "widget",
             "settings": {
               "title": "Diana Popescu",
@@ -1617,7 +1620,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "d9cb52a",
+            "id": "eb5c358",
             "elType": "widget",
             "settings": {
               "editor": "<p>HIIT Specialist</p>",
@@ -1637,7 +1640,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "ae8a9df",
+            "id": "6f2d047",
             "elType": "widget",
             "settings": {
               "image": {
@@ -1672,7 +1675,7 @@
             "widgetType": "image"
           },
           {
-            "id": "38eb2dd",
+            "id": "2e4c858",
             "elType": "widget",
             "settings": {
               "title": "Mihai Stoica",
@@ -1696,7 +1699,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "dbc0e47",
+            "id": "c251baa",
             "elType": "widget",
             "settings": {
               "editor": "<p>Yoga Instructor</p>",
@@ -1722,7 +1725,7 @@
     "isInner": false
   },
   {
-    "id": "3903c5c",
+    "id": "f146ca4",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1752,7 +1755,7 @@
     },
     "elements": [
       {
-        "id": "49d43c2",
+        "id": "4510c6f",
         "elType": "widget",
         "settings": {
           "editor": "<p>„Am slăbit 15 kg în 6 luni. Echipa IronPulse m-a ajutat să-mi schimb complet stilul de viață. Nu e doar o sală, e o familie.\"</p>",
@@ -1780,7 +1783,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "0edad07",
+        "id": "3464d35",
         "elType": "widget",
         "settings": {
           "editor": "<p>Membră din 2023</p>",
@@ -1797,7 +1800,7 @@
     "isInner": false
   },
   {
-    "id": "538e311",
+    "id": "e29bba3",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1827,7 +1830,7 @@
     },
     "elements": [
       {
-        "id": "c95c98f",
+        "id": "a79aebd",
         "elType": "widget",
         "settings": {
           "title": "Ești pregătit?",
@@ -1851,7 +1854,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "4b1e6d2",
+        "id": "1444e38",
         "elType": "widget",
         "settings": {
           "editor": "<p>Prima sesiune de antrenament este gratuită. Vino să încerci.</p>",
@@ -1873,7 +1876,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "10889f0",
+        "id": "1c5d3bc",
         "elType": "widget",
         "settings": {
           "text": "Rezervă o sesiune gratuită",
@@ -1913,7 +1916,7 @@
     "isInner": false
   },
   {
-    "id": "fbfe46a",
+    "id": "1ef4091",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -1946,7 +1949,7 @@
     },
     "elements": [
       {
-        "id": "94827a1",
+        "id": "ce415aa",
         "elType": "widget",
         "settings": {
           "title": "IronPulse",
@@ -1962,7 +1965,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a4e3d69",
+        "id": "b783fcf",
         "elType": "widget",
         "settings": {
           "view": "inline",

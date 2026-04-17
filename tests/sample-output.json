@@ -1,6 +1,6 @@
 [
   {
-    "id": "ce89b30",
+    "id": "0fb6607",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -31,7 +31,7 @@
     },
     "elements": [
       {
-        "id": "8780168",
+        "id": "04108d2",
         "elType": "widget",
         "settings": {
           "image": {
@@ -53,7 +53,7 @@
         "widgetType": "image"
       },
       {
-        "id": "fbc2859",
+        "id": "712b7ce",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -120,7 +120,7 @@
     "isInner": false
   },
   {
-    "id": "1f39f03",
+    "id": "5feef6e",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -148,7 +148,7 @@
     },
     "elements": [
       {
-        "id": "216ac31",
+        "id": "4836d43",
         "elType": "widget",
         "settings": {
           "image": {
@@ -171,7 +171,7 @@
         "widgetType": "image"
       },
       {
-        "id": "b28138f",
+        "id": "fe20b46",
         "elType": "widget",
         "settings": {
           "title": "Cabinet veterinar cu suflet",
@@ -199,7 +199,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b186a3a",
+        "id": "64af421",
         "elType": "widget",
         "settings": {
           "editor": "<p>Oferim servicii veterinare complete pentru câini și pisici într-un mediu calm și profesionist.</p>",
@@ -226,7 +226,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "abe6b9a",
+        "id": "f26a2ef",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -256,7 +256,7 @@
         },
         "elements": [
           {
-            "id": "52d9a5e",
+            "id": "5cf9fea",
             "elType": "widget",
             "settings": {
               "text": "Programează vizită",
@@ -287,7 +287,7 @@
             "widgetType": "button"
           },
           {
-            "id": "8fa7d9a",
+            "id": "b41e251",
             "elType": "widget",
             "settings": {
               "text": "Vezi serviciile",
@@ -334,7 +334,7 @@
     "isInner": false
   },
   {
-    "id": "2e16589",
+    "id": "fa9eda5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -362,7 +362,7 @@
     },
     "elements": [
       {
-        "id": "4971776",
+        "id": "fb55656",
         "elType": "widget",
         "settings": {
           "title": "Despre cabinetul nostru",
@@ -385,7 +385,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "4110a1d",
+        "id": "c18f759",
         "elType": "widget",
         "settings": {
           "editor": "<p>Suntem un cabinet veterinar modern din București, dedicat sănătății și bunăstării animalelor de companie. Echipa noastră oferă consultații, tratamente și intervenții cu profesionalism.</p>",
@@ -407,7 +407,7 @@
     "isInner": false
   },
   {
-    "id": "9439744",
+    "id": "9fed636",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -437,7 +437,7 @@
     },
     "elements": [
       {
-        "id": "2a7c3b8",
+        "id": "12f5e23",
         "elType": "widget",
         "settings": {
           "title": "De ce să ne alegi",
@@ -460,7 +460,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "f1e4b22",
+        "id": "4736759",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -487,7 +487,7 @@
         },
         "elements": [
           {
-            "id": "14d11a4",
+            "id": "cf2a310",
             "elType": "widget",
             "settings": {
               "title_text": "Îngrijire cu suflet",
@@ -576,7 +576,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "2649edf",
+            "id": "faa4948",
             "elType": "widget",
             "settings": {
               "title_text": "Servicii complete",
@@ -665,7 +665,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "0acdfad",
+            "id": "b104f41",
             "elType": "widget",
             "settings": {
               "title_text": "Locație centrală",
@@ -754,7 +754,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "14c134d",
+            "id": "eeb327c",
             "elType": "widget",
             "settings": {
               "title_text": "Program flexibil",
@@ -849,7 +849,7 @@
     "isInner": false
   },
   {
-    "id": "dc82abc",
+    "id": "e478a7e",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -879,7 +879,7 @@
     },
     "elements": [
       {
-        "id": "32e6798",
+        "id": "7f7d80a",
         "elType": "widget",
         "settings": {
           "title": "Ce spun clienții noștri",
@@ -902,7 +902,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "e848e88",
+        "id": "2658187",
         "elType": "widget",
         "settings": {
           "editor": "<p>Un cabinet cu oameni dedicați și foarte empatici.</p>",
@@ -925,7 +925,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "83f166e",
+        "id": "aea764b",
         "elType": "widget",
         "settings": {
           "editor": "<p>Echipa de oameni sufletiști, cărora le pasă de animăluțe.</p>",
@@ -951,7 +951,7 @@
     "isInner": false
   },
   {
-    "id": "355d69d",
+    "id": "59267a8",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -981,7 +981,7 @@
     },
     "elements": [
       {
-        "id": "0ca3b3f",
+        "id": "070c602",
         "elType": "widget",
         "settings": {
           "title": "Ai nevoie de o consultație?",
@@ -1004,7 +1004,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "fd505b6",
+        "id": "dbcc2ca",
         "elType": "widget",
         "settings": {
           "editor": "<p>Contactează-ne și programează o vizită pentru companionul tău.</p>",
@@ -1026,7 +1026,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "fe41eac",
+        "id": "d56c31f",
         "elType": "widget",
         "settings": {
           "text": "Contactează-ne",
@@ -1060,7 +1060,7 @@
     "isInner": false
   },
   {
-    "id": "c34f6d0",
+    "id": "6db44c9",
     "elType": "container",
     "settings": {
       "content_width": "full",

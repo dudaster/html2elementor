@@ -540,11 +540,25 @@ def _apply_container_card_styling(settings: dict, styles: dict) -> None:
 
 
 def _leaf_text_widget(node: dict) -> dict:
-    """Styled div/span with text only — taglines, prices, small labels."""
+    """Styled div/span with text only — taglines, prices, small labels, emojis."""
     text = (node.get("text") or "").strip()
     styles = node.get("styles", {})
     color_hex = to_hex(styles.get("color"))
-    settings: dict[str, Any] = {
+
+    # Emoji or very short text (≤4 chars) → heading with div tag
+    if len(text) <= 4 and text:
+        settings: dict[str, Any] = {
+            "title": text,
+            "header_size": "div",
+            "align": text_align(styles),
+        }
+        apply_typography(settings, styles)
+        _apply_margin(settings, styles)
+        if color_hex:
+            settings["title_color"] = color_hex
+        return {"widgetType": "heading", "settings": settings}
+
+    settings = {
         "editor": f"<p>{_escape(text)}</p>",
         "align": text_align(styles),
     }
