@@ -302,6 +302,7 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
     """Emit children of a flex-row div in a horizontal container."""
     styles = node.get("styles", {})
     jc = styles.get("justify-content", "flex-start")
+    gap = px_to_int(styles.get("gap", "8"))
     jc_map = {
         "space-between": "space-between",
         "space-around": "space-around",
@@ -310,7 +311,28 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
     }
     child_widgets: list[dict] = []
     for child in node.get("children", []):
-        _walk(child, child_widgets, consumed)
+        child_tag = child.get("tag", "")
+        child_children = child.get("children", [])
+        # If child is a div with multiple children, wrap in a column container
+        # so its contents stay stacked vertically (e.g., name + role under avatar)
+        if child_tag == "div" and len(child_children) >= 2 and not _is_inline_flex_row(child):
+            inner_widgets: list[dict] = []
+            for grandchild in child_children:
+                _walk(grandchild, inner_widgets, consumed)
+            if inner_widgets:
+                child_widgets.append({
+                    "__inner_container__": True,
+                    "settings": {
+                        "content_width": "full",
+                        "_element_width": "initial",
+                        "flex_direction": "column",
+                        "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
+                    },
+                    "children": inner_widgets,
+                })
+            consumed.add(id(child))
+        else:
+            _walk(child, child_widgets, consumed)
     return {
         "__inner_container__": True,
         "settings": {
@@ -318,7 +340,7 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
             "flex_direction": "row",
             "flex_justify_content": jc_map.get(jc, "flex-start"),
             "flex_align_items": "center",
-            "flex_gap": {"unit": "px", "size": 8, "column": "8", "row": "8"},
+            "flex_gap": {"unit": "px", "size": gap, "column": str(gap), "row": str(gap)},
         },
         "children": child_widgets,
     }
