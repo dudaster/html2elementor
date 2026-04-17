@@ -1,6 +1,6 @@
 [
   {
-    "id": "ef6a5c3",
+    "id": "1b86a4e",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -43,29 +43,22 @@
     },
     "elements": [
       {
-        "id": "023319f",
+        "id": "18d7f1a",
         "elType": "widget",
         "settings": {
           "title": "Code",
           "header_size": "h4",
           "align": "left",
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "22",
-            "sizes": []
-          },
-          "typography_font_weight": "800",
           "__globals__": {
-            "title_color": "globals/colors?id=text"
+            "title_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=9dffbf6"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "f976d0f",
+        "id": "6ed0d8c",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -129,7 +122,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "780755b",
+        "id": "36d09ca",
         "elType": "widget",
         "settings": {
           "text": "Începe gratuit",
@@ -149,18 +142,11 @@
             "isLinked": true
           },
           "button_background_hover_color": "#6d33d0",
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "14",
-            "sizes": []
-          },
-          "typography_font_weight": "600",
           "__globals__": {
             "button_text_color": "globals/colors?id=25a8170",
             "button_hover_text_color": "globals/colors?id=25a8170",
-            "background_color": "globals/colors?id=primary"
+            "background_color": "globals/colors?id=primary",
+            "typography_typography": "globals/typography?id=0bca67a"
           }
         },
         "elements": [],
@@ -170,7 +156,7 @@
     "isInner": false
   },
   {
-    "id": "6a280ab",
+    "id": "6e24f38",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -207,20 +193,12 @@
     },
     "elements": [
       {
-        "id": "8f130b2",
+        "id": "1625b0b",
         "elType": "widget",
         "settings": {
           "title": "🚀 Peste 10.000 de studenți activi",
           "header_size": "h6",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "14",
-            "sizes": []
-          },
-          "typography_font_weight": "600",
           "_background_background": "classic",
           "_border_border": "solid",
           "_border_width": {
@@ -250,14 +228,15 @@
           "__globals__": {
             "title_color": "globals/colors?id=primary",
             "_background_color": "globals/colors?id=25a8170",
-            "_border_color": "globals/colors?id=08bf214"
+            "_border_color": "globals/colors?id=08bf214",
+            "typography_typography": "globals/typography?id=0bca67a"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "9afbb03",
+        "id": "e9ae351",
         "elType": "widget",
         "settings": {
           "title": "Învață să programezi de la zero",
@@ -290,20 +269,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "219a583",
+        "id": "32e9fc9",
         "elType": "widget",
         "settings": {
           "editor": "<p>Cursuri practice de programare, cu mentori dedicați și proiecte reale. De la începător la junior developer în 6 luni.</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "19",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=c180041"
           },
           "typography_line_height": {
             "unit": "em",
@@ -323,7 +296,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "c15c264",
+        "id": "43c80fe",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -350,7 +323,7 @@
         },
         "elements": [
           {
-            "id": "26bffad",
+            "id": "6b51746",
             "elType": "widget",
             "settings": {
               "text": "Începe gratuit",
@@ -370,25 +343,18 @@
                 "isLinked": true
               },
               "button_background_hover_color": "#6d33d0",
-              "typography_typography": "custom",
-              "typography_font_family": "Plus Jakarta Sans",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "16",
-                "sizes": []
-              },
-              "typography_font_weight": "600",
               "__globals__": {
                 "button_text_color": "globals/colors?id=25a8170",
                 "button_hover_text_color": "globals/colors?id=25a8170",
-                "background_color": "globals/colors?id=primary"
+                "background_color": "globals/colors?id=primary",
+                "typography_typography": "globals/typography?id=0bca67a"
               }
             },
             "elements": [],
             "widgetType": "button"
           },
           {
-            "id": "856780d",
+            "id": "3796016",
             "elType": "widget",
             "settings": {
               "text": "Vezi cursurile",
@@ -408,18 +374,11 @@
                 "isLinked": true
               },
               "button_background_hover_color": "#e0e0e0",
-              "typography_typography": "custom",
-              "typography_font_family": "Plus Jakarta Sans",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "16",
-                "sizes": []
-              },
-              "typography_font_weight": "600",
               "__globals__": {
                 "button_text_color": "globals/colors?id=text",
                 "button_hover_text_color": "globals/colors?id=text",
-                "background_color": "globals/colors?id=25a8170"
+                "background_color": "globals/colors?id=25a8170",
+                "typography_typography": "globals/typography?id=0bca67a"
               }
             },
             "elements": [],
@@ -432,7 +391,7 @@
     "isInner": false
   },
   {
-    "id": "fbfdca4",
+    "id": "e1af0ba",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -470,7 +429,7 @@
     },
     "elements": [
       {
-        "id": "ebe91f9",
+        "id": "cba581e",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -497,7 +456,7 @@
         },
         "elements": [
           {
-            "id": "b581f25",
+            "id": "3f77c78",
             "elType": "widget",
             "settings": {
               "image": {
@@ -542,7 +501,7 @@
             "widgetType": "image"
           },
           {
-            "id": "1aef24e",
+            "id": "6dda54b",
             "elType": "widget",
             "settings": {
               "image": {
@@ -595,7 +554,7 @@
             "widgetType": "image"
           },
           {
-            "id": "f01600d",
+            "id": "a9adab4",
             "elType": "widget",
             "settings": {
               "image": {
@@ -648,7 +607,7 @@
             "widgetType": "image"
           },
           {
-            "id": "da557d3",
+            "id": "a9e8c5d",
             "elType": "widget",
             "settings": {
               "image": {
@@ -704,20 +663,14 @@
         "isInner": true
       },
       {
-        "id": "c15692b",
+        "id": "0fa2342",
         "elType": "widget",
         "settings": {
           "editor": "<p><strong>4.9/5</strong> din 2.847 recenzii · Înscrie-te alături de 10.000+ studenți</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "15",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=text"
           }
         },
         "elements": [],
@@ -727,7 +680,7 @@
     "isInner": false
   },
   {
-    "id": "eddc416",
+    "id": "6e17bbf",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -755,20 +708,12 @@
     },
     "elements": [
       {
-        "id": "c59a304",
+        "id": "5019ba1",
         "elType": "widget",
         "settings": {
           "title": "Cursuri populare",
           "header_size": "h6",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "13",
-            "sizes": []
-          },
-          "typography_font_weight": "600",
           "_background_background": "classic",
           "_border_radius": {
             "unit": "px",
@@ -788,14 +733,15 @@
           },
           "__globals__": {
             "title_color": "globals/colors?id=primary",
-            "_background_color": "globals/colors?id=fd7de3a"
+            "_background_color": "globals/colors?id=fd7de3a",
+            "typography_typography": "globals/typography?id=0bca67a"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "c9d108b",
+        "id": "ccb3940",
         "elType": "widget",
         "settings": {
           "title": "Alege-ți parcursul",
@@ -810,20 +756,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "04935f3",
+        "id": "3eca309",
         "elType": "widget",
         "settings": {
           "editor": "<p>Cursuri structurate, de la fundamente până la nivel avansat</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "17",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=c180041"
           },
           "_margin": {
             "unit": "px",
@@ -838,7 +778,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "9f67612",
+        "id": "a1b7dd9",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -878,7 +818,7 @@
         },
         "elements": [
           {
-            "id": "cec55de",
+            "id": "350788f",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -924,7 +864,7 @@
             },
             "elements": [
               {
-                "id": "f669fc5",
+                "id": "4f03783",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -947,7 +887,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "841b354",
+                "id": "31b7153",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -973,20 +913,12 @@
                 },
                 "elements": [
                   {
-                    "id": "8d085ad",
+                    "id": "7a61040",
                     "elType": "widget",
                     "settings": {
                       "title": "Începător",
                       "header_size": "h6",
                       "align": "center",
-                      "typography_typography": "custom",
-                      "typography_font_family": "Plus Jakarta Sans",
-                      "typography_font_size": {
-                        "unit": "px",
-                        "size": "12",
-                        "sizes": []
-                      },
-                      "typography_font_weight": "600",
                       "_background_background": "classic",
                       "_border_radius": {
                         "unit": "px",
@@ -1006,14 +938,15 @@
                       },
                       "__globals__": {
                         "title_color": "globals/colors?id=primary",
-                        "_background_color": "globals/colors?id=fd7de3a"
+                        "_background_color": "globals/colors?id=fd7de3a",
+                        "typography_typography": "globals/typography?id=0bca67a"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
                   },
                   {
-                    "id": "b64dde4",
+                    "id": "fa41061",
                     "elType": "widget",
                     "settings": {
                       "title": "Python Fundamentals",
@@ -1036,20 +969,14 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "548b65a",
+                    "id": "001c290",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Învață bazele programării cu cel mai popular limbaj pentru începători.</p>",
                       "align": "left",
                       "__globals__": {
-                        "text_color": "globals/colors?id=text"
-                      },
-                      "typography_typography": "custom",
-                      "typography_font_family": "Plus Jakarta Sans",
-                      "typography_font_size": {
-                        "unit": "px",
-                        "size": "14",
-                        "sizes": []
+                        "text_color": "globals/colors?id=text",
+                        "typography_typography": "globals/typography?id=text"
                       },
                       "typography_line_height": {
                         "unit": "em",
@@ -1069,7 +996,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "b85877f",
+                    "id": "7c44ec8",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1096,41 +1023,28 @@
                     },
                     "elements": [
                       {
-                        "id": "e4d557f",
+                        "id": "75092a4",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>299 lei</p>",
                           "align": "left",
-                          "typography_typography": "custom",
-                          "typography_font_family": "Plus Jakarta Sans",
-                          "typography_font_size": {
-                            "unit": "px",
-                            "size": "20",
-                            "sizes": []
-                          },
-                          "typography_font_weight": "800",
                           "__globals__": {
-                            "text_color": "globals/colors?id=primary"
+                            "text_color": "globals/colors?id=primary",
+                            "typography_typography": "globals/typography?id=9dffbf6"
                           }
                         },
                         "elements": [],
                         "widgetType": "text-editor"
                       },
                       {
-                        "id": "3c4075b",
+                        "id": "f04a6cd",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>12 săptămâni</p>",
                           "align": "left",
-                          "typography_typography": "custom",
-                          "typography_font_family": "Plus Jakarta Sans",
-                          "typography_font_size": {
-                            "unit": "px",
-                            "size": "13",
-                            "sizes": []
-                          },
                           "__globals__": {
-                            "text_color": "globals/colors?id=c900e1b"
+                            "text_color": "globals/colors?id=c900e1b",
+                            "typography_typography": "globals/typography?id=text"
                           }
                         },
                         "elements": [],
@@ -1146,7 +1060,7 @@
             "isInner": true
           },
           {
-            "id": "cc145ad",
+            "id": "2e9e216",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1192,7 +1106,7 @@
             },
             "elements": [
               {
-                "id": "ee11471",
+                "id": "5e4c815",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1215,7 +1129,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "9330e08",
+                "id": "fb4ed9c",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1241,20 +1155,12 @@
                 },
                 "elements": [
                   {
-                    "id": "16f0321",
+                    "id": "cb91b0b",
                     "elType": "widget",
                     "settings": {
                       "title": "Intermediar",
                       "header_size": "h6",
                       "align": "center",
-                      "typography_typography": "custom",
-                      "typography_font_family": "Plus Jakarta Sans",
-                      "typography_font_size": {
-                        "unit": "px",
-                        "size": "12",
-                        "sizes": []
-                      },
-                      "typography_font_weight": "600",
                       "_background_background": "classic",
                       "_border_radius": {
                         "unit": "px",
@@ -1274,14 +1180,15 @@
                       },
                       "__globals__": {
                         "title_color": "globals/colors?id=primary",
-                        "_background_color": "globals/colors?id=fd7de3a"
+                        "_background_color": "globals/colors?id=fd7de3a",
+                        "typography_typography": "globals/typography?id=0bca67a"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
                   },
                   {
-                    "id": "9fc2109",
+                    "id": "7e7813e",
                     "elType": "widget",
                     "settings": {
                       "title": "React & Next.js",
@@ -1304,20 +1211,14 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "b433181",
+                    "id": "8049c3d",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Construiește aplicații web moderne cu React și framework-ul Next.js.</p>",
                       "align": "left",
                       "__globals__": {
-                        "text_color": "globals/colors?id=text"
-                      },
-                      "typography_typography": "custom",
-                      "typography_font_family": "Plus Jakarta Sans",
-                      "typography_font_size": {
-                        "unit": "px",
-                        "size": "14",
-                        "sizes": []
+                        "text_color": "globals/colors?id=text",
+                        "typography_typography": "globals/typography?id=text"
                       },
                       "typography_line_height": {
                         "unit": "em",
@@ -1337,7 +1238,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "56e8ce6",
+                    "id": "4b6da19",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1364,41 +1265,28 @@
                     },
                     "elements": [
                       {
-                        "id": "6451425",
+                        "id": "27704bd",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>499 lei</p>",
                           "align": "left",
-                          "typography_typography": "custom",
-                          "typography_font_family": "Plus Jakarta Sans",
-                          "typography_font_size": {
-                            "unit": "px",
-                            "size": "20",
-                            "sizes": []
-                          },
-                          "typography_font_weight": "800",
                           "__globals__": {
-                            "text_color": "globals/colors?id=primary"
+                            "text_color": "globals/colors?id=primary",
+                            "typography_typography": "globals/typography?id=9dffbf6"
                           }
                         },
                         "elements": [],
                         "widgetType": "text-editor"
                       },
                       {
-                        "id": "d88254f",
+                        "id": "345450c",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>16 săptămâni</p>",
                           "align": "left",
-                          "typography_typography": "custom",
-                          "typography_font_family": "Plus Jakarta Sans",
-                          "typography_font_size": {
-                            "unit": "px",
-                            "size": "13",
-                            "sizes": []
-                          },
                           "__globals__": {
-                            "text_color": "globals/colors?id=c900e1b"
+                            "text_color": "globals/colors?id=c900e1b",
+                            "typography_typography": "globals/typography?id=text"
                           }
                         },
                         "elements": [],
@@ -1414,7 +1302,7 @@
             "isInner": true
           },
           {
-            "id": "90d6d45",
+            "id": "e8596ce",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1460,7 +1348,7 @@
             },
             "elements": [
               {
-                "id": "a343281",
+                "id": "149ae60",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1483,7 +1371,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "0d64604",
+                "id": "f0a9e98",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1509,20 +1397,12 @@
                 },
                 "elements": [
                   {
-                    "id": "e89b895",
+                    "id": "cefee99",
                     "elType": "widget",
                     "settings": {
                       "title": "Avansat",
                       "header_size": "h6",
                       "align": "center",
-                      "typography_typography": "custom",
-                      "typography_font_family": "Plus Jakarta Sans",
-                      "typography_font_size": {
-                        "unit": "px",
-                        "size": "12",
-                        "sizes": []
-                      },
-                      "typography_font_weight": "600",
                       "_background_background": "classic",
                       "_border_radius": {
                         "unit": "px",
@@ -1542,14 +1422,15 @@
                       },
                       "__globals__": {
                         "title_color": "globals/colors?id=primary",
-                        "_background_color": "globals/colors?id=fd7de3a"
+                        "_background_color": "globals/colors?id=fd7de3a",
+                        "typography_typography": "globals/typography?id=0bca67a"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
                   },
                   {
-                    "id": "767da67",
+                    "id": "b292ad4",
                     "elType": "widget",
                     "settings": {
                       "title": "Full Stack Developer",
@@ -1572,20 +1453,14 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "d5ab4fb",
+                    "id": "7e164d6",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Parcurs complet: frontend, backend, baze de date și deployment.</p>",
                       "align": "left",
                       "__globals__": {
-                        "text_color": "globals/colors?id=text"
-                      },
-                      "typography_typography": "custom",
-                      "typography_font_family": "Plus Jakarta Sans",
-                      "typography_font_size": {
-                        "unit": "px",
-                        "size": "14",
-                        "sizes": []
+                        "text_color": "globals/colors?id=text",
+                        "typography_typography": "globals/typography?id=text"
                       },
                       "typography_line_height": {
                         "unit": "em",
@@ -1605,7 +1480,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "de1f1be",
+                    "id": "bcdeaf6",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1632,41 +1507,28 @@
                     },
                     "elements": [
                       {
-                        "id": "e2ce2c3",
+                        "id": "1aeffef",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>799 lei</p>",
                           "align": "left",
-                          "typography_typography": "custom",
-                          "typography_font_family": "Plus Jakarta Sans",
-                          "typography_font_size": {
-                            "unit": "px",
-                            "size": "20",
-                            "sizes": []
-                          },
-                          "typography_font_weight": "800",
                           "__globals__": {
-                            "text_color": "globals/colors?id=primary"
+                            "text_color": "globals/colors?id=primary",
+                            "typography_typography": "globals/typography?id=9dffbf6"
                           }
                         },
                         "elements": [],
                         "widgetType": "text-editor"
                       },
                       {
-                        "id": "24943cc",
+                        "id": "167f1ab",
                         "elType": "widget",
                         "settings": {
                           "editor": "<p>24 săptămâni</p>",
                           "align": "left",
-                          "typography_typography": "custom",
-                          "typography_font_family": "Plus Jakarta Sans",
-                          "typography_font_size": {
-                            "unit": "px",
-                            "size": "13",
-                            "sizes": []
-                          },
                           "__globals__": {
-                            "text_color": "globals/colors?id=c900e1b"
+                            "text_color": "globals/colors?id=c900e1b",
+                            "typography_typography": "globals/typography?id=text"
                           }
                         },
                         "elements": [],
@@ -1688,7 +1550,7 @@
     "isInner": false
   },
   {
-    "id": "39a1a59",
+    "id": "396434b",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1718,7 +1580,7 @@
     },
     "elements": [
       {
-        "id": "b6c694b",
+        "id": "34c2662",
         "elType": "widget",
         "settings": {
           "title": "De ce CodeAcademy?",
@@ -1733,20 +1595,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "a9ed042",
+        "id": "ac415dc",
         "elType": "widget",
         "settings": {
           "editor": "<p>Tot ce ai nevoie pentru a deveni developer</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=25a8170"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "17",
-            "sizes": []
+            "text_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=c180041"
           },
           "_margin": {
             "unit": "px",
@@ -1761,7 +1617,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "5f35594",
+        "id": "7ae23b9",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1801,7 +1657,7 @@
         },
         "elements": [
           {
-            "id": "3839a37",
+            "id": "a1b423b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1837,18 +1693,11 @@
             },
             "elements": [
               {
-                "id": "56c0a08",
+                "id": "21df9b3",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>👨‍💻</p>",
                   "align": "left",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "32",
-                    "sizes": []
-                  },
                   "_margin": {
                     "unit": "px",
                     "top": "0",
@@ -1858,14 +1707,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=48e47ce"
                   }
                 },
                 "elements": [],
                 "widgetType": "text-editor"
               },
               {
-                "id": "a66520b",
+                "id": "73e1892",
                 "elType": "widget",
                 "settings": {
                   "title": "Mentori din industrie",
@@ -1888,20 +1738,14 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b9449e0",
+                "id": "7ba7ef5",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Fiecare student are acces la un mentor cu experiență în companii tech de top.</p>",
                   "align": "left",
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
-                  },
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=text"
                   },
                   "typography_line_height": {
                     "unit": "em",
@@ -1916,7 +1760,7 @@
             "isInner": true
           },
           {
-            "id": "bbdec13",
+            "id": "e68f073",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1952,18 +1796,11 @@
             },
             "elements": [
               {
-                "id": "eae743a",
+                "id": "a86e8cd",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>🎯</p>",
                   "align": "left",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "32",
-                    "sizes": []
-                  },
                   "_margin": {
                     "unit": "px",
                     "top": "0",
@@ -1973,14 +1810,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=48e47ce"
                   }
                 },
                 "elements": [],
                 "widgetType": "text-editor"
               },
               {
-                "id": "323501a",
+                "id": "e20f204",
                 "elType": "widget",
                 "settings": {
                   "title": "Proiecte practice",
@@ -2003,20 +1841,14 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b5521ed",
+                "id": "bbb26e4",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Construiești proiecte reale pe care le poți arăta la interviuri de angajare.</p>",
                   "align": "left",
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
-                  },
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=text"
                   },
                   "typography_line_height": {
                     "unit": "em",
@@ -2034,7 +1866,7 @@
         "isInner": true
       },
       {
-        "id": "3d9ac9e",
+        "id": "b0ea43c",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2074,7 +1906,7 @@
         },
         "elements": [
           {
-            "id": "b2d252c",
+            "id": "b263a15",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2110,18 +1942,11 @@
             },
             "elements": [
               {
-                "id": "f3a3df7",
+                "id": "8ca8fe4",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>🏆</p>",
                   "align": "left",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "32",
-                    "sizes": []
-                  },
                   "_margin": {
                     "unit": "px",
                     "top": "0",
@@ -2131,14 +1956,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=48e47ce"
                   }
                 },
                 "elements": [],
                 "widgetType": "text-editor"
               },
               {
-                "id": "f0deeb2",
+                "id": "7323732",
                 "elType": "widget",
                 "settings": {
                   "title": "Certificare recunoscută",
@@ -2161,20 +1987,14 @@
                 "widgetType": "heading"
               },
               {
-                "id": "daa1945",
+                "id": "934932f",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Primești o certificare la finalul fiecărui curs, validată de partenerii noștri.</p>",
                   "align": "left",
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
-                  },
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=text"
                   },
                   "typography_line_height": {
                     "unit": "em",
@@ -2189,7 +2009,7 @@
             "isInner": true
           },
           {
-            "id": "3e99d04",
+            "id": "ba07202",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2225,18 +2045,11 @@
             },
             "elements": [
               {
-                "id": "2b6642e",
+                "id": "f7d752a",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>💼</p>",
                   "align": "left",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "32",
-                    "sizes": []
-                  },
                   "_margin": {
                     "unit": "px",
                     "top": "0",
@@ -2246,14 +2059,15 @@
                     "isLinked": false
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=48e47ce"
                   }
                 },
                 "elements": [],
                 "widgetType": "text-editor"
               },
               {
-                "id": "24f800f",
+                "id": "d871569",
                 "elType": "widget",
                 "settings": {
                   "title": "Asistență la angajare",
@@ -2276,20 +2090,14 @@
                 "widgetType": "heading"
               },
               {
-                "id": "2fdf708",
+                "id": "a360b50",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Te ajutăm cu CV-ul, portofoliul și pregătirea pentru interviuri tehnice.</p>",
                   "align": "left",
                   "__globals__": {
-                    "text_color": "globals/colors?id=25a8170"
-                  },
-                  "typography_typography": "custom",
-                  "typography_font_family": "Plus Jakarta Sans",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=text"
                   },
                   "typography_line_height": {
                     "unit": "em",
@@ -2310,7 +2118,7 @@
     "isInner": false
   },
   {
-    "id": "b300547",
+    "id": "753fdc5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2338,7 +2146,7 @@
     },
     "elements": [
       {
-        "id": "5c80e18",
+        "id": "69979a0",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2365,7 +2173,7 @@
         },
         "elements": [
           {
-            "id": "d1f50cc",
+            "id": "b2dce8e",
             "elType": "widget",
             "settings": {
               "image": {
@@ -2400,41 +2208,28 @@
             "widgetType": "image"
           },
           {
-            "id": "faec8e5",
+            "id": "41ba79e",
             "elType": "widget",
             "settings": {
               "editor": "<p>Alexandra Dumitrescu</p>",
               "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "Plus Jakarta Sans",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "16",
-                "sizes": []
-              },
-              "typography_font_weight": "700",
               "__globals__": {
-                "text_color": "globals/colors?id=text"
+                "text_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=c133c1f"
               }
             },
             "elements": [],
             "widgetType": "text-editor"
           },
           {
-            "id": "78ad243",
+            "id": "672afc7",
             "elType": "widget",
             "settings": {
               "editor": "<p>Junior Frontend Developer la Endava</p>",
               "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "Plus Jakarta Sans",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "14",
-                "sizes": []
-              },
               "__globals__": {
-                "text_color": "globals/colors?id=accent"
+                "text_color": "globals/colors?id=accent",
+                "typography_typography": "globals/typography?id=text"
               }
             },
             "elements": [],
@@ -2447,7 +2242,7 @@
     "isInner": false
   },
   {
-    "id": "91e6009",
+    "id": "b613e98",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2484,7 +2279,7 @@
     },
     "elements": [
       {
-        "id": "fae79ac",
+        "id": "85c38be",
         "elType": "widget",
         "settings": {
           "title": "Gata să începi?",
@@ -2507,20 +2302,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "f708989",
+        "id": "8ebde02",
         "elType": "widget",
         "settings": {
           "editor": "<p>Prima lecție este gratuită. Alege un curs și fă primul pas spre cariera ta în tech.</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=25a8170"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "18",
-            "sizes": []
+            "text_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=c180041"
           },
           "_margin": {
             "unit": "px",
@@ -2535,7 +2324,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "6977e61",
+        "id": "5096138",
         "elType": "widget",
         "settings": {
           "text": "Începe gratuit acum",
@@ -2555,18 +2344,11 @@
             "isLinked": true
           },
           "button_background_hover_color": "#e0e0e0",
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "16",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "__globals__": {
             "button_text_color": "globals/colors?id=primary",
             "button_hover_text_color": "globals/colors?id=primary",
-            "background_color": "globals/colors?id=25a8170"
+            "background_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=c133c1f"
           }
         },
         "elements": [],
@@ -2576,7 +2358,7 @@
     "isInner": false
   },
   {
-    "id": "514dc8a",
+    "id": "0fb0cbb",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -2609,29 +2391,22 @@
     },
     "elements": [
       {
-        "id": "d762271",
+        "id": "ba009b5",
         "elType": "widget",
         "settings": {
           "title": "Code",
           "header_size": "h4",
           "align": "left",
-          "typography_typography": "custom",
-          "typography_font_family": "Plus Jakarta Sans",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "20",
-            "sizes": []
-          },
-          "typography_font_weight": "800",
           "__globals__": {
-            "title_color": "globals/colors?id=25a8170"
+            "title_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=9dffbf6"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "a2d4d4b",
+        "id": "0e7fd63",
         "elType": "widget",
         "settings": {
           "view": "inline",

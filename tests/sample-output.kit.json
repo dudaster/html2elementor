@@ -117,6 +117,30 @@
       }
     },
     {
+      "_id": "c180041",
+      "title": "Body Text",
+      "typography_typography": "custom",
+      "typography_font_family": "Nunito",
+      "typography_font_weight": "400",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "20",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "45b5de8",
+      "title": "Button Text",
+      "typography_typography": "custom",
+      "typography_font_family": "Nunito",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "16",
+        "sizes": []
+      }
+    },
+    {
       "_id": "fdbf1fe",
       "title": "Section Title",
       "typography_typography": "custom",
@@ -137,18 +161,6 @@
       "typography_font_size": {
         "unit": "px",
         "size": "24",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "accb2c9",
-      "title": "Small Heading",
-      "typography_typography": "custom",
-      "typography_font_family": "Nunito",
-      "typography_font_weight": "700",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "18",
         "sizes": []
       }
     }

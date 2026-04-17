@@ -125,6 +125,42 @@
   ],
   "custom_typography": [
     {
+      "_id": "9dffbf6",
+      "title": "Text",
+      "typography_typography": "custom",
+      "typography_font_family": "Montserrat",
+      "typography_font_weight": "800",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "24",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "45b5de8",
+      "title": "Button Text",
+      "typography_typography": "custom",
+      "typography_font_family": "Montserrat",
+      "typography_font_weight": "500",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "14",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "0bca67a",
+      "title": "Button Text 2",
+      "typography_typography": "custom",
+      "typography_font_family": "Montserrat",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "13",
+        "sizes": []
+      }
+    },
+    {
       "_id": "107f65d",
       "title": "Hero Heading",
       "typography_typography": "custom",
@@ -133,6 +169,30 @@
       "typography_font_size": {
         "unit": "px",
         "size": "64",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "48e47ce",
+      "title": "Text 2",
+      "typography_typography": "custom",
+      "typography_font_family": "Montserrat",
+      "typography_font_weight": "900",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "48",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "0d96bbc",
+      "title": "Text 3",
+      "typography_typography": "custom",
+      "typography_font_family": "Montserrat",
+      "typography_font_weight": "400",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "13",
         "sizes": []
       }
     },
@@ -161,26 +221,26 @@
       }
     },
     {
-      "_id": "e964d84",
-      "title": "Card Title 2",
+      "_id": "c48e929",
+      "title": "Quote",
       "typography_typography": "custom",
       "typography_font_family": "Montserrat",
-      "typography_font_weight": "700",
+      "typography_font_weight": "300",
       "typography_font_size": {
         "unit": "px",
-        "size": "18",
+        "size": "28",
         "sizes": []
       }
     },
     {
-      "_id": "099f00b",
-      "title": "Section Title 2",
+      "_id": "c133c1f",
+      "title": "Text 4",
       "typography_typography": "custom",
       "typography_font_family": "Montserrat",
-      "typography_font_weight": "900",
+      "typography_font_weight": "800",
       "typography_font_size": {
         "unit": "px",
-        "size": "48",
+        "size": "20",
         "sizes": []
       }
     }

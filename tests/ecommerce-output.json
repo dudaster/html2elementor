@@ -1,6 +1,6 @@
 [
   {
-    "id": "516f327",
+    "id": "52748c4",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -30,7 +30,7 @@
     },
     "elements": [
       {
-        "id": "a14457d",
+        "id": "0564a8c",
         "elType": "widget",
         "settings": {
           "editor": "<p>Transport gratuit pentru comenzi peste 200 lei</p>",
@@ -43,7 +43,7 @@
           "typography_text_transform": "uppercase",
           "__globals__": {
             "text_color": "globals/colors?id=c900e1b",
-            "typography_typography": "globals/typography?id=accb2c9"
+            "typography_typography": "globals/typography?id=9dffbf6"
           }
         },
         "elements": [],
@@ -53,7 +53,7 @@
     "isInner": false
   },
   {
-    "id": "bca9c9b",
+    "id": "e620db4",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -84,34 +84,27 @@
     },
     "elements": [
       {
-        "id": "0f6d32f",
+        "id": "ae84aae",
         "elType": "widget",
         "settings": {
           "title": "BOTANICA",
           "header_size": "h4",
           "align": "left",
-          "typography_typography": "custom",
-          "typography_font_family": "Cormorant Garamond",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "32",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "typography_letter_spacing": {
             "unit": "px",
             "size": 3,
             "sizes": []
           },
           "__globals__": {
-            "title_color": "globals/colors?id=text"
+            "title_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=48e47ce"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "87e1d0e",
+        "id": "50af03b",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -175,7 +168,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "dfa1dff",
+        "id": "f804a58",
         "elType": "widget",
         "settings": {
           "text": "Coș (0)",
@@ -206,13 +199,6 @@
           },
           "button_background_hover_color": "#00000010",
           "button_hover_text_color": "#262320",
-          "typography_typography": "custom",
-          "typography_font_family": "Jost",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "14",
-            "sizes": []
-          },
           "typography_letter_spacing": {
             "unit": "px",
             "size": 1,
@@ -221,7 +207,8 @@
           "typography_text_transform": "uppercase",
           "__globals__": {
             "button_text_color": "globals/colors?id=text",
-            "border_color": "globals/colors?id=text"
+            "border_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=9dffbf6"
           }
         },
         "elements": [],
@@ -231,7 +218,7 @@
     "isInner": false
   },
   {
-    "id": "5c2bcf5",
+    "id": "8bebcdc",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -261,7 +248,7 @@
     },
     "elements": [
       {
-        "id": "747e6d0",
+        "id": "710aeec",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -298,18 +285,11 @@
         },
         "elements": [
           {
-            "id": "84f39f8",
+            "id": "be78bcf",
             "elType": "widget",
             "settings": {
               "editor": "<p>Colecția de primăvară</p>",
               "align": "left",
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "12",
-                "sizes": []
-              },
               "typography_letter_spacing": {
                 "unit": "px",
                 "size": 4,
@@ -325,14 +305,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "text_color": "globals/colors?id=accent"
+                "text_color": "globals/colors?id=accent",
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
             "widgetType": "text-editor"
           },
           {
-            "id": "f838952",
+            "id": "4f72a69",
             "elType": "widget",
             "settings": {
               "title": "Frumusețe pură, direct din natură",
@@ -360,20 +341,14 @@
             "widgetType": "heading"
           },
           {
-            "id": "cf855d6",
+            "id": "e10f7dc",
             "elType": "widget",
             "settings": {
               "editor": "<p>Descoperă gama noastră de cosmetice 100% naturale, create cu ingrediente organice certificate și multă grijă pentru pielea ta.</p>",
               "align": "left",
               "__globals__": {
-                "text_color": "globals/colors?id=text"
-              },
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "17",
-                "sizes": []
+                "text_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=c180041"
               },
               "typography_line_height": {
                 "unit": "em",
@@ -393,7 +368,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "3ca520b",
+            "id": "3029ca2",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -423,7 +398,7 @@
             },
             "elements": [
               {
-                "id": "ee0352e",
+                "id": "9061280",
                 "elType": "widget",
                 "settings": {
                   "text": "Descoperă colecția",
@@ -453,14 +428,14 @@
                     "button_text_color": "globals/colors?id=734bfa4",
                     "button_hover_text_color": "globals/colors?id=734bfa4",
                     "background_color": "globals/colors?id=text",
-                    "typography_typography": "globals/typography?id=accb2c9"
+                    "typography_typography": "globals/typography?id=9dffbf6"
                   }
                 },
                 "elements": [],
                 "widgetType": "button"
               },
               {
-                "id": "b9744df",
+                "id": "02f16a1",
                 "elType": "widget",
                 "settings": {
                   "text": "Află povestea noastră",
@@ -498,7 +473,7 @@
                   "typography_text_transform": "uppercase",
                   "__globals__": {
                     "button_text_color": "globals/colors?id=text",
-                    "typography_typography": "globals/typography?id=accb2c9"
+                    "typography_typography": "globals/typography?id=9dffbf6"
                   }
                 },
                 "elements": [],
@@ -511,7 +486,7 @@
         "isInner": true
       },
       {
-        "id": "30ff4c6",
+        "id": "fa1e41a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -558,7 +533,7 @@
     "isInner": false
   },
   {
-    "id": "eeef1ed",
+    "id": "0cf6e00",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -600,7 +575,7 @@
     },
     "elements": [
       {
-        "id": "3073a4e",
+        "id": "0351f8b",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -665,7 +640,7 @@
         },
         "elements": [
           {
-            "id": "6dc421d",
+            "id": "cb1934c",
             "elType": "widget",
             "settings": {
               "title": "100% Natural",
@@ -687,27 +662,21 @@
               },
               "__globals__": {
                 "title_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=accb2c9"
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
             "widgetType": "heading"
           },
           {
-            "id": "79a2bae",
+            "id": "7270b42",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ingrediente organice certificate</p>",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text"
-              },
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "14",
-                "sizes": []
+                "text_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
@@ -717,7 +686,7 @@
         "isInner": true
       },
       {
-        "id": "13aa338",
+        "id": "6f5b0e1",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -782,7 +751,7 @@
         },
         "elements": [
           {
-            "id": "416faf9",
+            "id": "a6af625",
             "elType": "widget",
             "settings": {
               "title": "Cruelty Free",
@@ -804,27 +773,21 @@
               },
               "__globals__": {
                 "title_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=accb2c9"
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
             "widgetType": "heading"
           },
           {
-            "id": "8892901",
+            "id": "aa92a63",
             "elType": "widget",
             "settings": {
               "editor": "<p>Netestat pe animale</p>",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text"
-              },
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "14",
-                "sizes": []
+                "text_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
@@ -834,7 +797,7 @@
         "isInner": true
       },
       {
-        "id": "5d29c1e",
+        "id": "5484a1f",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -899,7 +862,7 @@
         },
         "elements": [
           {
-            "id": "d5ba1e2",
+            "id": "66cfc09",
             "elType": "widget",
             "settings": {
               "title": "Eco Packaging",
@@ -921,27 +884,21 @@
               },
               "__globals__": {
                 "title_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=accb2c9"
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
             "widgetType": "heading"
           },
           {
-            "id": "b0ec1a1",
+            "id": "68fe3f4",
             "elType": "widget",
             "settings": {
               "editor": "<p>Ambalaje 100% reciclabile</p>",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text"
-              },
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "14",
-                "sizes": []
+                "text_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
@@ -951,7 +908,7 @@
         "isInner": true
       },
       {
-        "id": "823c605",
+        "id": "33e05ee",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1016,7 +973,7 @@
         },
         "elements": [
           {
-            "id": "5b4fa4c",
+            "id": "ca82eb2",
             "elType": "widget",
             "settings": {
               "title": "Handmade",
@@ -1038,27 +995,21 @@
               },
               "__globals__": {
                 "title_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=accb2c9"
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
             "widgetType": "heading"
           },
           {
-            "id": "e752c14",
+            "id": "52360d0",
             "elType": "widget",
             "settings": {
               "editor": "<p>Făcut manual, în loturi mici</p>",
               "align": "center",
               "__globals__": {
-                "text_color": "globals/colors?id=text"
-              },
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "14",
-                "sizes": []
+                "text_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
@@ -1071,7 +1022,7 @@
     "isInner": false
   },
   {
-    "id": "e8a4320",
+    "id": "3eedb79",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1099,7 +1050,7 @@
     },
     "elements": [
       {
-        "id": "9742721",
+        "id": "561767f",
         "elType": "widget",
         "settings": {
           "title": "Cele mai iubite produse",
@@ -1122,20 +1073,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "01cb950",
+        "id": "1d6a29c",
         "elType": "widget",
         "settings": {
           "editor": "<p>Alese cu grijă, create cu pasiune</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Jost",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "15",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=9dffbf6"
           },
           "_margin": {
             "unit": "px",
@@ -1150,7 +1095,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "57ecbac",
+        "id": "788e5d8",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1190,7 +1135,7 @@
         },
         "elements": [
           {
-            "id": "35bdfcd",
+            "id": "a3498f2",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1216,7 +1161,7 @@
             },
             "elements": [
               {
-                "id": "99c3368",
+                "id": "6984525",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1239,7 +1184,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "a9e1dc5",
+                "id": "18de655",
                 "elType": "widget",
                 "settings": {
                   "title": "Serum Vitamina C",
@@ -1262,25 +1207,19 @@
                 "widgetType": "heading"
               },
               {
-                "id": "38e76a2",
+                "id": "8c0ded0",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>189 lei</p>",
                   "align": "center",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Jost",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
-                  },
                   "typography_letter_spacing": {
                     "unit": "px",
                     "size": 1,
                     "sizes": []
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent"
+                    "text_color": "globals/colors?id=accent",
+                    "typography_typography": "globals/typography?id=9dffbf6"
                   }
                 },
                 "elements": [],
@@ -1290,7 +1229,7 @@
             "isInner": true
           },
           {
-            "id": "32e9b4d",
+            "id": "4584bb9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1316,7 +1255,7 @@
             },
             "elements": [
               {
-                "id": "e3f7f6a",
+                "id": "6c02a08",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1339,7 +1278,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "b8a9583",
+                "id": "1269e00",
                 "elType": "widget",
                 "settings": {
                   "title": "Cremă de noapte",
@@ -1362,25 +1301,19 @@
                 "widgetType": "heading"
               },
               {
-                "id": "3abb252",
+                "id": "dde3414",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>159 lei</p>",
                   "align": "center",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Jost",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
-                  },
                   "typography_letter_spacing": {
                     "unit": "px",
                     "size": 1,
                     "sizes": []
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent"
+                    "text_color": "globals/colors?id=accent",
+                    "typography_typography": "globals/typography?id=9dffbf6"
                   }
                 },
                 "elements": [],
@@ -1390,7 +1323,7 @@
             "isInner": true
           },
           {
-            "id": "7066f34",
+            "id": "3e40aac",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1416,7 +1349,7 @@
             },
             "elements": [
               {
-                "id": "39ec06f",
+                "id": "a2b20c6",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1439,7 +1372,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "f3f1726",
+                "id": "db29792",
                 "elType": "widget",
                 "settings": {
                   "title": "Ulei de argan pur",
@@ -1462,25 +1395,19 @@
                 "widgetType": "heading"
               },
               {
-                "id": "282cc0e",
+                "id": "d7e6652",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>129 lei</p>",
                   "align": "center",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Jost",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
-                  },
                   "typography_letter_spacing": {
                     "unit": "px",
                     "size": 1,
                     "sizes": []
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent"
+                    "text_color": "globals/colors?id=accent",
+                    "typography_typography": "globals/typography?id=9dffbf6"
                   }
                 },
                 "elements": [],
@@ -1490,7 +1417,7 @@
             "isInner": true
           },
           {
-            "id": "aa72468",
+            "id": "bfb1d04",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1516,7 +1443,7 @@
             },
             "elements": [
               {
-                "id": "a5f7ff2",
+                "id": "b882559",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1539,7 +1466,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "68d958b",
+                "id": "6a9ea3f",
                 "elType": "widget",
                 "settings": {
                   "title": "Balsam de buze",
@@ -1562,25 +1489,19 @@
                 "widgetType": "heading"
               },
               {
-                "id": "dcf4f96",
+                "id": "be98b4d",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>49 lei</p>",
                   "align": "center",
-                  "typography_typography": "custom",
-                  "typography_font_family": "Jost",
-                  "typography_font_size": {
-                    "unit": "px",
-                    "size": "15",
-                    "sizes": []
-                  },
                   "typography_letter_spacing": {
                     "unit": "px",
                     "size": 1,
                     "sizes": []
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=accent"
+                    "text_color": "globals/colors?id=accent",
+                    "typography_typography": "globals/typography?id=9dffbf6"
                   }
                 },
                 "elements": [],
@@ -1596,7 +1517,7 @@
     "isInner": false
   },
   {
-    "id": "4d6dfba",
+    "id": "374d18a",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -1626,7 +1547,7 @@
     },
     "elements": [
       {
-        "id": "6e31bfd",
+        "id": "f8ad3da",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1670,7 +1591,7 @@
         "isInner": true
       },
       {
-        "id": "a11720a",
+        "id": "e4bbb47",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1707,18 +1628,11 @@
         },
         "elements": [
           {
-            "id": "453f5d1",
+            "id": "fa9ca08",
             "elType": "widget",
             "settings": {
               "editor": "<p>Povestea noastră</p>",
               "align": "left",
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "12",
-                "sizes": []
-              },
               "typography_letter_spacing": {
                 "unit": "px",
                 "size": 4,
@@ -1734,14 +1648,15 @@
                 "isLinked": false
               },
               "__globals__": {
-                "text_color": "globals/colors?id=accent"
+                "text_color": "globals/colors?id=accent",
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
             "widgetType": "text-editor"
           },
           {
-            "id": "2a32bc0",
+            "id": "a3eb7ab",
             "elType": "widget",
             "settings": {
               "title": "Născuți din dragostea pentru natură",
@@ -1764,20 +1679,14 @@
             "widgetType": "heading"
           },
           {
-            "id": "318fdb7",
+            "id": "e67f880",
             "elType": "widget",
             "settings": {
               "editor": "<p>Fiecare produs Botanica este creat manual din ingrediente atent selectate. Credem că frumusețea autentică vine din armonia cu natura.</p>",
               "align": "left",
               "__globals__": {
-                "text_color": "globals/colors?id=text"
-              },
-              "typography_typography": "custom",
-              "typography_font_family": "Jost",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "16",
-                "sizes": []
+                "text_color": "globals/colors?id=text",
+                "typography_typography": "globals/typography?id=9dffbf6"
               },
               "typography_line_height": {
                 "unit": "em",
@@ -1797,7 +1706,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "e884839",
+            "id": "488dd94",
             "elType": "widget",
             "settings": {
               "text": "Citește mai mult",
@@ -1837,7 +1746,7 @@
               "__globals__": {
                 "button_text_color": "globals/colors?id=text",
                 "border_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=accb2c9"
+                "typography_typography": "globals/typography?id=9dffbf6"
               }
             },
             "elements": [],
@@ -1850,7 +1759,7 @@
     "isInner": false
   },
   {
-    "id": "5bf5910",
+    "id": "8bbd199",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1880,18 +1789,11 @@
     },
     "elements": [
       {
-        "id": "f850d67",
+        "id": "cdf396d",
         "elType": "widget",
         "settings": {
           "editor": "<p>★★★★★</p>",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Cormorant Garamond",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "24",
-            "sizes": []
-          },
           "_margin": {
             "unit": "px",
             "top": "0",
@@ -1901,29 +1803,23 @@
             "isLinked": false
           },
           "__globals__": {
-            "text_color": "globals/colors?id=c900e1b"
+            "text_color": "globals/colors?id=c900e1b",
+            "typography_typography": "globals/typography?id=c5a24ec"
           }
         },
         "elements": [],
         "widgetType": "text-editor"
       },
       {
-        "id": "7d7854c",
+        "id": "14dcbd2",
         "elType": "widget",
         "settings": {
           "editor": "<p>„De când folosesc serumul cu vitamina C, pielea mea arată mai luminoasă ca niciodată. Produse excepționale, cu rezultate vizibile.\"</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=25a8170"
+            "text_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=c48e929"
           },
-          "typography_typography": "custom",
-          "typography_font_family": "Cormorant Garamond",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "32",
-            "sizes": []
-          },
-          "typography_font_weight": "400",
           "typography_line_height": {
             "unit": "em",
             "size": 1.5,
@@ -1943,18 +1839,11 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "cf2d84f",
+        "id": "8661ee4",
         "elType": "widget",
         "settings": {
           "editor": "<p>Ana-Maria T. — Clientă verificată</p>",
           "align": "center",
-          "typography_typography": "custom",
-          "typography_font_family": "Jost",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "14",
-            "sizes": []
-          },
           "typography_letter_spacing": {
             "unit": "px",
             "size": 2,
@@ -1962,7 +1851,8 @@
           },
           "typography_text_transform": "uppercase",
           "__globals__": {
-            "text_color": "globals/colors?id=primary"
+            "text_color": "globals/colors?id=primary",
+            "typography_typography": "globals/typography?id=9dffbf6"
           }
         },
         "elements": [],
@@ -1972,7 +1862,7 @@
     "isInner": false
   },
   {
-    "id": "250f8d2",
+    "id": "7d05290",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2002,7 +1892,7 @@
     },
     "elements": [
       {
-        "id": "429222d",
+        "id": "24e2005",
         "elType": "widget",
         "settings": {
           "title": "Rămâi aproape de natură",
@@ -2025,20 +1915,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "430c53b",
+        "id": "02d87b5",
         "elType": "widget",
         "settings": {
           "editor": "<p>Abonează-te și primești 10% reducere la prima comandă</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Jost",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "15",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=9dffbf6"
           },
           "_margin": {
             "unit": "px",
@@ -2053,7 +1937,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "f1e6fad",
+        "id": "ac51bec",
         "elType": "widget",
         "settings": {
           "text": "Abonează-te",
@@ -2083,7 +1967,7 @@
             "button_text_color": "globals/colors?id=734bfa4",
             "button_hover_text_color": "globals/colors?id=734bfa4",
             "background_color": "globals/colors?id=text",
-            "typography_typography": "globals/typography?id=accb2c9"
+            "typography_typography": "globals/typography?id=9dffbf6"
           }
         },
         "elements": [],
@@ -2093,7 +1977,7 @@
     "isInner": false
   },
   {
-    "id": "041c9ef",
+    "id": "07ae3fb",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -2126,34 +2010,27 @@
     },
     "elements": [
       {
-        "id": "b4e4ea4",
+        "id": "f97479d",
         "elType": "widget",
         "settings": {
           "title": "BOTANICA",
           "header_size": "h4",
           "align": "left",
-          "typography_typography": "custom",
-          "typography_font_family": "Cormorant Garamond",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "24",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "typography_letter_spacing": {
             "unit": "px",
             "size": 3,
             "sizes": []
           },
           "__globals__": {
-            "title_color": "globals/colors?id=734bfa4"
+            "title_color": "globals/colors?id=734bfa4",
+            "typography_typography": "globals/typography?id=c133c1f"
           }
         },
         "elements": [],
         "widgetType": "heading"
       },
       {
-        "id": "f44a550",
+        "id": "cf54170",
         "elType": "widget",
         "settings": {
           "view": "inline",

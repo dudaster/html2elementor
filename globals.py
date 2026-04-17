@@ -244,22 +244,14 @@ def _build_custom_typography_from_tree(capture: dict, system_typo: dict) -> tupl
     """
     from .sections import iter_tree
 
-    HEADING_TAGS = {"h1", "h2", "h3", "h4", "h5", "h6"}
+    TEXT_TAGS = {"h1", "h2", "h3", "h4", "h5", "h6", "p", "blockquote", "a", "button", "li", "div", "span"}
     seen: dict[tuple, str] = {}  # (family, weight, size) → global_id
     custom_list: list[dict] = []
 
-    # Section classifiers for naming
-    section_names = []
     for sec in capture.get("sections", []):
-        cls = " ".join(sec.get("classes", []))
-        section_names.append(cls)
-
-    sec_idx = 0
-    for sec in capture.get("sections", []):
-        sec_cls = " ".join(sec.get("classes", []))
         for node in iter_tree(sec):
             tag = node.get("tag", "")
-            if tag not in HEADING_TAGS:
+            if tag not in TEXT_TAGS:
                 continue
             styles = node.get("styles", {})
             family = (styles.get("font-family") or "").split(",")[0].strip().strip('"').strip("'")
@@ -276,6 +268,16 @@ def _build_custom_typography_from_tree(capture: dict, system_typo: dict) -> tupl
             if key in seen:
                 continue
 
+            # Check if a SIMILAR global already exists (same family+weight, size within ±2px)
+            similar_match = None
+            for (f, w, s), gid in seen.items():
+                if f == family and w == str(weight) and abs(int(s) - int(size)) <= 2:
+                    similar_match = gid
+                    break
+            if similar_match:
+                seen[key] = similar_match
+                continue
+
             # Check if it matches a system typography
             matches_system = False
             for role, (sys_fam, sys_w, sys_s) in system_typo.items():
@@ -287,17 +289,24 @@ def _build_custom_typography_from_tree(capture: dict, system_typo: dict) -> tupl
                 continue
 
             # Name based on tag + context
-            text = (node.get("text") or "")[:20].strip()
             if tag == "h1":
                 name = "Hero Heading"
             elif tag == "h2":
-                name = f"Section Title"
+                name = "Section Title"
             elif tag == "h3":
                 name = "Card Title"
             elif tag in ("h4", "h5", "h6"):
                 name = "Small Heading"
+            elif tag == "p":
+                name = "Body Text"
+            elif tag == "blockquote":
+                name = "Quote"
+            elif tag in ("a", "button"):
+                name = "Button Text"
+            elif tag == "li":
+                name = "List Item"
             else:
-                name = "Heading"
+                name = "Text"
 
             # Deduplicate names
             base = name

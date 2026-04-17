@@ -1,6 +1,6 @@
 [
   {
-    "id": "e2fea2d",
+    "id": "ce89b30",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -31,7 +31,7 @@
     },
     "elements": [
       {
-        "id": "ac5c395",
+        "id": "8780168",
         "elType": "widget",
         "settings": {
           "image": {
@@ -53,7 +53,7 @@
         "widgetType": "image"
       },
       {
-        "id": "5da960e",
+        "id": "fbc2859",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -120,7 +120,7 @@
     "isInner": false
   },
   {
-    "id": "12261ca",
+    "id": "1f39f03",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -148,7 +148,7 @@
     },
     "elements": [
       {
-        "id": "5b0d779",
+        "id": "216ac31",
         "elType": "widget",
         "settings": {
           "image": {
@@ -171,7 +171,7 @@
         "widgetType": "image"
       },
       {
-        "id": "408434d",
+        "id": "b28138f",
         "elType": "widget",
         "settings": {
           "title": "Cabinet veterinar cu suflet",
@@ -199,20 +199,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "74d2464",
+        "id": "b186a3a",
         "elType": "widget",
         "settings": {
           "editor": "<p>Oferim servicii veterinare complete pentru câini și pisici într-un mediu calm și profesionist.</p>",
           "align": "left",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Nunito",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "20",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=c180041"
           },
           "typography_line_height": {
             "unit": "em",
@@ -232,7 +226,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "fa396ca",
+        "id": "abe6b9a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -262,7 +256,7 @@
         },
         "elements": [
           {
-            "id": "d5c6245",
+            "id": "52d9a5e",
             "elType": "widget",
             "settings": {
               "text": "Programează vizită",
@@ -282,25 +276,18 @@
                 "isLinked": true
               },
               "button_background_hover_color": "#dcbc61",
-              "typography_typography": "custom",
-              "typography_font_family": "Nunito",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "16",
-                "sizes": []
-              },
-              "typography_font_weight": "700",
               "__globals__": {
                 "button_text_color": "globals/colors?id=text",
                 "button_hover_text_color": "globals/colors?id=text",
-                "background_color": "globals/colors?id=secondary"
+                "background_color": "globals/colors?id=secondary",
+                "typography_typography": "globals/typography?id=45b5de8"
               }
             },
             "elements": [],
             "widgetType": "button"
           },
           {
-            "id": "9efa154",
+            "id": "8fa7d9a",
             "elType": "widget",
             "settings": {
               "text": "Vezi serviciile",
@@ -331,17 +318,10 @@
               },
               "button_background_hover_color": "#00000010",
               "button_hover_text_color": "#ce5c58",
-              "typography_typography": "custom",
-              "typography_font_family": "Nunito",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "16",
-                "sizes": []
-              },
-              "typography_font_weight": "700",
               "__globals__": {
                 "button_text_color": "globals/colors?id=primary",
-                "border_color": "globals/colors?id=primary"
+                "border_color": "globals/colors?id=primary",
+                "typography_typography": "globals/typography?id=45b5de8"
               }
             },
             "elements": [],
@@ -354,7 +334,7 @@
     "isInner": false
   },
   {
-    "id": "5709228",
+    "id": "2e16589",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -382,7 +362,7 @@
     },
     "elements": [
       {
-        "id": "2f78265",
+        "id": "4971776",
         "elType": "widget",
         "settings": {
           "title": "Despre cabinetul nostru",
@@ -405,20 +385,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "ac42f0f",
+        "id": "4110a1d",
         "elType": "widget",
         "settings": {
           "editor": "<p>Suntem un cabinet veterinar modern din București, dedicat sănătății și bunăstării animalelor de companie. Echipa noastră oferă consultații, tratamente și intervenții cu profesionalism.</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Nunito",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "18",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=text"
           },
           "typography_line_height": {
             "unit": "em",
@@ -433,7 +407,7 @@
     "isInner": false
   },
   {
-    "id": "af0f15c",
+    "id": "9439744",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -463,7 +437,7 @@
     },
     "elements": [
       {
-        "id": "4f71a60",
+        "id": "2a7c3b8",
         "elType": "widget",
         "settings": {
           "title": "De ce să ne alegi",
@@ -486,7 +460,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b5f6c82",
+        "id": "f1e4b22",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -513,7 +487,7 @@
         },
         "elements": [
           {
-            "id": "d15ba7d",
+            "id": "14d11a4",
             "elType": "widget",
             "settings": {
               "title_text": "Îngrijire cu suflet",
@@ -602,7 +576,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "0c74660",
+            "id": "2649edf",
             "elType": "widget",
             "settings": {
               "title_text": "Servicii complete",
@@ -691,7 +665,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "0e0d591",
+            "id": "0acdfad",
             "elType": "widget",
             "settings": {
               "title_text": "Locație centrală",
@@ -780,7 +754,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "962bd41",
+            "id": "14c134d",
             "elType": "widget",
             "settings": {
               "title_text": "Program flexibil",
@@ -875,7 +849,7 @@
     "isInner": false
   },
   {
-    "id": "1c2881d",
+    "id": "dc82abc",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -905,7 +879,7 @@
     },
     "elements": [
       {
-        "id": "113c0db",
+        "id": "32e6798",
         "elType": "widget",
         "settings": {
           "title": "Ce spun clienții noștri",
@@ -928,20 +902,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "1f24a34",
+        "id": "e848e88",
         "elType": "widget",
         "settings": {
           "editor": "<p>Un cabinet cu oameni dedicați și foarte empatici.</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Nunito",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "18",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=text"
           },
           "typography_font_style": "italic",
           "_margin": {
@@ -957,20 +925,14 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "fed3f3f",
+        "id": "83f166e",
         "elType": "widget",
         "settings": {
           "editor": "<p>Echipa de oameni sufletiști, cărora le pasă de animăluțe.</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=text"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Nunito",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "18",
-            "sizes": []
+            "text_color": "globals/colors?id=text",
+            "typography_typography": "globals/typography?id=text"
           },
           "typography_font_style": "italic",
           "_margin": {
@@ -989,7 +951,7 @@
     "isInner": false
   },
   {
-    "id": "5664c04",
+    "id": "355d69d",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1019,7 +981,7 @@
     },
     "elements": [
       {
-        "id": "a7df588",
+        "id": "0ca3b3f",
         "elType": "widget",
         "settings": {
           "title": "Ai nevoie de o consultație?",
@@ -1042,20 +1004,14 @@
         "widgetType": "heading"
       },
       {
-        "id": "22b0697",
+        "id": "fd505b6",
         "elType": "widget",
         "settings": {
           "editor": "<p>Contactează-ne și programează o vizită pentru companionul tău.</p>",
           "align": "center",
           "__globals__": {
-            "text_color": "globals/colors?id=25a8170"
-          },
-          "typography_typography": "custom",
-          "typography_font_family": "Nunito",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "18",
-            "sizes": []
+            "text_color": "globals/colors?id=25a8170",
+            "typography_typography": "globals/typography?id=text"
           },
           "_margin": {
             "unit": "px",
@@ -1070,7 +1026,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "3a783f3",
+        "id": "fe41eac",
         "elType": "widget",
         "settings": {
           "text": "Contactează-ne",
@@ -1090,18 +1046,11 @@
             "isLinked": true
           },
           "button_background_hover_color": "#dcbc61",
-          "typography_typography": "custom",
-          "typography_font_family": "Nunito",
-          "typography_font_size": {
-            "unit": "px",
-            "size": "16",
-            "sizes": []
-          },
-          "typography_font_weight": "700",
           "__globals__": {
             "button_text_color": "globals/colors?id=text",
             "button_hover_text_color": "globals/colors?id=text",
-            "background_color": "globals/colors?id=secondary"
+            "background_color": "globals/colors?id=secondary",
+            "typography_typography": "globals/typography?id=45b5de8"
           }
         },
         "elements": [],
@@ -1111,7 +1060,7 @@
     "isInner": false
   },
   {
-    "id": "7d52dcf",
+    "id": "c34f6d0",
     "elType": "container",
     "settings": {
       "content_width": "full",
