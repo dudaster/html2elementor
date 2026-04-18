@@ -140,12 +140,28 @@ def build_kit(capture: dict) -> tuple[dict[str, Any], dict[str, str], dict[str, 
         for title, hex_val in all_custom
     ]
 
+    # Like colors: widgets should never reference system_typography slots
+    # (primary/secondary/text/accent) because those are shared site-wide.
+    # Promote system fonts into custom_typography with page-unique IDs, then
+    # map font-family → hashed ID. Widgets end up referencing custom_typo only.
     font_map: dict[str, str] = {}
-    # Priority order: primary > text > secondary > accent (keep first)
+    seen_family: set[str] = set()
     for role in ("primary", "text", "secondary", "accent"):
         family = system_typo[role][0]
-        if family not in font_map:
-            font_map[family] = role
+        if family in seen_family:
+            continue
+        seen_family.add(family)
+        # Add a custom typography entry for the family with hashed id
+        custom_id = short_id("family:" + family)
+        kit_settings["custom_typography"].append({
+            "_id": custom_id,
+            "title": family,
+            "typography_typography": "custom",
+            "typography_font_family": family,
+            "typography_font_weight": system_typo[role][1],
+            "typography_font_size": {"unit": "px", "size": system_typo[role][2], "sizes": []},
+        })
+        font_map[family] = custom_id
 
     return kit_settings, color_map, font_map, typo_map
 

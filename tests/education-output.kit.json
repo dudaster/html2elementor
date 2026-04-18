@@ -361,6 +361,18 @@
         "size": "18",
         "sizes": []
       }
+    },
+    {
+      "_id": "974cae7",
+      "title": "Plus Jakarta Sans",
+      "typography_typography": "custom",
+      "typography_font_family": "Plus Jakarta Sans",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": 48,
+        "sizes": []
+      }
     }
   ]
 }

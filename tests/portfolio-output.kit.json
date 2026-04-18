@@ -342,6 +342,18 @@
         "size": "13",
         "sizes": []
       }
+    },
+    {
+      "_id": "4d26a0c",
+      "title": "Inter",
+      "typography_typography": "custom",
+      "typography_font_family": "Inter",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": 48,
+        "sizes": []
+      }
     }
   ],
   "body_background_background": "classic",

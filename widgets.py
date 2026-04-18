@@ -797,15 +797,26 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
     css_ai = styles.get("align-items", "")
     ai_map = {"flex-start": "flex-start", "center": "center", "flex-end": "flex-end", "stretch": "stretch"}
     flex_ai = ai_map.get(css_ai, "flex-start" if jc_map.get(jc) == "flex-start" else "center")
+    # Respect CSS flex-wrap: wrap → Elementor flex_wrap so children wrap to new
+    # lines when viewport shrinks (trusted logos, tag clouds, button groups).
+    css_fw = (styles.get("flex-wrap") or "").lower()
+    fw_settings = {}
+    if css_fw == "wrap":
+        fw_settings["flex_wrap"] = "wrap"
+        fw_settings["flex_wrap_tablet"] = "wrap"
+        fw_settings["flex_wrap_mobile"] = "wrap"
 
     return {
         "__inner_container__": True,
         "settings": {
             "content_width": "full",
             "flex_direction": "row",
+            # On mobile, default to column stack (widgets hog width anyway)
+            "flex_direction_mobile": "column",
             "flex_justify_content": jc_map.get(jc, "flex-start"),
             "flex_align_items": flex_ai,
             "flex_gap": {"unit": "px", "size": gap, "column": str(gap), "row": str(gap)},
+            **fw_settings,
         },
         "children": child_widgets,
     }

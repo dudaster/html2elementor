@@ -1,6 +1,6 @@
 [
   {
-    "id": "39de49d",
+    "id": "2152678",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -34,7 +34,7 @@
     },
     "elements": [
       {
-        "id": "04dee8a",
+        "id": "3342ab3",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -54,7 +54,7 @@
         },
         "elements": [
           {
-            "id": "d2587a0",
+            "id": "8c0cdd3",
             "elType": "widget",
             "settings": {
               "title": "maya.design",
@@ -77,7 +77,7 @@
         "isInner": true
       },
       {
-        "id": "3f9a2af",
+        "id": "083a102",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -104,7 +104,7 @@
         },
         "elements": [
           {
-            "id": "f2f518d",
+            "id": "6b75c56",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -170,7 +170,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "8771665",
+            "id": "7ea027d",
             "elType": "widget",
             "settings": {
               "text": "Book a call",
@@ -220,7 +220,7 @@
     "isInner": false
   },
   {
-    "id": "b1aa959",
+    "id": "e42da28",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -248,7 +248,7 @@
     },
     "elements": [
       {
-        "id": "4b4c7c2",
+        "id": "ffab145",
         "elType": "widget",
         "settings": {
           "title": "Available for new projects",
@@ -296,7 +296,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "db96dcc",
+        "id": "92ba123",
         "elType": "widget",
         "settings": {
           "title": "Designing products that <span style=\"color:#84cc16\">people love</span>",
@@ -343,7 +343,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "ef75b10",
+        "id": "02dfca6",
         "elType": "widget",
         "settings": {
           "editor": "<p>Hi, I'm Maya — a product designer and developer helping startups ship beautiful, usable software.</p>",
@@ -377,7 +377,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "a5ba434",
+        "id": "f2944e6",
         "elType": "widget",
         "settings": {
           "text": "View my work",
@@ -424,7 +424,7 @@
     "isInner": false
   },
   {
-    "id": "a16e87c",
+    "id": "b901d57",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -454,7 +454,7 @@
     },
     "elements": [
       {
-        "id": "d25be41",
+        "id": "9a8b05f",
         "elType": "widget",
         "settings": {
           "title": "What I do",
@@ -494,7 +494,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "fb8dae4",
+        "id": "cdd7bdb",
         "elType": "widget",
         "settings": {
           "editor": "<p>End-to-end product work from strategy to shipped pixels.</p>",
@@ -528,7 +528,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "85cc5fe",
+        "id": "300c105",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -568,7 +568,7 @@
         },
         "elements": [
           {
-            "id": "8ad08ea",
+            "id": "ae45244",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -605,7 +605,7 @@
             },
             "elements": [
               {
-                "id": "0118d70",
+                "id": "661b391",
                 "elType": "widget",
                 "settings": {
                   "title": "Product Design",
@@ -633,7 +633,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "fa98d50",
+                "id": "9770329",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>From user research to polished interfaces. I work closely with founders to turn ideas into products.</p>",
@@ -655,7 +655,7 @@
             "isInner": true
           },
           {
-            "id": "1ca6092",
+            "id": "df69cf5",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -692,7 +692,7 @@
             },
             "elements": [
               {
-                "id": "a429274",
+                "id": "cdd4429",
                 "elType": "widget",
                 "settings": {
                   "title": "Web Development",
@@ -720,7 +720,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f119fb8",
+                "id": "c1ba4fa",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Modern frontend with React, Next.js, and TypeScript. Clean code, fast sites, happy teams.</p>",
@@ -742,7 +742,7 @@
             "isInner": true
           },
           {
-            "id": "11416e7",
+            "id": "f40ffd0",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -779,7 +779,7 @@
             },
             "elements": [
               {
-                "id": "67473a2",
+                "id": "d83a632",
                 "elType": "widget",
                 "settings": {
                   "title": "Brand Systems",
@@ -807,7 +807,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "7bf3587",
+                "id": "18bce8e",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Visual identity, component libraries, and design tokens that scale across your product.</p>",
@@ -835,7 +835,7 @@
     "isInner": false
   },
   {
-    "id": "d704dce",
+    "id": "741ab38",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -865,7 +865,7 @@
     },
     "elements": [
       {
-        "id": "36c2f04",
+        "id": "25d6a2d",
         "elType": "widget",
         "settings": {
           "title": "Track record",
@@ -905,11 +905,12 @@
         "widgetType": "heading"
       },
       {
-        "id": "41911c6",
+        "id": "810f139",
         "elType": "container",
         "settings": {
           "content_width": "full",
           "flex_direction": "row",
+          "flex_direction_mobile": "column",
           "flex_justify_content": "center",
           "flex_align_items": "center",
           "flex_gap": {
@@ -932,7 +933,7 @@
         },
         "elements": [
           {
-            "id": "e489612",
+            "id": "67df982",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -964,7 +965,7 @@
             },
             "elements": [
               {
-                "id": "c11f0e7",
+                "id": "cd6cfa1",
                 "elType": "widget",
                 "settings": {
                   "title": "47",
@@ -992,7 +993,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "22a29cb",
+                "id": "01df4c0",
                 "elType": "widget",
                 "settings": {
                   "title": "Projects shipped",
@@ -1015,7 +1016,7 @@
             "isInner": true
           },
           {
-            "id": "cfbba50",
+            "id": "53d1604",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1047,7 +1048,7 @@
             },
             "elements": [
               {
-                "id": "5f31307",
+                "id": "ace6fc0",
                 "elType": "widget",
                 "settings": {
                   "title": "12",
@@ -1075,7 +1076,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b3e600e",
+                "id": "3832a3f",
                 "elType": "widget",
                 "settings": {
                   "title": "Startups helped",
@@ -1098,7 +1099,7 @@
             "isInner": true
           },
           {
-            "id": "539ca70",
+            "id": "ee724f2",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1130,7 +1131,7 @@
             },
             "elements": [
               {
-                "id": "9d1310a",
+                "id": "aaa9ec3",
                 "elType": "widget",
                 "settings": {
                   "title": "8y",
@@ -1158,7 +1159,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b29fa4e",
+                "id": "70a1c56",
                 "elType": "widget",
                 "settings": {
                   "title": "Experience",
@@ -1187,7 +1188,7 @@
     "isInner": false
   },
   {
-    "id": "b8735a7",
+    "id": "9de9696",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -1215,7 +1216,7 @@
     },
     "elements": [
       {
-        "id": "6bd89bd",
+        "id": "fdc3e0a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1252,7 +1253,7 @@
         },
         "elements": [
           {
-            "id": "3a9ee4c",
+            "id": "225ce89",
             "elType": "widget",
             "settings": {
               "title": "Let's work together",
@@ -1292,7 +1293,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "f69e3d9",
+            "id": "cfb0d83",
             "elType": "widget",
             "settings": {
               "title": "Got a project in mind? I'd love to hear about it.",
@@ -1320,7 +1321,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "a0e92e1",
+            "id": "2a0352d",
             "elType": "widget",
             "settings": {
               "text": "Start a project",
@@ -1370,7 +1371,7 @@
     "isInner": false
   },
   {
-    "id": "f34ac20",
+    "id": "bba4231",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1400,7 +1401,7 @@
     },
     "elements": [
       {
-        "id": "9443257",
+        "id": "ed18837",
         "elType": "widget",
         "settings": {
           "title": "maya.design",
@@ -1428,7 +1429,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "7844ad9",
+        "id": "f3be8f5",
         "elType": "widget",
         "settings": {
           "editor": "© 2026 Maya Chen. Crafted with care.",

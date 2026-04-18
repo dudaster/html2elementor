@@ -1,6 +1,6 @@
 [
   {
-    "id": "0c347d9",
+    "id": "758b32e",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -32,7 +32,7 @@
     },
     "elements": [
       {
-        "id": "0e16c6a",
+        "id": "77efc96",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -52,7 +52,7 @@
         },
         "elements": [
           {
-            "id": "08852cf",
+            "id": "c061840",
             "elType": "widget",
             "settings": {
               "title": "Vol <span style=\"color:#7c3aed\">ta</span>",
@@ -75,7 +75,7 @@
         "isInner": true
       },
       {
-        "id": "055c855",
+        "id": "03093c0",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -102,7 +102,7 @@
         },
         "elements": [
           {
-            "id": "4da7505",
+            "id": "0d0fd3c",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -190,7 +190,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "91de4b3",
+            "id": "e4f47f7",
             "elType": "widget",
             "settings": {
               "text": "Get started",
@@ -240,7 +240,7 @@
     "isInner": false
   },
   {
-    "id": "e751415",
+    "id": "40ec932",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -268,7 +268,7 @@
     },
     "elements": [
       {
-        "id": "7fa9aae",
+        "id": "8623e68",
         "elType": "widget",
         "settings": {
           "title": "✨ Now with agentic workflows",
@@ -316,7 +316,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "3863264",
+        "id": "4fc3996",
         "elType": "widget",
         "settings": {
           "title": "Resolve support tickets with an AI that actually understands your product.",
@@ -363,7 +363,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "137232f",
+        "id": "7f56d13",
         "elType": "widget",
         "settings": {
           "editor": "<p>Volta reads your docs, your past tickets, and your product itself — so the answers it gives customers are accurate, in your voice, and never hallucinated.</p>",
@@ -397,11 +397,12 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "f4a1b1c",
+        "id": "66a70e1",
         "elType": "container",
         "settings": {
           "content_width": "full",
           "flex_direction": "row",
+          "flex_direction_mobile": "column",
           "flex_justify_content": "center",
           "flex_align_items": "center",
           "flex_gap": {
@@ -424,7 +425,7 @@
         },
         "elements": [
           {
-            "id": "e47d5d9",
+            "id": "020ae97",
             "elType": "widget",
             "settings": {
               "text": "Book a demo",
@@ -468,7 +469,7 @@
             "widgetType": "button"
           },
           {
-            "id": "41e18d7",
+            "id": "c1f9ee5",
             "elType": "widget",
             "settings": {
               "text": "See it in action",
@@ -518,7 +519,7 @@
     "isInner": false
   },
   {
-    "id": "80d5b1d",
+    "id": "5b9b63f",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -558,7 +559,7 @@
     },
     "elements": [
       {
-        "id": "79db315",
+        "id": "aad52e9",
         "elType": "widget",
         "settings": {
           "title": "Trusted by teams at",
@@ -599,11 +600,12 @@
         "widgetType": "heading"
       },
       {
-        "id": "d5da100",
+        "id": "aed8a2f",
         "elType": "container",
         "settings": {
           "content_width": "full",
           "flex_direction": "row",
+          "flex_direction_mobile": "column",
           "flex_justify_content": "center",
           "flex_align_items": "center",
           "flex_gap": {
@@ -612,6 +614,9 @@
             "column": "56",
             "row": "56"
           },
+          "flex_wrap": "wrap",
+          "flex_wrap_tablet": "wrap",
+          "flex_wrap_mobile": "wrap",
           "padding": {
             "unit": "px",
             "top": "0",
@@ -626,7 +631,7 @@
         },
         "elements": [
           {
-            "id": "a46277b",
+            "id": "cbc2c81",
             "elType": "widget",
             "settings": {
               "title": "Linear",
@@ -646,7 +651,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "317e8b5",
+            "id": "89ac882",
             "elType": "widget",
             "settings": {
               "title": "Notion",
@@ -666,7 +671,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "1a610be",
+            "id": "c4510c4",
             "elType": "widget",
             "settings": {
               "title": "Vercel",
@@ -686,7 +691,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "ce22398",
+            "id": "73c81f3",
             "elType": "widget",
             "settings": {
               "title": "Cal.com",
@@ -706,7 +711,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "0e60425",
+            "id": "5780193",
             "elType": "widget",
             "settings": {
               "title": "Raycast",
@@ -732,7 +737,7 @@
     "isInner": false
   },
   {
-    "id": "b050ef4",
+    "id": "2a639a4",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -760,7 +765,7 @@
     },
     "elements": [
       {
-        "id": "0870e6e",
+        "id": "76c6428",
         "elType": "widget",
         "settings": {
           "title": "Why Volta",
@@ -801,7 +806,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "878dca4",
+        "id": "de5c884",
         "elType": "widget",
         "settings": {
           "title": "Built for teams that care about their customers.",
@@ -841,7 +846,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "d12020d",
+        "id": "5a4cbb4",
         "elType": "widget",
         "settings": {
           "editor": "<p>Stop copy-pasting the same answer 40 times a week. Let Volta handle the repeatable questions so your team can focus on the hard ones.</p>",
@@ -868,7 +873,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "bddeae7",
+        "id": "ec9a736",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -908,7 +913,7 @@
         },
         "elements": [
           {
-            "id": "2f319a4",
+            "id": "7297018",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -945,7 +950,7 @@
             },
             "elements": [
               {
-                "id": "0daca7b",
+                "id": "2172483",
                 "elType": "widget",
                 "settings": {
                   "title": "🎯",
@@ -985,7 +990,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "62150d8",
+                "id": "33cf38a",
                 "elType": "widget",
                 "settings": {
                   "title": "Grounded in your data",
@@ -1013,7 +1018,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "9313ded",
+                "id": "e3e575a",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Volta only answers from sources you connect. No hallucinations, no made-up policies, no confident nonsense.</p>",
@@ -1035,7 +1040,7 @@
             "isInner": true
           },
           {
-            "id": "9e70337",
+            "id": "2922e82",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1072,7 +1077,7 @@
             },
             "elements": [
               {
-                "id": "80584e2",
+                "id": "b0b79f7",
                 "elType": "widget",
                 "settings": {
                   "title": "⚡",
@@ -1112,7 +1117,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "160126c",
+                "id": "788a9e1",
                 "elType": "widget",
                 "settings": {
                   "title": "Sub-second responses",
@@ -1140,7 +1145,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b4f84ac",
+                "id": "53c519e",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We cache everything at the edge. Customers see the first token in under 300ms, anywhere in the world.</p>",
@@ -1162,7 +1167,7 @@
             "isInner": true
           },
           {
-            "id": "1d638cf",
+            "id": "44dc54b",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1199,7 +1204,7 @@
             },
             "elements": [
               {
-                "id": "5ce7edf",
+                "id": "95d1b93",
                 "elType": "widget",
                 "settings": {
                   "title": "🛡️",
@@ -1239,7 +1244,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f419492",
+                "id": "a798134",
                 "elType": "widget",
                 "settings": {
                   "title": "SOC 2 compliant",
@@ -1267,7 +1272,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8a073a5",
+                "id": "95780b3",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Your customer data never trains a model. SOC 2 Type II, GDPR, and HIPAA available on Enterprise.</p>",
@@ -1295,7 +1300,7 @@
     "isInner": false
   },
   {
-    "id": "550cac9",
+    "id": "a3678e9",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1325,7 +1330,7 @@
     },
     "elements": [
       {
-        "id": "9bd4352",
+        "id": "8e27b51",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1365,7 +1370,7 @@
         },
         "elements": [
           {
-            "id": "b341402",
+            "id": "b301dec",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1392,7 +1397,7 @@
             },
             "elements": [
               {
-                "id": "28b5cf8",
+                "id": "0b3f59b",
                 "elType": "widget",
                 "settings": {
                   "title": "82%",
@@ -1432,7 +1437,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b51bfb7",
+                "id": "bdd3da0",
                 "elType": "widget",
                 "settings": {
                   "title": "Tickets deflected",
@@ -1468,7 +1473,7 @@
             "isInner": true
           },
           {
-            "id": "72b3fec",
+            "id": "d64885c",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1495,7 +1500,7 @@
             },
             "elements": [
               {
-                "id": "11ac71d",
+                "id": "459882d",
                 "elType": "widget",
                 "settings": {
                   "title": "2.4M",
@@ -1535,7 +1540,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f448337",
+                "id": "fa701d2",
                 "elType": "widget",
                 "settings": {
                   "title": "Conversations handled",
@@ -1571,7 +1576,7 @@
             "isInner": true
           },
           {
-            "id": "da3a7f0",
+            "id": "7907ea1",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1598,7 +1603,7 @@
             },
             "elements": [
               {
-                "id": "c8a7131",
+                "id": "d3aff6b",
                 "elType": "widget",
                 "settings": {
                   "title": "280ms",
@@ -1638,7 +1643,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "53eae1e",
+                "id": "be284a3",
                 "elType": "widget",
                 "settings": {
                   "title": "Median response",
@@ -1674,7 +1679,7 @@
             "isInner": true
           },
           {
-            "id": "1fb853e",
+            "id": "b0542e8",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1701,7 +1706,7 @@
             },
             "elements": [
               {
-                "id": "e20c7f4",
+                "id": "89afb4b",
                 "elType": "widget",
                 "settings": {
                   "title": "4.8/5",
@@ -1741,7 +1746,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "e6d7396",
+                "id": "7a69118",
                 "elType": "widget",
                 "settings": {
                   "title": "CSAT score",
@@ -1783,7 +1788,7 @@
     "isInner": false
   },
   {
-    "id": "8451189",
+    "id": "5ec2e87",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1811,7 +1816,7 @@
     },
     "elements": [
       {
-        "id": "a7ff5b0",
+        "id": "515be2e",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1855,7 +1860,7 @@
         },
         "elements": [
           {
-            "id": "b670d71",
+            "id": "5ea3d27",
             "elType": "widget",
             "settings": {
               "title": "Turn your support inbox from a cost center into a delight.",
@@ -1902,7 +1907,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "ca9ec98",
+            "id": "dd54dba",
             "elType": "widget",
             "settings": {
               "editor": "<p>Free 30-day trial on all plans. No credit card, no sales call required to get started.</p>",
@@ -1936,7 +1941,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "6e71284",
+            "id": "5a4c4b0",
             "elType": "widget",
             "settings": {
               "text": "Start your trial",
@@ -1986,7 +1991,7 @@
     "isInner": false
   },
   {
-    "id": "83d9169",
+    "id": "d533d9c",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2026,7 +2031,7 @@
     },
     "elements": [
       {
-        "id": "944f4ad",
+        "id": "5d43d39",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2066,7 +2071,7 @@
         },
         "elements": [
           {
-            "id": "592d5f0",
+            "id": "0c8ac99",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2093,7 +2098,7 @@
             },
             "elements": [
               {
-                "id": "5118935",
+                "id": "5cfdcb9",
                 "elType": "widget",
                 "settings": {
                   "title": "Vol <span style=\"color:#7c3aed\">ta</span>",
@@ -2121,7 +2126,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "00d6b3e",
+                "id": "c5952ba",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>AI support agents for product teams. Based in San Francisco, trusted worldwide since 2023.</p>",
@@ -2143,7 +2148,7 @@
             "isInner": true
           },
           {
-            "id": "6ae0fa8",
+            "id": "9f31bcd",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2170,7 +2175,7 @@
             },
             "elements": [
               {
-                "id": "e6885c1",
+                "id": "efb3ddf",
                 "elType": "widget",
                 "settings": {
                   "title": "Product",
@@ -2211,7 +2216,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b6c965d",
+                "id": "cceaa6e",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2290,7 +2295,7 @@
             "isInner": true
           },
           {
-            "id": "7647dd4",
+            "id": "72e4c18",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2317,7 +2322,7 @@
             },
             "elements": [
               {
-                "id": "6ac0743",
+                "id": "281273c",
                 "elType": "widget",
                 "settings": {
                   "title": "Resources",
@@ -2358,7 +2363,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f120ff0",
+                "id": "14a1819",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2437,7 +2442,7 @@
             "isInner": true
           },
           {
-            "id": "966d73e",
+            "id": "ef77508",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2464,7 +2469,7 @@
             },
             "elements": [
               {
-                "id": "961f0ff",
+                "id": "aab4e1d",
                 "elType": "widget",
                 "settings": {
                   "title": "Company",
@@ -2505,7 +2510,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f912794",
+                "id": "a31b728",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2587,7 +2592,7 @@
         "isInner": true
       },
       {
-        "id": "11a7e29",
+        "id": "214c1e9",
         "elType": "widget",
         "settings": {
           "title": "© 2026 Volta AI, Inc. Made in San Francisco.",

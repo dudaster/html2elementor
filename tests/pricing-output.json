@@ -1,6 +1,6 @@
 [
   {
-    "id": "3865e13",
+    "id": "892d8d0",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -44,7 +44,7 @@
     },
     "elements": [
       {
-        "id": "1128945",
+        "id": "4071a80",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -64,7 +64,7 @@
         },
         "elements": [
           {
-            "id": "075af91",
+            "id": "1c72d72",
             "elType": "widget",
             "settings": {
               "title": "Task <span style=\"color:#3b82f6\">Flow</span>",
@@ -87,7 +87,7 @@
         "isInner": true
       },
       {
-        "id": "7fb1ce0",
+        "id": "61f8b0e",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -114,7 +114,7 @@
         },
         "elements": [
           {
-            "id": "26a1003",
+            "id": "549dae3",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -180,7 +180,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "8070fab",
+            "id": "c172c2d",
             "elType": "widget",
             "settings": {
               "text": "Sign in",
@@ -230,7 +230,7 @@
     "isInner": false
   },
   {
-    "id": "2214535",
+    "id": "d56e63e",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -267,7 +267,7 @@
     },
     "elements": [
       {
-        "id": "5586acb",
+        "id": "553cce1",
         "elType": "widget",
         "settings": {
           "title": "✨ Now with AI assistance",
@@ -315,7 +315,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "76c73a3",
+        "id": "d28a1d8",
         "elType": "widget",
         "settings": {
           "title": "Simple pricing for teams of every size",
@@ -362,7 +362,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "15f344b",
+        "id": "b6eef53",
         "elType": "widget",
         "settings": {
           "editor": "<p>Start free, scale as you grow. No credit card required, cancel anytime.</p>",
@@ -399,7 +399,7 @@
     "isInner": false
   },
   {
-    "id": "81f5ded",
+    "id": "a8a2091",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -427,7 +427,7 @@
     },
     "elements": [
       {
-        "id": "9364955",
+        "id": "945c4b8",
         "elType": "widget",
         "settings": {
           "title": "Choose your plan",
@@ -455,7 +455,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "afcddd9",
+        "id": "2dad4de",
         "elType": "widget",
         "settings": {
           "title": "All plans include unlimited projects and members.",
@@ -483,7 +483,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a5fb25a",
+        "id": "590836b",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -523,7 +523,7 @@
         },
         "elements": [
           {
-            "id": "eafde0b",
+            "id": "41eb41f",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -560,7 +560,7 @@
             },
             "elements": [
               {
-                "id": "86b03c3",
+                "id": "03a603b",
                 "elType": "widget",
                 "settings": {
                   "title": "Starter",
@@ -588,7 +588,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "1ec488f",
+                "id": "c603950",
                 "elType": "widget",
                 "settings": {
                   "title": "For solo creators",
@@ -616,7 +616,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c998171",
+                "id": "ad907ae",
                 "elType": "widget",
                 "settings": {
                   "title": "$0",
@@ -644,7 +644,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "89e636b",
+                "id": "f56433c",
                 "elType": "widget",
                 "settings": {
                   "title": "forever free",
@@ -672,7 +672,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "3ae521d",
+                "id": "2fa5719",
                 "elType": "widget",
                 "settings": {
                   "text": "Get started",
@@ -719,7 +719,7 @@
             "isInner": true
           },
           {
-            "id": "d25ff92",
+            "id": "2a3a285",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -756,7 +756,7 @@
             },
             "elements": [
               {
-                "id": "7836f60",
+                "id": "a9645e5",
                 "elType": "widget",
                 "settings": {
                   "title": "Pro",
@@ -784,7 +784,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "7f9fa02",
+                "id": "d356937",
                 "elType": "widget",
                 "settings": {
                   "title": "For growing teams",
@@ -812,7 +812,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ebe332c",
+                "id": "5fa4531",
                 "elType": "widget",
                 "settings": {
                   "title": "$12",
@@ -840,7 +840,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4b7cc76",
+                "id": "039101e",
                 "elType": "widget",
                 "settings": {
                   "title": "per user / month",
@@ -868,7 +868,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f118c60",
+                "id": "e7cb40c",
                 "elType": "widget",
                 "settings": {
                   "text": "Start 14-day trial",
@@ -915,7 +915,7 @@
             "isInner": true
           },
           {
-            "id": "a4dcddb",
+            "id": "5fadd7a",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -952,7 +952,7 @@
             },
             "elements": [
               {
-                "id": "09dfa71",
+                "id": "bf82e37",
                 "elType": "widget",
                 "settings": {
                   "title": "Enterprise",
@@ -980,7 +980,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "a903aa6",
+                "id": "e0f402e",
                 "elType": "widget",
                 "settings": {
                   "title": "For larger companies",
@@ -1008,7 +1008,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "415064c",
+                "id": "cf91d45",
                 "elType": "widget",
                 "settings": {
                   "title": "Custom",
@@ -1036,7 +1036,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "bc9b3f3",
+                "id": "f98469c",
                 "elType": "widget",
                 "settings": {
                   "title": "tailored pricing",
@@ -1064,7 +1064,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "eefd072",
+                "id": "cee4d26",
                 "elType": "widget",
                 "settings": {
                   "text": "Contact sales",
@@ -1117,7 +1117,7 @@
     "isInner": false
   },
   {
-    "id": "6eeee9b",
+    "id": "4400daa",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1147,7 +1147,7 @@
     },
     "elements": [
       {
-        "id": "29e5f85",
+        "id": "f49ec5b",
         "elType": "widget",
         "settings": {
           "title": "Why teams love TaskFlow",
@@ -1175,7 +1175,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "f81bb1c",
+        "id": "cf023dd",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1215,7 +1215,7 @@
         },
         "elements": [
           {
-            "id": "2beedd1",
+            "id": "dfcf33b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1242,7 +1242,7 @@
             },
             "elements": [
               {
-                "id": "f4fe4dc",
+                "id": "617784c",
                 "elType": "widget",
                 "settings": {
                   "title": "Blazing fast",
@@ -1270,7 +1270,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4596df2",
+                "id": "b187636",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Built for speed with a modern stack. Load any project in milliseconds.</p>",
@@ -1292,7 +1292,7 @@
             "isInner": true
           },
           {
-            "id": "bc94bbb",
+            "id": "9d334f8",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1319,7 +1319,7 @@
             },
             "elements": [
               {
-                "id": "d9337a5",
+                "id": "caec213",
                 "elType": "widget",
                 "settings": {
                   "title": "Deeply integrated",
@@ -1347,7 +1347,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "1ea540d",
+                "id": "b04cf0f",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Works with Slack, GitHub, Notion, Figma, and 50+ other tools your team already uses.</p>",
@@ -1369,7 +1369,7 @@
             "isInner": true
           },
           {
-            "id": "e26e0ab",
+            "id": "a7e48f0",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1396,7 +1396,7 @@
             },
             "elements": [
               {
-                "id": "c28bbff",
+                "id": "63a43b6",
                 "elType": "widget",
                 "settings": {
                   "title": "Keyboard-first",
@@ -1424,7 +1424,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "3bfeafb",
+                "id": "da2fffd",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Get things done without touching the mouse. Every action has a shortcut.</p>",
@@ -1452,7 +1452,7 @@
     "isInner": false
   },
   {
-    "id": "8f79fd0",
+    "id": "f28d821",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1482,7 +1482,7 @@
     },
     "elements": [
       {
-        "id": "c17acf6",
+        "id": "0c4c656",
         "elType": "widget",
         "settings": {
           "editor": "<p>\"TaskFlow replaced 3 tools for us. The speed alone is worth the switch — our team ships twice as fast now.\"</p>",
@@ -1524,7 +1524,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "5d06cf4",
+        "id": "a26d4ad",
         "elType": "widget",
         "settings": {
           "title": "David Okonkwo",
@@ -1552,7 +1552,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "fe259c8",
+        "id": "8964463",
         "elType": "widget",
         "settings": {
           "title": "Head of Engineering, Relay Labs",
@@ -1575,7 +1575,7 @@
     "isInner": false
   },
   {
-    "id": "11343fd",
+    "id": "4690404",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1615,7 +1615,7 @@
     },
     "elements": [
       {
-        "id": "1fb364d",
+        "id": "a5227e6",
         "elType": "widget",
         "settings": {
           "editor": "© 2026 TaskFlow, Inc. Made in Berlin.",

@@ -395,6 +395,18 @@
         "size": "26",
         "sizes": []
       }
+    },
+    {
+      "_id": "5e34dd9",
+      "title": "Manrope",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": 48,
+        "sizes": []
+      }
     }
   ]
 }
