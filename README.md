@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Elementor](https://img.shields.io/badge/elementor-3.x+-ec4899.svg)](https://elementor.com/)
 
-Until now, every HTML → Elementor tool has been commercial (Web2Elementor, AI to Elementor, …). `html2elementor` is the first **fully open-source, local, zero-dependency-on-external-services** converter that emits clean Elementor container-based JSON from static HTML + CSS.
+`html2elementor` is a **fully open-source, local, zero-dependency-on-external-services** converter that emits clean Elementor container-based JSON from static HTML + CSS.
 
 Pairs naturally with AI-generated HTML: point an LLM at your design brief, run the output through this tool, and import the JSON into Elementor. Or install as a Claude Code skill and let Claude do all three steps for you.
 
