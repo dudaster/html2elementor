@@ -1,6 +1,6 @@
 [
   {
-    "id": "f8ab8b4",
+    "id": "4ef5536",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -42,7 +42,7 @@
     },
     "elements": [
       {
-        "id": "da17adf",
+        "id": "40dc25f",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -62,7 +62,7 @@
         },
         "elements": [
           {
-            "id": "d6fd6e0",
+            "id": "afd1559",
             "elType": "widget",
             "settings": {
               "title": "Field Notes",
@@ -93,7 +93,7 @@
         "isInner": true
       },
       {
-        "id": "abfdda8",
+        "id": "ae61fbe",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -120,7 +120,7 @@
         },
         "elements": [
           {
-            "id": "6eda2e2",
+            "id": "e295782",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -186,7 +186,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "00090f3",
+            "id": "2543509",
             "elType": "widget",
             "settings": {
               "text": "Subscribe",
@@ -236,7 +236,7 @@
     "isInner": false
   },
   {
-    "id": "59d21ec",
+    "id": "5d8811a",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -274,7 +274,7 @@
     },
     "elements": [
       {
-        "id": "aeb10a1",
+        "id": "80e0e8d",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -302,7 +302,7 @@
         },
         "elements": [
           {
-            "id": "0a2529f",
+            "id": "5c83ec0",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -340,7 +340,7 @@
             },
             "elements": [
               {
-                "id": "2386478",
+                "id": "54e47d6",
                 "elType": "widget",
                 "settings": {
                   "title": "Essay · March 2026",
@@ -381,7 +381,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8e63765",
+                "id": "a7b44e9",
                 "elType": "widget",
                 "settings": {
                   "title": "The case for building smaller, slower software.",
@@ -421,7 +421,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "1e29a2a",
+                "id": "9f2a4c1",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We spent a decade optimizing for shipping velocity. The cost showed up somewhere else — in products that are harder to use, harder to trust, and harder to love. Here's what we might try instead.</p>",
@@ -454,7 +454,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "daf2e92",
+                "id": "455e526",
                 "elType": "widget",
                 "settings": {
                   "title": "By <span style=\"color:#1a1a1a\"><strong>Tomas Iversen</strong></span> · 12 min read",
@@ -477,7 +477,7 @@
             "isInner": true
           },
           {
-            "id": "3f0d450",
+            "id": "8310c20",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -515,7 +515,7 @@
             },
             "elements": [
               {
-                "id": "39bf3e0",
+                "id": "bf0db9e",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -555,7 +555,7 @@
     "isInner": false
   },
   {
-    "id": "775c6df",
+    "id": "b86d6f8",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -583,7 +583,7 @@
     },
     "elements": [
       {
-        "id": "de9afbc",
+        "id": "df506d5",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -623,7 +623,7 @@
         },
         "elements": [
           {
-            "id": "1bf8667",
+            "id": "86ec7fa",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -650,7 +650,7 @@
             },
             "elements": [
               {
-                "id": "b1a07f3",
+                "id": "a0a80bc",
                 "elType": "widget",
                 "settings": {
                   "title": "Latest essays",
@@ -685,7 +685,7 @@
             "isInner": true
           },
           {
-            "id": "d3997d9",
+            "id": "02c4925",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -712,7 +712,7 @@
             },
             "elements": [
               {
-                "id": "5f4e11a",
+                "id": "ab7bc59",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -743,7 +743,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "4e0efd0",
+                "id": "3b3febd",
                 "elType": "widget",
                 "settings": {
                   "title": "Interview",
@@ -784,7 +784,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "e4df930",
+                "id": "2319cff",
                 "elType": "widget",
                 "settings": {
                   "title": "How Linear's engineering team stays small.",
@@ -812,7 +812,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "0745243",
+                "id": "13a3f23",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>A conversation with Karri Saarinen about hiring, tooling, and the discipline of saying no to new features.</p>",
@@ -839,7 +839,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "413c997",
+                "id": "261a1d3",
                 "elType": "widget",
                 "settings": {
                   "title": "Sofia Reinholt · 18 min read",
@@ -862,7 +862,7 @@
             "isInner": true
           },
           {
-            "id": "b267584",
+            "id": "7e94bc5",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -889,7 +889,7 @@
             },
             "elements": [
               {
-                "id": "e590ed3",
+                "id": "b53e6e4",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -920,7 +920,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "7ab5a46",
+                "id": "74a38fa",
                 "elType": "widget",
                 "settings": {
                   "title": "Essay",
@@ -961,7 +961,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "03994e9",
+                "id": "ada89da",
                 "elType": "widget",
                 "settings": {
                   "title": "Why the best software documentation reads like a tutorial.",
@@ -989,7 +989,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "216cec8",
+                "id": "669a211",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Reference docs have their place. But if you want people to actually learn your tool, write a story.</p>",
@@ -1016,7 +1016,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "08e352c",
+                "id": "a58cae8",
                 "elType": "widget",
                 "settings": {
                   "title": "Marcus Alderete · 8 min read",
@@ -1039,7 +1039,7 @@
             "isInner": true
           },
           {
-            "id": "8a5d7d8",
+            "id": "570c27e",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1066,7 +1066,7 @@
             },
             "elements": [
               {
-                "id": "dba23f8",
+                "id": "366f279",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1097,7 +1097,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "b12dad2",
+                "id": "295c414",
                 "elType": "widget",
                 "settings": {
                   "title": "Field report",
@@ -1138,7 +1138,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "634bf71",
+                "id": "aeee7b8",
                 "elType": "widget",
                 "settings": {
                   "title": "Three weeks of deliberately boring tools.",
@@ -1166,7 +1166,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "02540aa",
+                "id": "46a5f0f",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>I swapped every fancy app for its most boring, lowest-common-denominator alternative. Here's what I missed and what I didn't.</p>",
@@ -1193,7 +1193,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "54fe379",
+                "id": "30a778c",
                 "elType": "widget",
                 "settings": {
                   "title": "Priya Natarajan · 14 min read",
@@ -1222,7 +1222,7 @@
     "isInner": false
   },
   {
-    "id": "00c69c5",
+    "id": "42d7f02",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1262,7 +1262,7 @@
     },
     "elements": [
       {
-        "id": "b552f0b",
+        "id": "479028b",
         "elType": "widget",
         "settings": {
           "title": "A weekly essay, every Sunday.",
@@ -1309,7 +1309,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "df4d3a4",
+        "id": "ba45303",
         "elType": "widget",
         "settings": {
           "editor": "<p>Join 14,000 readers getting one essay a week about building products, teams, and careers worth caring about.</p>",
@@ -1343,7 +1343,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "bef7f61",
+        "id": "8c12f27",
         "elType": "widget",
         "settings": {
           "text": "Subscribe for free",
@@ -1387,7 +1387,7 @@
         "widgetType": "button"
       },
       {
-        "id": "ee80b3f",
+        "id": "5553f25",
         "elType": "widget",
         "settings": {
           "title": "One-click unsubscribe. No spam, ever.",
@@ -1425,7 +1425,7 @@
     "isInner": false
   },
   {
-    "id": "f56a61c",
+    "id": "17f0ef6",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1453,7 +1453,7 @@
     },
     "elements": [
       {
-        "id": "a22823e",
+        "id": "898dc31",
         "elType": "widget",
         "settings": {
           "title": "From the archive",
@@ -1493,7 +1493,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "aada1ea",
+        "id": "b24104c",
         "elType": "widget",
         "settings": {
           "editor": "<div style=\"position:relative;padding-left:152px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:120px;color:#737373;font-size:13px;font-weight:700;letter-spacing:1px\">March 8, 2026</strong><span style=\"display:block;font-size:12px;color:#dc2626;line-height:1.6\">Essay</span><strong style=\"display:block;font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:6px\">The arithmetic of keeping teams small</strong></div>",
@@ -1506,7 +1506,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "e8b751d",
+        "id": "31f83ad",
         "elType": "widget",
         "settings": {
           "editor": "<div style=\"position:relative;padding-left:152px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:120px;color:#737373;font-size:13px;font-weight:700;letter-spacing:1px\">February 22, 2026</strong><span style=\"display:block;font-size:12px;color:#dc2626;line-height:1.6\">Interview</span><strong style=\"display:block;font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:6px\">Building a design agency that refuses retainers</strong></div>",
@@ -1519,7 +1519,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "704f249",
+        "id": "e6a628c",
         "elType": "widget",
         "settings": {
           "editor": "<div style=\"position:relative;padding-left:152px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:120px;color:#737373;font-size:13px;font-weight:700;letter-spacing:1px\">February 10, 2026</strong><span style=\"display:block;font-size:12px;color:#dc2626;line-height:1.6\">Field report</span><strong style=\"display:block;font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:6px\">One month on a mechanical typewriter</strong></div>",
@@ -1532,7 +1532,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "e311f7a",
+        "id": "11a87a2",
         "elType": "widget",
         "settings": {
           "editor": "<div style=\"position:relative;padding-left:152px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:120px;color:#737373;font-size:13px;font-weight:700;letter-spacing:1px\">January 28, 2026</strong><span style=\"display:block;font-size:12px;color:#dc2626;line-height:1.6\">Essay</span><strong style=\"display:block;font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:6px\">Why every product company eventually becomes a content company</strong></div>",
@@ -1548,7 +1548,7 @@
     "isInner": false
   },
   {
-    "id": "ecc53bf",
+    "id": "f720254",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1578,7 +1578,7 @@
     },
     "elements": [
       {
-        "id": "c396f78",
+        "id": "47c0ca6",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1618,7 +1618,7 @@
         },
         "elements": [
           {
-            "id": "b155001",
+            "id": "6c8d6a9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1645,7 +1645,7 @@
             },
             "elements": [
               {
-                "id": "9edf1f1",
+                "id": "26b5e71",
                 "elType": "widget",
                 "settings": {
                   "title": "Field Notes",
@@ -1681,7 +1681,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "9bea288",
+                "id": "5b81574",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>An independent journal about designing, building, and running small software companies. Published weekly since 2021.</p>",
@@ -1709,7 +1709,7 @@
             "isInner": true
           },
           {
-            "id": "7072bc8",
+            "id": "559656b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1736,7 +1736,7 @@
             },
             "elements": [
               {
-                "id": "e3ae949",
+                "id": "36c1501",
                 "elType": "widget",
                 "settings": {
                   "title": "Read",
@@ -1777,7 +1777,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "92cc3c6",
+                "id": "038fc19",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -1856,7 +1856,7 @@
             "isInner": true
           },
           {
-            "id": "b829d0a",
+            "id": "f848999",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1883,7 +1883,7 @@
             },
             "elements": [
               {
-                "id": "7388358",
+                "id": "0f73b19",
                 "elType": "widget",
                 "settings": {
                   "title": "Follow",
@@ -1924,7 +1924,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d53949b",
+                "id": "7287d70",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -1995,7 +1995,7 @@
         "isInner": true
       },
       {
-        "id": "0b3d019",
+        "id": "e0ddced",
         "elType": "widget",
         "settings": {
           "title": "© 2026 Field Notes. Written in Copenhagen.",

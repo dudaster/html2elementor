@@ -4,12 +4,26 @@ import colorsys
 import re
 
 
+_NAMED_COLORS = {
+    "white": "#ffffff", "black": "#000000",
+    "red": "#ff0000", "green": "#008000", "blue": "#0000ff",
+    "yellow": "#ffff00", "orange": "#ffa500", "purple": "#800080",
+    "pink": "#ffc0cb", "gray": "#808080", "grey": "#808080",
+    "silver": "#c0c0c0", "maroon": "#800000", "olive": "#808000",
+    "navy": "#000080", "teal": "#008080", "aqua": "#00ffff",
+    "lime": "#00ff00", "fuchsia": "#ff00ff", "cyan": "#00ffff",
+    "magenta": "#ff00ff", "brown": "#a52a2a", "beige": "#f5f5dc",
+}
+
+
 def to_hex(css: str | None) -> str | None:
     if not css:
         return None
     s = css.strip().lower()
     if s in ("transparent", "none", "currentcolor", "inherit", "initial"):
         return None
+    if s in _NAMED_COLORS:
+        return _NAMED_COLORS[s]
     if s.startswith("#"):
         hx = s[1:]
         if len(hx) == 3:

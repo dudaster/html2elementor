@@ -14,6 +14,14 @@ INHERITED = {
     "visibility", "cursor", "direction",
 }
 
+# Common CSS color keywords that may appear in shorthand values
+_CSS_COLOR_KEYWORDS = {
+    "white", "black", "red", "green", "blue", "yellow", "orange", "purple",
+    "pink", "gray", "grey", "silver", "maroon", "olive", "navy", "teal",
+    "aqua", "lime", "fuchsia", "cyan", "magenta", "brown", "beige",
+    "transparent", "currentcolor",
+}
+
 
 def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> dict[int, dict]:
     """Resolve styles for every element. Returns id(tag) → styles dict."""
@@ -117,12 +125,17 @@ def _walk_resolve(el: Tag, element_styles: dict, result: dict,
         styles.update(_parse_inline(inline))
 
     # 4. Substitute CSS var() references AFTER cascade so declarations that
-    # override will still use resolved variables.
+    # override will still use resolved variables. Also re-expand shorthand
+    # for keys whose values changed (e.g. background: var(--color) → hex
+    # should populate background-color).
     if css_vars:
         for k in list(styles.keys()):
             v = styles[k]
             if isinstance(v, str) and "var(" in v:
-                styles[k] = _substitute_vars(v, css_vars)
+                new_val = _substitute_vars(v, css_vars)
+                styles[k] = new_val
+                if new_val != v:
+                    _expand_shorthand(styles, k, new_val)
 
     result[id(el)] = styles
 
@@ -211,11 +224,20 @@ def _expand_shorthand(result: dict, prop: str, value: str) -> None:
         result["column-gap"] = parts[1] if len(parts) > 1 else parts[0]
     elif prop == "background":
         # background shorthand: may contain color, url(), gradient
-        # Simple color value
-        for p in parts:
-            if p.startswith("#") or p.startswith("rgb"):
-                result.setdefault("background-color", p)
-                break
+        # Extract color — hex, rgb/rgba, hsl, or named color keyword
+        if "gradient" not in value and "url(" not in value:
+            # Try: first part that looks like a color
+            for p in parts:
+                if (p.startswith("#") or p.startswith("rgb") or
+                    p.startswith("hsl") or p in _CSS_COLOR_KEYWORDS):
+                    result.setdefault("background-color", p)
+                    break
+        else:
+            # Mixed: still try to find a solid color in the string
+            for p in parts:
+                if p.startswith("#") or p.startswith("rgb"):
+                    result.setdefault("background-color", p)
+                    break
         # url()
         url_match = re.search(r"url\(['\"]?([^)'\"\s]+)['\"]?\)", value)
         if url_match:

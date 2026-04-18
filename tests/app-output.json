@@ -1,6 +1,6 @@
 [
   {
-    "id": "5bdeddb",
+    "id": "d72cd5d",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -32,7 +32,7 @@
     },
     "elements": [
       {
-        "id": "0a759c7",
+        "id": "ea87fa2",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -52,7 +52,7 @@
         },
         "elements": [
           {
-            "id": "e2159b3",
+            "id": "e21fed6",
             "elType": "widget",
             "settings": {
               "title": "Dri <span style=\"color:#ea580c\">ft</span>",
@@ -75,7 +75,7 @@
         "isInner": true
       },
       {
-        "id": "1647f68",
+        "id": "6c242ac",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -102,7 +102,7 @@
         },
         "elements": [
           {
-            "id": "1528647",
+            "id": "4bba9d9",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -179,7 +179,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "cd98840",
+            "id": "f62c7ca",
             "elType": "widget",
             "settings": {
               "text": "Sign in",
@@ -229,7 +229,7 @@
     "isInner": false
   },
   {
-    "id": "c03bccf",
+    "id": "0a65164",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -257,7 +257,7 @@
     },
     "elements": [
       {
-        "id": "2e47dfd",
+        "id": "cb8200c",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -284,7 +284,7 @@
         },
         "elements": [
           {
-            "id": "e6b8887",
+            "id": "412e284",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -318,7 +318,7 @@
             },
             "elements": [
               {
-                "id": "f2bc014",
+                "id": "db2782a",
                 "elType": "widget",
                 "settings": {
                   "title": "BETA — INVITE ONLY",
@@ -366,7 +366,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b935071",
+                "id": "1904244",
                 "elType": "widget",
                 "settings": {
                   "title": "A <span style=\"color:#ea580c\"><em>calmer</em></span> way to manage your money.",
@@ -406,7 +406,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "947ac40",
+                "id": "c424aeb",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Drift is a personal finance app for people who hate personal finance apps. No dopamine hits, no aggressive notifications — just the numbers, rendered honestly.</p>",
@@ -439,7 +439,7 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "614d1d0",
+                "id": "195c1f0",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -466,7 +466,7 @@
                 },
                 "elements": [
                   {
-                    "id": "c4d2ac0",
+                    "id": "9cf39c1",
                     "elType": "widget",
                     "settings": {
                       "text": "Request an invite",
@@ -510,7 +510,7 @@
                     "widgetType": "button"
                   },
                   {
-                    "id": "51a3927",
+                    "id": "b87f8dd",
                     "elType": "widget",
                     "settings": {
                       "text": "See how it works",
@@ -557,7 +557,7 @@
                 "isInner": true
               },
               {
-                "id": "8e0398a",
+                "id": "2dfa082",
                 "elType": "widget",
                 "settings": {
                   "title": "Free while in beta. 12,800 people on the waitlist.",
@@ -594,7 +594,7 @@
             "isInner": true
           },
           {
-            "id": "4ec128a",
+            "id": "bd90138",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -631,7 +631,7 @@
             },
             "elements": [
               {
-                "id": "e8ae8cb",
+                "id": "e125190",
                 "elType": "widget",
                 "settings": {
                   "title": "Net worth",
@@ -672,7 +672,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "20d774e",
+                "id": "5145fc8",
                 "elType": "widget",
                 "settings": {
                   "title": "$128,450 <span style=\"color:#16a34a\">+2.4% this month</span>",
@@ -721,7 +721,7 @@
     "isInner": false
   },
   {
-    "id": "44bfcb6",
+    "id": "0790d06",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -749,7 +749,7 @@
     },
     "elements": [
       {
-        "id": "872e954",
+        "id": "af67230",
         "elType": "widget",
         "settings": {
           "title": "What makes Drift different",
@@ -790,7 +790,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "052be5e",
+        "id": "4e8ff42",
         "elType": "widget",
         "settings": {
           "title": "Calm, honest, and yours.",
@@ -830,7 +830,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "c11d374",
+        "id": "9bdbe9b",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -870,7 +870,7 @@
         },
         "elements": [
           {
-            "id": "2e24ed8",
+            "id": "01e2e84",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -907,7 +907,7 @@
             },
             "elements": [
               {
-                "id": "4d54623",
+                "id": "4d0bf80",
                 "elType": "widget",
                 "settings": {
                   "title": "🌿",
@@ -935,7 +935,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f25b3e1",
+                "id": "bc81724",
                 "elType": "widget",
                 "settings": {
                   "title": "No dark patterns",
@@ -963,7 +963,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4eb87dd",
+                "id": "c9a7aaa",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We don't optimize for engagement. You open Drift when you need to, not when we send a push notification.</p>",
@@ -985,7 +985,7 @@
             "isInner": true
           },
           {
-            "id": "08b5151",
+            "id": "de1c123",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1022,7 +1022,7 @@
             },
             "elements": [
               {
-                "id": "409c4f3",
+                "id": "d75dab0",
                 "elType": "widget",
                 "settings": {
                   "title": "🔒",
@@ -1050,7 +1050,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f9f5f86",
+                "id": "c853cca",
                 "elType": "widget",
                 "settings": {
                   "title": "Local-first data",
@@ -1078,7 +1078,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "3851e78",
+                "id": "2c24a2f",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Your financial data lives on your device. We never see your balances, transactions, or goals. Encrypted sync is optional.</p>",
@@ -1100,7 +1100,7 @@
             "isInner": true
           },
           {
-            "id": "b3c9611",
+            "id": "ecd423c",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1137,7 +1137,7 @@
             },
             "elements": [
               {
-                "id": "a2b0b00",
+                "id": "47e5ded",
                 "elType": "widget",
                 "settings": {
                   "title": "📊",
@@ -1165,7 +1165,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "a5ac193",
+                "id": "7732b19",
                 "elType": "widget",
                 "settings": {
                   "title": "Boring by design",
@@ -1193,7 +1193,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "2a56d79",
+                "id": "9fee251",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Simple charts, text-heavy summaries, no gradients. We'd rather be useful than look impressive.</p>",
@@ -1221,7 +1221,7 @@
     "isInner": false
   },
   {
-    "id": "f002493",
+    "id": "808bfca",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1251,7 +1251,7 @@
     },
     "elements": [
       {
-        "id": "4e90868",
+        "id": "0140fcf",
         "elType": "widget",
         "settings": {
           "title": "Get the beta invite.",
@@ -1291,7 +1291,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "43fb329",
+        "id": "83bd73b",
         "elType": "widget",
         "settings": {
           "editor": "<p>Drop your email. We'll send your invite as soon as a spot opens — usually within two weeks.</p>",
@@ -1325,7 +1325,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "c106ab7",
+        "id": "b51e09c",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1352,7 +1352,7 @@
         },
         "elements": [
           {
-            "id": "b71485f",
+            "id": "8f6b60d",
             "elType": "widget",
             "settings": {
               "editor": "<input type=\"email\" placeholder=\"you@example.com\" style=\"width:100%;padding:14px 18px;border-radius:10px;border:1px solid #44403c;background:#1c1917;color:#fffbf5;font-size:14px;font-family:inherit;outline:none;box-sizing:border-box\">",
@@ -1367,7 +1367,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "6351452",
+            "id": "079abc4",
             "elType": "widget",
             "settings": {
               "text": "Join waitlist",
@@ -1414,7 +1414,7 @@
         "isInner": true
       },
       {
-        "id": "6f2aa44",
+        "id": "2dad669",
         "elType": "widget",
         "settings": {
           "editor": "<p>We don't track you. We never share your email. Unsubscribe in one click.</p>",
@@ -1451,7 +1451,7 @@
     "isInner": false
   },
   {
-    "id": "41ce5e8",
+    "id": "4e72bea",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1491,7 +1491,7 @@
     },
     "elements": [
       {
-        "id": "9cc91ec",
+        "id": "9aa66e3",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1531,7 +1531,7 @@
         },
         "elements": [
           {
-            "id": "9bac5e1",
+            "id": "5db8b73",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1558,7 +1558,7 @@
             },
             "elements": [
               {
-                "id": "ff47fff",
+                "id": "dc78426",
                 "elType": "widget",
                 "settings": {
                   "title": "Dri <span style=\"color:#ea580c\">ft</span>",
@@ -1586,7 +1586,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ec528d8",
+                "id": "442c43c",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>A personal finance app for people who'd rather not think about personal finance apps. Made in Amsterdam.</p>",
@@ -1614,7 +1614,7 @@
             "isInner": true
           },
           {
-            "id": "4f8b158",
+            "id": "fd38245",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1641,7 +1641,7 @@
             },
             "elements": [
               {
-                "id": "6e8cf0b",
+                "id": "61c1c3f",
                 "elType": "widget",
                 "settings": {
                   "title": "Product",
@@ -1682,7 +1682,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "162e5f8",
+                "id": "4b96365",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -1761,7 +1761,7 @@
             "isInner": true
           },
           {
-            "id": "8611197",
+            "id": "11e3cd9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1788,7 +1788,7 @@
             },
             "elements": [
               {
-                "id": "1dd6392",
+                "id": "0b61f6d",
                 "elType": "widget",
                 "settings": {
                   "title": "Company",
@@ -1829,7 +1829,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "cae0190",
+                "id": "14363aa",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -1908,7 +1908,7 @@
             "isInner": true
           },
           {
-            "id": "a8d160e",
+            "id": "4d48076",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1935,7 +1935,7 @@
             },
             "elements": [
               {
-                "id": "c874ae5",
+                "id": "f8d54a0",
                 "elType": "widget",
                 "settings": {
                   "title": "Legal",
@@ -1976,7 +1976,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4eccf0d",
+                "id": "5248bf5",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2047,7 +2047,7 @@
         "isInner": true
       },
       {
-        "id": "1c9d6f6",
+        "id": "6ee761c",
         "elType": "widget",
         "settings": {
           "title": "© 2026 Drift Finance BV · Amsterdam",

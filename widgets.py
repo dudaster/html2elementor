@@ -193,10 +193,6 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
 
 def looks_like_button(node: dict) -> bool:
     classes = " ".join(node.get("classes", [])).lower()
-    # These are styled links, not visual buttons — but we STILL emit them
-    # as button widgets with text-link styling (transparent bg, no border)
-    if any(h in classes for h in BUTTON_HINTS):
-        return True
     styles = node.get("styles", {})
     bg = styles.get("background-color") or styles.get("backgroundColor")
     has_bg = bool(bg and bg not in ("transparent", "none"))
@@ -205,6 +201,12 @@ def looks_like_button(node: dict) -> bool:
     has_padding = bool(has_padding_val and has_padding_val not in ("0px", "0"))
     has_border_val = styles.get("border-top-width") or styles.get("borderTopWidth") or ""
     has_border = bool(has_border_val and has_border_val not in ("0px", "0"))
+    # Class hint alone is not enough — "cta" appears in "nav-cta-secondary"
+    # (a styled text link without bg/border/padding). Require at least some
+    # button-like styling alongside the hint.
+    has_hint = any(h in classes for h in BUTTON_HINTS)
+    if has_hint and (has_bg or has_radius or has_padding or has_border):
+        return True
     return sum([has_bg, has_radius, has_padding, has_border]) >= 2
 
 

@@ -13,12 +13,12 @@
     {
       "_id": "secondary",
       "title": "Secondary",
-      "color": "#7c3aed"
+      "color": "#ffffff"
     },
     {
       "_id": "accent",
       "title": "Accent",
-      "color": "#94a3b8"
+      "color": "#7c3aed"
     }
   ],
   "custom_colors": [
@@ -31,6 +31,16 @@
       "_id": "1561c2d",
       "title": "White",
       "color": "#ffffff"
+    },
+    {
+      "_id": "8fa3677",
+      "title": "Accent",
+      "color": "#94a3b8"
+    },
+    {
+      "_id": "866071a",
+      "title": "Border",
+      "color": "#e2e8f0"
     },
     {
       "_id": "9f992e9",
@@ -48,8 +58,8 @@
       "color": "#ede9fe"
     },
     {
-      "_id": "970bfdc",
-      "title": "Accent",
+      "_id": "b912ab0",
+      "title": "Accent 2",
       "color": "#ddd6fe"
     },
     {
@@ -63,14 +73,9 @@
       "color": "#64748b"
     },
     {
-      "_id": "dac5788",
-      "title": "Secondary",
-      "color": "#7c3aed"
-    },
-    {
-      "_id": "8fa3677",
+      "_id": "7e61532",
       "title": "Accent",
-      "color": "#94a3b8"
+      "color": "#7c3aed"
     }
   ],
   "system_typography": [
