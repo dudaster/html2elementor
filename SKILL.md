@@ -51,54 +51,17 @@ Produces:
 
 Reports mismatches in color, font-size, spacing. Zero issues means the cascade was resolved correctly. Visual fidelity still needs a screenshot-compare (see below).
 
-### 3. Import into WordPress (Playsand sandbox)
+### 3. Import into WordPress
 
-```bash
-cd ~/Projects/elementor-templates-skill/playsand
+How you import depends on your setup — local WP, Docker, staging, production, REST API, etc. The output is just a JSON payload that goes into the `_elementor_data` post meta, and the companion `.kit.json` merges into the active kit's `_elementor_page_settings` meta. Ask the user about their WordPress setup and pick the appropriate import path (WP-CLI, REST API, or direct DB).
 
-# Copy JSON + kit into the container
-docker compose cp /tmp/layout.json      wp:/tmp/layout.json
-docker compose cp /tmp/layout.kit.json  wp:/tmp/layout.kit.json
-
-# Merge kit globals + create a page
-docker compose exec -T wp wp eval '
-$data = file_get_contents("/tmp/layout.json");
-$kit  = json_decode(file_get_contents("/tmp/layout.kit.json"), true);
-$active_kit = get_option("elementor_active_kit");
-$ks = get_post_meta($active_kit, "_elementor_page_settings", true) ?: [];
-foreach (($kit["custom_colors"] ?? []) as $c) {
-    $dup = false;
-    foreach ($ks["custom_colors"] ?? [] as &$ec) { if ($ec["_id"] === $c["_id"]) { $ec = $c; $dup = true; break; } }
-    if (!$dup) $ks["custom_colors"][] = $c;
-}
-foreach (($kit["custom_typography"] ?? []) as $t) {
-    $dup = false;
-    foreach ($ks["custom_typography"] ?? [] as &$et) { if ($et["_id"] === $t["_id"]) { $et = $t; $dup = true; break; } }
-    if (!$dup) $ks["custom_typography"][] = $t;
-}
-update_post_meta($active_kit, "_elementor_page_settings", $ks);
-
-$pid = wp_insert_post([
-    "post_title"  => "Imported Page",
-    "post_status" => "publish",
-    "post_type"   => "page",
-    "meta_input"  => [
-        "_elementor_edit_mode"      => "builder",
-        "_elementor_template_type"  => "wp-page",
-        "_wp_page_template"         => "elementor_canvas",
-    ],
-]);
-update_post_meta($pid, "_elementor_data", wp_slash($data));
-echo "Page: http://localhost:8090/?p=$pid\n";
-' --allow-root
-
-# Flush Elementor's CSS cache so the page renders immediately
-docker compose exec -T wp wp elementor flush_css --allow-root
-```
+Two things that ALWAYS need to happen regardless of setup:
+- Merge `.kit.json` custom_colors + custom_typography into the active Elementor kit's `_elementor_page_settings` meta (widgets reference these via `globals/colors?id=...` and `globals/typography?id=...`).
+- After updating `_elementor_data`, run `wp elementor flush_css` (or equivalent) — Elementor caches generated CSS aggressively and visual changes won't appear otherwise.
 
 ### 4. Visual diff (recommended for AI-generated HTML)
 
-Take screenshots of both source and imported page, compare visually, fix any mismatch in `html2elementor/widgets.py` or `resolver.py`, reconvert, reimport. Repeat until matching. See `screenshots/` folder for captured diffs.
+Take screenshots of both source and imported page, compare visually, fix any mismatch in `html2elementor/widgets.py` or `resolver.py`, reconvert, reimport. Repeat until matching.
 
 ## What gets converted
 
