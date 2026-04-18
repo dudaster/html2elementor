@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Field Notes — A journal about building things</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', 'Times New Roman', serif; color: #1a1a1a; background: #ffffff; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ============ HEADER ============ */
+    header { padding: 24px 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e5e5; }
+    header .brand { font-size: 24px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.5px; font-style: italic; }
+    header nav a { font-size: 14px; color: #525252; font-weight: 500; margin-left: 28px; }
+    header nav a.subscribe { background: #1a1a1a; color: #ffffff; padding: 10px 20px; border-radius: 4px; }
+
+    /* ============ FEATURED (split hero) ============ */
+    .featured { padding: 72px 56px; border-bottom: 1px solid #e5e5e5; }
+    .featured .row { display: flex; gap: 56px; max-width: 1200px; margin: 0 auto; align-items: center; }
+    .featured .text { flex: 1; }
+    .featured .text .cat { font-size: 12px; font-weight: 700; color: #dc2626; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+    .featured .text h1 { font-size: 56px; font-weight: 700; color: #1a1a1a; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; }
+    .featured .text .excerpt { font-size: 18px; color: #525252; margin-bottom: 28px; line-height: 1.6; max-width: 520px; }
+    .featured .text .meta { font-size: 14px; color: #737373; }
+    .featured .text .meta strong { color: #1a1a1a; font-weight: 700; }
+    .featured .img { flex: 1; }
+    .featured .img img { width: 100%; height: 460px; object-fit: cover; border-radius: 4px; }
+
+    /* ============ LATEST ============ */
+    .latest { padding: 96px 56px; }
+    .latest .head { max-width: 1200px; margin: 0 auto 48px; display: flex; justify-content: space-between; align-items: baseline; }
+    .latest .head h2 { font-size: 36px; font-weight: 700; color: #1a1a1a; letter-spacing: -1px; }
+    .latest .head a { font-size: 14px; color: #dc2626; font-weight: 600; }
+    .latest .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .latest .card img { width: 100%; height: 240px; object-fit: cover; border-radius: 4px; margin-bottom: 20px; }
+    .latest .card .cat { font-size: 11px; font-weight: 700; color: #dc2626; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .latest .card h3 { font-size: 22px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.25; }
+    .latest .card .excerpt { font-size: 15px; color: #525252; margin-bottom: 14px; line-height: 1.6; }
+    .latest .card .meta { font-size: 13px; color: #737373; }
+
+    /* ============ NEWSLETTER CTA ============ */
+    .newsletter { padding: 96px 56px; background: #fef2f2; border-top: 1px solid #fecaca; border-bottom: 1px solid #fecaca; text-align: center; }
+    .newsletter h2 { font-size: 40px; font-weight: 700; color: #1a1a1a; letter-spacing: -1px; margin-bottom: 12px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .newsletter p { font-size: 17px; color: #525252; max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
+    .newsletter .btn { display: inline-block; background: #dc2626; color: #ffffff; padding: 16px 32px; border-radius: 4px; font-size: 15px; font-weight: 600; font-family: 'Inter', sans-serif; }
+    .newsletter .note { font-size: 13px; color: #737373; margin-top: 16px; font-family: 'Inter', sans-serif; }
+
+    /* ============ ARCHIVE ============ */
+    .archive { padding: 96px 56px; }
+    .archive .head { max-width: 820px; margin: 0 auto 40px; text-align: center; }
+    .archive .head h2 { font-size: 36px; font-weight: 700; color: #1a1a1a; letter-spacing: -1px; }
+    .archive .list { max-width: 820px; margin: 0 auto; }
+    .archive .item { display: flex; gap: 32px; padding: 28px 0; border-bottom: 1px solid #e5e5e5; align-items: center; }
+    .archive .item .date { font-size: 13px; color: #737373; width: 120px; flex-shrink: 0; font-family: 'Inter', sans-serif; }
+    .archive .item h3 { font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+    .archive .item .cat { font-size: 12px; color: #dc2626; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-family: 'Inter', sans-serif; }
+
+    /* ============ FOOTER ============ */
+    footer { padding: 48px 56px 32px; background: #1a1a1a; }
+    footer .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; max-width: 1200px; margin: 0 auto 40px; }
+    footer .about .brand { font-size: 20px; font-weight: 700; color: #ffffff; font-style: italic; margin-bottom: 12px; }
+    footer .about p { font-size: 14px; color: #a3a3a3; max-width: 280px; line-height: 1.6; }
+    footer .col h4 { font-size: 12px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-family: 'Inter', sans-serif; }
+    footer .col a { display: block; font-size: 14px; color: #a3a3a3; margin-bottom: 10px; font-family: 'Inter', sans-serif; }
+    footer .copy { text-align: center; padding-top: 32px; border-top: 1px solid #404040; font-size: 13px; color: #737373; font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="brand">Field Notes</div>
+        <nav>
+            <a href="#">Essays</a>
+            <a href="#">Interviews</a>
+            <a href="#">Archive</a>
+            <a href="#" class="subscribe">Subscribe</a>
+        </nav>
+    </header>
+
+    <section class="featured">
+        <div class="row">
+            <div class="text">
+                <div class="cat">Essay · March 2026</div>
+                <h1>The case for building smaller, slower software.</h1>
+                <p class="excerpt">We spent a decade optimizing for shipping velocity. The cost showed up somewhere else — in products that are harder to use, harder to trust, and harder to love. Here's what we might try instead.</p>
+                <p class="meta">By <strong>Tomas Iversen</strong> · 12 min read</p>
+            </div>
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900" alt="Featured">
+            </div>
+        </div>
+    </section>
+
+    <section class="latest">
+        <div class="head">
+            <h2>Latest essays</h2>
+            <a href="#">View archive →</a>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="">
+                <div class="cat">Interview</div>
+                <h3>How Linear's engineering team stays small.</h3>
+                <p class="excerpt">A conversation with Karri Saarinen about hiring, tooling, and the discipline of saying no to new features.</p>
+                <p class="meta">Sofia Reinholt · 18 min read</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="">
+                <div class="cat">Essay</div>
+                <h3>Why the best software documentation reads like a tutorial.</h3>
+                <p class="excerpt">Reference docs have their place. But if you want people to actually learn your tool, write a story.</p>
+                <p class="meta">Marcus Alderete · 8 min read</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?w=600" alt="">
+                <div class="cat">Field report</div>
+                <h3>Three weeks of deliberately boring tools.</h3>
+                <p class="excerpt">I swapped every fancy app for its most boring, lowest-common-denominator alternative. Here's what I missed and what I didn't.</p>
+                <p class="meta">Priya Natarajan · 14 min read</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>A weekly essay, every Sunday.</h2>
+        <p>Join 14,000 readers getting one essay a week about building products, teams, and careers worth caring about.</p>
+        <a href="#" class="btn">Subscribe for free</a>
+        <p class="note">One-click unsubscribe. No spam, ever.</p>
+    </section>
+
+    <section class="archive">
+        <div class="head">
+            <h2>From the archive</h2>
+        </div>
+        <div class="list">
+            <div class="item">
+                <div class="date">March 8, 2026</div>
+                <div>
+                    <div class="cat">Essay</div>
+                    <h3>The arithmetic of keeping teams small</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">February 22, 2026</div>
+                <div>
+                    <div class="cat">Interview</div>
+                    <h3>Building a design agency that refuses retainers</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">February 10, 2026</div>
+                <div>
+                    <div class="cat">Field report</div>
+                    <h3>One month on a mechanical typewriter</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">January 28, 2026</div>
+                <div>
+                    <div class="cat">Essay</div>
+                    <h3>Why every product company eventually becomes a content company</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="cols">
+            <div class="about">
+                <div class="brand">Field Notes</div>
+                <p>An independent journal about designing, building, and running small software companies. Published weekly since 2021.</p>
+            </div>
+            <div class="col">
+                <h4>Read</h4>
+                <a href="#">Essays</a>
+                <a href="#">Interviews</a>
+                <a href="#">Field reports</a>
+                <a href="#">Archive</a>
+            </div>
+            <div class="col">
+                <h4>Follow</h4>
+                <a href="#">RSS</a>
+                <a href="#">Email</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="copy">© 2026 Field Notes. Written in Copenhagen.</div>
+    </footer>
+</body>
+</html>

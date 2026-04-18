@@ -44,6 +44,12 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
             out.append(button_widget(node, btn_text))
             return
 
+    # Link list column (footer column, sidebar): a div with multiple <a>
+    # children — emit the heading + an icon-list widget.
+    if tag == "div" and _is_link_list(node):
+        out.extend(_link_list_widgets(node))
+        return
+
     if tag == "img" and node.get("src"):
         out.append(image_widget(node))
         return
@@ -389,6 +395,77 @@ def button_widget(node: dict, text: str) -> dict:
     return {"widgetType": "button", "settings": settings}
 
 
+def _is_link_list(node: dict) -> bool:
+    """A div whose children are: 0 or 1 heading (h1-h6 or similar) + N anchors.
+    Common footer-column or sidebar pattern."""
+    children = node.get("children", [])
+    if len(children) < 2:
+        return False
+    anchors = [c for c in children if c.get("tag") == "a"]
+    if len(anchors) < 2:
+        return False
+    allowed_tags = {"a", "h1", "h2", "h3", "h4", "h5", "h6"}
+    for c in children:
+        if c.get("tag") not in allowed_tags:
+            return False
+    return True
+
+
+def _link_list_widgets(node: dict) -> list[dict]:
+    """Emit an optional heading widget + icon-list widget for a footer/sidebar link list."""
+    from .styles import apply_typography as _at, px_to_int as _px
+    out: list[dict] = []
+    heading_node = None
+    link_nodes: list[dict] = []
+    for c in node.get("children", []):
+        if c.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6") and heading_node is None:
+            heading_node = c
+        elif c.get("tag") == "a":
+            link_nodes.append(c)
+    # Heading
+    if heading_node:
+        h_styles = heading_node.get("styles", {})
+        h_settings: dict[str, Any] = {
+            "title": _escape((heading_node.get("text") or "").strip()),
+            "header_size": heading_node.get("tag", "h4"),
+            "align": text_align(h_styles),
+        }
+        h_color = to_hex(h_styles.get("color"))
+        if h_color:
+            h_settings["title_color"] = h_color
+        _at(h_settings, h_styles)
+        _apply_margin(h_settings, h_styles)
+        out.append({"widgetType": "heading", "settings": h_settings})
+    # Icon list
+    if link_nodes:
+        first = link_nodes[0]
+        first_styles = first.get("styles", {})
+        items = []
+        for a in link_nodes:
+            items.append({
+                "text": (a.get("text") or "").strip(),
+                "link": {"url": a.get("href", "#"), "is_external": False},
+                "selected_icon": {"value": "", "library": ""},
+            })
+        list_settings: dict[str, Any] = {
+            "view": "traditional",
+            "space_between": {"unit": "px", "size": 10, "sizes": []},
+            "icon_list": items,
+        }
+        link_color = to_hex(first_styles.get("color"))
+        if link_color:
+            list_settings["text_color"] = link_color
+        tmp: dict = {}
+        _at(tmp, first_styles)
+        for k, v in tmp.items():
+            if k == "typography_typography":
+                list_settings["icon_typography_typography"] = v
+            elif k.startswith("typography_"):
+                list_settings["icon_" + k] = v
+        out.append({"widgetType": "icon-list", "settings": list_settings})
+    return out
+
+
 def _is_list_row(node: dict) -> bool:
     """A flex row with exactly 2 children: first is a fixed-width leaf (label),
     second is a div with text content. Common for agenda/schedule slots."""
@@ -489,7 +566,62 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
         "center": "center",
         "flex-end": "flex-end",
     }
+    # Split layout: exactly 2 children with flex:1 on both (or no fixed widths)
+    # → emit as 2 inner containers each taking 50% width.
+    row_children = [c for c in node.get("children", []) if c.get("tag") in ("div", "section", "article")]
+    is_split = False
+    if len(row_children) == 2:
+        both_no_fixed = all(
+            not px_to_int(c.get("styles", {}).get("width", "")) for c in row_children
+        )
+        # Heuristic: both children have substantial content (so we want
+        # side-by-side columns, not time+desc label row)
+        both_content = all(
+            any(n.get("tag") in ("h1", "h2", "h3", "img", "p") for n in _iter(c, max_depth=3))
+            for c in row_children
+        )
+        is_split = both_no_fixed and both_content
+
     child_widgets: list[dict] = []
+    if is_split:
+        parent_ai = (styles.get("align-items") or "center").lower()
+        ai_map = {"center": "center", "flex-start": "flex-start",
+                  "flex-end": "flex-end", "stretch": "stretch"}
+        split_ai = ai_map.get(parent_ai, "center")
+        for child in row_children:
+            sub_widgets: list[dict] = []
+            _walk(child, sub_widgets, consumed)
+            if not sub_widgets:
+                continue
+            child_widgets.append({
+                "__inner_container__": True,
+                "_no_group": True,
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_align_items": "flex-start",
+                    "flex_gap": {"unit": "px", "size": 12, "column": "12", "row": "12"},
+                    "_element_width": "initial",
+                    "_element_custom_width": {"unit": "%", "size": 48, "sizes": []},
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {"unit": "%", "size": 100, "sizes": []},
+                },
+                "children": sub_widgets,
+            })
+        return {
+            "__inner_container__": True,
+            "_no_group": True,
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_mobile": "column",
+                "flex_justify_content": jc_map.get(jc, "center"),
+                "flex_align_items": split_ai,
+                "flex_gap": {"unit": "px", "size": gap, "column": str(gap), "row": str(gap)},
+            },
+            "children": child_widgets,
+        }
+
     for child in node.get("children", []):
         child_tag = child.get("tag", "")
         child_children = child.get("children", [])
