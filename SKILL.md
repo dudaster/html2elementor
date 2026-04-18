@@ -1,6 +1,15 @@
 ---
 name: html2elementor
 description: Convert raw HTML+CSS into importable Elementor JSON. Use when the user wants to turn a static webpage, a Tailwind/plain-CSS mockup, an AI-generated design, or a competitor's landing page into an Elementor page for WordPress. Local, no browser, no API calls. Works on HTML strings, local files, or (optionally with playwright) live URLs.
+metadata:
+  openclaw:
+    requires:
+      bins:
+        - python3
+      python:
+        - beautifulsoup4>=4.12
+        - tinycss2>=1.2
+        - cssselect2>=0.7
 ---
 
 # html2elementor
