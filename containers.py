@@ -277,8 +277,13 @@ def _section_settings(section: dict) -> dict[str, Any]:
 
     is_flex = (w_styles.get("display") or "") in ("flex", "inline-flex", "grid")
     flex_dir = "column"
-    align = "center"
-    justify = "center"
+    # For column (vertical) sections, use stretch so child widgets take full
+    # width — then each widget's own align setting (from text-align) controls
+    # horizontal positioning of its content. This handles both "centered
+    # hero" (widgets stretched, text centered) and "left-aligned hero"
+    # (widgets stretched, text left-aligned) uniformly.
+    align = "stretch"
+    justify = "flex-start"
 
     if is_flex:
         fd = w_styles.get("flex-direction") or w_styles.get("flexDirection") or "column"

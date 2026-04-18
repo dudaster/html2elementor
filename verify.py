@@ -286,15 +286,33 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict, p
             return
         # Disambiguate duplicates (same button text in multiple places) by matching bg color.
         el_bg_val = _resolved_color(s, "background_color", kit_maps)
-        el_bg_hex = to_hex(el_bg_val).lower() if el_bg_val else None
+        _tmp = to_hex(el_bg_val) if el_bg_val else None
+        el_bg_hex = _tmp.lower() if _tmp else None
+        el_tc_val = _resolved_color(s, "button_text_color", kit_maps)
+        _tmptc = to_hex(el_tc_val) if el_tc_val else None
+        el_tc_hex = _tmptc.lower() if _tmptc else None
         node = candidates[0]
-        if len(candidates) > 1 and el_bg_hex:
+        if len(candidates) > 1:
+            best_score = -1
             for c in candidates:
-                css_bg = c.get("styles", {}).get("background-color") or c.get("styles", {}).get("background") or ""
-                css_bg_hex = to_hex(css_bg).lower() if css_bg else None
-                if css_bg_hex and css_bg_hex == el_bg_hex:
+                cs = c.get("styles", {})
+                css_bg_raw = cs.get("background-color") or cs.get("background") or ""
+                css_tc_raw = cs.get("color") or ""
+                _tbg = to_hex(css_bg_raw) if css_bg_raw else None
+                css_bg_hex = _tbg.lower() if _tbg else None
+                _ttc = to_hex(css_tc_raw) if css_tc_raw else None
+                css_tc_hex = _ttc.lower() if _ttc else None
+                # Score: +2 for bg match, +1 for text color match; +2 for transparent-match
+                score = 0
+                if el_bg_hex and css_bg_hex and el_bg_hex == css_bg_hex:
+                    score += 2
+                elif (el_bg_hex in ("#ffffff00", None) and css_bg_raw in ("transparent", "none", "")):
+                    score += 2
+                if el_tc_hex and css_tc_hex and el_tc_hex == css_tc_hex:
+                    score += 1
+                if score > best_score:
+                    best_score = score
                     node = c
-                    break
         css = node.get("styles", {})
         el_tc = _resolved_color(s, "button_text_color", kit_maps)
         _cmp_color(el_tc, css.get("color", ""), f"button\"{text}\".text-color", issues)

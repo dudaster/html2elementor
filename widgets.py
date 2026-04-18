@@ -49,6 +49,21 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
         return
 
 
+    # Div/span with mixed inline content (direct text + inline children like
+    # <span>, <em>, <strong>, <b>, <i>). Example: brand "Paper<span>fold</span>".
+    # Emit as a single leaf-text widget using _all_text_html to preserve both
+    # the direct text AND nested inline markup + colors.
+    if tag in ("div", "span") and text and node.get("children"):
+        only_inline_children = all(
+            c.get("tag") in ("span", "em", "i", "strong", "b")
+            for c in node.get("children", [])
+        )
+        if only_inline_children:
+            # Treat as a leaf — text_widget's short-text branch handles this
+            # with proper inline span-color preservation via _all_text_html.
+            out.append(text_widget(node))
+            return
+
     # Leaf div/span with text but no children — emit as text-editor
     # Catches: badges/pills, taglines, prices, emoji decorations, etc.
     if tag in ("div", "span") and text and not node.get("children"):
@@ -100,6 +115,12 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                 grid_cols = _get_grid_columns(node)
                 grid_max_width = px_to_int(parent_styles.get("max-width"))
                 grid_gap = px_to_int(parent_styles.get("gap"))
+                for card in cards:
+                    # Parent is a grid/row layout, so cards SHOULD be grouped into
+                    # rows by _group_into_grids. If a card came from a styled
+                    # wrapper (bg/radius preserving) its _no_group flag was set
+                    # defensively; clear it here so grouping actually happens.
+                    card.pop("_no_group", None)
                 if grid_cols or grid_max_width or grid_gap:
                     for card in cards:
                         if grid_cols:
@@ -764,46 +785,68 @@ def _emit_card_grid(node: dict, consumed: set[int]) -> list[dict]:
                                 merged_styles[k] = ws[k]
 
                     child_gap = _pxi(card_styles.get("gap") or card_styles.get("row-gap")) or 12
+                    # Respect justify-content: flex-end (content pushed to bottom
+                    # for big feature cards with min-height).
+                    card_jc = (card_styles.get("justify-content") or "").lower()
+                    jc_map = {"flex-end": "flex-end", "end": "flex-end",
+                              "center": "center", "space-between": "space-between",
+                              "flex-start": "flex-start", "start": "flex-start"}
+                    flex_jc = jc_map.get(card_jc, "flex-start")
                     card_settings: dict[str, Any] = {
                         "content_width": "full",
                         "flex_direction": "column",
                         "flex_align_items": "center" if ta == "center" else "flex-start",
+                        "flex_justify_content": flex_jc,
                         "flex_gap": {"unit": "px", "size": child_gap, "column": str(child_gap), "row": str(child_gap)},
                     }
+                    # min-height from CSS (for large hero/feature cards)
+                    min_h = _pxi(card_styles.get("min-height", ""))
+                    if min_h:
+                        card_settings["min_height"] = {"unit": "px", "size": min_h, "sizes": []}
                     _apply_container_card_styling(card_settings, merged_styles)
-                # If the card's only content is an inner container (e.g. agenda slot
-                # emitted as flex-row by _inline_flex_row_widget) AND the card has no
-                # visual card decoration (bg, radius), collapse the wrapper by MERGING
-                # the card's padding/border into the inner container. This avoids a
-                # column-wraps-row nesting that breaks layout in Elementor.
+                # Collapse redundant double wrapping:
+                # Case A: card has no visual decoration — merge padding/border into inner.
+                # Case B: card content is a single styled_wrapper that already represents
+                #         the same card styling (same bg/radius) — use inner directly and
+                #         transfer any extra card_settings keys (jc, min-height).
                 has_visual_card = bool(
                     card_settings.get("background_background") or
                     card_settings.get("border_radius")
                 )
                 single_inner = (len(card_elements) == 1 and card_elements[0].get("__inner_container__"))
-                if single_inner and not has_visual_card:
+                if single_inner:
                     inner = card_elements[0]
                     inner_s = inner.setdefault("settings", {})
-                    # Merge padding
-                    if card_settings.get("padding"):
-                        inner_s["padding"] = card_settings["padding"]
-                    # Merge border (bottom border line for agenda slots)
-                    if card_settings.get("border_border"):
-                        inner_s["border_border"] = card_settings["border_border"]
-                        if card_settings.get("border_width"):
-                            inner_s["border_width"] = card_settings["border_width"]
-                        if card_settings.get("border_color"):
-                            inner_s["border_color"] = card_settings["border_color"]
-                    # Merge gap if inner didn't set one yet
-                    if "flex_gap" not in inner_s and card_settings.get("flex_gap"):
-                        inner_s["flex_gap"] = card_settings["flex_gap"]
-                    cards.append(inner)
-                else:
-                    cards.append({
-                        "__inner_container__": True,
-                        "settings": card_settings,
-                        "children": card_elements,
-                    })
+                    # Case B: inner already has the card bg/radius → don't double-wrap
+                    if has_visual_card and (
+                        inner_s.get("background_background") == card_settings.get("background_background")
+                        or inner_s.get("background_color") == card_settings.get("background_color")
+                    ):
+                        # Transfer extra settings only the outer card had
+                        for extra_key in ("flex_justify_content", "min_height"):
+                            if extra_key in card_settings and extra_key not in inner_s:
+                                inner_s[extra_key] = card_settings[extra_key]
+                        cards.append(inner)
+                        continue
+                    # Case A: no visual card → merge outer padding/border into inner
+                    if not has_visual_card:
+                        if card_settings.get("padding"):
+                            inner_s["padding"] = card_settings["padding"]
+                        if card_settings.get("border_border"):
+                            inner_s["border_border"] = card_settings["border_border"]
+                            if card_settings.get("border_width"):
+                                inner_s["border_width"] = card_settings["border_width"]
+                            if card_settings.get("border_color"):
+                                inner_s["border_color"] = card_settings["border_color"]
+                        if "flex_gap" not in inner_s and card_settings.get("flex_gap"):
+                            inner_s["flex_gap"] = card_settings["flex_gap"]
+                        cards.append(inner)
+                        continue
+                cards.append({
+                    "__inner_container__": True,
+                    "settings": card_settings,
+                    "children": card_elements,
+                })
     return cards
 
 
@@ -891,13 +934,18 @@ def _leaf_text_widget(node: dict) -> dict:
 
 
 def _badge_widget(node: dict) -> dict:
-    """Small styled inline text (badge, pill, tag) — rendered as heading h6."""
+    """Small styled inline text (badge, pill, tag) — rendered as heading h6.
+    Auto-width (not stretched) so the pill hugs its text content."""
     text = (node.get("text") or "").strip()
     styles = node.get("styles", {})
+    # Content-width so the bg pill hugs its text. _flex_align_self overrides the
+    # parent container's align-items:stretch so the badge doesn't span full width.
     settings: dict[str, Any] = {
         "title": text,
         "header_size": "h6",
         "align": "center",
+        "_element_width": "initial",
+        "_flex_align_self": "flex-start",
     }
     apply_typography(settings, styles)
     # Badge color
@@ -1280,13 +1328,26 @@ def _styled_wrapper_container(node: dict, children: list[dict]) -> dict:
     from .colors import to_hex
     from .styles import css_padding_to_elementor, px_to_int
     styles = node.get("styles", {})
+    css_jc = (styles.get("justify-content") or "").lower()
+    css_ai = (styles.get("align-items") or "").lower()
+    jc_map = {"flex-end": "flex-end", "end": "flex-end", "flex-start": "flex-start",
+              "start": "flex-start", "center": "center", "space-between": "space-between"}
+    ai_map = {"flex-end": "flex-end", "end": "flex-end", "flex-start": "flex-start",
+              "start": "flex-start", "center": "center", "stretch": "stretch"}
+    flex_dir = "column"
+    if (styles.get("flex-direction") or "").lower().startswith("row"):
+        flex_dir = "row"
     settings: dict[str, Any] = {
         "content_width": "boxed",
-        "flex_direction": "column",
-        "flex_align_items": "center",
-        "flex_justify_content": "center",
+        "flex_direction": flex_dir,
+        "flex_align_items": ai_map.get(css_ai, "center"),
+        "flex_justify_content": jc_map.get(css_jc, "center"),
         "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
     }
+    # min-height from CSS (for large feature cards)
+    mh = px_to_int(styles.get("min-height", ""))
+    if mh:
+        settings["min_height"] = {"unit": "px", "size": mh, "sizes": []}
     # Background
     bg_raw = styles.get("background") or styles.get("background-image") or ""
     if "gradient" in bg_raw:

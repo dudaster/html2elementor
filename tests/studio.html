@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Paperfold — Design & motion studio</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #0a0a0a; background: #fafaf9; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ============ HEADER ============ */
+    header { padding: 24px 56px; display: flex; justify-content: space-between; align-items: center; background: #fafaf9; }
+    header .brand { font-size: 20px; font-weight: 800; color: #0a0a0a; letter-spacing: -0.5px; }
+    header .brand span { color: #22c55e; }
+    header nav { display: flex; align-items: center; }
+    header nav a { font-size: 14px; color: #404040; font-weight: 500; margin-right: 28px; }
+    header .link { background: #0a0a0a; color: #ffffff; padding: 10px 20px; border-radius: 99px; font-size: 14px; font-weight: 600; }
+
+    /* ============ HERO (left-aligned, not centered) ============ */
+    .hero { padding: 120px 56px 100px; }
+    .hero .inner { max-width: 1200px; margin: 0 auto; }
+    .hero .tag { display: inline-block; background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 99px; font-size: 12px; font-weight: 700; margin-bottom: 28px; }
+    .hero h1 { font-size: 84px; font-weight: 800; color: #0a0a0a; max-width: 960px; letter-spacing: -3px; line-height: 1; margin-bottom: 32px; }
+    .hero h1 em { color: #22c55e; font-style: normal; }
+    .hero p { font-size: 20px; color: #525252; max-width: 580px; margin-bottom: 44px; line-height: 1.6; }
+    .hero .ctas { display: flex; gap: 12px; }
+    .hero .primary { background: #0a0a0a; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; }
+    .hero .secondary { background: transparent; color: #0a0a0a; padding: 16px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; border: 1px solid #d4d4d8; }
+
+    /* ============ VALUE PROPS (3 cards with check icons) ============ */
+    .values { padding: 80px 56px; background: #ffffff; border-top: 1px solid #e5e5e4; border-bottom: 1px solid #e5e5e4; }
+    .values .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto; }
+    .values .item .check { width: 40px; height: 40px; background: #dcfce7; color: #166534; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+    .values .item h3 { font-size: 19px; font-weight: 700; color: #0a0a0a; margin-bottom: 8px; }
+    .values .item p { font-size: 15px; color: #525252; line-height: 1.65; }
+
+    /* ============ WORK (big cards) ============ */
+    .work { padding: 120px 56px; }
+    .work .head { max-width: 1200px; margin: 0 auto 64px; }
+    .work .head .kicker { font-size: 13px; color: #22c55e; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+    .work .head h2 { font-size: 52px; font-weight: 800; color: #0a0a0a; max-width: 700px; letter-spacing: -1.5px; }
+    .work .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1200px; margin: 0 auto; }
+    .work .card { padding: 48px 40px; border-radius: 24px; min-height: 320px; display: flex; flex-direction: column; justify-content: flex-end; }
+    .work .card.a { background: #fef3c7; }
+    .work .card.b { background: #e0f2fe; }
+    .work .card.c { background: #fce7f3; }
+    .work .card.d { background: #ede9fe; }
+    .work .card .cat { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #0a0a0a; margin-bottom: 12px; opacity: 0.6; }
+    .work .card h3 { font-size: 28px; font-weight: 800; color: #0a0a0a; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .work .card p { font-size: 15px; color: #404040; }
+
+    /* ============ PROCESS (numbered steps) ============ */
+    .process { padding: 120px 56px; background: #0a0a0a; }
+    .process .head { max-width: 1200px; margin: 0 auto 64px; text-align: center; }
+    .process .head h2 { font-size: 48px; font-weight: 800; color: #ffffff; letter-spacing: -1.2px; margin-bottom: 16px; }
+    .process .head p { font-size: 17px; color: #a1a1aa; max-width: 520px; margin: 0 auto; }
+    .process .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 1200px; margin: 0 auto; }
+    .process .step .num { font-size: 64px; font-weight: 800; color: #22c55e; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
+    .process .step h3 { font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 10px; }
+    .process .step p { font-size: 15px; color: #a1a1aa; line-height: 1.65; }
+
+    /* ============ TESTIMONIAL ============ */
+    .testi { padding: 120px 56px; text-align: center; }
+    .testi .quote { font-size: 36px; font-weight: 500; color: #0a0a0a; max-width: 860px; margin: 0 auto 36px; line-height: 1.3; letter-spacing: -0.8px; }
+    .testi .author { font-size: 16px; font-weight: 700; color: #0a0a0a; margin-bottom: 4px; }
+    .testi .role { font-size: 14px; color: #737373; }
+
+    /* ============ CTA ============ */
+    .cta { padding: 80px 56px; }
+    .cta .inner { background: #22c55e; padding: 80px 48px; border-radius: 32px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .cta h2 { font-size: 48px; font-weight: 800; color: #052e16; margin-bottom: 20px; letter-spacing: -1.2px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta p { font-size: 17px; color: #14532d; max-width: 520px; margin: 0 auto 36px; }
+    .cta .btn { display: inline-block; background: #052e16; color: #ffffff; padding: 18px 40px; border-radius: 8px; font-size: 15px; font-weight: 700; }
+
+    /* ============ FOOTER ============ */
+    footer { padding: 56px 56px 32px; background: #fafaf9; border-top: 1px solid #e5e5e4; }
+    footer .cols { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
+    footer .about .brand { font-size: 20px; font-weight: 800; color: #0a0a0a; letter-spacing: -0.5px; margin-bottom: 12px; }
+    footer .about .brand span { color: #22c55e; }
+    footer .about p { font-size: 14px; color: #737373; max-width: 280px; line-height: 1.6; }
+    footer .col h4 { font-size: 12px; font-weight: 700; color: #0a0a0a; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+    footer .col a { display: block; font-size: 14px; color: #525252; margin-bottom: 10px; }
+    footer .copy { text-align: center; padding-top: 32px; border-top: 1px solid #e5e5e4; font-size: 13px; color: #a3a3a3; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="brand">Paper<span>fold</span></div>
+        <nav>
+            <a href="#">Work</a>
+            <a href="#">Services</a>
+            <a href="#">Studio</a>
+            <a href="#">Journal</a>
+            <a href="#" class="link">Start a project</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="inner">
+            <div class="tag">ACCEPTING Q3 PROJECTS</div>
+            <h1>We design brands that <em>move</em>.</h1>
+            <p>Paperfold is a design and motion studio working with ambitious teams across tech, culture, and climate. No retainers, no decks — just the work.</p>
+            <div class="ctas">
+                <a href="#" class="primary">See our work</a>
+                <a href="#" class="secondary">Start a project</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="grid">
+            <div class="item">
+                <div class="check">✓</div>
+                <h3>Senior by default</h3>
+                <p>You'll work directly with the people making the work — no account managers between you and the decisions.</p>
+            </div>
+            <div class="item">
+                <div class="check">✓</div>
+                <h3>Systems over artifacts</h3>
+                <p>Every project ships with the components, guidelines, and templates your team needs to keep building after we leave.</p>
+            </div>
+            <div class="item">
+                <div class="check">✓</div>
+                <h3>Real deadlines, real scope</h3>
+                <p>Fixed-price engagements with weekly reviews. You'll know exactly what you're getting and when you'll have it.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="head">
+            <div class="kicker">Selected work</div>
+            <h2>Brands and products we've shaped recently.</h2>
+        </div>
+        <div class="grid">
+            <div class="card a">
+                <div class="cat">Brand identity</div>
+                <h3>Honeycomb Labs</h3>
+                <p>Biotech startup rebrand — logo system, product UI, and launch film.</p>
+            </div>
+            <div class="card b">
+                <div class="cat">Motion</div>
+                <h3>Atlas Ventures</h3>
+                <p>Opening titles and in-talk animations for a flagship VC conference.</p>
+            </div>
+            <div class="card c">
+                <div class="cat">Product design</div>
+                <h3>Marigold Health</h3>
+                <p>End-to-end design of a patient intake platform used by 40+ clinics.</p>
+            </div>
+            <div class="card d">
+                <div class="cat">Editorial</div>
+                <h3>Bluebird Press</h3>
+                <p>Quarterly magazine design across print and digital, 12 issues shipped.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="head">
+            <h2>A deliberately small process.</h2>
+            <p>We ship in three phases. No theatre, no change requests in month four.</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="num">01</div>
+                <h3>Frame</h3>
+                <p>One week to understand the business, the audience, and the real problem. You'll leave with a creative brief we both sign.</p>
+            </div>
+            <div class="step">
+                <div class="num">02</div>
+                <h3>Make</h3>
+                <p>Four to eight weeks of tight design sprints with weekly reviews. You see everything as it's built — no big reveal.</p>
+            </div>
+            <div class="step">
+                <div class="num">03</div>
+                <h3>Ship</h3>
+                <p>Production files, templates, and a handover session with your team. We stick around for two weeks of support afterwards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testi">
+        <p class="quote">"Paperfold delivered on time, on scope, and on brand — three things I'd stopped expecting from a creative studio."</p>
+        <div class="author">Sofia Reinholt</div>
+        <div class="role">CEO, Marigold Health</div>
+    </section>
+
+    <section class="cta">
+        <div class="inner">
+            <h2>Got a project on the horizon?</h2>
+            <p>We take on three or four new engagements each quarter. Tell us what you're working on and we'll come back within two working days.</p>
+            <a href="#" class="btn">Start a project</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="cols">
+            <div class="about">
+                <div class="brand">Paper<span>fold</span></div>
+                <p>A small design and motion studio based in Copenhagen, working worldwide since 2018.</p>
+            </div>
+            <div class="col">
+                <h4>Studio</h4>
+                <a href="#">Work</a>
+                <a href="#">Services</a>
+                <a href="#">Journal</a>
+                <a href="#">About</a>
+            </div>
+            <div class="col">
+                <h4>Contact</h4>
+                <a href="#">hello@paperfold.dk</a>
+                <a href="#">Start a project</a>
+                <a href="#">Press enquiries</a>
+            </div>
+            <div class="col">
+                <h4>Elsewhere</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Are.na</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="copy">© 2026 Paperfold Studio ApS. Copenhagen.</div>
+    </footer>
+</body>
+</html>

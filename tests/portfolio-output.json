@@ -1,6 +1,6 @@
 [
   {
-    "id": "e755f95",
+    "id": "3bc2ad6",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -34,7 +34,7 @@
     },
     "elements": [
       {
-        "id": "ec630c2",
+        "id": "2c660fd",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -54,7 +54,7 @@
         },
         "elements": [
           {
-            "id": "af0e13b",
+            "id": "33115a5",
             "elType": "widget",
             "settings": {
               "title": "maya.design",
@@ -77,7 +77,7 @@
         "isInner": true
       },
       {
-        "id": "37adf17",
+        "id": "467acef",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -104,7 +104,7 @@
         },
         "elements": [
           {
-            "id": "936f1f0",
+            "id": "9eaee92",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -170,7 +170,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "1cf6f2f",
+            "id": "d2c2b38",
             "elType": "widget",
             "settings": {
               "text": "Book a call",
@@ -220,13 +220,13 @@
     "isInner": false
   },
   {
-    "id": "6dfc1af",
+    "id": "c7c9069",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -248,12 +248,14 @@
     },
     "elements": [
       {
-        "id": "dafac3c",
+        "id": "ce3aab7",
         "elType": "widget",
         "settings": {
           "title": "Available for new projects",
           "header_size": "h6",
           "align": "center",
+          "_element_width": "initial",
+          "_flex_align_self": "flex-start",
           "typography_line_height": {
             "unit": "em",
             "size": 1.5,
@@ -294,7 +296,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "3b6f2c6",
+        "id": "22d02c1",
         "elType": "widget",
         "settings": {
           "title": "Designing products that <span style=\"color:#84cc16\">people love</span>",
@@ -340,7 +342,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "8dae8aa",
+        "id": "ac737d3",
         "elType": "widget",
         "settings": {
           "editor": "<p>Hi, I'm Maya — a product designer and developer helping startups ship beautiful, usable software.</p>",
@@ -373,7 +375,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "d111283",
+        "id": "d73194c",
         "elType": "widget",
         "settings": {
           "text": "View my work",
@@ -420,13 +422,13 @@
     "isInner": false
   },
   {
-    "id": "af76f5d",
+    "id": "f731f2b",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -450,7 +452,7 @@
     },
     "elements": [
       {
-        "id": "db2f0d3",
+        "id": "2f6ab08",
         "elType": "widget",
         "settings": {
           "title": "What I do",
@@ -490,7 +492,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "d48f679",
+        "id": "a4c9f2b",
         "elType": "widget",
         "settings": {
           "editor": "<p>End-to-end product work from strategy to shipped pixels.</p>",
@@ -523,7 +525,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "56d664b",
+        "id": "5926422",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -563,27 +565,27 @@
         },
         "elements": [
           {
-            "id": "5db3782",
+            "id": "43d4268",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_border": "solid",
-              "border_width": {
+              "padding": {
                 "unit": "px",
-                "top": "1",
-                "right": "1",
-                "bottom": "1",
-                "left": "1",
-                "isLinked": true
+                "top": "32",
+                "right": "32",
+                "bottom": "32",
+                "left": "32",
+                "isLinked": false
               },
               "border_radius": {
                 "unit": "px",
@@ -593,133 +595,84 @@
                 "left": "12",
                 "isLinked": true
               },
-              "padding": {
-                "unit": "px",
-                "top": "32",
-                "right": "32",
-                "bottom": "32",
-                "left": "32",
-                "isLinked": true
-              },
               "__globals__": {
                 "background_color": "globals/colors?id=1561c2d",
-                "border_color": "globals/colors?id=c62d733",
                 "typography_typography": "globals/typography?id=text"
               }
             },
             "elements": [
               {
-                "id": "e4313fd",
-                "elType": "container",
+                "id": "7d04540",
+                "elType": "widget",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_justify_content": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
+                  "title": "Product Design",
+                  "header_size": "h3",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
                   },
-                  "background_background": "classic",
-                  "padding": {
+                  "_margin": {
                     "unit": "px",
-                    "top": "32",
-                    "right": "32",
-                    "bottom": "32",
-                    "left": "32",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
                     "isLinked": false
                   },
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "12",
-                    "right": "12",
-                    "bottom": "12",
-                    "left": "12",
-                    "isLinked": true
-                  },
                   "__globals__": {
-                    "background_color": "globals/colors?id=1561c2d",
-                    "typography_typography": "globals/typography?id=text"
+                    "title_color": "globals/colors?id=35cbfad",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
                 },
-                "elements": [
-                  {
-                    "id": "67a369f",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Product Design",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "12",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=35cbfad",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "f606ae6",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>From user research to polished interfaces. I work closely with founders to turn ideas into products.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
                   },
-                  {
-                    "id": "66dbfe3",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>From user research to polished interfaces. I work closely with founders to turn ideas into products.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=8ce3743",
-                        "typography_typography": "globals/typography?id=f3bb408"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8ce3743",
+                    "typography_typography": "globals/typography?id=f3bb408"
                   }
-                ],
-                "isInner": true
+                },
+                "elements": [],
+                "widgetType": "text-editor"
               }
             ],
             "isInner": true
           },
           {
-            "id": "cb5d248",
+            "id": "c62d755",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_border": "solid",
-              "border_width": {
+              "padding": {
                 "unit": "px",
-                "top": "1",
-                "right": "1",
-                "bottom": "1",
-                "left": "1",
-                "isLinked": true
+                "top": "32",
+                "right": "32",
+                "bottom": "32",
+                "left": "32",
+                "isLinked": false
               },
               "border_radius": {
                 "unit": "px",
@@ -729,133 +682,84 @@
                 "left": "12",
                 "isLinked": true
               },
-              "padding": {
-                "unit": "px",
-                "top": "32",
-                "right": "32",
-                "bottom": "32",
-                "left": "32",
-                "isLinked": true
-              },
               "__globals__": {
                 "background_color": "globals/colors?id=1561c2d",
-                "border_color": "globals/colors?id=c62d733",
                 "typography_typography": "globals/typography?id=text"
               }
             },
             "elements": [
               {
-                "id": "85e8287",
-                "elType": "container",
+                "id": "b00c971",
+                "elType": "widget",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_justify_content": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
+                  "title": "Web Development",
+                  "header_size": "h3",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
                   },
-                  "background_background": "classic",
-                  "padding": {
+                  "_margin": {
                     "unit": "px",
-                    "top": "32",
-                    "right": "32",
-                    "bottom": "32",
-                    "left": "32",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
                     "isLinked": false
                   },
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "12",
-                    "right": "12",
-                    "bottom": "12",
-                    "left": "12",
-                    "isLinked": true
-                  },
                   "__globals__": {
-                    "background_color": "globals/colors?id=1561c2d",
-                    "typography_typography": "globals/typography?id=text"
+                    "title_color": "globals/colors?id=35cbfad",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
                 },
-                "elements": [
-                  {
-                    "id": "8d110ae",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Web Development",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "12",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=35cbfad",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "2747516",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Modern frontend with React, Next.js, and TypeScript. Clean code, fast sites, happy teams.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
                   },
-                  {
-                    "id": "be2f55c",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Modern frontend with React, Next.js, and TypeScript. Clean code, fast sites, happy teams.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=8ce3743",
-                        "typography_typography": "globals/typography?id=f3bb408"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8ce3743",
+                    "typography_typography": "globals/typography?id=f3bb408"
                   }
-                ],
-                "isInner": true
+                },
+                "elements": [],
+                "widgetType": "text-editor"
               }
             ],
             "isInner": true
           },
           {
-            "id": "66afee3",
+            "id": "13883eb",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_border": "solid",
-              "border_width": {
+              "padding": {
                 "unit": "px",
-                "top": "1",
-                "right": "1",
-                "bottom": "1",
-                "left": "1",
-                "isLinked": true
+                "top": "32",
+                "right": "32",
+                "bottom": "32",
+                "left": "32",
+                "isLinked": false
               },
               "border_radius": {
                 "unit": "px",
@@ -865,107 +769,58 @@
                 "left": "12",
                 "isLinked": true
               },
-              "padding": {
-                "unit": "px",
-                "top": "32",
-                "right": "32",
-                "bottom": "32",
-                "left": "32",
-                "isLinked": true
-              },
               "__globals__": {
                 "background_color": "globals/colors?id=1561c2d",
-                "border_color": "globals/colors?id=c62d733",
                 "typography_typography": "globals/typography?id=text"
               }
             },
             "elements": [
               {
-                "id": "c8d53b2",
-                "elType": "container",
+                "id": "8da6c54",
+                "elType": "widget",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_justify_content": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
+                  "title": "Brand Systems",
+                  "header_size": "h3",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
                   },
-                  "background_background": "classic",
-                  "padding": {
+                  "_margin": {
                     "unit": "px",
-                    "top": "32",
-                    "right": "32",
-                    "bottom": "32",
-                    "left": "32",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
                     "isLinked": false
                   },
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "12",
-                    "right": "12",
-                    "bottom": "12",
-                    "left": "12",
-                    "isLinked": true
-                  },
                   "__globals__": {
-                    "background_color": "globals/colors?id=1561c2d",
-                    "typography_typography": "globals/typography?id=text"
+                    "title_color": "globals/colors?id=35cbfad",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
                 },
-                "elements": [
-                  {
-                    "id": "674d4f5",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Brand Systems",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "12",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=35cbfad",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "2299ba3",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Visual identity, component libraries, and design tokens that scale across your product.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
                   },
-                  {
-                    "id": "e1661eb",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Visual identity, component libraries, and design tokens that scale across your product.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=8ce3743",
-                        "typography_typography": "globals/typography?id=f3bb408"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8ce3743",
+                    "typography_typography": "globals/typography?id=f3bb408"
                   }
-                ],
-                "isInner": true
+                },
+                "elements": [],
+                "widgetType": "text-editor"
               }
             ],
             "isInner": true
@@ -977,13 +832,13 @@
     "isInner": false
   },
   {
-    "id": "f8c79a1",
+    "id": "0037158",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -1007,7 +862,7 @@
     },
     "elements": [
       {
-        "id": "23a5024",
+        "id": "482179c",
         "elType": "widget",
         "settings": {
           "title": "Track record",
@@ -1047,7 +902,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "1b54ab7",
+        "id": "c902919",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1074,7 +929,7 @@
         },
         "elements": [
           {
-            "id": "48375a8",
+            "id": "248f675",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1106,7 +961,7 @@
             },
             "elements": [
               {
-                "id": "db10ffc",
+                "id": "7926c77",
                 "elType": "widget",
                 "settings": {
                   "title": "47",
@@ -1134,7 +989,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "44ae362",
+                "id": "bd441bd",
                 "elType": "widget",
                 "settings": {
                   "title": "Projects shipped",
@@ -1157,7 +1012,7 @@
             "isInner": true
           },
           {
-            "id": "dda94dd",
+            "id": "f630f83",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1189,7 +1044,7 @@
             },
             "elements": [
               {
-                "id": "4937248",
+                "id": "7913e07",
                 "elType": "widget",
                 "settings": {
                   "title": "12",
@@ -1217,7 +1072,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c2deb5f",
+                "id": "5f5f883",
                 "elType": "widget",
                 "settings": {
                   "title": "Startups helped",
@@ -1240,7 +1095,7 @@
             "isInner": true
           },
           {
-            "id": "37a8d2d",
+            "id": "a951414",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1272,7 +1127,7 @@
             },
             "elements": [
               {
-                "id": "740a561",
+                "id": "ba88a4e",
                 "elType": "widget",
                 "settings": {
                   "title": "8y",
@@ -1300,7 +1155,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "1340ffc",
+                "id": "072c064",
                 "elType": "widget",
                 "settings": {
                   "title": "Experience",
@@ -1329,13 +1184,13 @@
     "isInner": false
   },
   {
-    "id": "1a66495",
+    "id": "ab72913",
     "elType": "container",
     "settings": {
       "content_width": "full",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -1357,13 +1212,13 @@
     },
     "elements": [
       {
-        "id": "7c8f12d",
+        "id": "ac8b6e7",
         "elType": "container",
         "settings": {
           "content_width": "full",
           "flex_direction": "column",
-          "flex_justify_content": "center",
-          "flex_align_items": "center",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "stretch",
           "flex_gap": {
             "unit": "px",
             "size": 0,
@@ -1394,7 +1249,7 @@
         },
         "elements": [
           {
-            "id": "dfcb713",
+            "id": "6929d35",
             "elType": "widget",
             "settings": {
               "title": "Let's work together",
@@ -1434,7 +1289,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "016e6cb",
+            "id": "fb2e9b0",
             "elType": "widget",
             "settings": {
               "title": "Got a project in mind? I'd love to hear about it.",
@@ -1462,7 +1317,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "e410ebd",
+            "id": "d1fd34c",
             "elType": "widget",
             "settings": {
               "text": "Start a project",
@@ -1512,13 +1367,13 @@
     "isInner": false
   },
   {
-    "id": "9c41207",
+    "id": "6b82f89",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -1542,7 +1397,7 @@
     },
     "elements": [
       {
-        "id": "1f4eee3",
+        "id": "2848d91",
         "elType": "widget",
         "settings": {
           "title": "maya.design",
@@ -1570,7 +1425,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "e6ff7bd",
+        "id": "8b193e8",
         "elType": "widget",
         "settings": {
           "editor": "© 2026 Maya Chen. Crafted with care.",

@@ -1,6 +1,6 @@
 [
   {
-    "id": "24a6969",
+    "id": "663355d",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -44,7 +44,7 @@
     },
     "elements": [
       {
-        "id": "5bc092c",
+        "id": "914bc08",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -64,7 +64,7 @@
         },
         "elements": [
           {
-            "id": "086be08",
+            "id": "cabd837",
             "elType": "widget",
             "settings": {
               "title": "Code <span style=\"color:#7c3aed\">Academy</span>",
@@ -82,7 +82,7 @@
         "isInner": true
       },
       {
-        "id": "920dfc7",
+        "id": "b724bd5",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -109,7 +109,7 @@
         },
         "elements": [
           {
-            "id": "5bbbb79",
+            "id": "e984263",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -181,7 +181,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "5884494",
+            "id": "c5d7d23",
             "elType": "widget",
             "settings": {
               "text": "Începe gratuit",
@@ -226,13 +226,13 @@
     "isInner": false
   },
   {
-    "id": "ab2ed93",
+    "id": "d7d2d2a",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -263,12 +263,14 @@
     },
     "elements": [
       {
-        "id": "c83cd54",
+        "id": "be7bfb9",
         "elType": "widget",
         "settings": {
           "title": "🚀 Peste 10.000 de studenți activi",
           "header_size": "h6",
           "align": "center",
+          "_element_width": "initial",
+          "_flex_align_self": "flex-start",
           "_background_background": "classic",
           "_border_border": "solid",
           "_border_width": {
@@ -314,7 +316,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "187e89d",
+        "id": "d8db19b",
         "elType": "widget",
         "settings": {
           "title": "Învață să programezi de la zero",
@@ -360,7 +362,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "1a82ce2",
+        "id": "1a03f10",
         "elType": "widget",
         "settings": {
           "editor": "<p>Cursuri practice de programare, cu mentori dedicați și proiecte reale. De la începător la junior developer în 6 luni.</p>",
@@ -393,7 +395,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "eaaa6fe",
+        "id": "b51cd1a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -420,7 +422,7 @@
         },
         "elements": [
           {
-            "id": "a76f278",
+            "id": "257c80c",
             "elType": "widget",
             "settings": {
               "text": "Începe gratuit",
@@ -459,7 +461,7 @@
             "widgetType": "button"
           },
           {
-            "id": "a02595e",
+            "id": "da9d762",
             "elType": "widget",
             "settings": {
               "text": "Vezi cursurile",
@@ -504,13 +506,13 @@
     "isInner": false
   },
   {
-    "id": "2e3be9a",
+    "id": "d785b35",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -542,7 +544,7 @@
     },
     "elements": [
       {
-        "id": "4775187",
+        "id": "79f631e",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -569,7 +571,7 @@
         },
         "elements": [
           {
-            "id": "e515583",
+            "id": "bb7fd6d",
             "elType": "widget",
             "settings": {
               "image": {
@@ -614,7 +616,7 @@
             "widgetType": "image"
           },
           {
-            "id": "cb038f6",
+            "id": "26d9e18",
             "elType": "widget",
             "settings": {
               "image": {
@@ -667,7 +669,7 @@
             "widgetType": "image"
           },
           {
-            "id": "d33537a",
+            "id": "a72e40d",
             "elType": "widget",
             "settings": {
               "image": {
@@ -720,7 +722,7 @@
             "widgetType": "image"
           },
           {
-            "id": "1dc2f19",
+            "id": "ef5525e",
             "elType": "widget",
             "settings": {
               "image": {
@@ -776,7 +778,7 @@
         "isInner": true
       },
       {
-        "id": "3e128ba",
+        "id": "e05e9b4",
         "elType": "widget",
         "settings": {
           "editor": "<p><span style=\"color:#0f172a\"><strong>4.9/5</strong></span> din 2.847 recenzii · Înscrie-te alături de 10.000+ studenți</p>",
@@ -793,13 +795,13 @@
     "isInner": false
   },
   {
-    "id": "7f287e1",
+    "id": "feacdd6",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -821,12 +823,14 @@
     },
     "elements": [
       {
-        "id": "3e1324a",
+        "id": "08559a1",
         "elType": "widget",
         "settings": {
           "title": "Cursuri populare",
           "header_size": "h6",
           "align": "center",
+          "_element_width": "initial",
+          "_flex_align_self": "flex-start",
           "_background_background": "classic",
           "_border_radius": {
             "unit": "px",
@@ -862,7 +866,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b700510",
+        "id": "f3cd1c4",
         "elType": "widget",
         "settings": {
           "title": "Alege-ți parcursul",
@@ -877,7 +881,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "e54c505",
+        "id": "7c71902",
         "elType": "widget",
         "settings": {
           "editor": "<p>Cursuri structurate, de la fundamente până la nivel avansat</p>",
@@ -899,7 +903,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "7e9c4e3",
+        "id": "11f13ff",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -939,28 +943,20 @@
         },
         "elements": [
           {
-            "id": "1a946d1",
+            "id": "524e61d",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_border": "solid",
-              "border_width": {
-                "unit": "px",
-                "top": "1",
-                "right": "1",
-                "bottom": "1",
-                "left": "1",
-                "isLinked": true
-              },
               "border_radius": {
                 "unit": "px",
                 "top": "16",
@@ -971,41 +967,147 @@
               },
               "padding": {
                 "unit": "px",
-                "top": "24",
-                "right": "24",
-                "bottom": "24",
-                "left": "24",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
                 "isLinked": true
               },
               "__globals__": {
                 "background_color": "globals/colors?id=1561c2d",
-                "border_color": "globals/colors?id=866071a",
                 "typography_typography": "globals/typography?id=text"
               }
             },
             "elements": [
               {
-                "id": "0f7c914",
+                "id": "d623b15",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600",
+                    "id": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "alt": "Python",
+                  "width": {
+                    "unit": "%",
+                    "size": "100",
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "719dcb2",
+                "elType": "widget",
+                "settings": {
+                  "title": "Începător",
+                  "header_size": "h6",
+                  "align": "center",
+                  "_element_width": "initial",
+                  "_flex_align_self": "flex-start",
+                  "_background_background": "classic",
+                  "_border_radius": {
+                    "unit": "px",
+                    "top": "99",
+                    "right": "99",
+                    "bottom": "99",
+                    "left": "99",
+                    "isLinked": true
+                  },
+                  "_padding": {
+                    "unit": "px",
+                    "top": "4",
+                    "right": "12",
+                    "bottom": "4",
+                    "left": "12",
+                    "isLinked": false
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=0d16bbb",
+                    "_background_color": "globals/colors?id=9f992e9",
+                    "typography_typography": "globals/typography?id=0d96bbc"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "15e4b01",
+                "elType": "widget",
+                "settings": {
+                  "title": "Python Fundamentals",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "8",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=eb03881",
+                    "typography_typography": "globals/typography?id=c5a24ec"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "0200988",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Învață bazele programării cu cel mai popular limbaj pentru începători.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=093dd35",
+                    "typography_typography": "globals/typography?id=437a177"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "368a69c",
                 "elType": "container",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
+                  "content_width": "full",
+                  "flex_direction": "row",
+                  "flex_justify_content": "space-between",
                   "flex_align_items": "center",
-                  "flex_justify_content": "center",
                   "flex_gap": {
                     "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
-                  },
-                  "background_background": "classic",
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "16",
-                    "right": "16",
-                    "bottom": "16",
-                    "left": "16",
-                    "isLinked": true
+                    "size": 8,
+                    "column": "8",
+                    "row": "8"
                   },
                   "padding": {
                     "unit": "px",
@@ -1016,184 +1118,39 @@
                     "isLinked": true
                   },
                   "__globals__": {
-                    "background_color": "globals/colors?id=1561c2d",
                     "typography_typography": "globals/typography?id=text"
                   }
                 },
                 "elements": [
                   {
-                    "id": "881a795",
+                    "id": "b3cccf4",
                     "elType": "widget",
                     "settings": {
-                      "image": {
-                        "url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600",
-                        "id": ""
-                      },
-                      "image_size": "full",
-                      "align": "center",
-                      "alt": "Python",
-                      "width": {
-                        "unit": "%",
-                        "size": "100",
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "typography_typography": "globals/typography?id=text"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "image"
-                  },
-                  {
-                    "id": "6778a2b",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Începător",
-                      "header_size": "h6",
-                      "align": "center",
-                      "_background_background": "classic",
-                      "_border_radius": {
-                        "unit": "px",
-                        "top": "99",
-                        "right": "99",
-                        "bottom": "99",
-                        "left": "99",
-                        "isLinked": true
-                      },
-                      "_padding": {
-                        "unit": "px",
-                        "top": "4",
-                        "right": "12",
-                        "bottom": "4",
-                        "left": "12",
-                        "isLinked": false
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "12",
-                        "left": "0",
-                        "isLinked": false
-                      },
+                      "title": "299 lei",
+                      "header_size": "div",
+                      "align": "left",
                       "__globals__": {
                         "title_color": "globals/colors?id=0d16bbb",
-                        "_background_color": "globals/colors?id=9f992e9",
-                        "typography_typography": "globals/typography?id=0d96bbc"
+                        "typography_typography": "globals/typography?id=c133c1f"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
                   },
                   {
-                    "id": "f9c442d",
+                    "id": "7213ed3",
                     "elType": "widget",
                     "settings": {
-                      "title": "Python Fundamentals",
-                      "header_size": "h3",
+                      "title": "12 săptămâni",
+                      "header_size": "div",
                       "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "8",
-                        "left": "0",
-                        "isLinked": false
-                      },
                       "__globals__": {
-                        "title_color": "globals/colors?id=eb03881",
-                        "typography_typography": "globals/typography?id=c5a24ec"
+                        "title_color": "globals/colors?id=8fa3677",
+                        "typography_typography": "globals/typography?id=27afeb3"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
-                  },
-                  {
-                    "id": "95f7f6a",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Învață bazele programării cu cel mai popular limbaj pentru începători.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "16",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=093dd35",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  },
-                  {
-                    "id": "5b8efec",
-                    "elType": "container",
-                    "settings": {
-                      "content_width": "full",
-                      "flex_direction": "row",
-                      "flex_justify_content": "space-between",
-                      "flex_align_items": "center",
-                      "flex_gap": {
-                        "unit": "px",
-                        "size": 8,
-                        "column": "8",
-                        "row": "8"
-                      },
-                      "padding": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "0",
-                        "left": "0",
-                        "isLinked": true
-                      },
-                      "__globals__": {
-                        "typography_typography": "globals/typography?id=text"
-                      }
-                    },
-                    "elements": [
-                      {
-                        "id": "b2363e7",
-                        "elType": "widget",
-                        "settings": {
-                          "title": "299 lei",
-                          "header_size": "div",
-                          "align": "left",
-                          "__globals__": {
-                            "title_color": "globals/colors?id=0d16bbb",
-                            "typography_typography": "globals/typography?id=c133c1f"
-                          }
-                        },
-                        "elements": [],
-                        "widgetType": "heading"
-                      },
-                      {
-                        "id": "f778ee7",
-                        "elType": "widget",
-                        "settings": {
-                          "title": "12 săptămâni",
-                          "header_size": "div",
-                          "align": "left",
-                          "__globals__": {
-                            "title_color": "globals/colors?id=8fa3677",
-                            "typography_typography": "globals/typography?id=27afeb3"
-                          }
-                        },
-                        "elements": [],
-                        "widgetType": "heading"
-                      }
-                    ],
-                    "isInner": true
                   }
                 ],
                 "isInner": true
@@ -1202,28 +1159,20 @@
             "isInner": true
           },
           {
-            "id": "064a197",
+            "id": "b8f9c2c",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_border": "solid",
-              "border_width": {
-                "unit": "px",
-                "top": "1",
-                "right": "1",
-                "bottom": "1",
-                "left": "1",
-                "isLinked": true
-              },
               "border_radius": {
                 "unit": "px",
                 "top": "16",
@@ -1234,41 +1183,147 @@
               },
               "padding": {
                 "unit": "px",
-                "top": "24",
-                "right": "24",
-                "bottom": "24",
-                "left": "24",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
                 "isLinked": true
               },
               "__globals__": {
                 "background_color": "globals/colors?id=1561c2d",
-                "border_color": "globals/colors?id=866071a",
                 "typography_typography": "globals/typography?id=text"
               }
             },
             "elements": [
               {
-                "id": "9d8984a",
+                "id": "04af4bd",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
+                    "id": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "alt": "React",
+                  "width": {
+                    "unit": "%",
+                    "size": "100",
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "250b461",
+                "elType": "widget",
+                "settings": {
+                  "title": "Intermediar",
+                  "header_size": "h6",
+                  "align": "center",
+                  "_element_width": "initial",
+                  "_flex_align_self": "flex-start",
+                  "_background_background": "classic",
+                  "_border_radius": {
+                    "unit": "px",
+                    "top": "99",
+                    "right": "99",
+                    "bottom": "99",
+                    "left": "99",
+                    "isLinked": true
+                  },
+                  "_padding": {
+                    "unit": "px",
+                    "top": "4",
+                    "right": "12",
+                    "bottom": "4",
+                    "left": "12",
+                    "isLinked": false
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=0d16bbb",
+                    "_background_color": "globals/colors?id=9f992e9",
+                    "typography_typography": "globals/typography?id=0d96bbc"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "1f5e46e",
+                "elType": "widget",
+                "settings": {
+                  "title": "React & Next.js",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "8",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=eb03881",
+                    "typography_typography": "globals/typography?id=c5a24ec"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "5ba55bc",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Construiește aplicații web moderne cu React și framework-ul Next.js.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=093dd35",
+                    "typography_typography": "globals/typography?id=437a177"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "afb84ae",
                 "elType": "container",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
+                  "content_width": "full",
+                  "flex_direction": "row",
+                  "flex_justify_content": "space-between",
                   "flex_align_items": "center",
-                  "flex_justify_content": "center",
                   "flex_gap": {
                     "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
-                  },
-                  "background_background": "classic",
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "16",
-                    "right": "16",
-                    "bottom": "16",
-                    "left": "16",
-                    "isLinked": true
+                    "size": 8,
+                    "column": "8",
+                    "row": "8"
                   },
                   "padding": {
                     "unit": "px",
@@ -1279,184 +1334,39 @@
                     "isLinked": true
                   },
                   "__globals__": {
-                    "background_color": "globals/colors?id=1561c2d",
                     "typography_typography": "globals/typography?id=text"
                   }
                 },
                 "elements": [
                   {
-                    "id": "54b841a",
+                    "id": "943eac7",
                     "elType": "widget",
                     "settings": {
-                      "image": {
-                        "url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
-                        "id": ""
-                      },
-                      "image_size": "full",
-                      "align": "center",
-                      "alt": "React",
-                      "width": {
-                        "unit": "%",
-                        "size": "100",
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "typography_typography": "globals/typography?id=text"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "image"
-                  },
-                  {
-                    "id": "b6edfe8",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Intermediar",
-                      "header_size": "h6",
-                      "align": "center",
-                      "_background_background": "classic",
-                      "_border_radius": {
-                        "unit": "px",
-                        "top": "99",
-                        "right": "99",
-                        "bottom": "99",
-                        "left": "99",
-                        "isLinked": true
-                      },
-                      "_padding": {
-                        "unit": "px",
-                        "top": "4",
-                        "right": "12",
-                        "bottom": "4",
-                        "left": "12",
-                        "isLinked": false
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "12",
-                        "left": "0",
-                        "isLinked": false
-                      },
+                      "title": "499 lei",
+                      "header_size": "div",
+                      "align": "left",
                       "__globals__": {
                         "title_color": "globals/colors?id=0d16bbb",
-                        "_background_color": "globals/colors?id=9f992e9",
-                        "typography_typography": "globals/typography?id=0d96bbc"
+                        "typography_typography": "globals/typography?id=c133c1f"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
                   },
                   {
-                    "id": "6302f55",
+                    "id": "7204fe7",
                     "elType": "widget",
                     "settings": {
-                      "title": "React & Next.js",
-                      "header_size": "h3",
+                      "title": "16 săptămâni",
+                      "header_size": "div",
                       "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "8",
-                        "left": "0",
-                        "isLinked": false
-                      },
                       "__globals__": {
-                        "title_color": "globals/colors?id=eb03881",
-                        "typography_typography": "globals/typography?id=c5a24ec"
+                        "title_color": "globals/colors?id=8fa3677",
+                        "typography_typography": "globals/typography?id=27afeb3"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
-                  },
-                  {
-                    "id": "2e9e11c",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Construiește aplicații web moderne cu React și framework-ul Next.js.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "16",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=093dd35",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  },
-                  {
-                    "id": "e73eb8b",
-                    "elType": "container",
-                    "settings": {
-                      "content_width": "full",
-                      "flex_direction": "row",
-                      "flex_justify_content": "space-between",
-                      "flex_align_items": "center",
-                      "flex_gap": {
-                        "unit": "px",
-                        "size": 8,
-                        "column": "8",
-                        "row": "8"
-                      },
-                      "padding": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "0",
-                        "left": "0",
-                        "isLinked": true
-                      },
-                      "__globals__": {
-                        "typography_typography": "globals/typography?id=text"
-                      }
-                    },
-                    "elements": [
-                      {
-                        "id": "66e959d",
-                        "elType": "widget",
-                        "settings": {
-                          "title": "499 lei",
-                          "header_size": "div",
-                          "align": "left",
-                          "__globals__": {
-                            "title_color": "globals/colors?id=0d16bbb",
-                            "typography_typography": "globals/typography?id=c133c1f"
-                          }
-                        },
-                        "elements": [],
-                        "widgetType": "heading"
-                      },
-                      {
-                        "id": "5cde842",
-                        "elType": "widget",
-                        "settings": {
-                          "title": "16 săptămâni",
-                          "header_size": "div",
-                          "align": "left",
-                          "__globals__": {
-                            "title_color": "globals/colors?id=8fa3677",
-                            "typography_typography": "globals/typography?id=27afeb3"
-                          }
-                        },
-                        "elements": [],
-                        "widgetType": "heading"
-                      }
-                    ],
-                    "isInner": true
                   }
                 ],
                 "isInner": true
@@ -1465,28 +1375,20 @@
             "isInner": true
           },
           {
-            "id": "d73326f",
+            "id": "0803e60",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_border": "solid",
-              "border_width": {
-                "unit": "px",
-                "top": "1",
-                "right": "1",
-                "bottom": "1",
-                "left": "1",
-                "isLinked": true
-              },
               "border_radius": {
                 "unit": "px",
                 "top": "16",
@@ -1497,41 +1399,147 @@
               },
               "padding": {
                 "unit": "px",
-                "top": "24",
-                "right": "24",
-                "bottom": "24",
-                "left": "24",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
                 "isLinked": true
               },
               "__globals__": {
                 "background_color": "globals/colors?id=1561c2d",
-                "border_color": "globals/colors?id=866071a",
                 "typography_typography": "globals/typography?id=text"
               }
             },
             "elements": [
               {
-                "id": "50d20d8",
+                "id": "2829ea9",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600",
+                    "id": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "alt": "Full Stack",
+                  "width": {
+                    "unit": "%",
+                    "size": "100",
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "7cc81bb",
+                "elType": "widget",
+                "settings": {
+                  "title": "Avansat",
+                  "header_size": "h6",
+                  "align": "center",
+                  "_element_width": "initial",
+                  "_flex_align_self": "flex-start",
+                  "_background_background": "classic",
+                  "_border_radius": {
+                    "unit": "px",
+                    "top": "99",
+                    "right": "99",
+                    "bottom": "99",
+                    "left": "99",
+                    "isLinked": true
+                  },
+                  "_padding": {
+                    "unit": "px",
+                    "top": "4",
+                    "right": "12",
+                    "bottom": "4",
+                    "left": "12",
+                    "isLinked": false
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=0d16bbb",
+                    "_background_color": "globals/colors?id=9f992e9",
+                    "typography_typography": "globals/typography?id=0d96bbc"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "1c0cc76",
+                "elType": "widget",
+                "settings": {
+                  "title": "Full Stack Developer",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "8",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=eb03881",
+                    "typography_typography": "globals/typography?id=c5a24ec"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "5ec2c0d",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Parcurs complet: frontend, backend, baze de date și deployment.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=093dd35",
+                    "typography_typography": "globals/typography?id=437a177"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "de8795d",
                 "elType": "container",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
+                  "content_width": "full",
+                  "flex_direction": "row",
+                  "flex_justify_content": "space-between",
                   "flex_align_items": "center",
-                  "flex_justify_content": "center",
                   "flex_gap": {
                     "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
-                  },
-                  "background_background": "classic",
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "16",
-                    "right": "16",
-                    "bottom": "16",
-                    "left": "16",
-                    "isLinked": true
+                    "size": 8,
+                    "column": "8",
+                    "row": "8"
                   },
                   "padding": {
                     "unit": "px",
@@ -1542,184 +1550,39 @@
                     "isLinked": true
                   },
                   "__globals__": {
-                    "background_color": "globals/colors?id=1561c2d",
                     "typography_typography": "globals/typography?id=text"
                   }
                 },
                 "elements": [
                   {
-                    "id": "e2a3d57",
+                    "id": "2179ae8",
                     "elType": "widget",
                     "settings": {
-                      "image": {
-                        "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600",
-                        "id": ""
-                      },
-                      "image_size": "full",
-                      "align": "center",
-                      "alt": "Full Stack",
-                      "width": {
-                        "unit": "%",
-                        "size": "100",
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "typography_typography": "globals/typography?id=text"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "image"
-                  },
-                  {
-                    "id": "3b7cfce",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Avansat",
-                      "header_size": "h6",
-                      "align": "center",
-                      "_background_background": "classic",
-                      "_border_radius": {
-                        "unit": "px",
-                        "top": "99",
-                        "right": "99",
-                        "bottom": "99",
-                        "left": "99",
-                        "isLinked": true
-                      },
-                      "_padding": {
-                        "unit": "px",
-                        "top": "4",
-                        "right": "12",
-                        "bottom": "4",
-                        "left": "12",
-                        "isLinked": false
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "12",
-                        "left": "0",
-                        "isLinked": false
-                      },
+                      "title": "799 lei",
+                      "header_size": "div",
+                      "align": "left",
                       "__globals__": {
                         "title_color": "globals/colors?id=0d16bbb",
-                        "_background_color": "globals/colors?id=9f992e9",
-                        "typography_typography": "globals/typography?id=0d96bbc"
+                        "typography_typography": "globals/typography?id=c133c1f"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
                   },
                   {
-                    "id": "d53e179",
+                    "id": "0acf3b5",
                     "elType": "widget",
                     "settings": {
-                      "title": "Full Stack Developer",
-                      "header_size": "h3",
+                      "title": "24 săptămâni",
+                      "header_size": "div",
                       "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "8",
-                        "left": "0",
-                        "isLinked": false
-                      },
                       "__globals__": {
-                        "title_color": "globals/colors?id=eb03881",
-                        "typography_typography": "globals/typography?id=c5a24ec"
+                        "title_color": "globals/colors?id=8fa3677",
+                        "typography_typography": "globals/typography?id=27afeb3"
                       }
                     },
                     "elements": [],
                     "widgetType": "heading"
-                  },
-                  {
-                    "id": "962e09e",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Parcurs complet: frontend, backend, baze de date și deployment.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "16",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=093dd35",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  },
-                  {
-                    "id": "66aeeb3",
-                    "elType": "container",
-                    "settings": {
-                      "content_width": "full",
-                      "flex_direction": "row",
-                      "flex_justify_content": "space-between",
-                      "flex_align_items": "center",
-                      "flex_gap": {
-                        "unit": "px",
-                        "size": 8,
-                        "column": "8",
-                        "row": "8"
-                      },
-                      "padding": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "0",
-                        "left": "0",
-                        "isLinked": true
-                      },
-                      "__globals__": {
-                        "typography_typography": "globals/typography?id=text"
-                      }
-                    },
-                    "elements": [
-                      {
-                        "id": "94faf73",
-                        "elType": "widget",
-                        "settings": {
-                          "title": "799 lei",
-                          "header_size": "div",
-                          "align": "left",
-                          "__globals__": {
-                            "title_color": "globals/colors?id=0d16bbb",
-                            "typography_typography": "globals/typography?id=c133c1f"
-                          }
-                        },
-                        "elements": [],
-                        "widgetType": "heading"
-                      },
-                      {
-                        "id": "f108e20",
-                        "elType": "widget",
-                        "settings": {
-                          "title": "24 săptămâni",
-                          "header_size": "div",
-                          "align": "left",
-                          "__globals__": {
-                            "title_color": "globals/colors?id=8fa3677",
-                            "typography_typography": "globals/typography?id=27afeb3"
-                          }
-                        },
-                        "elements": [],
-                        "widgetType": "heading"
-                      }
-                    ],
-                    "isInner": true
                   }
                 ],
                 "isInner": true
@@ -1734,13 +1597,13 @@
     "isInner": false
   },
   {
-    "id": "89247fa",
+    "id": "d0dfa0c",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -1764,7 +1627,7 @@
     },
     "elements": [
       {
-        "id": "51890bb",
+        "id": "a351310",
         "elType": "widget",
         "settings": {
           "title": "De ce CodeAcademy?",
@@ -1779,7 +1642,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "6e9641a",
+        "id": "7e8a4b9",
         "elType": "widget",
         "settings": {
           "title": "Tot ce ai nevoie pentru a deveni developer",
@@ -1802,7 +1665,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "55b7b29",
+        "id": "5edeac3",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1842,33 +1705,34 @@
         },
         "elements": [
           {
-            "id": "98d7e94",
+            "id": "924a758",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_radius": {
-                "unit": "px",
-                "top": "16",
-                "right": "16",
-                "bottom": "16",
-                "left": "16",
-                "isLinked": true
-              },
               "padding": {
                 "unit": "px",
                 "top": "32",
                 "right": "32",
                 "bottom": "32",
                 "left": "32",
+                "isLinked": false
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
                 "isLinked": true
               },
               "__globals__": {
@@ -1878,141 +1742,102 @@
             },
             "elements": [
               {
-                "id": "c66403c",
-                "elType": "container",
+                "id": "d4662b7",
+                "elType": "widget",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_justify_content": "center",
-                  "flex_gap": {
+                  "title": "👨‍💻",
+                  "header_size": "div",
+                  "align": "left",
+                  "_margin": {
                     "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
-                  },
-                  "background_background": "classic",
-                  "padding": {
-                    "unit": "px",
-                    "top": "32",
-                    "right": "32",
-                    "bottom": "32",
-                    "left": "32",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
                     "isLinked": false
                   },
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "16",
-                    "right": "16",
-                    "bottom": "16",
-                    "left": "16",
-                    "isLinked": true
-                  },
                   "__globals__": {
-                    "background_color": "globals/colors?id=4411482",
-                    "typography_typography": "globals/typography?id=text"
+                    "title_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=bd3f3b7"
                   }
                 },
-                "elements": [
-                  {
-                    "id": "5e4cd5f",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "👨‍💻",
-                      "header_size": "div",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "16",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=25a8170",
-                        "typography_typography": "globals/typography?id=bd3f3b7"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "a513f18",
+                "elType": "widget",
+                "settings": {
+                  "title": "Mentori din industrie",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "8",
+                    "left": "0",
+                    "isLinked": false
                   },
-                  {
-                    "id": "80abbd8",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Mentori din industrie",
-                      "header_size": "h3",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "8",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=1561c2d",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "e13da7a",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Fiecare student are acces la un mentor cu experiență în companii tech de top.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=8fa3677",
-                        "typography_typography": "globals/typography?id=797ba1a"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
-                ],
-                "isInner": true
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "253dbd8",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Fiecare student are acces la un mentor cu experiență în companii tech de top.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8fa3677",
+                    "typography_typography": "globals/typography?id=797ba1a"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
               }
             ],
             "isInner": true
           },
           {
-            "id": "29dd6ee",
+            "id": "acf5461",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_radius": {
-                "unit": "px",
-                "top": "16",
-                "right": "16",
-                "bottom": "16",
-                "left": "16",
-                "isLinked": true
-              },
               "padding": {
                 "unit": "px",
                 "top": "32",
                 "right": "32",
                 "bottom": "32",
                 "left": "32",
+                "isLinked": false
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
                 "isLinked": true
               },
               "__globals__": {
@@ -2022,109 +1847,69 @@
             },
             "elements": [
               {
-                "id": "d6fc6e3",
-                "elType": "container",
+                "id": "376bc24",
+                "elType": "widget",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_justify_content": "center",
-                  "flex_gap": {
+                  "title": "🎯",
+                  "header_size": "div",
+                  "align": "left",
+                  "_margin": {
                     "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
-                  },
-                  "background_background": "classic",
-                  "padding": {
-                    "unit": "px",
-                    "top": "32",
-                    "right": "32",
-                    "bottom": "32",
-                    "left": "32",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
                     "isLinked": false
                   },
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "16",
-                    "right": "16",
-                    "bottom": "16",
-                    "left": "16",
-                    "isLinked": true
-                  },
                   "__globals__": {
-                    "background_color": "globals/colors?id=4411482",
-                    "typography_typography": "globals/typography?id=text"
+                    "title_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=bd3f3b7"
                   }
                 },
-                "elements": [
-                  {
-                    "id": "b1ed3e4",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "🎯",
-                      "header_size": "div",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "16",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=25a8170",
-                        "typography_typography": "globals/typography?id=bd3f3b7"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "6bd4467",
+                "elType": "widget",
+                "settings": {
+                  "title": "Proiecte practice",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "8",
+                    "left": "0",
+                    "isLinked": false
                   },
-                  {
-                    "id": "6b06a89",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Proiecte practice",
-                      "header_size": "h3",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "8",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=1561c2d",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "d9f9738",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Construiești proiecte reale pe care le poți arăta la interviuri de angajare.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=8fa3677",
-                        "typography_typography": "globals/typography?id=797ba1a"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
-                ],
-                "isInner": true
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "07e8acb",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Construiești proiecte reale pe care le poți arăta la interviuri de angajare.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8fa3677",
+                    "typography_typography": "globals/typography?id=797ba1a"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
               }
             ],
             "isInner": true
@@ -2133,7 +1918,7 @@
         "isInner": true
       },
       {
-        "id": "353933f",
+        "id": "efa0185",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2173,33 +1958,34 @@
         },
         "elements": [
           {
-            "id": "ba99530",
+            "id": "d2d1b28",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_radius": {
-                "unit": "px",
-                "top": "16",
-                "right": "16",
-                "bottom": "16",
-                "left": "16",
-                "isLinked": true
-              },
               "padding": {
                 "unit": "px",
                 "top": "32",
                 "right": "32",
                 "bottom": "32",
                 "left": "32",
+                "isLinked": false
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
                 "isLinked": true
               },
               "__globals__": {
@@ -2209,141 +1995,102 @@
             },
             "elements": [
               {
-                "id": "af577ae",
-                "elType": "container",
+                "id": "7c20554",
+                "elType": "widget",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_justify_content": "center",
-                  "flex_gap": {
+                  "title": "🏆",
+                  "header_size": "div",
+                  "align": "left",
+                  "_margin": {
                     "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
-                  },
-                  "background_background": "classic",
-                  "padding": {
-                    "unit": "px",
-                    "top": "32",
-                    "right": "32",
-                    "bottom": "32",
-                    "left": "32",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
                     "isLinked": false
                   },
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "16",
-                    "right": "16",
-                    "bottom": "16",
-                    "left": "16",
-                    "isLinked": true
-                  },
                   "__globals__": {
-                    "background_color": "globals/colors?id=4411482",
-                    "typography_typography": "globals/typography?id=text"
+                    "title_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=bd3f3b7"
                   }
                 },
-                "elements": [
-                  {
-                    "id": "ccc0162",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "🏆",
-                      "header_size": "div",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "16",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=25a8170",
-                        "typography_typography": "globals/typography?id=bd3f3b7"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "897907c",
+                "elType": "widget",
+                "settings": {
+                  "title": "Certificare recunoscută",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "8",
+                    "left": "0",
+                    "isLinked": false
                   },
-                  {
-                    "id": "d3d3915",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Certificare recunoscută",
-                      "header_size": "h3",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "8",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=1561c2d",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "ae16bbb",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Primești o certificare la finalul fiecărui curs, validată de partenerii noștri.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=8fa3677",
-                        "typography_typography": "globals/typography?id=797ba1a"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
-                ],
-                "isInner": true
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "f87be6c",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Primești o certificare la finalul fiecărui curs, validată de partenerii noștri.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8fa3677",
+                    "typography_typography": "globals/typography?id=797ba1a"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
               }
             ],
             "isInner": true
           },
           {
-            "id": "80f124a",
+            "id": "c24fcc0",
             "elType": "container",
             "settings": {
-              "content_width": "full",
+              "content_width": "boxed",
               "flex_direction": "column",
-              "flex_align_items": "flex-start",
+              "flex_align_items": "center",
+              "flex_justify_content": "center",
               "flex_gap": {
                 "unit": "px",
-                "size": 12,
-                "column": "12",
-                "row": "12"
+                "size": 0,
+                "column": "0",
+                "row": "0"
               },
               "background_background": "classic",
-              "border_radius": {
-                "unit": "px",
-                "top": "16",
-                "right": "16",
-                "bottom": "16",
-                "left": "16",
-                "isLinked": true
-              },
               "padding": {
                 "unit": "px",
                 "top": "32",
                 "right": "32",
                 "bottom": "32",
                 "left": "32",
+                "isLinked": false
+              },
+              "border_radius": {
+                "unit": "px",
+                "top": "16",
+                "right": "16",
+                "bottom": "16",
+                "left": "16",
                 "isLinked": true
               },
               "__globals__": {
@@ -2353,109 +2100,69 @@
             },
             "elements": [
               {
-                "id": "c7a98b6",
-                "elType": "container",
+                "id": "46fb25d",
+                "elType": "widget",
                 "settings": {
-                  "content_width": "boxed",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_justify_content": "center",
-                  "flex_gap": {
+                  "title": "💼",
+                  "header_size": "div",
+                  "align": "left",
+                  "_margin": {
                     "unit": "px",
-                    "size": 0,
-                    "column": "0",
-                    "row": "0"
-                  },
-                  "background_background": "classic",
-                  "padding": {
-                    "unit": "px",
-                    "top": "32",
-                    "right": "32",
-                    "bottom": "32",
-                    "left": "32",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
                     "isLinked": false
                   },
-                  "border_radius": {
-                    "unit": "px",
-                    "top": "16",
-                    "right": "16",
-                    "bottom": "16",
-                    "left": "16",
-                    "isLinked": true
-                  },
                   "__globals__": {
-                    "background_color": "globals/colors?id=4411482",
-                    "typography_typography": "globals/typography?id=text"
+                    "title_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=bd3f3b7"
                   }
                 },
-                "elements": [
-                  {
-                    "id": "4c9f8d4",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "💼",
-                      "header_size": "div",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "16",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=25a8170",
-                        "typography_typography": "globals/typography?id=bd3f3b7"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "007494a",
+                "elType": "widget",
+                "settings": {
+                  "title": "Asistență la angajare",
+                  "header_size": "h3",
+                  "align": "left",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "8",
+                    "left": "0",
+                    "isLinked": false
                   },
-                  {
-                    "id": "6c53cdc",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Asistență la angajare",
-                      "header_size": "h3",
-                      "align": "left",
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "8",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=1561c2d",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "197d420",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Te ajutăm cu CV-ul, portofoliul și pregătirea pentru interviuri tehnice.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=8fa3677",
-                        "typography_typography": "globals/typography?id=797ba1a"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d",
+                    "typography_typography": "globals/typography?id=c5a24ec"
                   }
-                ],
-                "isInner": true
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "8cb5a7a",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Te ajutăm cu CV-ul, portofoliul și pregătirea pentru interviuri tehnice.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8fa3677",
+                    "typography_typography": "globals/typography?id=797ba1a"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
               }
             ],
             "isInner": true
@@ -2467,13 +2174,13 @@
     "isInner": false
   },
   {
-    "id": "64f5b29",
+    "id": "c6ff675",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -2495,7 +2202,7 @@
     },
     "elements": [
       {
-        "id": "c14c6e0",
+        "id": "cfc33c3",
         "elType": "widget",
         "settings": {
           "editor": "<p>„Am trecut de la contabilitate la frontend development în 8 luni. Cursurile sunt extrem de bine structurate, iar mentorii sunt mereu disponibili.\"</p>",
@@ -2536,7 +2243,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "8b7ebae",
+        "id": "9b80f08",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2563,7 +2270,7 @@
         },
         "elements": [
           {
-            "id": "5872b5e",
+            "id": "720e3a5",
             "elType": "widget",
             "settings": {
               "image": {
@@ -2598,7 +2305,7 @@
             "widgetType": "image"
           },
           {
-            "id": "02c429f",
+            "id": "ee20876",
             "elType": "widget",
             "settings": {
               "editor": "<strong>Alexandra Dumitrescu</strong><br>Junior Frontend Developer la Endava",
@@ -2616,13 +2323,13 @@
     "isInner": false
   },
   {
-    "id": "dcea1d7",
+    "id": "9c42b35",
     "elType": "container",
     "settings": {
       "content_width": "full",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -2644,13 +2351,13 @@
     },
     "elements": [
       {
-        "id": "eabe69c",
+        "id": "a3431a6",
         "elType": "container",
         "settings": {
           "content_width": "full",
           "flex_direction": "column",
-          "flex_justify_content": "center",
-          "flex_align_items": "center",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "stretch",
           "flex_gap": {
             "unit": "px",
             "size": 0,
@@ -2688,7 +2395,7 @@
         },
         "elements": [
           {
-            "id": "fa7ba58",
+            "id": "8e4ab3f",
             "elType": "widget",
             "settings": {
               "title": "Gata să începi?",
@@ -2711,7 +2418,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "9e812ee",
+            "id": "e302b48",
             "elType": "widget",
             "settings": {
               "editor": "<p>Prima lecție este gratuită. Alege un curs și fă primul pas spre cariera ta în tech.</p>",
@@ -2733,7 +2440,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "05009b0",
+            "id": "54c55e4",
             "elType": "widget",
             "settings": {
               "text": "Începe gratuit acum",
@@ -2778,13 +2485,13 @@
     "isInner": false
   },
   {
-    "id": "ed65ec3",
+    "id": "335b2ae",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "center",
+      "flex_justify_content": "flex-start",
+      "flex_align_items": "stretch",
       "flex_gap": {
         "unit": "px",
         "size": 0,
@@ -2808,7 +2515,7 @@
     },
     "elements": [
       {
-        "id": "2f13850",
+        "id": "71bc74a",
         "elType": "widget",
         "settings": {
           "title": "Code <span style=\"color:#7c3aed\">Academy</span>",
@@ -2831,7 +2538,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "c05afac",
+        "id": "80a7ce3",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -2921,7 +2628,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "c6c624a",
+        "id": "6596215",
         "elType": "widget",
         "settings": {
           "editor": "© 2026 CodeAcademy. Toate drepturile rezervate.",
