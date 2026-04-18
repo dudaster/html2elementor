@@ -282,11 +282,7 @@ def heading_widget(node: dict) -> dict:
 
     apply_typography(settings, styles)
     _apply_margin(settings, styles)
-    # Apply max-width if set (constrains heading width for readability)
-    mw = px_to_int(styles.get("max-width"))
-    if mw:
-        settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
-        settings["_element_width"] = "initial"
+    _apply_max_width_and_self_align(settings, styles)
     return {"widgetType": "heading", "settings": settings}
 
 
@@ -310,10 +306,7 @@ def text_widget(node: dict) -> dict:
             del settings["__globals__"]["title_color"]
         apply_typography(settings, styles)
         _apply_margin(settings, styles)
-        mw = px_to_int(styles.get("max-width"))
-        if mw:
-            settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
-            settings["_element_width"] = "initial"
+        _apply_max_width_and_self_align(settings, styles)
         return {"widgetType": "heading", "settings": settings}
 
     # Longer paragraphs → text-editor
@@ -328,10 +321,7 @@ def text_widget(node: dict) -> dict:
         del settings["__globals__"]["text_color"]
     apply_typography(settings, styles)
     _apply_margin(settings, styles)
-    mw = px_to_int(styles.get("max-width"))
-    if mw:
-        settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
-        settings["_element_width"] = "initial"
+    _apply_max_width_and_self_align(settings, styles)
     return {"widgetType": "text-editor", "settings": settings}
 
 
@@ -1378,6 +1368,29 @@ def _all_text_html(node: dict, parent_color: str | None = None) -> str:
             tag = child.get("tag", "")
             parts.append(_wrap_inline(inner, child, tag))
     return " ".join(parts)
+
+
+def _apply_max_width_and_self_align(settings: dict, styles: dict) -> None:
+    """Apply CSS max-width as widget width, and compute widget self-alignment.
+    `margin: 0 auto` or `margin-left/right: auto` or text-align:center with max-width
+    → widget centers in parent (via _flex_align_self: center). Otherwise no self-align
+    (parent flex-align-items applies)."""
+    from .styles import px_to_int as _px
+    mw = _px(styles.get("max-width"))
+    if not mw:
+        return
+    settings["_element_custom_width"] = {"unit": "px", "size": mw, "sizes": []}
+    settings["_element_width"] = "initial"
+    # Detect centered positioning: margin-left/right auto OR text-align center
+    ml = (styles.get("margin-left") or "").lower()
+    mr = (styles.get("margin-right") or "").lower()
+    ta = (styles.get("text-align") or "").lower()
+    is_centered = (ml == "auto" and mr == "auto") or ta == "center"
+    is_right = ml == "auto" and mr != "auto"
+    if is_centered:
+        settings["_flex_align_self"] = "center"
+    elif is_right:
+        settings["_flex_align_self"] = "flex-end"
 
 
 def _apply_margin(settings: dict, styles: dict) -> None:
