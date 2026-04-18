@@ -74,15 +74,22 @@ def _strip_html(s: str) -> str:
     return re.sub(r"<[^>]+>", "", s or "").strip()
 
 
-def _cmp_color(el_val: Any, css_val: str, label: str, issues: list):
-    """Compare a color value from Elementor settings vs CSS."""
+def _cmp_color(el_val: Any, css_val: str, label: str, issues: list, ignore_defaults: tuple = ()):
+    """Compare a color value from Elementor settings vs CSS.
+    Flags both mismatches AND missing elementor values when CSS has a color."""
     css_hex = to_hex(css_val) if css_val else None
     if not css_hex:
+        return
+    # Skip CSS defaults that aren't worth checking (e.g. inherit from body)
+    if css_hex.lower() in ignore_defaults:
         return
     el_hex = None
     if isinstance(el_val, str):
         el_hex = to_hex(el_val)
-    if el_hex and el_hex.lower() != css_hex.lower():
+    if not el_hex:
+        issues.append(f"{label}: css={css_hex} but elementor has no color set")
+        return
+    if el_hex.lower() != css_hex.lower():
         issues.append(f"{label}: elementor={el_hex} vs css={css_hex}")
 
 
@@ -299,7 +306,8 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
         for a in _iter_html(best_node):
             if a.get("tag") == "a":
                 css = a.get("styles", {})
-                _cmp_color(s.get("text_color"), css.get("color", ""), "nav-link.color", issues)
+                _cmp_color(_resolved_color(s, "text_color", kit_maps),
+                           css.get("color", ""), "nav-link.color", issues)
                 _cmp_size(s.get("icon_typography_font_size"),
                           css.get("font-size", ""), "nav-link.font-size", issues)
                 css_spacing = (px_to_int(css.get("margin-left", "")) or
