@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Generated test outputs (regenerate with `python3 -m html2elementor tests/<name>.html -o tests/<name>-output.json`)
+tests/*-output.json
+tests/*-output.kit.json
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
