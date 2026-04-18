@@ -1,6 +1,6 @@
 [
   {
-    "id": "a23dc32",
+    "id": "f97498b",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -43,7 +43,7 @@
     },
     "elements": [
       {
-        "id": "aa45e55",
+        "id": "50ab617",
         "elType": "widget",
         "settings": {
           "title": "CloudSync",
@@ -58,7 +58,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "55187d4",
+        "id": "0c7ec87",
         "elType": "widget",
         "settings": {
           "view": "inline",
@@ -102,8 +102,16 @@
               }
             }
           ],
+          "icon_typography_typography": "custom",
+          "icon_typography_font_family": "Inter",
+          "icon_typography_font_size": {
+            "unit": "px",
+            "size": "15",
+            "sizes": []
+          },
+          "icon_typography_font_weight": "500",
           "__globals__": {
-            "text_color": "globals/colors?id=primary",
+            "text_color": "globals/colors?id=734bfa4",
             "typography_typography": "globals/typography?id=text"
           }
         },
@@ -111,7 +119,7 @@
         "widgetType": "icon-list"
       },
       {
-        "id": "ecc45b2",
+        "id": "e59650b",
         "elType": "widget",
         "settings": {
           "text": "Get Started",
@@ -145,7 +153,7 @@
     "isInner": false
   },
   {
-    "id": "13d369e",
+    "id": "d77153d",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -154,9 +162,9 @@
       "flex_align_items": "center",
       "flex_gap": {
         "unit": "px",
-        "size": 20,
-        "column": "20",
-        "row": "20"
+        "size": 0,
+        "column": "0",
+        "row": "0"
       },
       "padding": {
         "unit": "px",
@@ -182,7 +190,7 @@
     },
     "elements": [
       {
-        "id": "89f2a9d",
+        "id": "686e480",
         "elType": "widget",
         "settings": {
           "title": "✨ Now with AI-powered sync",
@@ -215,7 +223,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a6fa1b5",
+        "id": "0bf789c",
         "elType": "widget",
         "settings": {
           "title": "Sync your data everywhere , effortlessly",
@@ -243,7 +251,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "2d451e0",
+        "id": "613963b",
         "elType": "widget",
         "settings": {
           "editor": "<p>CloudSync keeps your files, databases, and APIs in perfect harmony across all your environments.</p>",
@@ -270,7 +278,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "4613a05",
+        "id": "d6cdbe7",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -279,9 +287,9 @@
           "flex_align_items": "center",
           "flex_gap": {
             "unit": "px",
-            "size": 8,
-            "column": "8",
-            "row": "8"
+            "size": 16,
+            "column": "16",
+            "row": "16"
           },
           "padding": {
             "unit": "px",
@@ -297,7 +305,7 @@
         },
         "elements": [
           {
-            "id": "760702a",
+            "id": "df9afa6",
             "elType": "widget",
             "settings": {
               "text": "Start Free Trial",
@@ -328,7 +336,7 @@
             "widgetType": "button"
           },
           {
-            "id": "ae5e737",
+            "id": "b06feea",
             "elType": "widget",
             "settings": {
               "text": "Watch Demo",
@@ -365,7 +373,7 @@
     "isInner": false
   },
   {
-    "id": "b77cf1d",
+    "id": "7e724e4",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -374,9 +382,9 @@
       "flex_align_items": "center",
       "flex_gap": {
         "unit": "px",
-        "size": 20,
-        "column": "20",
-        "row": "20"
+        "size": 0,
+        "column": "0",
+        "row": "0"
       },
       "padding": {
         "unit": "px",
@@ -393,7 +401,7 @@
     },
     "elements": [
       {
-        "id": "a57e488",
+        "id": "e48cfe2",
         "elType": "widget",
         "settings": {
           "editor": "<p>Trusted by 10,000+ teams worldwide</p>",
@@ -421,7 +429,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "de192a6",
+        "id": "87076ba",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -430,9 +438,9 @@
           "flex_align_items": "center",
           "flex_gap": {
             "unit": "px",
-            "size": 8,
-            "column": "8",
-            "row": "8"
+            "size": 48,
+            "column": "48",
+            "row": "48"
           },
           "padding": {
             "unit": "px",
@@ -448,7 +456,7 @@
         },
         "elements": [
           {
-            "id": "c4046ec",
+            "id": "4cf665c",
             "elType": "widget",
             "settings": {
               "editor": "<p>Stripe</p>",
@@ -462,7 +470,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f069f0d",
+            "id": "4a7bf37",
             "elType": "widget",
             "settings": {
               "editor": "<p>Vercel</p>",
@@ -476,7 +484,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "1c075ac",
+            "id": "19e26de",
             "elType": "widget",
             "settings": {
               "editor": "<p>Linear</p>",
@@ -490,7 +498,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f6ecb72",
+            "id": "4e42330",
             "elType": "widget",
             "settings": {
               "editor": "<p>Notion</p>",
@@ -504,7 +512,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "419b494",
+            "id": "05e4367",
             "elType": "widget",
             "settings": {
               "editor": "<p>Figma</p>",
@@ -524,7 +532,7 @@
     "isInner": false
   },
   {
-    "id": "dca59de",
+    "id": "673e0a7",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -533,9 +541,9 @@
       "flex_align_items": "center",
       "flex_gap": {
         "unit": "px",
-        "size": 20,
-        "column": "20",
-        "row": "20"
+        "size": 0,
+        "column": "0",
+        "row": "0"
       },
       "padding": {
         "unit": "px",
@@ -554,7 +562,7 @@
     },
     "elements": [
       {
-        "id": "c5ccc55",
+        "id": "503a30a",
         "elType": "widget",
         "settings": {
           "title": "Everything you need to stay in sync",
@@ -577,7 +585,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "3f80f0d",
+        "id": "318e7f1",
         "elType": "widget",
         "settings": {
           "editor": "<p>Powerful features designed for modern development teams.</p>",
@@ -599,7 +607,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "efaa2e6",
+        "id": "9089fe8",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -639,7 +647,7 @@
         },
         "elements": [
           {
-            "id": "ae8648e",
+            "id": "4570a2f",
             "elType": "widget",
             "settings": {
               "title_text": "Real-time Sync",
@@ -748,7 +756,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "4146333",
+            "id": "bbb325c",
             "elType": "widget",
             "settings": {
               "title_text": "Version Control",
@@ -857,7 +865,7 @@
             "widgetType": "icon-box"
           },
           {
-            "id": "1108c25",
+            "id": "165e8b8",
             "elType": "widget",
             "settings": {
               "title_text": "Team Collaboration",
@@ -972,7 +980,7 @@
     "isInner": false
   },
   {
-    "id": "d290c77",
+    "id": "3f21784",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -981,9 +989,9 @@
       "flex_align_items": "center",
       "flex_gap": {
         "unit": "px",
-        "size": 20,
-        "column": "20",
-        "row": "20"
+        "size": 0,
+        "column": "0",
+        "row": "0"
       },
       "padding": {
         "unit": "px",
@@ -1000,7 +1008,7 @@
     },
     "elements": [
       {
-        "id": "091e1c5",
+        "id": "cde810f",
         "elType": "widget",
         "settings": {
           "title": "Simple, transparent pricing",
@@ -1023,7 +1031,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "e9447fd",
+        "id": "8580600",
         "elType": "widget",
         "settings": {
           "editor": "<p>No hidden fees. Cancel anytime.</p>",
@@ -1045,7 +1053,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "d2771f8",
+        "id": "ed5e2e7",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1054,9 +1062,9 @@
           "flex_align_items": "center",
           "flex_gap": {
             "unit": "px",
-            "size": 8,
-            "column": "8",
-            "row": "8"
+            "size": 24,
+            "column": "24",
+            "row": "24"
           },
           "padding": {
             "unit": "px",
@@ -1072,44 +1080,11 @@
         },
         "elements": [
           {
-            "id": "a0688db",
+            "id": "2693e80",
             "elType": "widget",
             "settings": {
-              "title": "Starter",
-              "header_size": "h3",
-              "align": "left",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "8",
-                "left": "0",
-                "isLinked": false
-              },
+              "editor": "<strong>Starter</strong><br><strong>$0</strong><br>Perfect for small projects<br>Get Started",
               "__globals__": {
-                "title_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=48e47ce"
-              }
-            },
-            "elements": [],
-            "widgetType": "heading"
-          },
-          {
-            "id": "ef51113",
-            "elType": "widget",
-            "settings": {
-              "editor": "<p>/month</p>",
-              "align": "left",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "8",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "text_color": "globals/colors?id=734bfa4",
                 "typography_typography": "globals/typography?id=text"
               }
             },
@@ -1117,107 +1092,11 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "f73f86b",
+            "id": "63bb030",
             "elType": "widget",
             "settings": {
-              "editor": "<p>Perfect for small projects</p>",
-              "align": "left",
+              "editor": "<strong>Pro</strong><br><strong>$29</strong><br>For growing teams<br>Start Free Trial",
               "__globals__": {
-                "text_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=text"
-              },
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "24",
-                "left": "0",
-                "isLinked": false
-              }
-            },
-            "elements": [],
-            "widgetType": "text-editor"
-          },
-          {
-            "id": "3d63539",
-            "elType": "widget",
-            "settings": {
-              "text": "Get Started",
-              "link": {
-                "url": "#",
-                "is_external": false,
-                "nofollow": false
-              },
-              "size": "md",
-              "align": "center",
-              "border_radius": {
-                "unit": "px",
-                "top": "10",
-                "right": "10",
-                "bottom": "10",
-                "left": "10",
-                "isLinked": true
-              },
-              "background_color": "#ffffff00",
-              "border_border": "solid",
-              "border_width": {
-                "unit": "px",
-                "top": "2",
-                "right": "2",
-                "bottom": "2",
-                "left": "2",
-                "isLinked": true
-              },
-              "button_background_hover_color": "#00000010",
-              "button_hover_text_color": "#161627",
-              "__globals__": {
-                "button_text_color": "globals/colors?id=text",
-                "border_color": "globals/colors?id=0705546",
-                "typography_typography": "globals/typography?id=0bca67a"
-              }
-            },
-            "elements": [],
-            "widgetType": "button"
-          },
-          {
-            "id": "001394a",
-            "elType": "widget",
-            "settings": {
-              "title": "Pro",
-              "header_size": "h3",
-              "align": "left",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "8",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "title_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=48e47ce"
-              }
-            },
-            "elements": [],
-            "widgetType": "heading"
-          },
-          {
-            "id": "7a69c2e",
-            "elType": "widget",
-            "settings": {
-              "editor": "<p>/month</p>",
-              "align": "left",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "8",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "text_color": "globals/colors?id=734bfa4",
                 "typography_typography": "globals/typography?id=text"
               }
             },
@@ -1225,165 +1104,16 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "7587e8d",
+            "id": "c1637b6",
             "elType": "widget",
             "settings": {
-              "editor": "<p>For growing teams</p>",
-              "align": "left",
+              "editor": "<strong>Enterprise</strong><br><strong>Custom</strong><br>For large organizations<br>Contact Sales",
               "__globals__": {
-                "text_color": "globals/colors?id=text",
                 "typography_typography": "globals/typography?id=text"
-              },
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "24",
-                "left": "0",
-                "isLinked": false
               }
             },
             "elements": [],
             "widgetType": "text-editor"
-          },
-          {
-            "id": "25ad37e",
-            "elType": "widget",
-            "settings": {
-              "text": "Start Free Trial",
-              "link": {
-                "url": "#",
-                "is_external": false,
-                "nofollow": false
-              },
-              "size": "md",
-              "align": "center",
-              "border_radius": {
-                "unit": "px",
-                "top": "10",
-                "right": "10",
-                "bottom": "10",
-                "left": "10",
-                "isLinked": true
-              },
-              "button_background_hover_color": "#5759d4",
-              "__globals__": {
-                "button_text_color": "globals/colors?id=25a8170",
-                "button_hover_text_color": "globals/colors?id=25a8170",
-                "background_color": "globals/colors?id=primary",
-                "typography_typography": "globals/typography?id=0bca67a"
-              }
-            },
-            "elements": [],
-            "widgetType": "button"
-          },
-          {
-            "id": "2f2a3db",
-            "elType": "widget",
-            "settings": {
-              "title": "Enterprise",
-              "header_size": "h3",
-              "align": "left",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "8",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "title_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=48e47ce"
-              }
-            },
-            "elements": [],
-            "widgetType": "heading"
-          },
-          {
-            "id": "fbf1e87",
-            "elType": "widget",
-            "settings": {
-              "editor": "<p>Custom</p>",
-              "align": "left",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "8",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "text_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=fdbf1fe"
-              }
-            },
-            "elements": [],
-            "widgetType": "text-editor"
-          },
-          {
-            "id": "90b2646",
-            "elType": "widget",
-            "settings": {
-              "editor": "<p>For large organizations</p>",
-              "align": "left",
-              "__globals__": {
-                "text_color": "globals/colors?id=text",
-                "typography_typography": "globals/typography?id=text"
-              },
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "24",
-                "left": "0",
-                "isLinked": false
-              }
-            },
-            "elements": [],
-            "widgetType": "text-editor"
-          },
-          {
-            "id": "1753e3f",
-            "elType": "widget",
-            "settings": {
-              "text": "Contact Sales",
-              "link": {
-                "url": "#",
-                "is_external": false,
-                "nofollow": false
-              },
-              "size": "md",
-              "align": "center",
-              "border_radius": {
-                "unit": "px",
-                "top": "10",
-                "right": "10",
-                "bottom": "10",
-                "left": "10",
-                "isLinked": true
-              },
-              "background_color": "#ffffff00",
-              "border_border": "solid",
-              "border_width": {
-                "unit": "px",
-                "top": "2",
-                "right": "2",
-                "bottom": "2",
-                "left": "2",
-                "isLinked": true
-              },
-              "button_background_hover_color": "#00000010",
-              "button_hover_text_color": "#161627",
-              "__globals__": {
-                "button_text_color": "globals/colors?id=text",
-                "border_color": "globals/colors?id=0705546",
-                "typography_typography": "globals/typography?id=0bca67a"
-              }
-            },
-            "elements": [],
-            "widgetType": "button"
           }
         ],
         "isInner": true
@@ -1392,7 +1122,7 @@
     "isInner": false
   },
   {
-    "id": "4f10e58",
+    "id": "371c286",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1401,9 +1131,9 @@
       "flex_align_items": "center",
       "flex_gap": {
         "unit": "px",
-        "size": 20,
-        "column": "20",
-        "row": "20"
+        "size": 0,
+        "column": "0",
+        "row": "0"
       },
       "padding": {
         "unit": "px",
@@ -1422,7 +1152,7 @@
     },
     "elements": [
       {
-        "id": "180730c",
+        "id": "b9f98c9",
         "elType": "widget",
         "settings": {
           "title": "Ready to sync smarter?",
@@ -1445,7 +1175,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "0c7be9d",
+        "id": "3abd35e",
         "elType": "widget",
         "settings": {
           "editor": "<p>Join thousands of teams who ship faster with CloudSync.</p>",
@@ -1467,7 +1197,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "4668124",
+        "id": "1b1bc67",
         "elType": "widget",
         "settings": {
           "text": "Start Free Trial",
@@ -1501,18 +1231,18 @@
     "isInner": false
   },
   {
-    "id": "87386c3",
+    "id": "395a59f",
     "elType": "container",
     "settings": {
-      "content_width": "full",
-      "flex_direction": "row",
-      "flex_justify_content": "space-between",
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_justify_content": "center",
       "flex_align_items": "center",
       "flex_gap": {
         "unit": "px",
-        "size": 20,
-        "column": "20",
-        "row": "20"
+        "size": 0,
+        "column": "0",
+        "row": "0"
       },
       "padding": {
         "unit": "px",
@@ -1524,9 +1254,6 @@
       },
       "background_background": "classic",
       "background_color": "#111827",
-      "flex_direction_tablet": "row",
-      "flex_direction_mobile": "column",
-      "flex_wrap": "wrap",
       "_title": "footer",
       "__globals__": {
         "typography_typography": "globals/typography?id=text"

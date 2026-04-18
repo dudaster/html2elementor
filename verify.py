@@ -35,27 +35,33 @@ def _iter_html(tree: dict):
         yield from _iter_html(child)
 
 
-def _find_html_node(tree: dict, target_text: str, target_tags: set[str]) -> dict | None:
-    """Find the HTML node whose text matches target_text and tag in target_tags.
-    Prefers leaf nodes (direct text match) over ancestors."""
+def _find_html_nodes(tree: dict, target_text: str, target_tags: set[str]) -> list[dict]:
+    """Find ALL HTML nodes whose text matches target_text and tag in target_tags.
+    Returns leaf/direct matches first, then full-text matches."""
     target_text = re.sub(r"\s+", " ", target_text.strip().lower())[:60]
     if not target_text:
-        return None
-    # Pass 1: look for direct text match (leaf)
+        return []
+    leaf_matches: list[dict] = []
+    ancestor_matches: list[dict] = []
     for node in _iter_html(tree):
         if target_tags and node.get("tag") not in target_tags:
             continue
         direct = re.sub(r"\s+", " ", (node.get("text") or "").strip().lower())[:60]
-        if direct and (target_text == direct or target_text in direct):
-            return node
-    # Pass 2: fallback to "text contained in all_text"
-    for node in _iter_html(tree):
-        if target_tags and node.get("tag") not in target_tags:
+        if direct and (target_text == direct or target_text in direct or direct in target_text and len(direct) >= max(8, int(len(target_text) * 0.6))):
+            leaf_matches.append(node)
             continue
-        txt = re.sub(r"\s+", " ", _all_text(node).lower())[:60]
-        if txt and (target_text in txt or txt in target_text):
-            return node
-    return None
+        # Full (recursive) text — require target IS substring of full text (one direction only)
+        txt = re.sub(r"\s+", " ", _all_text(node).lower())[:200]
+        if txt and target_text in txt:
+            ancestor_matches.append(node)
+    return leaf_matches + ancestor_matches
+
+
+def _find_html_node(tree: dict, target_text: str, target_tags: set[str]) -> dict | None:
+    """Find the HTML node whose text matches target_text and tag in target_tags.
+    Prefers leaf nodes (direct text match) over ancestors."""
+    matches = _find_html_nodes(tree, target_text, target_tags)
+    return matches[0] if matches else None
 
 
 def _close(a: int | None, b: int | None, tol: int) -> bool:
@@ -245,14 +251,24 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
 
     elif wtype == "button":
         text = s.get("text", "")
-        node = _find_html_node(html_tree, text, {"a", "button"})
-        if not node:
+        candidates = _find_html_nodes(html_tree, text, {"a", "button"})
+        if not candidates:
             return
+        # Disambiguate duplicates (same button text in multiple places) by matching bg color.
+        el_bg_val = _resolved_color(s, "background_color", kit_maps)
+        el_bg_hex = to_hex(el_bg_val).lower() if el_bg_val else None
+        node = candidates[0]
+        if len(candidates) > 1 and el_bg_hex:
+            for c in candidates:
+                css_bg = c.get("styles", {}).get("background-color") or c.get("styles", {}).get("background") or ""
+                css_bg_hex = to_hex(css_bg).lower() if css_bg else None
+                if css_bg_hex and css_bg_hex == el_bg_hex:
+                    node = c
+                    break
         css = node.get("styles", {})
         el_tc = _resolved_color(s, "button_text_color", kit_maps)
         _cmp_color(el_tc, css.get("color", ""), f"button\"{text}\".text-color", issues)
-        el_bg = _resolved_color(s, "background_color", kit_maps)
-        _cmp_color(el_bg, css.get("background-color") or css.get("background"),
+        _cmp_color(el_bg_val, css.get("background-color") or css.get("background"),
                    f"button\"{text}\".bg", issues)
 
     elif wtype == "icon-list":
@@ -300,6 +316,53 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
                 break
 
 
+def _check_section_bg(container: dict, html_section: dict, issues: list, kit_maps: dict):
+    """Compare top-level container background against source section CSS."""
+    s = container.get("settings", {})
+    css = html_section.get("styles", {}) or {}
+    tag = html_section.get("tag", "section")
+    cls = " ".join(html_section.get("classes", []))[:20]
+    label = f"section<{tag}.{cls}>"
+    bg_raw = css.get("background") or css.get("background-image") or ""
+    css_bg_color = css.get("background-color") or ""
+
+    # Gradient case
+    if "gradient" in bg_raw:
+        el_mode = s.get("background_background")
+        if el_mode != "gradient":
+            # Check if a child inner container has the gradient (styled wrapper pattern)
+            has_gradient_child = any(
+                c.get("settings", {}).get("background_background") == "gradient"
+                for c in container.get("elements", [])
+                if c.get("elType") == "container"
+            )
+            if not has_gradient_child:
+                issues.append(f"{label}.bg: css=gradient vs elementor={el_mode or 'none'}")
+        return
+
+    # Solid color case
+    css_hex = to_hex(css_bg_color) if css_bg_color else None
+    if not css_hex:
+        return
+    el_mode = s.get("background_background")
+    el_bg = _resolved_color(s, "background_color", kit_maps)
+    el_hex = to_hex(el_bg).lower() if el_bg else None
+    if el_mode != "classic" or not el_hex:
+        # Check if child inner container carries the bg (styled wrapper pattern)
+        for c in container.get("elements", []):
+            if c.get("elType") != "container":
+                continue
+            cs = c.get("settings", {})
+            if cs.get("background_background") == "classic":
+                cbg = _resolved_color(cs, "background_color", kit_maps)
+                if cbg and to_hex(cbg).lower() == css_hex.lower():
+                    return
+        issues.append(f"{label}.bg: css={css_hex} vs elementor={el_hex or 'none'} (mode={el_mode or 'none'})")
+        return
+    if el_hex != css_hex.lower():
+        issues.append(f"{label}.bg: css={css_hex} vs elementor={el_hex}")
+
+
 def _check_container(container: dict, html_tree: dict, issues: list, kit_maps: dict, depth: int = 0):
     for child in container.get("elements", []):
         if child.get("elType") == "widget":
@@ -333,7 +396,7 @@ def _load_kit_maps(kit_path: str | None) -> dict:
 def _resolve_global(globals_map: dict, kit_maps: dict, key: str, kind: str):
     """Resolve __globals__ reference to actual value from kit."""
     ref = (globals_map or {}).get(key, "")
-    m = re.search(r"id=([a-f0-9]+)", ref)
+    m = re.search(r"id=([\w-]+)", ref)
     if not m:
         return None
     gid = m.group(1)
@@ -368,8 +431,12 @@ def verify(html_path: str, output_json_path: str, kit_path: str | None = None) -
         for c in el.get("elements", []):
             count_widgets(c)
 
-    for section in layout:
+    html_sections = parsed["sections"]
+    for i, section in enumerate(layout):
         count_widgets(section)
+        # Match top-level container to source section by index (order preserved)
+        if i < len(html_sections):
+            _check_section_bg(section, html_sections[i], all_issues, kit_maps)
         _check_container(section, root, all_issues, kit_maps)
 
     return {

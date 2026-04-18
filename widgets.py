@@ -75,18 +75,39 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
     if tag == "div" and _is_card_grid(node):
         cards = _emit_card_grid(node, consumed)
         if cards:
-            grid_cols = _get_grid_columns(node)
-            grid_max_width = px_to_int(node.get("styles", {}).get("max-width"))
-            grid_gap = px_to_int(node.get("styles", {}).get("gap"))
-            if grid_cols or grid_max_width or grid_gap:
+            parent_styles = node.get("styles", {})
+            display = (parent_styles.get("display") or "").lower()
+            flex_dir = (parent_styles.get("flex-direction") or "").lower()
+            # Only wrap in row layout if parent is grid or flex-row.
+            # block/flex-column → leave flat (parent container handles vertical stacking).
+            is_row_layout = (display == "grid") or (display in ("flex", "inline-flex") and not flex_dir.startswith("column"))
+            if is_row_layout:
+                grid_cols = _get_grid_columns(node)
+                grid_max_width = px_to_int(parent_styles.get("max-width"))
+                grid_gap = px_to_int(parent_styles.get("gap"))
+                if grid_cols or grid_max_width or grid_gap:
+                    for card in cards:
+                        if grid_cols:
+                            card["_grid_cols"] = grid_cols
+                        if grid_max_width:
+                            card["_grid_max_width"] = grid_max_width
+                        if grid_gap:
+                            card["_grid_gap"] = grid_gap
+            else:
+                # Block / flex-column parent: mark cards so _group_into_grids skips them.
                 for card in cards:
-                    if grid_cols:
-                        card["_grid_cols"] = grid_cols
-                    if grid_max_width:
-                        card["_grid_max_width"] = grid_max_width
-                    if grid_gap:
-                        card["_grid_gap"] = grid_gap
+                    card["_no_group"] = True
             out.extend(cards)
+            return
+
+    # Styled wrapper div: has bg/gradient/radius → preserve as inner container
+    # so its bg, padding, radius aren't lost when descending into children.
+    if tag == "div" and _is_styled_wrapper(node):
+        inner_children: list[dict] = []
+        for child in node.get("children", []):
+            _walk(child, inner_children, consumed)
+        if inner_children:
+            out.append(_styled_wrapper_container(node, inner_children))
             return
 
     # Before descending into children, check if this div has margin-bottom
@@ -250,6 +271,10 @@ def text_widget(node: dict) -> dict:
         "align": text_align(styles),
         "__globals__": {"text_color": "globals/colors?id=text"},
     }
+    color_hex = to_hex(styles.get("color"))
+    if color_hex:
+        settings["text_color"] = color_hex
+        del settings["__globals__"]["text_color"]
     apply_typography(settings, styles)
     _apply_margin(settings, styles)
     mw = px_to_int(styles.get("max-width"))
@@ -955,3 +980,106 @@ def _iter(node: dict, max_depth: int = 20, _d: int = 0) -> Iterator[dict]:
 
 def _escape(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _is_styled_wrapper(node: dict) -> bool:
+    """Div with its own background/gradient/radius that must be preserved as a container.
+    Excludes buttons, badges, cards (handled elsewhere) and leaf-text divs."""
+    if node.get("tag") != "div":
+        return False
+    # Leaf with text handled by _leaf_text_widget / _badge_widget
+    if (node.get("text") or "").strip() and not node.get("children"):
+        return False
+    # Don't confuse with buttons: a button would be a leaf (already excluded above) or
+    # have only inline content. If this div has 2+ children OR any heading/p, it's a
+    # content wrapper, not a button.
+    children = node.get("children", [])
+    has_block_content = any(
+        c.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "div", "section")
+        for c in children
+    )
+    if not has_block_content and len(children) < 2 and looks_like_button(node):
+        return False
+    styles = node.get("styles", {})
+    bg_raw = styles.get("background") or styles.get("background-image") or ""
+    bg_color = styles.get("background-color") or ""
+    has_gradient = "gradient" in bg_raw
+    has_bg_color = bool(bg_color and bg_color not in ("transparent", "none", "rgba(0, 0, 0, 0)", ""))
+    has_radius = bool(styles.get("border-radius") or styles.get("border-top-left-radius"))
+    # Only wrap when there's visible styling: gradient, OR solid bg, OR substantial radius+padding
+    if has_gradient:
+        return True
+    if has_bg_color:
+        # Ignore pure-white bg on body-level wrappers (noise)
+        from .colors import to_hex
+        hx = to_hex(bg_color)
+        if hx and hx.lower() not in ("#ffffff", "#fff"):
+            return True
+        if has_radius:
+            return True
+    return False
+
+
+def _styled_wrapper_container(node: dict, children: list[dict]) -> dict:
+    """Build an inner container with this div's bg/gradient/padding/radius preserved."""
+    from .colors import to_hex
+    from .styles import css_padding_to_elementor, px_to_int
+    styles = node.get("styles", {})
+    settings: dict[str, Any] = {
+        "content_width": "boxed",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "flex_justify_content": "center",
+        "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
+    }
+    # Background
+    bg_raw = styles.get("background") or styles.get("background-image") or ""
+    if "gradient" in bg_raw:
+        import re
+        settings["background_background"] = "gradient"
+        angle_match = re.search(r"(\d+)deg", bg_raw)
+        angle = int(angle_match.group(1)) if angle_match else 180
+        colors = re.findall(r"(#[0-9a-fA-F]{3,8}|rgba?\([^)]+\))", bg_raw)
+        color1 = to_hex(colors[0]) if colors else "#ffffff"
+        color2 = to_hex(colors[-1]) if len(colors) > 1 else color1
+        settings["background_color"] = color1
+        settings["background_color_b"] = color2
+        settings["background_gradient_angle"] = {"unit": "deg", "size": angle, "sizes": []}
+        settings["background_gradient_position"] = "center center"
+    else:
+        bg_color = styles.get("background-color") or ""
+        hx = to_hex(bg_color)
+        if hx:
+            settings["background_background"] = "classic"
+            settings["background_color"] = hx
+    # Padding
+    pad = css_padding_to_elementor(styles)
+    if any(pad[k] != "0" for k in ("top", "right", "bottom", "left")):
+        settings["padding"] = pad
+    # Border-radius
+    br = styles.get("border-radius") or styles.get("border-top-left-radius") or ""
+    br_val = px_to_int(br) if br else None
+    if br_val:
+        settings["border_radius"] = {
+            "unit": "px",
+            "top": str(br_val), "right": str(br_val),
+            "bottom": str(br_val), "left": str(br_val),
+            "isLinked": True,
+        }
+    # Max-width
+    mw = px_to_int(styles.get("max-width") or "")
+    if mw:
+        settings["boxed_width"] = {"unit": "px", "size": mw, "sizes": []}
+    # text-align → flex_align_items
+    ta = (styles.get("text-align") or "").lower()
+    if ta == "center":
+        settings["flex_align_items"] = "center"
+    elif ta in ("right", "end"):
+        settings["flex_align_items"] = "flex-end"
+    # Mark as styled so _group_into_grids doesn't try to row-wrap
+    return {
+        "__inner_container__": True,
+        "_no_group": True,
+        "settings": settings,
+        "children": children,
+    }

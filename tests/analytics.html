@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lumen — AI analytics platform for product teams</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #0b1220; background: #ffffff; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ============ HEADER ============ */
+    header { padding: 18px 72px; display: flex; justify-content: space-between; align-items: center; background: #ffffff; border-bottom: 1px solid #eef2f7; }
+    header .brand { font-size: 22px; font-weight: 800; color: #0b1220; letter-spacing: -0.5px; }
+    header .brand span { color: #6366f1; }
+    header nav { display: flex; align-items: center; }
+    header nav a { font-size: 14px; color: #475569; font-weight: 500; margin-right: 32px; }
+    header .login { font-size: 14px; font-weight: 600; color: #0b1220; margin-right: 16px; }
+    header .signup { background: #0b1220; color: #ffffff; padding: 10px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; }
+
+    /* ============ HERO ============ */
+    .hero { padding: 96px 72px 72px; background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 100%); text-align: center; }
+    .hero .pill { display: inline-block; background: #ede9fe; color: #4338ca; padding: 8px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 28px; }
+    .hero h1 { font-size: 64px; font-weight: 800; color: #0b1220; max-width: 860px; margin: 0 auto 24px; letter-spacing: -2px; line-height: 1.05; }
+    .hero h1 span { color: #6366f1; }
+    .hero p { font-size: 20px; color: #475569; max-width: 600px; margin: 0 auto 40px; }
+    .hero .ctas { display: flex; justify-content: center; gap: 12px; margin-bottom: 56px; }
+    .hero .primary { background: #6366f1; color: #ffffff; padding: 16px 32px; border-radius: 10px; font-size: 15px; font-weight: 600; }
+    .hero .secondary { background: #ffffff; color: #0b1220; padding: 16px 32px; border-radius: 10px; font-size: 15px; font-weight: 600; border: 1px solid #e2e8f0; }
+    .hero .note { font-size: 13px; color: #94a3b8; }
+
+    /* ============ LOGO CLOUD ============ */
+    .logos { padding: 56px 72px; background: #ffffff; border-top: 1px solid #eef2f7; border-bottom: 1px solid #eef2f7; }
+    .logos .caption { text-align: center; font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 32px; }
+    .logos .row { display: flex; justify-content: center; align-items: center; gap: 64px; flex-wrap: wrap; }
+    .logos .row .logo { font-size: 22px; font-weight: 800; color: #94a3b8; letter-spacing: -0.5px; }
+
+    /* ============ FEATURES ============ */
+    .features { padding: 96px 72px; }
+    .features .intro { text-align: center; margin-bottom: 72px; }
+    .features .intro .kicker { font-size: 13px; color: #6366f1; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    .features .intro h2 { font-size: 44px; font-weight: 800; color: #0b1220; max-width: 640px; margin: 0 auto 16px; letter-spacing: -1.2px; }
+    .features .intro p { font-size: 17px; color: #64748b; max-width: 560px; margin: 0 auto; }
+    .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
+    .feat { padding: 36px; background: #f8fafc; border-radius: 18px; }
+    .feat .icon { width: 48px; height: 48px; background: #ede9fe; color: #6366f1; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 24px; }
+    .feat h3 { font-size: 20px; font-weight: 700; color: #0b1220; margin-bottom: 10px; }
+    .feat p { font-size: 15px; color: #64748b; line-height: 1.65; }
+
+    /* ============ STATS ============ */
+    .stats { padding: 80px 72px; background: #0b1220; }
+    .stats .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto; }
+    .stats .item { text-align: center; }
+    .stats .item .num { font-size: 52px; font-weight: 800; color: #a5b4fc; letter-spacing: -1.5px; margin-bottom: 8px; }
+    .stats .item .lbl { font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+
+    /* ============ PRICING ============ */
+    .pricing { padding: 96px 72px; }
+    .pricing .head { text-align: center; margin-bottom: 56px; }
+    .pricing .head h2 { font-size: 44px; font-weight: 800; color: #0b1220; margin-bottom: 14px; letter-spacing: -1.2px; }
+    .pricing .head p { font-size: 17px; color: #64748b; max-width: 520px; margin: 0 auto; }
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .plan { padding: 40px 32px; border: 1px solid #e2e8f0; border-radius: 20px; background: #ffffff; }
+    .plan.pop { background: #0b1220; border: 1px solid #0b1220; }
+    .plan .tag { font-size: 12px; font-weight: 700; color: #6366f1; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .plan.pop .tag { color: #a5b4fc; }
+    .plan h3 { font-size: 26px; font-weight: 800; color: #0b1220; margin-bottom: 8px; }
+    .plan.pop h3 { color: #ffffff; }
+    .plan .desc { font-size: 14px; color: #64748b; margin-bottom: 28px; line-height: 1.55; }
+    .plan.pop .desc { color: #cbd5e1; }
+    .plan .price { font-size: 48px; font-weight: 800; color: #0b1220; margin-bottom: 24px; letter-spacing: -1.5px; }
+    .plan.pop .price { color: #ffffff; }
+    .plan .btn { display: block; padding: 14px 20px; border-radius: 10px; text-align: center; font-size: 14px; font-weight: 600; background: #0b1220; color: #ffffff; }
+    .plan.pop .btn { background: #6366f1; }
+
+    /* ============ TESTIMONIAL ============ */
+    .testi { padding: 96px 72px; background: #f5f3ff; text-align: center; }
+    .testi .quote { font-size: 30px; font-weight: 500; color: #0b1220; max-width: 820px; margin: 0 auto 32px; line-height: 1.35; font-style: italic; letter-spacing: -0.5px; }
+    .testi .name { font-size: 16px; font-weight: 700; color: #0b1220; margin-bottom: 4px; }
+    .testi .role { font-size: 14px; color: #64748b; }
+
+    /* ============ FAQ ============ */
+    .faq { padding: 96px 72px; }
+    .faq h2 { font-size: 40px; font-weight: 800; color: #0b1220; text-align: center; margin-bottom: 56px; letter-spacing: -1px; }
+    .faq .list { max-width: 760px; margin: 0 auto; }
+    .faq .q { padding: 28px 0; border-bottom: 1px solid #e2e8f0; }
+    .faq .q h4 { font-size: 18px; font-weight: 700; color: #0b1220; margin-bottom: 10px; }
+    .faq .q p { font-size: 15px; color: #64748b; line-height: 1.65; }
+
+    /* ============ CTA ============ */
+    .cta-band { padding: 80px 72px; }
+    .cta-inner { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 72px 48px; border-radius: 28px; text-align: center; max-width: 1100px; margin: 0 auto; }
+    .cta-inner h2 { font-size: 42px; font-weight: 800; color: #ffffff; margin-bottom: 16px; letter-spacing: -1px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-inner p { font-size: 17px; color: #e0e7ff; max-width: 520px; margin: 0 auto 32px; }
+    .cta-inner .btn { display: inline-block; background: #ffffff; color: #4338ca; padding: 16px 36px; border-radius: 10px; font-size: 15px; font-weight: 700; }
+
+    /* ============ FOOTER ============ */
+    footer { padding: 64px 72px 32px; background: #0b1220; }
+    footer .cols { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto 48px; }
+    footer .about .brand { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 14px; }
+    footer .about .brand span { color: #a5b4fc; }
+    footer .about p { font-size: 14px; color: #94a3b8; line-height: 1.6; max-width: 260px; }
+    footer .col h4 { font-size: 12px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+    footer .col a { display: block; font-size: 14px; color: #94a3b8; margin-bottom: 10px; }
+    footer .bar { padding-top: 32px; border-top: 1px solid #1e293b; display: flex; justify-content: space-between; align-items: center; }
+    footer .bar .copy { font-size: 13px; color: #64748b; }
+    footer .bar .mini a { font-size: 13px; color: #64748b; margin-left: 24px; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="brand">Lu<span>men</span></div>
+        <nav>
+            <a href="#">Product</a>
+            <a href="#">Solutions</a>
+            <a href="#">Pricing</a>
+            <a href="#">Docs</a>
+            <a href="#">Customers</a>
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Start free</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="pill">Now with AI-powered insights</div>
+        <h1>The analytics platform <span>product teams</span> actually love.</h1>
+        <p>Lumen ties usage, revenue, and qualitative feedback together — so you can stop guessing what matters next.</p>
+        <div class="ctas">
+            <a href="#" class="primary">Start free trial</a>
+            <a href="#" class="secondary">Book a demo</a>
+        </div>
+        <div class="note">No credit card required · 14-day trial · Cancel anytime</div>
+    </section>
+
+    <section class="logos">
+        <div class="caption">Trusted by product teams at</div>
+        <div class="row">
+            <div class="logo">Atlas</div>
+            <div class="logo">Nimbus</div>
+            <div class="logo">Ferra</div>
+            <div class="logo">Kestrel</div>
+            <div class="logo">Orbit</div>
+            <div class="logo">Vance</div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="intro">
+            <div class="kicker">Why Lumen</div>
+            <h2>One source of truth for every decision.</h2>
+            <p>From first activation to expansion revenue — instrument, query, and visualize without stitching five tools together.</p>
+        </div>
+        <div class="feat-grid">
+            <div class="feat">
+                <div class="icon">📊</div>
+                <h3>Product analytics</h3>
+                <p>Funnels, retention, cohorts, and paths — with unlimited events and no row limits on any plan.</p>
+            </div>
+            <div class="feat">
+                <div class="icon">💡</div>
+                <h3>AI insights</h3>
+                <p>Ask questions in plain English. Lumen generates the query, the chart, and a short explanation.</p>
+            </div>
+            <div class="feat">
+                <div class="icon">🔌</div>
+                <h3>120+ integrations</h3>
+                <p>Pipe in data from Stripe, Segment, Snowflake, and more. Two-way sync with your warehouse.</p>
+            </div>
+            <div class="feat">
+                <div class="icon">🔒</div>
+                <h3>Enterprise-grade security</h3>
+                <p>SOC 2 Type II, HIPAA, and GDPR compliant. SSO, SCIM, and custom data residency available.</p>
+            </div>
+            <div class="feat">
+                <div class="icon">⚡</div>
+                <h3>Real-time queries</h3>
+                <p>Sub-second response times over billions of events thanks to our columnar query engine.</p>
+            </div>
+            <div class="feat">
+                <div class="icon">🧪</div>
+                <h3>Experimentation</h3>
+                <p>Run A/B tests directly on your product analytics — no separate experimentation tool needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="grid">
+            <div class="item"><div class="num">2.4B</div><div class="lbl">Events / day</div></div>
+            <div class="item"><div class="num">99.99%</div><div class="lbl">Uptime SLA</div></div>
+            <div class="item"><div class="num">180ms</div><div class="lbl">Median query</div></div>
+            <div class="item"><div class="num">4000+</div><div class="lbl">Paying teams</div></div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="head">
+            <h2>Pricing that scales with you.</h2>
+            <p>Start free, upgrade when you need more. All plans include unlimited seats and unlimited events.</p>
+        </div>
+        <div class="plans">
+            <div class="plan">
+                <div class="tag">Starter</div>
+                <h3>Free</h3>
+                <div class="desc">For small teams getting started with product analytics.</div>
+                <div class="price">$0</div>
+                <a href="#" class="btn">Get started</a>
+            </div>
+            <div class="plan pop">
+                <div class="tag">Most popular</div>
+                <h3>Growth</h3>
+                <div class="desc">For growing product teams that need advanced insights and collaboration.</div>
+                <div class="price">$399</div>
+                <a href="#" class="btn">Start 14-day trial</a>
+            </div>
+            <div class="plan">
+                <div class="tag">Enterprise</div>
+                <h3>Custom</h3>
+                <div class="desc">For larger organizations with custom security, compliance, and volume needs.</div>
+                <div class="price">Let's talk</div>
+                <a href="#" class="btn">Contact sales</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testi">
+        <p class="quote">"We replaced three separate tools with Lumen in a weekend. The AI insights alone pay for the whole subscription — our PMs are running analyses they used to wait a week for."</p>
+        <div class="name">Marcus Alderete</div>
+        <div class="role">VP Product, Sundial Health</div>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently asked questions</h2>
+        <div class="list">
+            <div class="q">
+                <h4>How is Lumen different from Amplitude or Mixpanel?</h4>
+                <p>Lumen is built around an AI query layer and a unified data model. You get product analytics, experimentation, and warehouse sync in one tool — priced transparently, with no event caps.</p>
+            </div>
+            <div class="q">
+                <h4>Do you have a free tier?</h4>
+                <p>Yes. The Starter plan is free forever for teams under 50k monthly tracked users. No credit card required to sign up.</p>
+            </div>
+            <div class="q">
+                <h4>Can I bring my own warehouse?</h4>
+                <p>Absolutely. Lumen syncs with Snowflake, BigQuery, Redshift, and Databricks in both directions. Your data stays yours.</p>
+            </div>
+            <div class="q">
+                <h4>What about data privacy and compliance?</h4>
+                <p>Lumen is SOC 2 Type II, HIPAA, and GDPR compliant. Enterprise customers can choose EU, US, or custom data residency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-band">
+        <div class="cta-inner">
+            <h2>See what your product data has been trying to tell you.</h2>
+            <p>14-day trial on the Growth plan. No credit card. Set up in under 10 minutes.</p>
+            <a href="#" class="btn">Start free trial</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="cols">
+            <div class="about">
+                <div class="brand">Lu<span>men</span></div>
+                <p>The analytics platform product teams actually love. Built in Berlin, trusted worldwide.</p>
+            </div>
+            <div class="col">
+                <h4>Product</h4>
+                <a href="#">Overview</a>
+                <a href="#">Analytics</a>
+                <a href="#">Experimentation</a>
+                <a href="#">Integrations</a>
+            </div>
+            <div class="col">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Customers</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="col">
+                <h4>Resources</h4>
+                <a href="#">Docs</a>
+                <a href="#">Changelog</a>
+                <a href="#">Status</a>
+                <a href="#">Security</a>
+            </div>
+            <div class="col">
+                <h4>Legal</h4>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">DPA</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        <div class="bar">
+            <div class="copy">© 2026 Lumen Analytics GmbH. Made in Berlin.</div>
+            <div class="mini">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

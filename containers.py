@@ -464,6 +464,12 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
         wt = el.get("widgetType")
         # Group 3+ consecutive cards (icon-box, image-box, or inner containers) into a grid
         is_card = wt in ("icon-box", "image-box") or el.get("__inner_container__")
+        if is_card and el.get("_no_group"):
+            # Card explicitly opted out of row grouping (block/flex-column parent)
+            el.pop("_no_group", None)
+            out.append(el)
+            i += 1
+            continue
         if is_card:
             group = [el]
             j = i + 1
