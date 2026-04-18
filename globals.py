@@ -117,11 +117,28 @@ def build_kit(capture: dict) -> tuple[dict[str, Any], dict[str, str], dict[str, 
         kit_settings["body_background_color"] = page_bg_hex
 
     # --- build mappings for widgets ---
+    # IMPORTANT: widgets reference ONLY custom_colors (hashed IDs), never
+    # system_colors. System colors (primary/secondary/text/accent) are shared
+    # across all pages in the site kit — reusing them would mean every new
+    # page import overwrites previous pages' colors and breaks them visually.
     color_map: dict[str, str] = {}
+    # Add system color hexes as custom-color entries so they still resolve to
+    # page-unique IDs instead of the shared system slots.
+    extra_customs: list[tuple[str, str]] = []
+    existing_hexes = {hx for _, hx in custom_colors}
     for role, hex_val in system_colors.items():
-        color_map[hex_val] = role
-    for title, hex_val in custom_colors:
-        color_map[hex_val] = short_id(title)
+        if hex_val not in existing_hexes:
+            title = role.capitalize()
+            extra_customs.append((title, hex_val))
+            existing_hexes.add(hex_val)
+    all_custom = list(custom_colors) + extra_customs
+    for title, hex_val in all_custom:
+        color_map[hex_val] = short_id(title + hex_val)
+    # Rebuild custom_colors in kit_settings to include the extras with matching IDs
+    kit_settings["custom_colors"] = [
+        {"_id": short_id(title + hex_val), "title": title, "color": hex_val}
+        for title, hex_val in all_custom
+    ]
 
     font_map: dict[str, str] = {}
     # Priority order: primary > text > secondary > accent (keep first)

@@ -55,6 +55,14 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
         styles = node.get("styles", {})
         has_bg = bool(styles.get("background-color") or styles.get("background"))
         has_radius = bool(styles.get("border-radius") or styles.get("border-top-left-radius"))
+        # Circular avatar: fixed-size square with bg + radius 50% → emit as circular container
+        w_px = px_to_int(styles.get("width", ""))
+        h_px = px_to_int(styles.get("height", ""))
+        br_raw = styles.get("border-radius", "") or ""
+        is_circular = "50%" in br_raw or "100%" in br_raw
+        if has_bg and w_px and h_px and is_circular and abs(w_px - h_px) <= 2:
+            out.append(_avatar_widget(node, w_px))
+            return
         if has_bg and has_radius:
             out.append(_badge_widget(node))
         else:
@@ -389,7 +397,12 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
         size_diff = (max(child_children_sizes) - min(child_children_sizes)) if child_children_sizes else 0
         # Only merge if font sizes are close (e.g., name 16 + role 14)
         # Don't merge if big number + small label (56 vs 15)
-        should_merge = size_diff <= 6
+        # Don't merge if any grandchild is a heading (h1-h6) — preserves semantic headings
+        has_heading_child = any(
+            gc.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6")
+            for gc in child_children
+        )
+        should_merge = size_diff <= 6 and not has_heading_child
         if child_tag == "div" and len(child_children) >= 2 and not _is_inline_flex_row(child) and should_merge:
             # Merge child div's text content into a single text-editor widget
             # (avoids nested container width issues in Elementor row flex)
@@ -910,10 +923,28 @@ def _all_text(node: dict) -> str:
     return _all_text_html(node)
 
 
-def _all_text_html(node: dict) -> str:
-    """Recursively build text in DOM order, preserving inline HTML tags."""
+def _all_text_html(node: dict, parent_color: str | None = None) -> str:
+    """Recursively build text in DOM order, preserving inline HTML tags.
+    Wraps <span>/<em> with color ≠ parent in <span style="color:#xxx"> so
+    inline highlight colors (e.g. hero "actually ship" pink) survive."""
+    from .colors import to_hex as _to_hex
+    my_color = _to_hex(node.get("styles", {}).get("color") or "") if node.get("styles") else None
+    effective_color = my_color or parent_color
     order = node.get("_order", [])
     children = node.get("children", [])
+
+    def _wrap_inline(inner: str, child: dict, tag: str) -> str:
+        child_color = _to_hex(child.get("styles", {}).get("color") or "") if child.get("styles") else None
+        needs_span = child_color and child_color.lower() != (effective_color or "").lower()
+        if tag in ("strong", "b"):
+            out = f"<strong>{inner}</strong>"
+        elif tag in ("em", "i"):
+            out = f"<em>{inner}</em>"
+        else:
+            out = inner
+        if needs_span:
+            out = f'<span style="color:{child_color}">{out}</span>'
+        return out
 
     if order:
         parts = []
@@ -923,15 +954,10 @@ def _all_text_html(node: dict) -> str:
             elif kind == "child" and val < len(children):
                 child = children[val]
                 tag = child.get("tag", "")
-                inner = _all_text_html(child)
+                inner = _all_text_html(child, effective_color)
                 if not inner:
                     continue
-                if tag in ("strong", "b"):
-                    parts.append(f"<strong>{inner}</strong>")
-                elif tag in ("em", "i"):
-                    parts.append(f"<em>{inner}</em>")
-                else:
-                    parts.append(inner)
+                parts.append(_wrap_inline(inner, child, tag))
         return " ".join(parts)
 
     # Fallback: direct text + children
@@ -940,9 +966,10 @@ def _all_text_html(node: dict) -> str:
     if direct:
         parts.append(direct)
     for child in children:
-        inner = _all_text_html(child)
+        inner = _all_text_html(child, effective_color)
         if inner:
-            parts.append(inner)
+            tag = child.get("tag", "")
+            parts.append(_wrap_inline(inner, child, tag))
     return " ".join(parts)
 
 
@@ -980,6 +1007,56 @@ def _iter(node: dict, max_depth: int = 20, _d: int = 0) -> Iterator[dict]:
 
 def _escape(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _avatar_widget(node: dict, size: int) -> dict:
+    """Emit a circular avatar: fixed-size inner container with bg + radius 50% wrapping
+    a heading widget for the initials/text inside."""
+    from .colors import to_hex
+    styles = node.get("styles", {})
+    text = (node.get("text") or "").strip()
+    # Inner heading with just the text/initials
+    heading_settings: dict[str, Any] = {
+        "title": _escape(text),
+        "header_size": "div",
+        "align": "center",
+    }
+    color_hex = to_hex(styles.get("color"))
+    if color_hex:
+        heading_settings["title_color"] = color_hex
+    apply_typography(heading_settings, styles)
+    inner_heading = {"widgetType": "heading", "settings": heading_settings}
+
+    # Outer circular container
+    bg_hex = to_hex(styles.get("background-color") or styles.get("background"))
+    radius_val = size // 2
+    container_settings: dict[str, Any] = {
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "flex_justify_content": "center",
+        "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
+        "_element_custom_width": {"unit": "px", "size": size, "sizes": []},
+        "_element_width": "initial",
+        "min_height": {"unit": "px", "size": size, "sizes": []},
+        "border_radius": {
+            "unit": "px",
+            "top": str(radius_val), "right": str(radius_val),
+            "bottom": str(radius_val), "left": str(radius_val),
+            "isLinked": True,
+        },
+    }
+    if bg_hex:
+        container_settings["background_background"] = "classic"
+        container_settings["background_color"] = bg_hex
+    # Preserve margin (e.g. avatar margin-bottom 16px)
+    _apply_margin(container_settings, styles)
+    return {
+        "__inner_container__": True,
+        "_no_group": True,
+        "settings": container_settings,
+        "children": [inner_heading],
+    }
 
 
 def _is_styled_wrapper(node: dict) -> bool:

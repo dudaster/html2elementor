@@ -23,49 +23,69 @@
   ],
   "custom_colors": [
     {
-      "_id": "3d97194",
+      "_id": "2f8d05a",
       "title": "Transparent",
       "color": "#ffffff00"
     },
     {
-      "_id": "25a8170",
+      "_id": "1561c2d",
       "title": "White",
       "color": "#ffffff"
     },
     {
-      "_id": "734bfa4",
+      "_id": "8ce3743",
       "title": "CTA Accent",
       "color": "#71717a"
     },
     {
-      "_id": "0705546",
+      "_id": "c62d733",
       "title": "Border",
       "color": "#e4e4e7"
     },
     {
-      "_id": "c900e1b",
+      "_id": "3e9bfa9",
       "title": "Accent",
       "color": "#d4d4d8"
     },
     {
-      "_id": "94f5cf6",
+      "_id": "9bb3bab",
       "title": "Dark Surface",
       "color": "#365314"
     },
     {
-      "_id": "fd7de3a",
+      "_id": "4e2da35",
       "title": "Light Background",
       "color": "#ecfccb"
     },
     {
-      "_id": "848b013",
+      "_id": "433db8f",
       "title": "Accent 2",
       "color": "#a1a1aa"
     },
     {
-      "_id": "a9fbe14",
+      "_id": "1dc7900",
       "title": "Dark Surface 2",
       "color": "#52525b"
+    },
+    {
+      "_id": "35cbfad",
+      "title": "Text",
+      "color": "#18181b"
+    },
+    {
+      "_id": "221fe6e",
+      "title": "Primary",
+      "color": "#09090b"
+    },
+    {
+      "_id": "ced3fca",
+      "title": "Secondary",
+      "color": "#fafaf9"
+    },
+    {
+      "_id": "0fe77bf",
+      "title": "Accent",
+      "color": "#84cc16"
     }
   ],
   "system_typography": [

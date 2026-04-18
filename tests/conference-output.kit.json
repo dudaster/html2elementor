@@ -3,22 +3,22 @@
     {
       "_id": "text",
       "title": "Text",
-      "color": "#0b1220"
+      "color": "#111827"
     },
     {
       "_id": "primary",
       "title": "Primary",
-      "color": "#94a3b8"
+      "color": "#6b7280"
     },
     {
       "_id": "secondary",
       "title": "Secondary",
-      "color": "#ffffff"
+      "color": "#ec4899"
     },
     {
       "_id": "accent",
       "title": "Accent",
-      "color": "#64748b"
+      "color": "#fbbf24"
     }
   ],
   "custom_colors": [
@@ -33,59 +33,64 @@
       "color": "#ffffff"
     },
     {
-      "_id": "15adb2d",
-      "title": "Section Background",
-      "color": "#6366f1"
+      "_id": "f644bd1",
+      "title": "Dark Background",
+      "color": "#1f2937"
     },
     {
-      "_id": "083816b",
-      "title": "Light Background",
-      "color": "#ede9fe"
-    },
-    {
-      "_id": "200910f",
-      "title": "Light Background 2",
-      "color": "#f8fafc"
-    },
-    {
-      "_id": "2cd7e4d",
-      "title": "CTA Accent",
-      "color": "#475569"
-    },
-    {
-      "_id": "5ab585b",
+      "_id": "772d8e5",
       "title": "Accent",
-      "color": "#a5b4fc"
+      "color": "#9ca3af"
     },
     {
-      "_id": "0ed47ed",
-      "title": "Light Background 3",
-      "color": "#f5f3ff"
+      "_id": "c1c1bd9",
+      "title": "Light Background",
+      "color": "#fce7f3"
     },
     {
-      "_id": "866071a",
+      "_id": "22fafbd",
+      "title": "CTA Accent",
+      "color": "#4b5563"
+    },
+    {
+      "_id": "a557f56",
       "title": "Border",
-      "color": "#e2e8f0"
+      "color": "#374151"
     },
     {
-      "_id": "b773dd4",
-      "title": "CTA Accent 2",
-      "color": "#4338ca"
-    },
-    {
-      "_id": "d8516c6",
-      "title": "Text",
+      "_id": "59d6f7c",
+      "title": "Dark Background 2",
       "color": "#0b1220"
     },
     {
-      "_id": "8338537",
-      "title": "Primary",
-      "color": "#94a3b8"
+      "_id": "76f188a",
+      "title": "Light Background 2",
+      "color": "#fdf2f8"
     },
     {
-      "_id": "093dd35",
+      "_id": "ed8299f",
+      "title": "Light Background 3",
+      "color": "#f9fafb"
+    },
+    {
+      "_id": "fb565c0",
+      "title": "Text",
+      "color": "#111827"
+    },
+    {
+      "_id": "c0ea049",
+      "title": "Primary",
+      "color": "#6b7280"
+    },
+    {
+      "_id": "0a24e50",
+      "title": "Secondary",
+      "color": "#ec4899"
+    },
+    {
+      "_id": "2ef37e0",
       "title": "Accent",
-      "color": "#64748b"
+      "color": "#fbbf24"
     }
   ],
   "system_typography": [
@@ -93,7 +98,7 @@
       "_id": "primary",
       "title": "Primary",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "700",
       "typography_font_size": {
         "unit": "px",
@@ -105,7 +110,7 @@
       "_id": "secondary",
       "title": "Secondary",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "600",
       "typography_font_size": {
         "unit": "px",
@@ -117,7 +122,7 @@
       "_id": "text",
       "title": "Text",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "400",
       "typography_font_size": {
         "unit": "px",
@@ -129,7 +134,7 @@
       "_id": "accent",
       "title": "Accent",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "500",
       "typography_font_size": {
         "unit": "px",
@@ -143,7 +148,7 @@
       "_id": "9dffbf6",
       "title": "Text",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "800",
       "typography_font_size": {
         "unit": "px",
@@ -155,8 +160,8 @@
       "_id": "45b5de8",
       "title": "Button Text",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "500",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "600",
       "typography_font_size": {
         "unit": "px",
         "size": "14",
@@ -167,8 +172,8 @@
       "_id": "0bca67a",
       "title": "Button Text 2",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "600",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "700",
       "typography_font_size": {
         "unit": "px",
         "size": "14",
@@ -179,11 +184,11 @@
       "_id": "48e47ce",
       "title": "Text 2",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "700",
       "typography_font_size": {
         "unit": "px",
-        "size": "12",
+        "size": "13",
         "sizes": []
       }
     },
@@ -191,11 +196,11 @@
       "_id": "107f65d",
       "title": "Hero Heading",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "800",
       "typography_font_size": {
         "unit": "px",
-        "size": "64",
+        "size": "72",
         "sizes": []
       }
     },
@@ -203,7 +208,7 @@
       "_id": "c180041",
       "title": "Body Text",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "400",
       "typography_font_size": {
         "unit": "px",
@@ -215,8 +220,8 @@
       "_id": "54fd601",
       "title": "Button Text 3",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "600",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "700",
       "typography_font_size": {
         "unit": "px",
         "size": "15",
@@ -227,103 +232,7 @@
       "_id": "0d96bbc",
       "title": "Text 3",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "400",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "13",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "c133c1f",
-      "title": "Text 4",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "600",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "13",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "27afeb3",
-      "title": "Text 5",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "700",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "13",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "fdbf1fe",
-      "title": "Section Title",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "800",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "44",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "797ba1a",
-      "title": "Body Text 2",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "400",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "17",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "bd3f3b7",
-      "title": "Text 6",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "400",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "24",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "c5a24ec",
-      "title": "Card Title",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "700",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "20",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "f3bb408",
-      "title": "Body Text 3",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "400",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "15",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "433d492",
-      "title": "Text 7",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "800",
       "typography_font_size": {
         "unit": "px",
@@ -332,14 +241,98 @@
       }
     },
     {
-      "_id": "e964d84",
-      "title": "Card Title 2",
+      "_id": "c133c1f",
+      "title": "Text 4",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "12",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "fdbf1fe",
+      "title": "Section Title",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "800",
       "typography_font_size": {
         "unit": "px",
-        "size": "26",
+        "size": "48",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "797ba1a",
+      "title": "Body Text 2",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "400",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "18",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "099f00b",
+      "title": "Section Title 2",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "800",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "44",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "f3bb408",
+      "title": "Body Text 3",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "400",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "17",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "27afeb3",
+      "title": "Text 5",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "800",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "36",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "bd3f3b7",
+      "title": "Text 6",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "18",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "433d492",
+      "title": "Text 7",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "400",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "13",
         "sizes": []
       }
     },
@@ -347,7 +340,31 @@
       "_id": "2b1c577",
       "title": "Text 8",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "800",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "16",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "c5a24ec",
+      "title": "Card Title",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
+      "typography_font_weight": "700",
+      "typography_font_size": {
+        "unit": "px",
+        "size": "19",
+        "sizes": []
+      }
+    },
+    {
+      "_id": "437a177",
+      "title": "Body Text 4",
+      "typography_typography": "custom",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "400",
       "typography_font_size": {
         "unit": "px",
@@ -359,23 +376,11 @@
       "_id": "d3cb001",
       "title": "Text 9",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "800",
       "typography_font_size": {
         "unit": "px",
-        "size": "48",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "437a177",
-      "title": "Body Text 4",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "500",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "30",
+        "size": "32",
         "sizes": []
       }
     },
@@ -383,59 +388,11 @@
       "_id": "805725b",
       "title": "Text 10",
       "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "700",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "16",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "099f00b",
-      "title": "Section Title 2",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
+      "typography_font_family": "Manrope",
       "typography_font_weight": "800",
       "typography_font_size": {
         "unit": "px",
-        "size": "40",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "accb2c9",
-      "title": "Small Heading",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "700",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "18",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "e8756e0",
-      "title": "Section Title 3",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "800",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "42",
-        "sizes": []
-      }
-    },
-    {
-      "_id": "d1b4db3",
-      "title": "Button Text 4",
-      "typography_typography": "custom",
-      "typography_font_family": "Inter",
-      "typography_font_weight": "700",
-      "typography_font_size": {
-        "unit": "px",
-        "size": "15",
+        "size": "26",
         "sizes": []
       }
     }

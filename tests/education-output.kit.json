@@ -23,49 +23,64 @@
   ],
   "custom_colors": [
     {
-      "_id": "3d97194",
+      "_id": "2f8d05a",
       "title": "Transparent",
       "color": "#ffffff00"
     },
     {
-      "_id": "25a8170",
+      "_id": "1561c2d",
       "title": "White",
       "color": "#ffffff"
     },
     {
-      "_id": "fd7de3a",
+      "_id": "9f992e9",
       "title": "Light Background",
       "color": "#f5f3ff"
     },
     {
-      "_id": "c900e1b",
+      "_id": "8fa3677",
       "title": "Accent",
       "color": "#94a3b8"
     },
     {
-      "_id": "8871614",
+      "_id": "4411482",
       "title": "Dark Background",
       "color": "#1e293b"
     },
     {
-      "_id": "0705546",
+      "_id": "866071a",
       "title": "Border",
       "color": "#e2e8f0"
     },
     {
-      "_id": "08bf214",
+      "_id": "2d9a73c",
       "title": "Border 2",
       "color": "#e9e5f5"
     },
     {
-      "_id": "94f5cf6",
+      "_id": "9729465",
       "title": "Dark Surface",
       "color": "#334155"
     },
     {
-      "_id": "a9fbe14",
+      "_id": "ccbe583",
       "title": "Dark Surface 2",
       "color": "#475569"
+    },
+    {
+      "_id": "eb03881",
+      "title": "Text",
+      "color": "#0f172a"
+    },
+    {
+      "_id": "0d16bbb",
+      "title": "Primary",
+      "color": "#7c3aed"
+    },
+    {
+      "_id": "093dd35",
+      "title": "Accent",
+      "color": "#64748b"
     }
   ],
   "system_typography": [

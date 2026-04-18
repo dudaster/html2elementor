@@ -37,24 +37,39 @@ def _iter_html(tree: dict):
 
 def _find_html_nodes(tree: dict, target_text: str, target_tags: set[str]) -> list[dict]:
     """Find ALL HTML nodes whose text matches target_text and tag in target_tags.
-    Returns leaf/direct matches first, then full-text matches."""
+    Priority: exact direct match > target⊂direct > direct⊂target > target⊂full_text."""
     target_text = re.sub(r"\s+", " ", target_text.strip().lower())[:60]
     if not target_text:
         return []
-    leaf_matches: list[dict] = []
-    ancestor_matches: list[dict] = []
+    exact: list[dict] = []
+    target_in_direct: list[dict] = []
+    direct_in_target: list[dict] = []
+    in_fulltext: list[dict] = []
+    # For very short targets (≤4 chars like "AL", "42", "Linear"), prefer exact only
+    short_target = len(target_text) <= 5
     for node in _iter_html(tree):
         if target_tags and node.get("tag") not in target_tags:
             continue
         direct = re.sub(r"\s+", " ", (node.get("text") or "").strip().lower())[:60]
-        if direct and (target_text == direct or target_text in direct or direct in target_text and len(direct) >= max(8, int(len(target_text) * 0.6))):
-            leaf_matches.append(node)
-            continue
+        if direct:
+            if target_text == direct:
+                exact.append(node)
+                continue
+            if short_target:
+                # Don't allow fuzzy matches for short targets — avoids "AL" matching
+                # "alphabet" or "Linear" matching "VP Eng, Linear".
+                continue
+            if target_text in direct:
+                target_in_direct.append(node)
+                continue
+            if direct in target_text and len(direct) >= max(8, int(len(target_text) * 0.6)):
+                direct_in_target.append(node)
+                continue
         # Full (recursive) text — require target IS substring of full text (one direction only)
         txt = re.sub(r"\s+", " ", _all_text(node).lower())[:200]
         if txt and target_text in txt:
-            ancestor_matches.append(node)
-    return leaf_matches + ancestor_matches
+            in_fulltext.append(node)
+    return exact + target_in_direct + direct_in_target + in_fulltext
 
 
 def _find_html_node(tree: dict, target_text: str, target_tags: set[str]) -> dict | None:
@@ -168,8 +183,12 @@ def _ancestor_bg_is_dark(node: dict, tree: dict) -> bool:
     return False
 
 
-def _check_margin(widget: dict, node: dict, label: str, issues: list):
-    """Check if widget's _margin matches CSS margin properties."""
+def _check_margin(widget: dict, node: dict, label: str, issues: list, parent_absorbed: bool = False):
+    """Check if widget's _margin matches CSS margin properties.
+    If parent_absorbed is True, the parent container already applied the margin
+    (e.g., avatar pattern: circular container holds the margin, heading inside doesn't)."""
+    if parent_absorbed:
+        return
     css = node.get("styles", {})
     css_mb = px_to_int(css.get("margin-bottom", ""))
     css_mt = px_to_int(css.get("margin-top", ""))
@@ -205,7 +224,7 @@ def _check_max_width(widget: dict, node: dict, label: str, issues: list):
         issues.append(f"{label}.max-width: elementor={el_mw} vs css={css_mw}px")
 
 
-def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
+def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict, parent_absorbed_margin: bool = False):
     wtype = widget.get("widgetType")
     s = widget.get("settings", {})
 
@@ -228,14 +247,18 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
         # Color: resolve global, skip check on dark bg (inversion to white is intentional)
         el_color = _resolved_color(s, "title_color", kit_maps)
         is_dark_bg = _ancestor_bg_is_dark(node, html_tree)
-        if not (is_dark_bg and el_color and to_hex(el_color).lower().startswith("#ffffff")):
+        # Skip color check on emoji-only headings (inherit body color but emoji renders own)
+        has_letters = any(c.isalnum() and ord(c) < 0x2600 for c in title)
+        if not has_letters:
+            pass  # decorative emoji/symbol heading — no color to enforce
+        elif not (is_dark_bg and el_color and to_hex(el_color).lower().startswith("#ffffff")):
             _cmp_color(el_color, css.get("color", ""), f"heading[{tag}]\"{title[:30]}\".color", issues)
         el_size = _resolved_typo_size(s, "typography_font_size", kit_maps)
         css_size = px_to_int(css.get("font-size", ""))
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
             issues.append(f"heading[{tag}]\"{title[:30]}\".font-size: elementor={el_size}px vs css={css_size}px")
         _check_max_width(widget, node, f"heading[{tag}]\"{title[:30]}\"", issues)
-        _check_margin(widget, node, f"heading[{tag}]\"{title[:30]}\"", issues)
+        _check_margin(widget, node, f"heading[{tag}]\"{title[:30]}\"", issues, parent_absorbed_margin)
 
     elif wtype == "text-editor":
         text = _strip_html(s.get("editor", ""))[:40]
@@ -254,7 +277,7 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict):
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
             issues.append(f"text\"{text[:30]}\".font-size: elementor={el_size}px vs css={css_size}px")
         _check_max_width(widget, node, f"text\"{text[:30]}\"", issues)
-        _check_margin(widget, node, f"text\"{text[:30]}\"", issues)
+        _check_margin(widget, node, f"text\"{text[:30]}\"", issues, parent_absorbed_margin)
 
     elif wtype == "button":
         text = s.get("text", "")
@@ -372,9 +395,13 @@ def _check_section_bg(container: dict, html_section: dict, issues: list, kit_map
 
 
 def _check_container(container: dict, html_tree: dict, issues: list, kit_maps: dict, depth: int = 0):
+    # If this container has its own _margin set, its child widgets should NOT
+    # independently re-apply the same CSS margin (avatar pattern, styled wrappers).
+    absorbed = bool(container.get("settings", {}).get("_margin") or
+                    container.get("settings", {}).get("margin"))
     for child in container.get("elements", []):
         if child.get("elType") == "widget":
-            _check_widget(child, html_tree, issues, kit_maps)
+            _check_widget(child, html_tree, issues, kit_maps, parent_absorbed_margin=absorbed)
         elif child.get("elType") == "container":
             _check_container(child, html_tree, issues, kit_maps, depth + 1)
 
