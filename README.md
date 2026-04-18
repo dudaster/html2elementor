@@ -1,14 +1,15 @@
-# html2elementor
+# html2elementor — HTML → Elementor skill for Claude Code
 
-> **The first free, open-source HTML → Elementor JSON converter.** Paste HTML + CSS, get a `_elementor_data` payload you can import into WordPress.
+> **The first free, open-source HTML → Elementor JSON converter, packaged as a Claude Code skill.** Paste HTML + CSS, get a `_elementor_data` payload you can import into WordPress. Works as a standalone Python CLI or as a skill that Claude auto-invokes when you ask to "import this design into Elementor".
 
+[![Claude Code skill](https://img.shields.io/badge/claude%20code-skill-d97757.svg)](https://docs.anthropic.com/en/docs/claude-code)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Elementor](https://img.shields.io/badge/elementor-3.x+-ec4899.svg)](https://elementor.com/)
 
 Until now, every HTML → Elementor tool has been commercial (Web2Elementor, AI to Elementor, …). `html2elementor` is the first **fully open-source, local, zero-dependency-on-external-services** converter that emits clean Elementor container-based JSON from static HTML + CSS.
 
-It pairs naturally with AI-generated HTML — point an LLM at your design brief, run the output through this tool, and import the JSON into Elementor.
+Pairs naturally with AI-generated HTML: point an LLM at your design brief, run the output through this tool, and import the JSON into Elementor. Or install as a Claude Code skill and let Claude do all three steps for you.
 
 ---
 
@@ -69,6 +70,18 @@ pip install -r requirements.txt
 ```
 
 Requires Python 3.10+ and three tiny dependencies: `beautifulsoup4`, `tinycss2`, `cssselect2`. No browser, no Node, no services.
+
+### Install as a Claude Code skill
+
+`SKILL.md` at the repo root tells Claude when to invoke the tool. Clone straight into your skills folder:
+
+```bash
+git clone https://github.com/dudaster/html2elementor.git ~/.claude/skills/html2elementor
+cd ~/.claude/skills/html2elementor
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+```
+
+After that, prompts like *"convert landing.html to Elementor"* or *"import this mockup into the WP sandbox"* auto-trigger the skill — Claude runs the conversion, the verifier, and the import for you.
 
 ---
 
