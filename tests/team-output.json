@@ -1,6 +1,6 @@
 [
   {
-    "id": "63feab2",
+    "id": "239c90f",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -42,7 +42,7 @@
     },
     "elements": [
       {
-        "id": "a009971",
+        "id": "e124e20",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -62,7 +62,7 @@
         },
         "elements": [
           {
-            "id": "8206a91",
+            "id": "dce65f0",
             "elType": "widget",
             "settings": {
               "title": "Meridian",
@@ -85,7 +85,7 @@
         "isInner": true
       },
       {
-        "id": "220d8e6",
+        "id": "76c8e95",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -112,7 +112,7 @@
         },
         "elements": [
           {
-            "id": "b157518",
+            "id": "9fe6823",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -178,7 +178,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "ca533f7",
+            "id": "803f728",
             "elType": "widget",
             "settings": {
               "text": "Contact us",
@@ -228,7 +228,7 @@
     "isInner": false
   },
   {
-    "id": "4cca0d5",
+    "id": "9f6ea3d",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -265,7 +265,7 @@
     },
     "elements": [
       {
-        "id": "b5ac3a3",
+        "id": "cbf7bfe",
         "elType": "widget",
         "settings": {
           "title": "About Meridian",
@@ -306,7 +306,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "5bb5a7e",
+        "id": "36bde3f",
         "elType": "widget",
         "settings": {
           "title": "A small team of specialists, working directly with you.",
@@ -353,7 +353,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "755e43d",
+        "id": "0870771",
         "elType": "widget",
         "settings": {
           "editor": "<p>No layers, no middlemen. When you work with Meridian you work with the people making the work. That's a deliberate choice — and it's the reason we stay small.</p>",
@@ -382,7 +382,7 @@
     "isInner": false
   },
   {
-    "id": "d02d8cd",
+    "id": "4566792",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -412,7 +412,7 @@
     },
     "elements": [
       {
-        "id": "78bdbeb",
+        "id": "cb859dd",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -452,7 +452,7 @@
         },
         "elements": [
           {
-            "id": "e063c8c",
+            "id": "1da4182",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -479,7 +479,7 @@
             },
             "elements": [
               {
-                "id": "74b3a8d",
+                "id": "916b07c",
                 "elType": "widget",
                 "settings": {
                   "title": "8",
@@ -519,7 +519,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b8b5960",
+                "id": "0058280",
                 "elType": "widget",
                 "settings": {
                   "title": "People on the team",
@@ -542,7 +542,7 @@
             "isInner": true
           },
           {
-            "id": "9fa191c",
+            "id": "6dcf465",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -569,7 +569,7 @@
             },
             "elements": [
               {
-                "id": "d7057d4",
+                "id": "4025aff",
                 "elType": "widget",
                 "settings": {
                   "title": "62",
@@ -609,7 +609,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "bf8b77f",
+                "id": "f9cf2a9",
                 "elType": "widget",
                 "settings": {
                   "title": "Projects shipped",
@@ -632,7 +632,7 @@
             "isInner": true
           },
           {
-            "id": "145ae50",
+            "id": "adac569",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -659,7 +659,7 @@
             },
             "elements": [
               {
-                "id": "9d3c2c3",
+                "id": "379ed90",
                 "elType": "widget",
                 "settings": {
                   "title": "11",
@@ -699,7 +699,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c8902ef",
+                "id": "3ed29cc",
                 "elType": "widget",
                 "settings": {
                   "title": "Years running",
@@ -728,7 +728,7 @@
     "isInner": false
   },
   {
-    "id": "0f0be1c",
+    "id": "0da1b89",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -756,7 +756,7 @@
     },
     "elements": [
       {
-        "id": "1ab5368",
+        "id": "c84939c",
         "elType": "widget",
         "settings": {
           "title": "The team",
@@ -797,7 +797,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "2f1c02f",
+        "id": "98d926a",
         "elType": "widget",
         "settings": {
           "title": "Eight specialists, no juniors, no agency overhead.",
@@ -837,7 +837,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "e73519a",
+        "id": "92d3388",
         "elType": "widget",
         "settings": {
           "editor": "<p>Everyone you meet during the project stays on it. No handoffs between an account manager and the people doing the work.</p>",
@@ -864,7 +864,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "acefe27",
+        "id": "9b73efa",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -904,7 +904,7 @@
         },
         "elements": [
           {
-            "id": "7d1a427",
+            "id": "ad43241",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -931,7 +931,7 @@
             },
             "elements": [
               {
-                "id": "ba9a91c",
+                "id": "8ab01e3",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -966,7 +966,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "38c4a2a",
+                "id": "a94e92f",
                 "elType": "widget",
                 "settings": {
                   "title": "Elena Marchetti",
@@ -994,7 +994,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "9329e99",
+                "id": "9e87883",
                 "elType": "widget",
                 "settings": {
                   "title": "Founder, Strategy",
@@ -1022,7 +1022,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "91d9780",
+                "id": "16f2311",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>15 years across brand strategy and product consulting. Ex-IDEO.</p>",
@@ -1044,7 +1044,7 @@
             "isInner": true
           },
           {
-            "id": "353b9b1",
+            "id": "9b56904",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1071,7 +1071,7 @@
             },
             "elements": [
               {
-                "id": "013caff",
+                "id": "19e925c",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1106,7 +1106,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "43cab02",
+                "id": "b69311a",
                 "elType": "widget",
                 "settings": {
                   "title": "Kai Tanaka",
@@ -1134,7 +1134,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "a59e3d4",
+                "id": "c580f8a",
                 "elType": "widget",
                 "settings": {
                   "title": "Design Director",
@@ -1162,7 +1162,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ca2541b",
+                "id": "a3eca66",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Leads every engagement's creative direction. Previously at Pentagram.</p>",
@@ -1184,7 +1184,7 @@
             "isInner": true
           },
           {
-            "id": "7e2e89b",
+            "id": "3ab8567",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1211,7 +1211,7 @@
             },
             "elements": [
               {
-                "id": "fe7e548",
+                "id": "a8b93c6",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1246,7 +1246,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "36c4ac2",
+                "id": "bbcf66f",
                 "elType": "widget",
                 "settings": {
                   "title": "Ines Dubois",
@@ -1274,7 +1274,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ea96c70",
+                "id": "36582c3",
                 "elType": "widget",
                 "settings": {
                   "title": "Senior Designer",
@@ -1302,7 +1302,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "21f893e",
+                "id": "cf5d5ca",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Identity systems and editorial design. Teaches a weekend workshop in Lyon.</p>",
@@ -1324,7 +1324,7 @@
             "isInner": true
           },
           {
-            "id": "d4ba409",
+            "id": "ee0faf3",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1351,7 +1351,7 @@
             },
             "elements": [
               {
-                "id": "b3bc632",
+                "id": "20c7532",
                 "elType": "widget",
                 "settings": {
                   "image": {
@@ -1386,7 +1386,7 @@
                 "widgetType": "image"
               },
               {
-                "id": "d4150d4",
+                "id": "fba752c",
                 "elType": "widget",
                 "settings": {
                   "title": "Marco Oliveira",
@@ -1414,7 +1414,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b60db8c",
+                "id": "2f82148",
                 "elType": "widget",
                 "settings": {
                   "title": "Motion & 3D",
@@ -1442,7 +1442,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "68d3fab",
+                "id": "6e6972d",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Ten years in broadcast and film. Handles everything that moves.</p>",
@@ -1470,7 +1470,7 @@
     "isInner": false
   },
   {
-    "id": "3ae020f",
+    "id": "d9e9d5d",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1500,7 +1500,7 @@
     },
     "elements": [
       {
-        "id": "15e5cac",
+        "id": "e1a5eeb",
         "elType": "widget",
         "settings": {
           "title": "How we work.",
@@ -1540,7 +1540,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "eda947a",
+        "id": "1d82278",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1580,7 +1580,7 @@
         },
         "elements": [
           {
-            "id": "aa3d5fe",
+            "id": "0ce647d",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1607,7 +1607,7 @@
             },
             "elements": [
               {
-                "id": "9f16d1b",
+                "id": "509a9dc",
                 "elType": "widget",
                 "settings": {
                   "title": "Small, senior, shipping.",
@@ -1635,7 +1635,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "54fb2e0",
+                "id": "67aca47",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Everyone on the team has been designing for a decade or more. We don't pair juniors with clients and we don't staff up for proposals we haven't won.</p>",
@@ -1657,7 +1657,7 @@
             "isInner": true
           },
           {
-            "id": "6a3c693",
+            "id": "c8d1878",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1684,7 +1684,7 @@
             },
             "elements": [
               {
-                "id": "06fe3d9",
+                "id": "495f830",
                 "elType": "widget",
                 "settings": {
                   "title": "Fixed scope, fixed price.",
@@ -1712,7 +1712,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "802a18d",
+                "id": "3f5e320",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We don't sell retainers or time-and-materials. You'll get a proposal with a clear scope, a clear price, and a clear end date — then we deliver it.</p>",
@@ -1737,7 +1737,7 @@
         "isInner": true
       },
       {
-        "id": "2dc32ec",
+        "id": "72e6266",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1777,7 +1777,7 @@
         },
         "elements": [
           {
-            "id": "a8b155f",
+            "id": "232c82c",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1804,7 +1804,7 @@
             },
             "elements": [
               {
-                "id": "1d54fed",
+                "id": "eb4fe92",
                 "elType": "widget",
                 "settings": {
                   "title": "One studio, one team.",
@@ -1832,7 +1832,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "5400bdf",
+                "id": "ba3badb",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>No outsourcing, no contractor networks. Everything we ship is made by the people whose names are on the website.</p>",
@@ -1854,7 +1854,7 @@
             "isInner": true
           },
           {
-            "id": "e36ae53",
+            "id": "3f1ccf9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1881,7 +1881,7 @@
             },
             "elements": [
               {
-                "id": "bee8540",
+                "id": "42d4aa3",
                 "elType": "widget",
                 "settings": {
                   "title": "In public, if possible.",
@@ -1909,7 +1909,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "02cb8c7",
+                "id": "6221595",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We'd rather publish a weekly update on our journal than polish a pitch deck. If your work lets us share process publicly, it's a plus.</p>",
@@ -1937,7 +1937,7 @@
     "isInner": false
   },
   {
-    "id": "d3af177",
+    "id": "ef59103",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1965,7 +1965,7 @@
     },
     "elements": [
       {
-        "id": "32f9a23",
+        "id": "6d21209",
         "elType": "widget",
         "settings": {
           "title": "Got a project we might be right for?",
@@ -2012,7 +2012,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b419c50",
+        "id": "a0428ec",
         "elType": "widget",
         "settings": {
           "editor": "<p>We take on four or five new engagements each year. Tell us what you're working on and we'll come back within three working days.</p>",
@@ -2046,7 +2046,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "c016900",
+        "id": "47775ce",
         "elType": "widget",
         "settings": {
           "text": "Start a conversation",
@@ -2093,7 +2093,7 @@
     "isInner": false
   },
   {
-    "id": "4471de7",
+    "id": "d165d0c",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2133,7 +2133,7 @@
     },
     "elements": [
       {
-        "id": "7254242",
+        "id": "6ba4707",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2173,7 +2173,7 @@
         },
         "elements": [
           {
-            "id": "765d8fc",
+            "id": "2c4f7c6",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2200,7 +2200,7 @@
             },
             "elements": [
               {
-                "id": "40cea71",
+                "id": "b86abfe",
                 "elType": "widget",
                 "settings": {
                   "title": "Meridian",
@@ -2228,7 +2228,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "721b2ea",
+                "id": "925eb23",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>An independent design studio based in Lisbon, working with founders and small teams across Europe since 2015.</p>",
@@ -2256,7 +2256,7 @@
             "isInner": true
           },
           {
-            "id": "af59f38",
+            "id": "5bd637f",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2283,7 +2283,7 @@
             },
             "elements": [
               {
-                "id": "a499ce2",
+                "id": "ee06c54",
                 "elType": "widget",
                 "settings": {
                   "title": "Studio",
@@ -2324,7 +2324,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "6a84cb0",
+                "id": "c2e5587",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2403,7 +2403,7 @@
             "isInner": true
           },
           {
-            "id": "34291b8",
+            "id": "b710f7e",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2430,7 +2430,7 @@
             },
             "elements": [
               {
-                "id": "2fa1b75",
+                "id": "ec0effe",
                 "elType": "widget",
                 "settings": {
                   "title": "Contact",
@@ -2471,7 +2471,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "25dc9c6",
+                "id": "7e02477",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2528,7 +2528,7 @@
             "isInner": true
           },
           {
-            "id": "70f6c1d",
+            "id": "74605a3",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2555,7 +2555,7 @@
             },
             "elements": [
               {
-                "id": "b50142c",
+                "id": "3e86b8b",
                 "elType": "widget",
                 "settings": {
                   "title": "Elsewhere",
@@ -2596,7 +2596,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "591ae86",
+                "id": "501ac0a",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2667,7 +2667,7 @@
         "isInner": true
       },
       {
-        "id": "890dcb0",
+        "id": "12b2fe4",
         "elType": "widget",
         "settings": {
           "title": "© 2026 Meridian Studio · Lisbon, Portugal",

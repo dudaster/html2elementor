@@ -1,6 +1,6 @@
 [
   {
-    "id": "adc3991",
+    "id": "5bdeddb",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -32,7 +32,7 @@
     },
     "elements": [
       {
-        "id": "7f3e3f3",
+        "id": "0a759c7",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -52,7 +52,7 @@
         },
         "elements": [
           {
-            "id": "e32450e",
+            "id": "e2159b3",
             "elType": "widget",
             "settings": {
               "title": "Dri <span style=\"color:#ea580c\">ft</span>",
@@ -75,7 +75,7 @@
         "isInner": true
       },
       {
-        "id": "30266ac",
+        "id": "1647f68",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -102,7 +102,7 @@
         },
         "elements": [
           {
-            "id": "36b78fa",
+            "id": "1528647",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -179,7 +179,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "00cc253",
+            "id": "cd98840",
             "elType": "widget",
             "settings": {
               "text": "Sign in",
@@ -229,7 +229,7 @@
     "isInner": false
   },
   {
-    "id": "c621df4",
+    "id": "c03bccf",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -257,7 +257,7 @@
     },
     "elements": [
       {
-        "id": "308c072",
+        "id": "2e47dfd",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -284,7 +284,7 @@
         },
         "elements": [
           {
-            "id": "6458239",
+            "id": "e6b8887",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -318,7 +318,7 @@
             },
             "elements": [
               {
-                "id": "cc89727",
+                "id": "f2bc014",
                 "elType": "widget",
                 "settings": {
                   "title": "BETA — INVITE ONLY",
@@ -366,7 +366,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "7892c6b",
+                "id": "b935071",
                 "elType": "widget",
                 "settings": {
                   "title": "A <span style=\"color:#ea580c\"><em>calmer</em></span> way to manage your money.",
@@ -406,7 +406,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "a18f37c",
+                "id": "947ac40",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Drift is a personal finance app for people who hate personal finance apps. No dopamine hits, no aggressive notifications — just the numbers, rendered honestly.</p>",
@@ -439,62 +439,125 @@
                 "widgetType": "text-editor"
               },
               {
-                "id": "51f0ffe",
-                "elType": "widget",
+                "id": "614d1d0",
+                "elType": "container",
                 "settings": {
-                  "view": "traditional",
-                  "space_between": {
+                  "content_width": "full",
+                  "flex_direction": "row",
+                  "flex_justify_content": "flex-start",
+                  "flex_align_items": "center",
+                  "flex_gap": {
                     "unit": "px",
-                    "size": 10,
-                    "sizes": []
+                    "size": 12,
+                    "column": "12",
+                    "row": "12"
                   },
-                  "icon_list": [
-                    {
-                      "text": "Request an invite",
-                      "link": {
-                        "url": "#",
-                        "is_external": false
-                      },
-                      "selected_icon": {
-                        "value": "",
-                        "library": ""
-                      }
-                    },
-                    {
-                      "text": "See how it works",
-                      "link": {
-                        "url": "#",
-                        "is_external": false
-                      },
-                      "selected_icon": {
-                        "value": "",
-                        "library": ""
-                      }
-                    }
-                  ],
-                  "icon_typography_typography": "custom",
-                  "icon_typography_font_family": "Inter",
-                  "icon_typography_font_size": {
+                  "padding": {
                     "unit": "px",
-                    "size": "15",
-                    "sizes": []
-                  },
-                  "icon_typography_font_weight": "600",
-                  "icon_typography_line_height": {
-                    "unit": "em",
-                    "size": 1.5,
-                    "sizes": []
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
                   },
                   "__globals__": {
-                    "text_color": "globals/colors?id=a9c31c7",
                     "typography_typography": "globals/typography?id=text"
                   }
                 },
-                "elements": [],
-                "widgetType": "icon-list"
+                "elements": [
+                  {
+                    "id": "c4d2ac0",
+                    "elType": "widget",
+                    "settings": {
+                      "text": "Request an invite",
+                      "link": {
+                        "url": "#",
+                        "is_external": false,
+                        "nofollow": false
+                      },
+                      "size": "md",
+                      "align": "left",
+                      "border_radius": {
+                        "unit": "px",
+                        "top": "10",
+                        "right": "10",
+                        "bottom": "10",
+                        "left": "10",
+                        "isLinked": true
+                      },
+                      "button_background_hover_color": "#cd4d0a",
+                      "typography_line_height": {
+                        "unit": "em",
+                        "size": 1.5,
+                        "sizes": []
+                      },
+                      "text_padding": {
+                        "unit": "px",
+                        "top": "16",
+                        "right": "28",
+                        "bottom": "16",
+                        "left": "28",
+                        "isLinked": false
+                      },
+                      "__globals__": {
+                        "button_text_color": "globals/colors?id=a9c31c7",
+                        "button_hover_text_color": "globals/colors?id=a9c31c7",
+                        "background_color": "globals/colors?id=455f652",
+                        "typography_typography": "globals/typography?id=54fd601"
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "button"
+                  },
+                  {
+                    "id": "51a3927",
+                    "elType": "widget",
+                    "settings": {
+                      "text": "See how it works",
+                      "link": {
+                        "url": "#",
+                        "is_external": false,
+                        "nofollow": false
+                      },
+                      "size": "md",
+                      "align": "left",
+                      "border_radius": {
+                        "unit": "px",
+                        "top": "10",
+                        "right": "10",
+                        "bottom": "10",
+                        "left": "10",
+                        "isLinked": true
+                      },
+                      "button_background_hover_color": "#e0dcd7",
+                      "typography_line_height": {
+                        "unit": "em",
+                        "size": 1.5,
+                        "sizes": []
+                      },
+                      "text_padding": {
+                        "unit": "px",
+                        "top": "16",
+                        "right": "28",
+                        "bottom": "16",
+                        "left": "28",
+                        "isLinked": false
+                      },
+                      "__globals__": {
+                        "button_text_color": "globals/colors?id=a83b460",
+                        "button_hover_text_color": "globals/colors?id=a83b460",
+                        "background_color": "globals/colors?id=a9c31c7",
+                        "typography_typography": "globals/typography?id=54fd601"
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "button"
+                  }
+                ],
+                "isInner": true
               },
               {
-                "id": "4b0f204",
+                "id": "8e0398a",
                 "elType": "widget",
                 "settings": {
                   "title": "Free while in beta. 12,800 people on the waitlist.",
@@ -531,7 +594,7 @@
             "isInner": true
           },
           {
-            "id": "906fbe2",
+            "id": "4ec128a",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -568,7 +631,7 @@
             },
             "elements": [
               {
-                "id": "a83be30",
+                "id": "e8ae8cb",
                 "elType": "widget",
                 "settings": {
                   "title": "Net worth",
@@ -609,7 +672,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b558779",
+                "id": "20d774e",
                 "elType": "widget",
                 "settings": {
                   "title": "$128,450 <span style=\"color:#16a34a\">+2.4% this month</span>",
@@ -658,7 +721,7 @@
     "isInner": false
   },
   {
-    "id": "e783a71",
+    "id": "44bfcb6",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -686,7 +749,7 @@
     },
     "elements": [
       {
-        "id": "f8809a3",
+        "id": "872e954",
         "elType": "widget",
         "settings": {
           "title": "What makes Drift different",
@@ -727,7 +790,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "6502192",
+        "id": "052be5e",
         "elType": "widget",
         "settings": {
           "title": "Calm, honest, and yours.",
@@ -767,7 +830,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "643c332",
+        "id": "c11d374",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -807,7 +870,7 @@
         },
         "elements": [
           {
-            "id": "228170a",
+            "id": "2e24ed8",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -844,7 +907,7 @@
             },
             "elements": [
               {
-                "id": "e0bfd37",
+                "id": "4d54623",
                 "elType": "widget",
                 "settings": {
                   "title": "🌿",
@@ -872,7 +935,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4fd7668",
+                "id": "f25b3e1",
                 "elType": "widget",
                 "settings": {
                   "title": "No dark patterns",
@@ -900,7 +963,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "2656a61",
+                "id": "4eb87dd",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We don't optimize for engagement. You open Drift when you need to, not when we send a push notification.</p>",
@@ -922,7 +985,7 @@
             "isInner": true
           },
           {
-            "id": "6a090f3",
+            "id": "08b5151",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -959,7 +1022,7 @@
             },
             "elements": [
               {
-                "id": "afd18fc",
+                "id": "409c4f3",
                 "elType": "widget",
                 "settings": {
                   "title": "🔒",
@@ -987,7 +1050,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "87a61e5",
+                "id": "f9f5f86",
                 "elType": "widget",
                 "settings": {
                   "title": "Local-first data",
@@ -1015,7 +1078,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d3d9627",
+                "id": "3851e78",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Your financial data lives on your device. We never see your balances, transactions, or goals. Encrypted sync is optional.</p>",
@@ -1037,7 +1100,7 @@
             "isInner": true
           },
           {
-            "id": "531f080",
+            "id": "b3c9611",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1074,7 +1137,7 @@
             },
             "elements": [
               {
-                "id": "5969706",
+                "id": "a2b0b00",
                 "elType": "widget",
                 "settings": {
                   "title": "📊",
@@ -1102,7 +1165,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ab9efb7",
+                "id": "a5ac193",
                 "elType": "widget",
                 "settings": {
                   "title": "Boring by design",
@@ -1130,7 +1193,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f5791c0",
+                "id": "2a56d79",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Simple charts, text-heavy summaries, no gradients. We'd rather be useful than look impressive.</p>",
@@ -1158,7 +1221,7 @@
     "isInner": false
   },
   {
-    "id": "0978c2a",
+    "id": "f002493",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1188,7 +1251,7 @@
     },
     "elements": [
       {
-        "id": "a7daea4",
+        "id": "4e90868",
         "elType": "widget",
         "settings": {
           "title": "Get the beta invite.",
@@ -1228,7 +1291,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "b8be393",
+        "id": "43fb329",
         "elType": "widget",
         "settings": {
           "editor": "<p>Drop your email. We'll send your invite as soon as a spot opens — usually within two weeks.</p>",
@@ -1262,7 +1325,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "f3108a4",
+        "id": "c106ab7",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1289,7 +1352,7 @@
         },
         "elements": [
           {
-            "id": "3cc873a",
+            "id": "b71485f",
             "elType": "widget",
             "settings": {
               "editor": "<input type=\"email\" placeholder=\"you@example.com\" style=\"width:100%;padding:14px 18px;border-radius:10px;border:1px solid #44403c;background:#1c1917;color:#fffbf5;font-size:14px;font-family:inherit;outline:none;box-sizing:border-box\">",
@@ -1304,7 +1367,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "0398313",
+            "id": "6351452",
             "elType": "widget",
             "settings": {
               "text": "Join waitlist",
@@ -1351,7 +1414,7 @@
         "isInner": true
       },
       {
-        "id": "d9c61aa",
+        "id": "6f2aa44",
         "elType": "widget",
         "settings": {
           "editor": "<p>We don't track you. We never share your email. Unsubscribe in one click.</p>",
@@ -1388,7 +1451,7 @@
     "isInner": false
   },
   {
-    "id": "23f5a15",
+    "id": "41ce5e8",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1428,7 +1491,7 @@
     },
     "elements": [
       {
-        "id": "2c04651",
+        "id": "9cc91ec",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1468,7 +1531,7 @@
         },
         "elements": [
           {
-            "id": "707329b",
+            "id": "9bac5e1",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1495,7 +1558,7 @@
             },
             "elements": [
               {
-                "id": "79642d2",
+                "id": "ff47fff",
                 "elType": "widget",
                 "settings": {
                   "title": "Dri <span style=\"color:#ea580c\">ft</span>",
@@ -1523,7 +1586,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ebac203",
+                "id": "ec528d8",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>A personal finance app for people who'd rather not think about personal finance apps. Made in Amsterdam.</p>",
@@ -1551,7 +1614,7 @@
             "isInner": true
           },
           {
-            "id": "1a9599b",
+            "id": "4f8b158",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1578,7 +1641,7 @@
             },
             "elements": [
               {
-                "id": "44e4be4",
+                "id": "6e8cf0b",
                 "elType": "widget",
                 "settings": {
                   "title": "Product",
@@ -1619,7 +1682,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8221a33",
+                "id": "162e5f8",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -1698,7 +1761,7 @@
             "isInner": true
           },
           {
-            "id": "f9483b1",
+            "id": "8611197",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1725,7 +1788,7 @@
             },
             "elements": [
               {
-                "id": "403c7d9",
+                "id": "1dd6392",
                 "elType": "widget",
                 "settings": {
                   "title": "Company",
@@ -1766,7 +1829,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "9e02cc3",
+                "id": "cae0190",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -1845,7 +1908,7 @@
             "isInner": true
           },
           {
-            "id": "fc86588",
+            "id": "a8d160e",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1872,7 +1935,7 @@
             },
             "elements": [
               {
-                "id": "d6cd709",
+                "id": "c874ae5",
                 "elType": "widget",
                 "settings": {
                   "title": "Legal",
@@ -1913,7 +1976,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "fab9e4a",
+                "id": "4eccf0d",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -1984,7 +2047,7 @@
         "isInner": true
       },
       {
-        "id": "664fe16",
+        "id": "1c9d6f6",
         "elType": "widget",
         "settings": {
           "title": "© 2026 Drift Finance BV · Amsterdam",

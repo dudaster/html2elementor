@@ -1,6 +1,6 @@
 [
   {
-    "id": "e72a995",
+    "id": "0dc5217",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -32,7 +32,7 @@
     },
     "elements": [
       {
-        "id": "127a447",
+        "id": "df51cd1",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -52,7 +52,7 @@
         },
         "elements": [
           {
-            "id": "55d54e8",
+            "id": "7474bf4",
             "elType": "widget",
             "settings": {
               "title": "Vol <span style=\"color:#7c3aed\">ta</span>",
@@ -75,7 +75,7 @@
         "isInner": true
       },
       {
-        "id": "1f07a2b",
+        "id": "986cdd4",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -102,7 +102,7 @@
         },
         "elements": [
           {
-            "id": "18c3a68",
+            "id": "ff4e787",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -179,7 +179,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "1febd2a",
+            "id": "25a7451",
             "elType": "widget",
             "settings": {
               "text": "Log in",
@@ -229,7 +229,7 @@
     "isInner": false
   },
   {
-    "id": "50e68d4",
+    "id": "06ed0ef",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -257,7 +257,7 @@
     },
     "elements": [
       {
-        "id": "06feaa0",
+        "id": "a7a97df",
         "elType": "widget",
         "settings": {
           "title": "✨ Now with agentic workflows",
@@ -305,7 +305,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "ba1e554",
+        "id": "247663a",
         "elType": "widget",
         "settings": {
           "title": "Resolve support tickets with an AI that actually understands your product.",
@@ -352,7 +352,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a954257",
+        "id": "e8c3fea",
         "elType": "widget",
         "settings": {
           "editor": "<p>Volta reads your docs, your past tickets, and your product itself — so the answers it gives customers are accurate, in your voice, and never hallucinated.</p>",
@@ -386,64 +386,135 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "c1deb8f",
-        "elType": "widget",
+        "id": "fc9538c",
+        "elType": "container",
         "settings": {
-          "view": "traditional",
-          "space_between": {
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_justify_content": "center",
+          "flex_align_items": "center",
+          "flex_gap": {
             "unit": "px",
-            "size": 10,
-            "sizes": []
+            "size": 12,
+            "column": "12",
+            "row": "12"
           },
-          "icon_list": [
-            {
-              "text": "Book a demo",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "See it in action",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            }
-          ],
-          "icon_typography_typography": "custom",
-          "icon_typography_font_family": "Inter",
-          "icon_typography_font_size": {
+          "padding": {
             "unit": "px",
-            "size": "15",
-            "sizes": []
-          },
-          "icon_typography_font_weight": "600",
-          "icon_typography_line_height": {
-            "unit": "em",
-            "size": 1.5,
-            "sizes": []
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
           },
           "__globals__": {
             "typography_typography": "globals/typography?id=text"
           }
         },
-        "elements": [],
-        "widgetType": "icon-list"
+        "elements": [
+          {
+            "id": "7457af8",
+            "elType": "widget",
+            "settings": {
+              "text": "Book a demo",
+              "link": {
+                "url": "#",
+                "is_external": false,
+                "nofollow": false
+              },
+              "size": "md",
+              "align": "center",
+              "border_radius": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "background_color": "#ffffff00",
+              "border_border": "none",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.5,
+                "sizes": []
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=54fd601"
+              }
+            },
+            "elements": [],
+            "widgetType": "button"
+          },
+          {
+            "id": "b42af23",
+            "elType": "widget",
+            "settings": {
+              "text": "See it in action",
+              "link": {
+                "url": "#",
+                "is_external": false,
+                "nofollow": false
+              },
+              "size": "md",
+              "align": "center",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "background_color": "#ffffff00",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "button_background_hover_color": "#00000010",
+              "button_hover_text_color": "#0c1323",
+              "typography_line_height": {
+                "unit": "em",
+                "size": 1.5,
+                "sizes": []
+              },
+              "text_padding": {
+                "unit": "px",
+                "top": "14",
+                "right": "28",
+                "bottom": "14",
+                "left": "28",
+                "isLinked": false
+              },
+              "__globals__": {
+                "button_text_color": "globals/colors?id=eb03881",
+                "typography_typography": "globals/typography?id=54fd601"
+              }
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
       }
     ],
     "isInner": false
   },
   {
-    "id": "33386bf",
+    "id": "45e069e",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -482,7 +553,7 @@
     },
     "elements": [
       {
-        "id": "1852f3f",
+        "id": "40f9cfe",
         "elType": "widget",
         "settings": {
           "title": "Trusted by teams at",
@@ -523,7 +594,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a3e7b5b",
+        "id": "953d124",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -550,7 +621,7 @@
         },
         "elements": [
           {
-            "id": "2b404e1",
+            "id": "ae3dee0",
             "elType": "widget",
             "settings": {
               "title": "Linear",
@@ -570,7 +641,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "5c743ae",
+            "id": "79d4477",
             "elType": "widget",
             "settings": {
               "title": "Notion",
@@ -590,7 +661,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "6f942a0",
+            "id": "ca702f1",
             "elType": "widget",
             "settings": {
               "title": "Vercel",
@@ -610,7 +681,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "16b827b",
+            "id": "fda4b16",
             "elType": "widget",
             "settings": {
               "title": "Cal.com",
@@ -630,7 +701,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "ac85ed0",
+            "id": "545ccea",
             "elType": "widget",
             "settings": {
               "title": "Raycast",
@@ -656,7 +727,7 @@
     "isInner": false
   },
   {
-    "id": "d1450fe",
+    "id": "4de6b7a",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -684,18 +755,139 @@
     },
     "elements": [
       {
-        "id": "b915adc",
+        "id": "a5c086a",
+        "elType": "widget",
+        "settings": {
+          "title": "Why Volta",
+          "header_size": "div",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Inter",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "13",
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.5,
+            "sizes": []
+          },
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": 2,
+            "sizes": []
+          },
+          "typography_text_transform": "uppercase",
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=dac5788"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "2ceb92c",
+        "elType": "widget",
+        "settings": {
+          "title": "Built for teams that care about their customers.",
+          "header_size": "h2",
+          "align": "center",
+          "typography_typography": "custom",
+          "typography_font_family": "Inter",
+          "typography_font_size": {
+            "unit": "px",
+            "size": "44",
+            "sizes": []
+          },
+          "typography_font_weight": "800",
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.5,
+            "sizes": []
+          },
+          "typography_letter_spacing": {
+            "unit": "px",
+            "size": -1,
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "16",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "title_color": "globals/colors?id=eb03881"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "37e2617",
+        "elType": "widget",
+        "settings": {
+          "editor": "<p>Stop copy-pasting the same answer 40 times a week. Let Volta handle the repeatable questions so your team can focus on the hard ones.</p>",
+          "align": "center",
+          "typography_line_height": {
+            "unit": "em",
+            "size": 1.6,
+            "sizes": []
+          },
+          "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "72",
+            "left": "0",
+            "isLinked": false
+          },
+          "__globals__": {
+            "text_color": "globals/colors?id=c47c4d6",
+            "typography_typography": "globals/typography?id=797ba1a"
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "6bf994b",
         "elType": "container",
         "settings": {
           "content_width": "full",
-          "flex_direction": "column",
-          "flex_align_items": "center",
-          "flex_justify_content": "flex-start",
+          "flex_direction": "row",
+          "flex_direction_tablet": "row",
+          "flex_direction_mobile": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "stretch",
           "flex_gap": {
             "unit": "px",
-            "size": 12,
-            "column": "12",
-            "row": "12"
+            "size": 24,
+            "column": "24",
+            "row": "24"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 24,
+            "column": "24",
+            "row": "24"
+          },
+          "width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
           },
           "padding": {
             "unit": "px",
@@ -711,145 +903,7 @@
         },
         "elements": [
           {
-            "id": "5dddc67",
-            "elType": "widget",
-            "settings": {
-              "title": "Why Volta",
-              "header_size": "div",
-              "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "Inter",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "13",
-                "sizes": []
-              },
-              "typography_font_weight": "700",
-              "typography_line_height": {
-                "unit": "em",
-                "size": 1.5,
-                "sizes": []
-              },
-              "typography_letter_spacing": {
-                "unit": "px",
-                "size": 2,
-                "sizes": []
-              },
-              "typography_text_transform": "uppercase",
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "16",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "title_color": "globals/colors?id=dac5788"
-              }
-            },
-            "elements": [],
-            "widgetType": "heading"
-          },
-          {
-            "id": "dd4cca3",
-            "elType": "widget",
-            "settings": {
-              "title": "Built for teams that care about their customers.",
-              "header_size": "h2",
-              "align": "center",
-              "typography_typography": "custom",
-              "typography_font_family": "Inter",
-              "typography_font_size": {
-                "unit": "px",
-                "size": "44",
-                "sizes": []
-              },
-              "typography_font_weight": "800",
-              "typography_line_height": {
-                "unit": "em",
-                "size": 1.5,
-                "sizes": []
-              },
-              "typography_letter_spacing": {
-                "unit": "px",
-                "size": -1,
-                "sizes": []
-              },
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "16",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "title_color": "globals/colors?id=eb03881"
-              }
-            },
-            "elements": [],
-            "widgetType": "heading"
-          },
-          {
-            "id": "a1c45c0",
-            "elType": "widget",
-            "settings": {
-              "editor": "<p>Stop copy-pasting the same answer 40 times a week. Let Volta handle the repeatable questions so your team can focus on the hard ones.</p>",
-              "align": "center",
-              "typography_line_height": {
-                "unit": "em",
-                "size": 1.6,
-                "sizes": []
-              },
-              "_margin": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "72",
-                "left": "0",
-                "isLinked": false
-              },
-              "__globals__": {
-                "text_color": "globals/colors?id=c47c4d6",
-                "typography_typography": "globals/typography?id=797ba1a"
-              }
-            },
-            "elements": [],
-            "widgetType": "text-editor"
-          }
-        ],
-        "isInner": true
-      },
-      {
-        "id": "bfcec16",
-        "elType": "container",
-        "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "flex_align_items": "flex-start",
-          "flex_justify_content": "flex-start",
-          "flex_gap": {
-            "unit": "px",
-            "size": 24,
-            "column": "24",
-            "row": "24"
-          },
-          "padding": {
-            "unit": "px",
-            "top": "32",
-            "right": "32",
-            "bottom": "32",
-            "left": "32",
-            "isLinked": true
-          },
-          "__globals__": {
-            "typography_typography": "globals/typography?id=text"
-          }
-        },
-        "elements": [
-          {
-            "id": "858e4d7",
+            "id": "53e215a",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -895,7 +949,7 @@
             },
             "elements": [
               {
-                "id": "18dcb19",
+                "id": "8af18b1",
                 "elType": "widget",
                 "settings": {
                   "title": "🎯",
@@ -935,7 +989,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "af06602",
+                "id": "a6270d4",
                 "elType": "widget",
                 "settings": {
                   "title": "Grounded in your data",
@@ -963,7 +1017,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "a1facf9",
+                "id": "a3c31c5",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Volta only answers from sources you connect. No hallucinations, no made-up policies, no confident nonsense.</p>",
@@ -985,7 +1039,7 @@
             "isInner": true
           },
           {
-            "id": "7ec4b2b",
+            "id": "a05c1ac",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1031,7 +1085,7 @@
             },
             "elements": [
               {
-                "id": "b2ee4b3",
+                "id": "3c6eecb",
                 "elType": "widget",
                 "settings": {
                   "title": "⚡",
@@ -1071,7 +1125,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "7f4ab4b",
+                "id": "a876634",
                 "elType": "widget",
                 "settings": {
                   "title": "Sub-second responses",
@@ -1099,7 +1153,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4e0864b",
+                "id": "d734291",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>We cache everything at the edge. Customers see the first token in under 300ms, anywhere in the world.</p>",
@@ -1121,7 +1175,7 @@
             "isInner": true
           },
           {
-            "id": "2dfff4e",
+            "id": "68e24f6",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1167,7 +1221,7 @@
             },
             "elements": [
               {
-                "id": "b5167c0",
+                "id": "66c0ef4",
                 "elType": "widget",
                 "settings": {
                   "title": "🛡️",
@@ -1207,7 +1261,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "da1e13e",
+                "id": "438ed62",
                 "elType": "widget",
                 "settings": {
                   "title": "SOC 2 compliant",
@@ -1235,7 +1289,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4181248",
+                "id": "f4c4d75",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Your customer data never trains a model. SOC 2 Type II, GDPR, and HIPAA available on Enterprise.</p>",
@@ -1263,7 +1317,7 @@
     "isInner": false
   },
   {
-    "id": "3353189",
+    "id": "85991b8",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1293,7 +1347,7 @@
     },
     "elements": [
       {
-        "id": "9ae264c",
+        "id": "c40b32a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -1333,7 +1387,7 @@
         },
         "elements": [
           {
-            "id": "65a4bd7",
+            "id": "ec3b017",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1360,7 +1414,7 @@
             },
             "elements": [
               {
-                "id": "511226d",
+                "id": "6034f76",
                 "elType": "widget",
                 "settings": {
                   "title": "82%",
@@ -1400,7 +1454,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "caf3ada",
+                "id": "d41a0ac",
                 "elType": "widget",
                 "settings": {
                   "title": "Tickets deflected",
@@ -1436,7 +1490,7 @@
             "isInner": true
           },
           {
-            "id": "39ec963",
+            "id": "5cde1a0",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1463,7 +1517,7 @@
             },
             "elements": [
               {
-                "id": "75450ec",
+                "id": "d6545e4",
                 "elType": "widget",
                 "settings": {
                   "title": "2.4M",
@@ -1503,7 +1557,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d4f4ef2",
+                "id": "e898a24",
                 "elType": "widget",
                 "settings": {
                   "title": "Conversations handled",
@@ -1539,7 +1593,7 @@
             "isInner": true
           },
           {
-            "id": "3bee7a9",
+            "id": "1d07ea9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1566,7 +1620,7 @@
             },
             "elements": [
               {
-                "id": "7cae968",
+                "id": "8a1ee7e",
                 "elType": "widget",
                 "settings": {
                   "title": "280ms",
@@ -1606,7 +1660,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "60c8ee3",
+                "id": "00ffab8",
                 "elType": "widget",
                 "settings": {
                   "title": "Median response",
@@ -1642,7 +1696,7 @@
             "isInner": true
           },
           {
-            "id": "19679be",
+            "id": "35d76d9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1669,7 +1723,7 @@
             },
             "elements": [
               {
-                "id": "cb54b57",
+                "id": "84048dc",
                 "elType": "widget",
                 "settings": {
                   "title": "4.8/5",
@@ -1709,7 +1763,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "5339277",
+                "id": "b20c9a4",
                 "elType": "widget",
                 "settings": {
                   "title": "CSAT score",
@@ -1751,7 +1805,7 @@
     "isInner": false
   },
   {
-    "id": "224171c",
+    "id": "7bcf4cb",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1779,7 +1833,7 @@
     },
     "elements": [
       {
-        "id": "406aff6",
+        "id": "169ef84",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1823,7 +1877,7 @@
         },
         "elements": [
           {
-            "id": "5d75da5",
+            "id": "2d90d51",
             "elType": "widget",
             "settings": {
               "title": "Turn your support inbox from a cost center into a delight.",
@@ -1870,7 +1924,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "71323bb",
+            "id": "56e77b4",
             "elType": "widget",
             "settings": {
               "editor": "<p>Free 30-day trial on all plans. No credit card, no sales call required to get started.</p>",
@@ -1904,7 +1958,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "c6dc4aa",
+            "id": "ee0947b",
             "elType": "widget",
             "settings": {
               "text": "Start your trial",
@@ -1954,7 +2008,7 @@
     "isInner": false
   },
   {
-    "id": "f5a19ff",
+    "id": "0988650",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1993,7 +2047,7 @@
     },
     "elements": [
       {
-        "id": "79517ad",
+        "id": "d34f22d",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2033,7 +2087,7 @@
         },
         "elements": [
           {
-            "id": "af65360",
+            "id": "ad7189a",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2060,7 +2114,7 @@
             },
             "elements": [
               {
-                "id": "5e328a4",
+                "id": "b39579a",
                 "elType": "widget",
                 "settings": {
                   "title": "Vol <span style=\"color:#7c3aed\">ta</span>",
@@ -2088,7 +2142,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "dddf7ae",
+                "id": "0fea76f",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>AI support agents for product teams. Based in San Francisco, trusted worldwide since 2023.</p>",
@@ -2110,7 +2164,7 @@
             "isInner": true
           },
           {
-            "id": "b79fbee",
+            "id": "f3b5284",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2137,7 +2191,7 @@
             },
             "elements": [
               {
-                "id": "7741310",
+                "id": "150fa3f",
                 "elType": "widget",
                 "settings": {
                   "title": "Product",
@@ -2178,7 +2232,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f7eddad",
+                "id": "12fade8",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2257,7 +2311,7 @@
             "isInner": true
           },
           {
-            "id": "ff742fa",
+            "id": "1d81f79",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2284,7 +2338,7 @@
             },
             "elements": [
               {
-                "id": "3b4aef7",
+                "id": "96c03ea",
                 "elType": "widget",
                 "settings": {
                   "title": "Resources",
@@ -2325,7 +2379,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f12ce34",
+                "id": "8f0bbac",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2404,7 +2458,7 @@
             "isInner": true
           },
           {
-            "id": "559ce45",
+            "id": "b766a53",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2431,7 +2485,7 @@
             },
             "elements": [
               {
-                "id": "87b5f2f",
+                "id": "bc80a4f",
                 "elType": "widget",
                 "settings": {
                   "title": "Company",
@@ -2472,7 +2526,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "5f96f0c",
+                "id": "8532ac0",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2554,7 +2608,7 @@
         "isInner": true
       },
       {
-        "id": "9c43ebd",
+        "id": "273f266",
         "elType": "widget",
         "settings": {
           "title": "© 2026 Volta AI, Inc. Made in San Francisco.",

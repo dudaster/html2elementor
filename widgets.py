@@ -436,7 +436,9 @@ def _input_widget(node: dict) -> dict:
 
 def _is_link_list(node: dict) -> bool:
     """A div whose children are: 0 or 1 heading (h1-h6 or similar) + N anchors.
-    Common footer-column or sidebar pattern."""
+    Common footer-column or sidebar pattern.
+    Excludes anchor groups where any anchor looks like a button (styled as CTA) —
+    those are button rows and should be emitted as individual button widgets."""
     children = node.get("children", [])
     if len(children) < 2:
         return False
@@ -447,6 +449,9 @@ def _is_link_list(node: dict) -> bool:
     for c in children:
         if c.get("tag") not in allowed_tags:
             return False
+    # If ANY anchor is styled like a button, this is a CTA row, not a link list.
+    if any(looks_like_button(a) for a in anchors):
+        return False
     return True
 
 
@@ -851,21 +856,48 @@ def _image_row_widget(node: dict) -> dict:
 def _is_card_grid(node: dict) -> bool:
     """A div with 2+ direct child divs that each have meaningful content.
     Content = heading/p/blockquote tags OR leaf divs/spans with text.
-    Returns False if the parent has SIBLING heading/paragraph content outside
-    the divs — that's a regular section with mixed content, not a card grid."""
+    Returns False for:
+    - Parents with sibling heading/paragraph content outside the card divs
+      (regular section with mixed content, not a card grid)
+    - Pure centering wrappers (e.g. `.container` with only max-width + margin auto
+      and no display:grid / flex → just a width limiter; descend transparently)
+    - Children with structurally different shapes (one has direct heading,
+      another has grid of sub-cards)."""
     all_children = node.get("children", [])
     children = [c for c in all_children if c.get("tag") == "div"]
     if len(children) < 2:
         return False
-    # Non-div siblings (h1-h6, p) OUTSIDE the card divs must NOT be content —
-    # otherwise the card grid path would drop them. Allow only <img>, <br>,
-    # inline spans (which usually decorate or are typography marks).
+    # Non-div siblings (h1-h6, p) OUTSIDE the card divs must NOT be content
     content_sibling_tags = {"h1", "h2", "h3", "h4", "h5", "h6", "p",
                              "ul", "ol", "table", "blockquote", "figure"}
     for c in all_children:
         if c.get("tag") in content_sibling_tags:
             text = (c.get("text") or "").strip()
             if text or c.get("children"):
+                return False
+    # Pure centering wrapper: no display flex/grid, has max-width, no bg/radius
+    styles = node.get("styles", {})
+    display = (styles.get("display") or "").lower()
+    if display not in ("flex", "inline-flex", "grid"):
+        has_max_width = bool(styles.get("max-width"))
+        has_bg = bool(styles.get("background") or styles.get("background-color"))
+        has_radius = bool(styles.get("border-radius"))
+        if has_max_width and not has_bg and not has_radius:
+            return False  # .container-style width limiter
+    # Reject if any child has ITSELF a nested card-grid pattern (3+ sibling
+    # similar divs) — that's a meta-container, should descend instead.
+    # Example: .container has .feature-header + .feature-grid (where
+    # .feature-grid has 3 card divs).
+    for c in children:
+        gc_divs = [gc for gc in c.get("children", []) if gc.get("tag") == "div"]
+        if len(gc_divs) >= 3:
+            # Check if those grandchildren are "card-shaped" (have content)
+            nested_cards = sum(
+                1 for gc in gc_divs
+                if any(n.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6", "p")
+                       for n in _iter(gc, max_depth=3))
+            )
+            if nested_cards >= 3:
                 return False
     CARD_CONTENT_TAGS = HEADING_TAGS | TEXT_TAGS | {"blockquote"}
     for c in children:
