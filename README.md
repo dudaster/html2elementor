@@ -320,4 +320,4 @@ MIT. Use it, fork it, resell it in your SaaS, doesn't matter — just don't pret
 
 ## Author
 
-Built by [@dudaster](https://github.com/dudaster) with [Claude](https://www.anthropic.com/claude) pair-programming sessions. If this saves you money on a commercial license, consider starring the repo.
+Built by [@dudaster](https://github.com/dudaster). If this saves you money on a commercial license, consider starring the repo.
