@@ -34,8 +34,9 @@ Do NOT use this skill for:
 
 ### 1. Convert
 
+Run from the cloned skill directory (wherever you installed it — typically `~/.claude/skills/html2elementor` or `~/.openclaw/skills/html2elementor`):
+
 ```bash
-cd ~/Projects/elementor-templates-skill/html2elementor
 .venv/bin/python3 -m html2elementor path/to/input.html -o /tmp/layout.json
 ```
 
@@ -69,8 +70,9 @@ Widget mapping, layout detection, CSS features, responsive behavior, limitations
 
 ## Dev setup (one-time)
 
+From the cloned skill directory:
+
 ```bash
-cd ~/Projects/elementor-templates-skill/html2elementor
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 ```
