@@ -1,6 +1,6 @@
 [
   {
-    "id": "073c390",
+    "id": "55ad839",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -34,7 +34,7 @@
     },
     "elements": [
       {
-        "id": "980a23d",
+        "id": "5d95b97",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -54,7 +54,7 @@
         },
         "elements": [
           {
-            "id": "6bdb6cc",
+            "id": "093678c",
             "elType": "widget",
             "settings": {
               "title": "Paper <span style=\"color:#22c55e\">fold</span>",
@@ -77,7 +77,7 @@
         "isInner": true
       },
       {
-        "id": "d242ea9",
+        "id": "3e0ed75",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -104,7 +104,7 @@
         },
         "elements": [
           {
-            "id": "024f255",
+            "id": "f414199",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -181,7 +181,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "3aa0f9c",
+            "id": "8a664e5",
             "elType": "widget",
             "settings": {
               "text": "Start a project",
@@ -231,7 +231,7 @@
     "isInner": false
   },
   {
-    "id": "7e6738f",
+    "id": "7a0c20b",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -259,7 +259,7 @@
     },
     "elements": [
       {
-        "id": "b002801",
+        "id": "639b6a9",
         "elType": "widget",
         "settings": {
           "title": "ACCEPTING Q3 PROJECTS",
@@ -307,7 +307,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "166fdb4",
+        "id": "9c20562",
         "elType": "widget",
         "settings": {
           "title": "We design brands that <span style=\"color:#22c55e\"><em>move</em></span> .",
@@ -353,7 +353,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "1623894",
+        "id": "9a1ffe4",
         "elType": "widget",
         "settings": {
           "editor": "<p>Paperfold is a design and motion studio working with ambitious teams across tech, culture, and climate. No retainers, no decks — just the work.</p>",
@@ -386,7 +386,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "ab54323",
+        "id": "8f921f7",
         "elType": "widget",
         "settings": {
           "view": "traditional",
@@ -444,7 +444,7 @@
     "isInner": false
   },
   {
-    "id": "455d521",
+    "id": "e3f5efe",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -484,7 +484,7 @@
     },
     "elements": [
       {
-        "id": "426528d",
+        "id": "1ea8a4b",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -524,7 +524,7 @@
         },
         "elements": [
           {
-            "id": "e4e6253",
+            "id": "622f50d",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -551,7 +551,7 @@
             },
             "elements": [
               {
-                "id": "37f0af8",
+                "id": "7ce14df",
                 "elType": "widget",
                 "settings": {
                   "title": "✓",
@@ -591,7 +591,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "f9562e4",
+                "id": "5c8bf4e",
                 "elType": "widget",
                 "settings": {
                   "title": "Senior by default",
@@ -619,7 +619,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c67d75e",
+                "id": "b3bf92f",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>You'll work directly with the people making the work — no account managers between you and the decisions.</p>",
@@ -641,7 +641,7 @@
             "isInner": true
           },
           {
-            "id": "8f702a7",
+            "id": "4a6854a",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -668,7 +668,7 @@
             },
             "elements": [
               {
-                "id": "a31a071",
+                "id": "5120325",
                 "elType": "widget",
                 "settings": {
                   "title": "✓",
@@ -708,7 +708,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "13b2386",
+                "id": "82aed83",
                 "elType": "widget",
                 "settings": {
                   "title": "Systems over artifacts",
@@ -736,7 +736,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "a3b7961",
+                "id": "ac22a1b",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Every project ships with the components, guidelines, and templates your team needs to keep building after we leave.</p>",
@@ -758,7 +758,7 @@
             "isInner": true
           },
           {
-            "id": "3f50f97",
+            "id": "0b470d3",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -785,7 +785,7 @@
             },
             "elements": [
               {
-                "id": "5724657",
+                "id": "03a5f5d",
                 "elType": "widget",
                 "settings": {
                   "title": "✓",
@@ -825,7 +825,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "e814bab",
+                "id": "b4fb089",
                 "elType": "widget",
                 "settings": {
                   "title": "Real deadlines, real scope",
@@ -853,7 +853,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8f6ee03",
+                "id": "8f4e2ac",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Fixed-price engagements with weekly reviews. You'll know exactly what you're getting and when you'll have it.</p>",
@@ -881,7 +881,7 @@
     "isInner": false
   },
   {
-    "id": "4cefe6b",
+    "id": "ecbd6e7",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -909,7 +909,7 @@
     },
     "elements": [
       {
-        "id": "2cc701b",
+        "id": "61d78b7",
         "elType": "widget",
         "settings": {
           "title": "Selected work",
@@ -950,7 +950,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "70e74d4",
+        "id": "7c312b8",
         "elType": "widget",
         "settings": {
           "title": "Brands and products we've shaped recently.",
@@ -996,7 +996,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "18037e9",
+        "id": "b44633d",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1036,7 +1036,7 @@
         },
         "elements": [
           {
-            "id": "6f480f9",
+            "id": "e618415",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1078,7 +1078,7 @@
             },
             "elements": [
               {
-                "id": "bc782de",
+                "id": "dd522dd",
                 "elType": "widget",
                 "settings": {
                   "title": "Brand identity",
@@ -1119,7 +1119,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8be47ca",
+                "id": "b584633",
                 "elType": "widget",
                 "settings": {
                   "title": "Honeycomb Labs",
@@ -1147,7 +1147,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d63d1f8",
+                "id": "002a5ff",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Biotech startup rebrand — logo system, product UI, and launch film.</p>",
@@ -1169,7 +1169,7 @@
             "isInner": true
           },
           {
-            "id": "2595ae5",
+            "id": "9c23e6c",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1211,7 +1211,7 @@
             },
             "elements": [
               {
-                "id": "d2acea1",
+                "id": "e53e983",
                 "elType": "widget",
                 "settings": {
                   "title": "Motion",
@@ -1252,7 +1252,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "2a77b10",
+                "id": "74a28d3",
                 "elType": "widget",
                 "settings": {
                   "title": "Atlas Ventures",
@@ -1280,7 +1280,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "db8c482",
+                "id": "0fc96e1",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Opening titles and in-talk animations for a flagship VC conference.</p>",
@@ -1305,7 +1305,7 @@
         "isInner": true
       },
       {
-        "id": "7f4c8ea",
+        "id": "b7b0988",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1345,7 +1345,7 @@
         },
         "elements": [
           {
-            "id": "e7e48ac",
+            "id": "2437ba0",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1387,7 +1387,7 @@
             },
             "elements": [
               {
-                "id": "4615957",
+                "id": "ab79df3",
                 "elType": "widget",
                 "settings": {
                   "title": "Product design",
@@ -1428,7 +1428,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "886c2bd",
+                "id": "77a10e9",
                 "elType": "widget",
                 "settings": {
                   "title": "Marigold Health",
@@ -1456,7 +1456,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8eb7f2a",
+                "id": "02d5704",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>End-to-end design of a patient intake platform used by 40+ clinics.</p>",
@@ -1478,7 +1478,7 @@
             "isInner": true
           },
           {
-            "id": "ab270fa",
+            "id": "8aa0a7a",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1520,7 +1520,7 @@
             },
             "elements": [
               {
-                "id": "0846b77",
+                "id": "f8e1621",
                 "elType": "widget",
                 "settings": {
                   "title": "Editorial",
@@ -1561,7 +1561,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c4ed7de",
+                "id": "92394b9",
                 "elType": "widget",
                 "settings": {
                   "title": "Bluebird Press",
@@ -1589,7 +1589,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b177b48",
+                "id": "64752b5",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Quarterly magazine design across print and digital, 12 issues shipped.</p>",
@@ -1617,7 +1617,7 @@
     "isInner": false
   },
   {
-    "id": "9f4cf65",
+    "id": "8bf8cd2",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1647,7 +1647,7 @@
     },
     "elements": [
       {
-        "id": "f4e336d",
+        "id": "b1ef6ae",
         "elType": "widget",
         "settings": {
           "title": "A deliberately small process.",
@@ -1687,7 +1687,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "ee48e46",
+        "id": "115d37b",
         "elType": "widget",
         "settings": {
           "editor": "<p>We ship in three phases. No theatre, no change requests in month four.</p>",
@@ -1721,7 +1721,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "6820359",
+        "id": "69ebad4",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1761,7 +1761,7 @@
         },
         "elements": [
           {
-            "id": "506fab8",
+            "id": "8c2a0af",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1788,7 +1788,7 @@
             },
             "elements": [
               {
-                "id": "c67f562",
+                "id": "e308981",
                 "elType": "widget",
                 "settings": {
                   "title": "01",
@@ -1828,7 +1828,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "03c1bd5",
+                "id": "201a3ab",
                 "elType": "widget",
                 "settings": {
                   "title": "Frame",
@@ -1856,7 +1856,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "588309e",
+                "id": "cfbe112",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>One week to understand the business, the audience, and the real problem. You'll leave with a creative brief we both sign.</p>",
@@ -1878,7 +1878,7 @@
             "isInner": true
           },
           {
-            "id": "6ff09f4",
+            "id": "1a99303",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1905,7 +1905,7 @@
             },
             "elements": [
               {
-                "id": "3d78d67",
+                "id": "3b53f17",
                 "elType": "widget",
                 "settings": {
                   "title": "02",
@@ -1945,7 +1945,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "7966ce4",
+                "id": "daad60e",
                 "elType": "widget",
                 "settings": {
                   "title": "Make",
@@ -1973,7 +1973,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "055430c",
+                "id": "94d110a",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Four to eight weeks of tight design sprints with weekly reviews. You see everything as it's built — no big reveal.</p>",
@@ -1995,7 +1995,7 @@
             "isInner": true
           },
           {
-            "id": "c1af996",
+            "id": "fcca15c",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2022,7 +2022,7 @@
             },
             "elements": [
               {
-                "id": "9a1d001",
+                "id": "995add6",
                 "elType": "widget",
                 "settings": {
                   "title": "03",
@@ -2062,7 +2062,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d7776b7",
+                "id": "8dbc2a3",
                 "elType": "widget",
                 "settings": {
                   "title": "Ship",
@@ -2090,7 +2090,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "dbfcc5d",
+                "id": "1ffc282",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>Production files, templates, and a handover session with your team. We stick around for two weeks of support afterwards.</p>",
@@ -2118,7 +2118,7 @@
     "isInner": false
   },
   {
-    "id": "54bb7b9",
+    "id": "e005f0a",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2146,7 +2146,7 @@
     },
     "elements": [
       {
-        "id": "c703c07",
+        "id": "2fe2fb7",
         "elType": "widget",
         "settings": {
           "editor": "<p>\"Paperfold delivered on time, on scope, and on brand — three things I'd stopped expecting from a creative studio.\"</p>",
@@ -2180,7 +2180,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "bbb5ed7",
+        "id": "a24c4b1",
         "elType": "widget",
         "settings": {
           "title": "Sofia Reinholt",
@@ -2208,7 +2208,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "0e1c537",
+        "id": "d122281",
         "elType": "widget",
         "settings": {
           "title": "CEO, Marigold Health",
@@ -2231,7 +2231,7 @@
     "isInner": false
   },
   {
-    "id": "6d33129",
+    "id": "f653c15",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2259,7 +2259,7 @@
     },
     "elements": [
       {
-        "id": "b66b9d2",
+        "id": "e9718f5",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2301,7 +2301,7 @@
         },
         "elements": [
           {
-            "id": "5810b43",
+            "id": "4e1801c",
             "elType": "widget",
             "settings": {
               "title": "Got a project on the horizon?",
@@ -2348,7 +2348,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "aacfa8f",
+            "id": "cde160a",
             "elType": "widget",
             "settings": {
               "editor": "<p>We take on three or four new engagements each quarter. Tell us what you're working on and we'll come back within two working days.</p>",
@@ -2382,7 +2382,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "2eb3e76",
+            "id": "56b1304",
             "elType": "widget",
             "settings": {
               "text": "Start a project",
@@ -2432,7 +2432,7 @@
     "isInner": false
   },
   {
-    "id": "49d1b39",
+    "id": "d2a7e45",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2472,7 +2472,7 @@
     },
     "elements": [
       {
-        "id": "2c288f7",
+        "id": "2d19939",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2512,7 +2512,7 @@
         },
         "elements": [
           {
-            "id": "a4e3d00",
+            "id": "ac55c8e",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2539,7 +2539,7 @@
             },
             "elements": [
               {
-                "id": "79ee1bd",
+                "id": "75c1178",
                 "elType": "widget",
                 "settings": {
                   "title": "Paper <span style=\"color:#22c55e\">fold</span>",
@@ -2567,7 +2567,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "5871a6f",
+                "id": "584de20",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>A small design and motion studio based in Copenhagen, working worldwide since 2018.</p>",
@@ -2595,7 +2595,7 @@
             "isInner": true
           },
           {
-            "id": "1096c70",
+            "id": "a75398b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2622,7 +2622,7 @@
             },
             "elements": [
               {
-                "id": "a418fdc",
+                "id": "fb8e4b2",
                 "elType": "widget",
                 "settings": {
                   "title": "Studio",
@@ -2663,7 +2663,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "e7eef05",
+                "id": "be83181",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2742,7 +2742,7 @@
             "isInner": true
           },
           {
-            "id": "3be66a5",
+            "id": "f07a14f",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2769,7 +2769,7 @@
             },
             "elements": [
               {
-                "id": "64440b8",
+                "id": "2e7b962",
                 "elType": "widget",
                 "settings": {
                   "title": "Contact",
@@ -2810,7 +2810,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "4928343",
+                "id": "a20d730",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -2878,7 +2878,7 @@
             "isInner": true
           },
           {
-            "id": "c164755",
+            "id": "db331e7",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2905,7 +2905,7 @@
             },
             "elements": [
               {
-                "id": "577ce1d",
+                "id": "27d7966",
                 "elType": "widget",
                 "settings": {
                   "title": "Elsewhere",
@@ -2946,7 +2946,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "457b3a1",
+                "id": "55d8552",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -3017,7 +3017,7 @@
         "isInner": true
       },
       {
-        "id": "fb6cbdf",
+        "id": "a235657",
         "elType": "widget",
         "settings": {
           "title": "© 2026 Paperfold Studio ApS. Copenhagen.",

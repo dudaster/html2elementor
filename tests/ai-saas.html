@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Volta — AI-powered customer support</title>
+<style>
+    :root {
+        --color-bg: #f8fafc;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-brand: #7c3aed;
+        --color-brand-dark: #5b21b6;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: var(--color-text); background: var(--color-bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Navbar */
+    .nav-wrapper { position: sticky; top: 0; background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(10px); z-index: 50; border-bottom: 1px solid var(--color-border); }
+    .nav-container { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+    .nav-brand { display: flex; align-items: center; gap: 8px; }
+    .nav-brand-text { font-weight: 800; font-size: 20px; color: var(--color-text); letter-spacing: -0.4px; }
+    .nav-brand-text span { color: var(--color-brand); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-link { font-size: 14px; color: var(--color-muted); font-weight: 500; }
+    .nav-cta-group { display: flex; align-items: center; gap: 12px; }
+    .nav-cta-secondary { font-size: 14px; font-weight: 500; color: var(--color-text); }
+    .nav-cta-primary { background: var(--color-brand); color: white; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; }
+
+    /* Hero section */
+    .hero-section { padding: 96px 0 72px; text-align: center; }
+    .hero-badge-wrapper { display: flex; justify-content: center; margin-bottom: 28px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: #ede9fe; color: var(--color-brand-dark); padding: 6px 14px; border-radius: 99px; font-size: 13px; font-weight: 600; }
+    .hero-headline { font-size: 64px; font-weight: 800; letter-spacing: -2px; line-height: 1.05; color: var(--color-text); max-width: 900px; margin: 0 auto 24px; }
+    .hero-headline-accent { background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-subheadline { font-size: 19px; color: var(--color-muted); max-width: 640px; margin: 0 auto 40px; line-height: 1.6; }
+    .hero-cta-group { display: flex; justify-content: center; gap: 12px; margin-bottom: 56px; }
+    .button-primary { background: var(--color-text); color: white; padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; }
+    .button-secondary { background: white; color: var(--color-text); padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; border: 1px solid var(--color-border); }
+
+    /* Trusted by */
+    .trusted-section { padding: 48px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background: var(--color-surface); }
+    .trusted-label { text-align: center; font-size: 13px; color: var(--color-muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin-bottom: 24px; }
+    .trusted-logos { display: flex; justify-content: center; align-items: center; gap: 56px; flex-wrap: wrap; }
+    .trusted-logo { font-size: 20px; font-weight: 700; color: #94a3b8; letter-spacing: -0.5px; }
+
+    /* Feature section */
+    .feature-section { padding: 96px 0; }
+    .feature-header { max-width: 720px; margin: 0 auto 72px; text-align: center; }
+    .feature-eyebrow { display: inline-block; font-size: 13px; font-weight: 700; color: var(--color-brand); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+    .feature-heading { font-size: 44px; font-weight: 800; letter-spacing: -1.2px; color: var(--color-text); margin-bottom: 16px; }
+    .feature-description { font-size: 17px; color: var(--color-muted); line-height: 1.6; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .feature-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 32px; }
+    .feature-card-icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-md); background: #f5f3ff; color: var(--color-brand); font-size: 22px; margin-bottom: 20px; }
+    .feature-card-title { font-size: 19px; font-weight: 700; color: var(--color-text); margin-bottom: 10px; }
+    .feature-card-description { font-size: 15px; color: var(--color-muted); line-height: 1.6; }
+
+    /* Stats section */
+    .stats-section { padding: 96px 0; background: var(--color-text); color: white; }
+    .stats-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .stats-item { text-align: center; }
+    .stats-value { font-size: 48px; font-weight: 800; color: white; letter-spacing: -1.5px; margin-bottom: 6px; }
+    .stats-label { font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+
+    /* CTA section */
+    .cta-section { padding: 96px 0; }
+    .cta-wrapper { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border-radius: var(--radius-lg); padding: 72px 48px; text-align: center; }
+    .cta-heading { font-size: 40px; font-weight: 800; color: white; letter-spacing: -1px; margin-bottom: 16px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-description { font-size: 17px; color: #ddd6fe; max-width: 520px; margin: 0 auto 32px; }
+    .cta-button { display: inline-block; background: white; color: var(--color-brand-dark); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 700; }
+
+    /* Footer */
+    .footer-section { padding: 64px 0 32px; background: var(--color-surface); border-top: 1px solid var(--color-border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+    .footer-brand-column { max-width: 320px; }
+    .footer-brand-text { font-weight: 800; font-size: 20px; color: var(--color-text); letter-spacing: -0.4px; margin-bottom: 12px; }
+    .footer-brand-text span { color: var(--color-brand); }
+    .footer-brand-description { font-size: 14px; color: var(--color-muted); line-height: 1.6; }
+    .footer-column-title { font-size: 12px; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+    .footer-link { display: block; font-size: 14px; color: var(--color-muted); margin-bottom: 10px; }
+    .footer-bottom { padding-top: 32px; border-top: 1px solid var(--color-border); text-align: center; font-size: 13px; color: #94a3b8; }
+</style>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-brand-text">Vol<span>ta</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Product</a>
+                <a href="#" class="nav-link">Customers</a>
+                <a href="#" class="nav-link">Pricing</a>
+                <a href="#" class="nav-link">Docs</a>
+            </div>
+            <div class="nav-cta-group">
+                <a href="#" class="nav-cta-secondary">Log in</a>
+                <a href="#" class="nav-cta-primary">Get started</a>
+            </div>
+        </nav>
+    </div>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-badge-wrapper">
+                <div class="hero-badge">✨ Now with agentic workflows</div>
+            </div>
+            <h1 class="hero-headline">Resolve support tickets with an AI that <span class="hero-headline-accent">actually understands</span> your product.</h1>
+            <p class="hero-subheadline">Volta reads your docs, your past tickets, and your product itself — so the answers it gives customers are accurate, in your voice, and never hallucinated.</p>
+            <div class="hero-cta-group">
+                <a href="#" class="button-primary">Book a demo</a>
+                <a href="#" class="button-secondary">See it in action</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="trusted-section">
+        <div class="container">
+            <div class="trusted-label">Trusted by teams at</div>
+            <div class="trusted-logos">
+                <div class="trusted-logo">Linear</div>
+                <div class="trusted-logo">Notion</div>
+                <div class="trusted-logo">Vercel</div>
+                <div class="trusted-logo">Cal.com</div>
+                <div class="trusted-logo">Raycast</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-header">
+                <div class="feature-eyebrow">Why Volta</div>
+                <h2 class="feature-heading">Built for teams that care about their customers.</h2>
+                <p class="feature-description">Stop copy-pasting the same answer 40 times a week. Let Volta handle the repeatable questions so your team can focus on the hard ones.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon">🎯</div>
+                    <h3 class="feature-card-title">Grounded in your data</h3>
+                    <p class="feature-card-description">Volta only answers from sources you connect. No hallucinations, no made-up policies, no confident nonsense.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">⚡</div>
+                    <h3 class="feature-card-title">Sub-second responses</h3>
+                    <p class="feature-card-description">We cache everything at the edge. Customers see the first token in under 300ms, anywhere in the world.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">🛡️</div>
+                    <h3 class="feature-card-title">SOC 2 compliant</h3>
+                    <p class="feature-card-description">Your customer data never trains a model. SOC 2 Type II, GDPR, and HIPAA available on Enterprise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stats-item">
+                    <div class="stats-value">82%</div>
+                    <div class="stats-label">Tickets deflected</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-value">2.4M</div>
+                    <div class="stats-label">Conversations handled</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-value">280ms</div>
+                    <div class="stats-label">Median response</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-value">4.8/5</div>
+                    <div class="stats-label">CSAT score</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <h2 class="cta-heading">Turn your support inbox from a cost center into a delight.</h2>
+                <p class="cta-description">Free 30-day trial on all plans. No credit card, no sales call required to get started.</p>
+                <a href="#" class="cta-button">Start your trial</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-column">
+                    <div class="footer-brand-text">Vol<span>ta</span></div>
+                    <p class="footer-brand-description">AI support agents for product teams. Based in San Francisco, trusted worldwide since 2023.</p>
+                </div>
+                <div>
+                    <h4 class="footer-column-title">Product</h4>
+                    <a href="#" class="footer-link">Overview</a>
+                    <a href="#" class="footer-link">Integrations</a>
+                    <a href="#" class="footer-link">Pricing</a>
+                    <a href="#" class="footer-link">Changelog</a>
+                </div>
+                <div>
+                    <h4 class="footer-column-title">Resources</h4>
+                    <a href="#" class="footer-link">Docs</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">Customers</a>
+                    <a href="#" class="footer-link">Status</a>
+                </div>
+                <div>
+                    <h4 class="footer-column-title">Company</h4>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Security</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 Volta AI, Inc. Made in San Francisco.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -849,11 +849,24 @@ def _image_row_widget(node: dict) -> dict:
 
 
 def _is_card_grid(node: dict) -> bool:
-    """A div with 3+ direct child divs that each have meaningful content.
-    Content = heading/p/blockquote tags OR leaf divs/spans with text."""
-    children = [c for c in node.get("children", []) if c.get("tag") == "div"]
+    """A div with 2+ direct child divs that each have meaningful content.
+    Content = heading/p/blockquote tags OR leaf divs/spans with text.
+    Returns False if the parent has SIBLING heading/paragraph content outside
+    the divs — that's a regular section with mixed content, not a card grid."""
+    all_children = node.get("children", [])
+    children = [c for c in all_children if c.get("tag") == "div"]
     if len(children) < 2:
         return False
+    # Non-div siblings (h1-h6, p) OUTSIDE the card divs must NOT be content —
+    # otherwise the card grid path would drop them. Allow only <img>, <br>,
+    # inline spans (which usually decorate or are typography marks).
+    content_sibling_tags = {"h1", "h2", "h3", "h4", "h5", "h6", "p",
+                             "ul", "ol", "table", "blockquote", "figure"}
+    for c in all_children:
+        if c.get("tag") in content_sibling_tags:
+            text = (c.get("text") or "").strip()
+            if text or c.get("children"):
+                return False
     CARD_CONTENT_TAGS = HEADING_TAGS | TEXT_TAGS | {"blockquote"}
     for c in children:
         has_tag_content = any(

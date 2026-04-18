@@ -17,6 +17,9 @@ INHERITED = {
 
 def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> dict[int, dict]:
     """Resolve styles for every element. Returns id(tag) → styles dict."""
+    # Extract CSS custom properties defined on :root / html / body so we can
+    # substitute var(--x) references in later styles.
+    css_vars = _extract_css_vars(css_sources)
     rules = _parse_all_rules(css_sources)
 
     # Pre-compute: for each CSS rule, find matching elements via BS4 select
@@ -34,14 +37,65 @@ def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> dict[int, dict]:
     # Resolve: flatten specificity layers + merge inline + inherit from parent
     result: dict[int, dict] = {}
     body = soup.find("body") or soup
-    _walk_resolve(body, element_styles, result, parent_styles=None)
+    _walk_resolve(body, element_styles, result, parent_styles=None, css_vars=css_vars)
     return result
 
 
+def _extract_css_vars(css_sources: list[str]) -> dict[str, str]:
+    """Find --name: value declarations in :root/html/body selectors and capture
+    them. Resolves chains (e.g. --foo: var(--bar) → substituted)."""
+    vars_map: dict[str, str] = {}
+    var_selectors = {":root", "html", "body", ":root, html, body", "html, body"}
+    for css_text in css_sources:
+        parsed = tinycss2.parse_stylesheet(css_text, skip_whitespace=True)
+        for rule in parsed:
+            if rule.type != "qualified-rule":
+                continue
+            selector = tinycss2.serialize(rule.prelude).strip()
+            if selector.lower() not in var_selectors and ":root" not in selector:
+                continue
+            decls = tinycss2.parse_declaration_list(rule.content, skip_whitespace=True)
+            for d in decls:
+                if d.type == "declaration" and d.name.startswith("--"):
+                    vars_map[d.name] = tinycss2.serialize(d.value).strip()
+    # Resolve var-to-var chains (one pass is usually enough)
+    for _ in range(3):
+        changed = False
+        for k, v in list(vars_map.items()):
+            new = _substitute_vars(v, vars_map)
+            if new != v:
+                vars_map[k] = new
+                changed = True
+        if not changed:
+            break
+    return vars_map
+
+
+_VAR_RE = re.compile(r"var\(\s*(--[\w-]+)\s*(?:,\s*([^)]+))?\)")
+
+
+def _substitute_vars(value: str, css_vars: dict[str, str]) -> str:
+    """Replace var(--name, fallback) with resolved value (or fallback)."""
+    if "var(" not in value:
+        return value
+    def _sub(m):
+        name = m.group(1)
+        fallback = (m.group(2) or "").strip()
+        return css_vars.get(name, fallback)
+    # Apply up to 3 times for nested var refs
+    for _ in range(3):
+        new = _VAR_RE.sub(_sub, value)
+        if new == value:
+            break
+        value = new
+    return value
+
+
 def _walk_resolve(el: Tag, element_styles: dict, result: dict,
-                  parent_styles: dict | None) -> None:
+                  parent_styles: dict | None, css_vars: dict | None = None) -> None:
     if not isinstance(el, Tag):
         return
+    css_vars = css_vars or {}
 
     styles: dict[str, str] = {}
 
@@ -62,11 +116,19 @@ def _walk_resolve(el: Tag, element_styles: dict, result: dict,
     if inline:
         styles.update(_parse_inline(inline))
 
+    # 4. Substitute CSS var() references AFTER cascade so declarations that
+    # override will still use resolved variables.
+    if css_vars:
+        for k in list(styles.keys()):
+            v = styles[k]
+            if isinstance(v, str) and "var(" in v:
+                styles[k] = _substitute_vars(v, css_vars)
+
     result[id(el)] = styles
 
     for child in el.children:
         if isinstance(child, Tag):
-            _walk_resolve(child, element_styles, result, styles)
+            _walk_resolve(child, element_styles, result, styles, css_vars)
 
 
 def _parse_all_rules(css_sources: list[str]) -> list[tuple[str, tuple, dict]]:
