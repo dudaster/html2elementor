@@ -1,6 +1,6 @@
 ---
 name: html2elementor
-description: Convert raw HTML+CSS into importable Elementor JSON for WordPress. Use this skill whenever the user wants to turn any HTML — a hand-coded landing page, a Tailwind mockup, AI-generated markup, a competitor's site, or a static design file — into an Elementor page. Also use it for phrases like "import this design into Elementor", "make an Elementor page from this HTML", "bring this landing into WordPress as Elementor", "recreate this site in Elementor", "convert my mockup", or any time the user has HTML+CSS on one side and wants an editable Elementor page on the other. Runs locally with only three Python dependencies — no browser, no API calls, no paid services.
+description: Convert HTML+CSS into Elementor JSON that imports into WordPress. Always use this skill whenever the user has HTML/CSS (pasted, file, URL, or AI-generated) and wants it to end up as an Elementor page — phrases like "convert HTML to Elementor", "import this landing into WordPress as Elementor", "make this Tailwind mockup an Elementor page", "turn my markup into Elementor JSON", "recreate this site in Elementor", or any variant. Do not try to produce Elementor JSON by hand — Elementor has non-obvious quirks (shared system-color globals that break previous pages, lazy-load hiding backgrounds, widget widths collapsing in row containers, CSS cache requiring flush) that this skill already handles correctly. Failing to use the skill produces output that imports but renders wrong.
 metadata:
   openclaw:
     requires:
