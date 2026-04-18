@@ -12,30 +12,36 @@ def map_section(section: dict) -> tuple[dict[str, Any], list[dict]]:
     sec_tag = section.get("tag", "")
     sec_display = section.get("styles", {}).get("display", "")
     if sec_tag in ("header", "nav", "footer"):
-        is_flex_row = sec_display == "flex" or sec_tag in ("header", "nav")
-        if is_flex_row:
-            container["flex_direction"] = "row"
-            container["flex_direction_tablet"] = "row"
-            container["flex_direction_mobile"] = "column"
-            container["flex_justify_content"] = "space-between"
-            container["flex_align_items"] = "center"
-            container["flex_wrap"] = "nowrap"
-            container["flex_wrap_tablet"] = "wrap"
-            container["content_width"] = "full"
-        # Non-flex footer: column with center alignment
-        # Nav padding often lives on the inner container, not the header tag.
-        # Walk children to find it.
-        inner = _find_content_wrapper(section)
-        if inner and inner is not section:
-            inner_p = css_padding_to_elementor(inner.get("styles", {}))
+        # Check for a grid layout inside footer — if found, fall through to
+        # normal section handling so the grid columns are preserved.
+        has_grid_child = any(
+            (c.get("styles", {}).get("display") or "") == "grid"
+            for c in _iter(section)
+            if c is not section
+        )
+        use_header_builder = (sec_tag in ("header", "nav")) or (sec_tag == "footer" and not has_grid_child)
+        if use_header_builder:
+            is_flex_row = sec_display == "flex" or sec_tag in ("header", "nav")
+            if is_flex_row:
+                container["flex_direction"] = "row"
+                container["flex_direction_tablet"] = "row"
+                container["flex_direction_mobile"] = "column"
+                container["flex_justify_content"] = "space-between"
+                container["flex_align_items"] = "center"
+                container["flex_wrap"] = "nowrap"
+                container["flex_wrap_tablet"] = "wrap"
+                container["content_width"] = "full"
+            inner = _find_content_wrapper(section)
+            if inner and inner is not section:
+                inner_p = css_padding_to_elementor(inner.get("styles", {}))
+                for side in ("top", "bottom"):
+                    if inner_p[side] != "0":
+                        container["padding"][side] = inner_p[side]
             for side in ("top", "bottom"):
-                if inner_p[side] != "0":
-                    container["padding"][side] = inner_p[side]
-        # Safety: minimum 12px vertical padding for nav
-        for side in ("top", "bottom"):
-            if int(container["padding"][side]) < 12:
-                container["padding"][side] = "16"
-        return container, _build_header_elements(section)
+                if int(container["padding"][side]) < 12:
+                    container["padding"][side] = "16"
+            return container, _build_header_elements(section)
+        # Footer with grid inside: fall through to generic section handling
 
     # Split hero: flex row with 2 children (image + content)
     split = _detect_split_layout(section)

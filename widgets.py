@@ -76,6 +76,13 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
 
     # Inline flex row: a div with display:flex containing 2+ leaf children (price + duration, etc.)
     if tag == "div" and _is_inline_flex_row(node):
+        # Special case: "list row" (first child has fixed width, second is content).
+        # Common for agenda/schedule/timeline slots. Elementor row containers handle
+        # fixed+grow widths poorly, so we render as a single text-editor with
+        # inline-styled HTML — reliable visual match without container nesting.
+        if _is_list_row(node):
+            out.append(_list_row_widget(node))
+            return
         out.append(_inline_flex_row_widget(node, consumed))
         return
 
@@ -361,6 +368,84 @@ def button_widget(node: dict, text: str) -> dict:
     return {"widgetType": "button", "settings": settings}
 
 
+def _is_list_row(node: dict) -> bool:
+    """A flex row with exactly 2 children: first is a fixed-width leaf (label),
+    second is a div with text content. Common for agenda/schedule slots."""
+    children = node.get("children", [])
+    if len(children) != 2:
+        return False
+    first, second = children
+    # First child: fixed width in px, leaf text (no complex children)
+    first_styles = first.get("styles", {})
+    w = px_to_int(first_styles.get("width", ""))
+    if not w or w > 200:
+        return False
+    if not (first.get("text") or "").strip() or first.get("children"):
+        return False
+    # Second child: div with text content (heading + paragraph)
+    if second.get("tag") != "div":
+        return False
+    # Must have a heading or paragraph inside
+    has_text_content = any(
+        c.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6", "p")
+        for c in _iter(second, max_depth=2)
+    )
+    return has_text_content
+
+
+def _list_row_widget(node: dict) -> dict:
+    """Emit a flex-row "list row" (agenda slot, timeline entry) as a single
+    text-editor with inline-styled HTML. The label sits left via float/margin
+    tricks, heading + description flow naturally to the right."""
+    children = node.get("children", [])
+    label_node, content_node = children[0], children[1]
+    label_text = (label_node.get("text") or "").strip()
+    label_styles = label_node.get("styles", {})
+    label_w = px_to_int(label_styles.get("width", "")) or 100
+    label_color = to_hex(label_styles.get("color")) or "inherit"
+    label_weight = label_styles.get("font-weight", "700")
+    label_size = px_to_int(label_styles.get("font-size", "")) or 16
+
+    # Build content HTML from the right side (heading + paragraph)
+    parts: list[str] = []
+    for gc in content_node.get("children", []):
+        gc_tag = gc.get("tag", "")
+        gc_text = _all_text_html(gc).strip()
+        if not gc_text:
+            continue
+        gc_styles = gc.get("styles", {})
+        gc_color = to_hex(gc_styles.get("color"))
+        gc_size = px_to_int(gc_styles.get("font-size", ""))
+        gc_weight = gc_styles.get("font-weight", "400")
+        if gc_tag in ("h1", "h2", "h3", "h4", "h5", "h6"):
+            fs = gc_size or 19
+            parts.append(
+                f'<strong style="display:block;font-size:{fs}px;font-weight:{gc_weight};'
+                f'color:{gc_color or "inherit"};margin-bottom:6px">{gc_text}</strong>'
+            )
+        else:
+            fs = gc_size or 14
+            parts.append(
+                f'<span style="display:block;font-size:{fs}px;color:{gc_color or "inherit"};line-height:1.6">{gc_text}</span>'
+            )
+
+    gap = px_to_int(node.get("styles", {}).get("gap", "")) or 32
+    content_html = "".join(parts)
+    # Two-column layout via inline-block + padding offset on content
+    editor_html = (
+        f'<div style="position:relative;padding-left:{label_w + gap}px;min-height:1em">'
+        f'<strong style="position:absolute;left:0;top:0;width:{label_w}px;'
+        f'color:{label_color};font-size:{label_size}px;font-weight:{label_weight};'
+        f'letter-spacing:1px">{label_text}</strong>'
+        f'{content_html}'
+        f'</div>'
+    )
+    return {
+        "widgetType": "text-editor",
+        "settings": {"editor": editor_html, "align": "left"},
+    }
+
+
 def _is_inline_flex_row(node: dict) -> bool:
     """A div with display:flex that should be rendered as a horizontal row."""
     styles = node.get("styles", {})
@@ -426,36 +511,101 @@ def _inline_flex_row_widget(node: dict, consumed: set[int]) -> dict:
             for gc in child_children:
                 consumed.add(id(gc))
         elif child_tag == "div" and len(child_children) >= 2 and not _is_inline_flex_row(child):
-            # Different-sized content (e.g., stat num 56px + desc 15px):
-            # emit as nested column container so num stacks above desc.
-            # _flex_size: none → column takes content width; row's justify-content
-            # centers them with gap.
+            # Different-sized content inside a flex-row parent.
+            # Two sub-patterns:
+            #   A) "stat" style (parent justify-content center, content centered):
+            #      emit as narrow centered column (e.g. big number + small label).
+            #   B) "agenda" style (parent justify-content start, content left-aligned):
+            #      content grows, left-aligned, no fixed width (heading + description).
             inner_widgets: list[dict] = []
             for gc in child_children:
                 _walk(gc, inner_widgets, consumed)
             if inner_widgets:
-                child_widgets.append({
-                    "__inner_container__": True,
-                    "settings": {
+                parent_jc = jc  # from outer _inline_flex_row_widget scope
+                parent_ta = (styles.get("text-align") or "").lower()
+                is_centered_parent = parent_jc == "center" or parent_ta == "center"
+                if is_centered_parent:
+                    inner_settings = {
                         "content_width": "full",
                         "flex_direction": "column",
                         "flex_align_items": "center",
                         "flex_gap": {"unit": "px", "size": 8, "column": "8", "row": "8"},
                         "_element_custom_width": {"unit": "%", "size": 30, "sizes": []},
                         "_element_width": "initial",
-                    },
+                    }
+                else:
+                    # Agenda-style: content grows to fill remaining row space, left-aligned.
+                    # Use flex-grow with flex-basis:0 (via _flex_size grow + min-width override)
+                    # Elementor's container flex-grow alone allows content to overflow the row,
+                    # so we pair it with _element_custom_width calculated from parent.
+                    child_styles = child.get("styles", {})
+                    child_ta = (child_styles.get("text-align") or "left").lower()
+                    align_map = {"left": "flex-start", "right": "flex-end", "center": "center"}
+                    inner_settings = {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": align_map.get(child_ta, "flex-start"),
+                        "flex_gap": {"unit": "px", "size": 4, "column": "4", "row": "4"},
+                        "_flex_size": "grow",
+                        "_flex_shrink": 1,
+                        "_flex_basis": {"unit": "px", "size": 0, "sizes": []},
+                        "_flex_grow": 1,
+                    }
+                    # Force left-alignment on child widgets to match content flow
+                    if child_ta == "left":
+                        for w in inner_widgets:
+                            ws = w.get("settings", {})
+                            if "align" in ws or w.get("widgetType") in ("heading", "text-editor"):
+                                ws["align"] = "left"
+                                w["settings"] = ws
+                child_widgets.append({
+                    "__inner_container__": True,
+                    "settings": inner_settings,
                     "children": inner_widgets,
                 })
             consumed.add(id(child))
         else:
-            _walk(child, child_widgets, consumed)
+            sub_widgets: list[dict] = []
+            _walk(child, sub_widgets, consumed)
+            if not sub_widgets:
+                continue
+            # Only wrap in a fixed-width container when the CSS explicitly
+            # specifies a width on a div child (e.g. agenda `.time { width: 100px }`).
+            # Plain buttons/anchors/leaves shouldn't be wrapped — they work
+            # directly in row flex.
+            child_styles = child.get("styles", {})
+            w_px = px_to_int(child_styles.get("width", ""))
+            if child_tag == "div" and w_px and not (
+                len(sub_widgets) == 1 and sub_widgets[0].get("__inner_container__")
+            ):
+                child_widgets.append({
+                    "__inner_container__": True,
+                    "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "flex-start",
+                        "flex_gap": {"unit": "px", "size": 4, "column": "4", "row": "4"},
+                        "_flex_size": "none",
+                        "_element_width": "initial",
+                        "_element_custom_width": {"unit": "px", "size": w_px, "sizes": []},
+                    },
+                    "children": sub_widgets,
+                })
+            else:
+                child_widgets.extend(sub_widgets)
+
+    # Align items: respect CSS align-items, default stretch for left-aligned rows
+    css_ai = styles.get("align-items", "")
+    ai_map = {"flex-start": "flex-start", "center": "center", "flex-end": "flex-end", "stretch": "stretch"}
+    flex_ai = ai_map.get(css_ai, "flex-start" if jc_map.get(jc) == "flex-start" else "center")
+
     return {
         "__inner_container__": True,
         "settings": {
             "content_width": "full",
             "flex_direction": "row",
             "flex_justify_content": jc_map.get(jc, "flex-start"),
-            "flex_align_items": "center",
+            "flex_align_items": flex_ai,
             "flex_gap": {"unit": "px", "size": gap, "column": str(gap), "row": str(gap)},
         },
         "children": child_widgets,
@@ -621,11 +771,39 @@ def _emit_card_grid(node: dict, consumed: set[int]) -> list[dict]:
                         "flex_gap": {"unit": "px", "size": child_gap, "column": str(child_gap), "row": str(child_gap)},
                     }
                     _apply_container_card_styling(card_settings, merged_styles)
-                cards.append({
-                    "__inner_container__": True,
-                    "settings": card_settings,
-                    "children": card_elements,
-                })
+                # If the card's only content is an inner container (e.g. agenda slot
+                # emitted as flex-row by _inline_flex_row_widget) AND the card has no
+                # visual card decoration (bg, radius), collapse the wrapper by MERGING
+                # the card's padding/border into the inner container. This avoids a
+                # column-wraps-row nesting that breaks layout in Elementor.
+                has_visual_card = bool(
+                    card_settings.get("background_background") or
+                    card_settings.get("border_radius")
+                )
+                single_inner = (len(card_elements) == 1 and card_elements[0].get("__inner_container__"))
+                if single_inner and not has_visual_card:
+                    inner = card_elements[0]
+                    inner_s = inner.setdefault("settings", {})
+                    # Merge padding
+                    if card_settings.get("padding"):
+                        inner_s["padding"] = card_settings["padding"]
+                    # Merge border (bottom border line for agenda slots)
+                    if card_settings.get("border_border"):
+                        inner_s["border_border"] = card_settings["border_border"]
+                        if card_settings.get("border_width"):
+                            inner_s["border_width"] = card_settings["border_width"]
+                        if card_settings.get("border_color"):
+                            inner_s["border_color"] = card_settings["border_color"]
+                    # Merge gap if inner didn't set one yet
+                    if "flex_gap" not in inner_s and card_settings.get("flex_gap"):
+                        inner_s["flex_gap"] = card_settings["flex_gap"]
+                    cards.append(inner)
+                else:
+                    cards.append({
+                        "__inner_container__": True,
+                        "settings": card_settings,
+                        "children": card_elements,
+                    })
     return cards
 
 

@@ -1,6 +1,6 @@
 [
   {
-    "id": "07de3b3",
+    "id": "da0ee60",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -44,7 +44,7 @@
     },
     "elements": [
       {
-        "id": "915d9e5",
+        "id": "cf6ffef",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -64,7 +64,7 @@
         },
         "elements": [
           {
-            "id": "7eb2426",
+            "id": "4f4d6e9",
             "elType": "widget",
             "settings": {
               "title": "Ship <span style=\"color:#ec4899\">Con</span>",
@@ -87,7 +87,7 @@
         "isInner": true
       },
       {
-        "id": "185e1e6",
+        "id": "61dd60d",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -114,7 +114,7 @@
         },
         "elements": [
           {
-            "id": "10884bb",
+            "id": "4d45b2b",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -191,7 +191,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "b42c2c4",
+            "id": "9bf4ed6",
             "elType": "widget",
             "settings": {
               "text": "Get tickets",
@@ -241,7 +241,7 @@
     "isInner": false
   },
   {
-    "id": "3baac61",
+    "id": "0a555c2",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -271,7 +271,7 @@
     },
     "elements": [
       {
-        "id": "9040446",
+        "id": "1f6fe25",
         "elType": "widget",
         "settings": {
           "title": "JUNE 18–20, 2026 · LISBON",
@@ -329,7 +329,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "f18fe7b",
+        "id": "076c377",
         "elType": "widget",
         "settings": {
           "title": "The conference for people who <span style=\"color:#ec4899\">actually ship</span> .",
@@ -375,7 +375,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "c73addf",
+        "id": "def4a30",
         "elType": "widget",
         "settings": {
           "editor": "<p>Three days of hard-won lessons from the builders behind products you use every day. No fluff, no keynotes, no sales pitches.</p>",
@@ -408,7 +408,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "496f824",
+        "id": "cafd8d3",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -435,7 +435,7 @@
         },
         "elements": [
           {
-            "id": "1aee9fb",
+            "id": "8656cd0",
             "elType": "widget",
             "settings": {
               "text": "Get your ticket",
@@ -479,7 +479,7 @@
             "widgetType": "button"
           },
           {
-            "id": "3b4b232",
+            "id": "ea1544b",
             "elType": "widget",
             "settings": {
               "text": "View agenda",
@@ -539,7 +539,7 @@
     "isInner": false
   },
   {
-    "id": "ab0a26f",
+    "id": "2488da5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -579,7 +579,7 @@
     },
     "elements": [
       {
-        "id": "fcc0fcb",
+        "id": "48d9e06",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -619,7 +619,7 @@
         },
         "elements": [
           {
-            "id": "546cc38",
+            "id": "ceff989",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -655,7 +655,7 @@
             },
             "elements": [
               {
-                "id": "81f3b06",
+                "id": "d253065",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -692,7 +692,7 @@
                 },
                 "elements": [
                   {
-                    "id": "3c38965",
+                    "id": "959cb22",
                     "elType": "widget",
                     "settings": {
                       "title": "42",
@@ -724,7 +724,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "1a542eb",
+                    "id": "58f1532",
                     "elType": "widget",
                     "settings": {
                       "title": "Days left",
@@ -771,7 +771,7 @@
             "isInner": true
           },
           {
-            "id": "0084c05",
+            "id": "80f7639",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -807,7 +807,7 @@
             },
             "elements": [
               {
-                "id": "93a8aa5",
+                "id": "9c6d598",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -844,7 +844,7 @@
                 },
                 "elements": [
                   {
-                    "id": "d1bf52c",
+                    "id": "499ce15",
                     "elType": "widget",
                     "settings": {
                       "title": "28",
@@ -876,7 +876,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "72e7e49",
+                    "id": "fecc4fd",
                     "elType": "widget",
                     "settings": {
                       "title": "Speakers",
@@ -923,7 +923,7 @@
             "isInner": true
           },
           {
-            "id": "9ebc16d",
+            "id": "b5bb723",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -959,7 +959,7 @@
             },
             "elements": [
               {
-                "id": "2ff6fa8",
+                "id": "2b8a2b2",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -996,7 +996,7 @@
                 },
                 "elements": [
                   {
-                    "id": "d3e09e9",
+                    "id": "d48b77e",
                     "elType": "widget",
                     "settings": {
                       "title": "14",
@@ -1028,7 +1028,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "a8eb9ad",
+                    "id": "ba93996",
                     "elType": "widget",
                     "settings": {
                       "title": "Workshops",
@@ -1075,7 +1075,7 @@
             "isInner": true
           },
           {
-            "id": "4c0d23c",
+            "id": "40924b6",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1111,7 +1111,7 @@
             },
             "elements": [
               {
-                "id": "2f8d7ea",
+                "id": "29e7ce9",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1148,7 +1148,7 @@
                 },
                 "elements": [
                   {
-                    "id": "5265b0c",
+                    "id": "4f2198c",
                     "elType": "widget",
                     "settings": {
                       "title": "900",
@@ -1180,7 +1180,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "64ff756",
+                    "id": "ae727ce",
                     "elType": "widget",
                     "settings": {
                       "title": "Attendees",
@@ -1233,7 +1233,7 @@
     "isInner": false
   },
   {
-    "id": "ea0187a",
+    "id": "056d86a",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1261,7 +1261,7 @@
     },
     "elements": [
       {
-        "id": "ff5c1df",
+        "id": "75cd18c",
         "elType": "widget",
         "settings": {
           "title": "Why ShipCon",
@@ -1302,7 +1302,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "86aee91",
+        "id": "9a4de75",
         "elType": "widget",
         "settings": {
           "title": "Built by shippers, for shippers.",
@@ -1342,7 +1342,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a850442",
+        "id": "6796001",
         "elType": "widget",
         "settings": {
           "editor": "<p>ShipCon is a three-day, single-track conference with no sponsored talks and no product demos on stage. Every speaker is someone who has shipped real products at scale and is willing to share what actually worked — and what didn't.</p>",
@@ -1370,7 +1370,7 @@
     "isInner": false
   },
   {
-    "id": "611b921",
+    "id": "2c00318",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1400,7 +1400,7 @@
     },
     "elements": [
       {
-        "id": "7181f24",
+        "id": "11e1960",
         "elType": "widget",
         "settings": {
           "title": "Speakers",
@@ -1440,7 +1440,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "783015f",
+        "id": "a5c74ed",
         "elType": "widget",
         "settings": {
           "editor": "<p>Founders, engineers, and designers behind products that millions use.</p>",
@@ -1467,7 +1467,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "5634b7a",
+        "id": "40ddbc0",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1507,7 +1507,7 @@
         },
         "elements": [
           {
-            "id": "bff4600",
+            "id": "7ae9050",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1543,7 +1543,7 @@
             },
             "elements": [
               {
-                "id": "4d2c6eb",
+                "id": "ddcef9e",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1580,7 +1580,7 @@
                 },
                 "elements": [
                   {
-                    "id": "34ff57b",
+                    "id": "f8cb57b",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1636,7 +1636,7 @@
                     },
                     "elements": [
                       {
-                        "id": "ac4c3c8",
+                        "id": "83aae5c",
                         "elType": "widget",
                         "settings": {
                           "title": "AL",
@@ -1659,7 +1659,7 @@
                     "isInner": true
                   },
                   {
-                    "id": "f851c6e",
+                    "id": "38bcc9d",
                     "elType": "widget",
                     "settings": {
                       "title": "Aisha Laurent",
@@ -1687,7 +1687,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "ab63304",
+                    "id": "60c85a1",
                     "elType": "widget",
                     "settings": {
                       "title": "VP Eng, Linear",
@@ -1713,7 +1713,7 @@
             "isInner": true
           },
           {
-            "id": "f7ff5ad",
+            "id": "af1df2b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1749,7 +1749,7 @@
             },
             "elements": [
               {
-                "id": "9179122",
+                "id": "0351464",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1786,7 +1786,7 @@
                 },
                 "elements": [
                   {
-                    "id": "d39ae0e",
+                    "id": "b196dca",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -1842,7 +1842,7 @@
                     },
                     "elements": [
                       {
-                        "id": "0c88b9b",
+                        "id": "08707c1",
                         "elType": "widget",
                         "settings": {
                           "title": "DP",
@@ -1865,7 +1865,7 @@
                     "isInner": true
                   },
                   {
-                    "id": "4b4fe58",
+                    "id": "0499abd",
                     "elType": "widget",
                     "settings": {
                       "title": "Diego Perez",
@@ -1893,7 +1893,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "cea54ad",
+                    "id": "a895cd5",
                     "elType": "widget",
                     "settings": {
                       "title": "Co-founder, Raycast",
@@ -1919,7 +1919,7 @@
             "isInner": true
           },
           {
-            "id": "1b37d1b",
+            "id": "a35ecf1",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1955,7 +1955,7 @@
             },
             "elements": [
               {
-                "id": "1cec86a",
+                "id": "942cbe2",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1992,7 +1992,7 @@
                 },
                 "elements": [
                   {
-                    "id": "9f6c3fd",
+                    "id": "9ca29a5",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -2048,7 +2048,7 @@
                     },
                     "elements": [
                       {
-                        "id": "fc2d7e0",
+                        "id": "cec9a2c",
                         "elType": "widget",
                         "settings": {
                           "title": "YO",
@@ -2071,7 +2071,7 @@
                     "isInner": true
                   },
                   {
-                    "id": "c66b34f",
+                    "id": "455c992",
                     "elType": "widget",
                     "settings": {
                       "title": "Yuki Ono",
@@ -2099,7 +2099,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "4ccb263",
+                    "id": "0ad823d",
                     "elType": "widget",
                     "settings": {
                       "title": "Head of Design, Arc",
@@ -2125,7 +2125,7 @@
             "isInner": true
           },
           {
-            "id": "b30f835",
+            "id": "6307541",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2161,7 +2161,7 @@
             },
             "elements": [
               {
-                "id": "78a9037",
+                "id": "e5e9bad",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -2198,7 +2198,7 @@
                 },
                 "elements": [
                   {
-                    "id": "4b1cde2",
+                    "id": "127530f",
                     "elType": "container",
                     "settings": {
                       "content_width": "full",
@@ -2254,7 +2254,7 @@
                     },
                     "elements": [
                       {
-                        "id": "1471fa2",
+                        "id": "076e15f",
                         "elType": "widget",
                         "settings": {
                           "title": "MK",
@@ -2277,7 +2277,7 @@
                     "isInner": true
                   },
                   {
-                    "id": "d11b02b",
+                    "id": "cab7c03",
                     "elType": "widget",
                     "settings": {
                       "title": "Marcus Kim",
@@ -2305,7 +2305,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "2ee40ab",
+                    "id": "beac087",
                     "elType": "widget",
                     "settings": {
                       "title": "CTO, Cal.com",
@@ -2337,7 +2337,7 @@
     "isInner": false
   },
   {
-    "id": "9c0babd",
+    "id": "d53f299",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2365,7 +2365,7 @@
     },
     "elements": [
       {
-        "id": "392de23",
+        "id": "60cfbe7",
         "elType": "widget",
         "settings": {
           "title": "Day one at a glance",
@@ -2405,7 +2405,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "2bc9757",
+        "id": "9f037b1",
         "elType": "widget",
         "settings": {
           "editor": "<p>A preview of the opening day. Full schedule revealed next month.</p>",
@@ -2432,7 +2432,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "b3c6530",
+        "id": "b49e55c",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2458,142 +2458,23 @@
         },
         "elements": [
           {
-            "id": "89e2abb",
-            "elType": "container",
+            "id": "6548b9b",
+            "elType": "widget",
             "settings": {
-              "content_width": "full",
-              "flex_direction": "row",
-              "flex_justify_content": "flex-start",
-              "flex_align_items": "center",
-              "flex_gap": {
-                "unit": "px",
-                "size": 32,
-                "column": "32",
-                "row": "32"
-              },
-              "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-              },
+              "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">09:00</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Registration & breakfast</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">Coffee, pastries, and a lot of name tags. Meet your fellow attendees before the real work begins.</span></div>",
+              "align": "left",
               "__globals__": {
                 "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [
-              {
-                "id": "fab5ac2",
-                "elType": "widget",
-                "settings": {
-                  "title": "09:00",
-                  "header_size": "div",
-                  "align": "left",
-                  "typography_line_height": {
-                    "unit": "em",
-                    "size": 1.5,
-                    "sizes": []
-                  },
-                  "__globals__": {
-                    "title_color": "globals/colors?id=0a24e50",
-                    "typography_typography": "globals/typography?id=2b1c577"
-                  }
-                },
-                "elements": [],
-                "widgetType": "heading"
-              },
-              {
-                "id": "3c1e5bd",
-                "elType": "container",
-                "settings": {
-                  "content_width": "full",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 8,
-                    "column": "8",
-                    "row": "8"
-                  },
-                  "_element_custom_width": {
-                    "unit": "%",
-                    "size": 30,
-                    "sizes": []
-                  },
-                  "_element_width": "initial",
-                  "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                  },
-                  "__globals__": {
-                    "typography_typography": "globals/typography?id=text"
-                  }
-                },
-                "elements": [
-                  {
-                    "id": "966b58f",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Registration & breakfast",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "6",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=fb565c0",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "41852bd",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Coffee, pastries, and a lot of name tags. Meet your fellow attendees before the real work begins.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=c0ea049",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  }
-                ],
-                "isInner": true
-              }
-            ],
-            "isInner": true
+            "elements": [],
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
       },
       {
-        "id": "959b652",
+        "id": "e186b23",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2619,142 +2500,23 @@
         },
         "elements": [
           {
-            "id": "636f416",
-            "elType": "container",
+            "id": "4d7e3a4",
+            "elType": "widget",
             "settings": {
-              "content_width": "full",
-              "flex_direction": "row",
-              "flex_justify_content": "flex-start",
-              "flex_align_items": "center",
-              "flex_gap": {
-                "unit": "px",
-                "size": 32,
-                "column": "32",
-                "row": "32"
-              },
-              "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-              },
+              "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">10:00</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Opening keynote: What we broke this year</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">An honest retrospective from four founders about the mistakes that almost killed their companies — and how they recovered.</span></div>",
+              "align": "left",
               "__globals__": {
                 "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [
-              {
-                "id": "959d84d",
-                "elType": "widget",
-                "settings": {
-                  "title": "10:00",
-                  "header_size": "div",
-                  "align": "left",
-                  "typography_line_height": {
-                    "unit": "em",
-                    "size": 1.5,
-                    "sizes": []
-                  },
-                  "__globals__": {
-                    "title_color": "globals/colors?id=0a24e50",
-                    "typography_typography": "globals/typography?id=2b1c577"
-                  }
-                },
-                "elements": [],
-                "widgetType": "heading"
-              },
-              {
-                "id": "a0fcf1f",
-                "elType": "container",
-                "settings": {
-                  "content_width": "full",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 8,
-                    "column": "8",
-                    "row": "8"
-                  },
-                  "_element_custom_width": {
-                    "unit": "%",
-                    "size": 30,
-                    "sizes": []
-                  },
-                  "_element_width": "initial",
-                  "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                  },
-                  "__globals__": {
-                    "typography_typography": "globals/typography?id=text"
-                  }
-                },
-                "elements": [
-                  {
-                    "id": "e439007",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Opening keynote: What we broke this year",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "6",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=fb565c0",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "6c84027",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>An honest retrospective from four founders about the mistakes that almost killed their companies — and how they recovered.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=c0ea049",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  }
-                ],
-                "isInner": true
-              }
-            ],
-            "isInner": true
+            "elements": [],
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
       },
       {
-        "id": "367f0cb",
+        "id": "db9e943",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2780,142 +2542,23 @@
         },
         "elements": [
           {
-            "id": "9e316e0",
-            "elType": "container",
+            "id": "29fd1f5",
+            "elType": "widget",
             "settings": {
-              "content_width": "full",
-              "flex_direction": "row",
-              "flex_justify_content": "flex-start",
-              "flex_align_items": "center",
-              "flex_gap": {
-                "unit": "px",
-                "size": 32,
-                "column": "32",
-                "row": "32"
-              },
-              "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-              },
+              "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">11:30</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">The economics of shipping</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">How small teams decide what to build, what to cut, and when to stop polishing.</span></div>",
+              "align": "left",
               "__globals__": {
                 "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [
-              {
-                "id": "e95d5a8",
-                "elType": "widget",
-                "settings": {
-                  "title": "11:30",
-                  "header_size": "div",
-                  "align": "left",
-                  "typography_line_height": {
-                    "unit": "em",
-                    "size": 1.5,
-                    "sizes": []
-                  },
-                  "__globals__": {
-                    "title_color": "globals/colors?id=0a24e50",
-                    "typography_typography": "globals/typography?id=2b1c577"
-                  }
-                },
-                "elements": [],
-                "widgetType": "heading"
-              },
-              {
-                "id": "511d0be",
-                "elType": "container",
-                "settings": {
-                  "content_width": "full",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 8,
-                    "column": "8",
-                    "row": "8"
-                  },
-                  "_element_custom_width": {
-                    "unit": "%",
-                    "size": 30,
-                    "sizes": []
-                  },
-                  "_element_width": "initial",
-                  "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                  },
-                  "__globals__": {
-                    "typography_typography": "globals/typography?id=text"
-                  }
-                },
-                "elements": [
-                  {
-                    "id": "f2c6319",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "The economics of shipping",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "6",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=fb565c0",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "f3becfd",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>How small teams decide what to build, what to cut, and when to stop polishing.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=c0ea049",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  }
-                ],
-                "isInner": true
-              }
-            ],
-            "isInner": true
+            "elements": [],
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
       },
       {
-        "id": "103a086",
+        "id": "da2dd17",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2941,142 +2584,23 @@
         },
         "elements": [
           {
-            "id": "e46da7f",
-            "elType": "container",
+            "id": "fed86cf",
+            "elType": "widget",
             "settings": {
-              "content_width": "full",
-              "flex_direction": "row",
-              "flex_justify_content": "flex-start",
-              "flex_align_items": "center",
-              "flex_gap": {
-                "unit": "px",
-                "size": 32,
-                "column": "32",
-                "row": "32"
-              },
-              "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-              },
+              "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">13:00</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Lunch & hallway track</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">Long lunch. No schedule. Meet the people you came to meet.</span></div>",
+              "align": "left",
               "__globals__": {
                 "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [
-              {
-                "id": "b1bb11a",
-                "elType": "widget",
-                "settings": {
-                  "title": "13:00",
-                  "header_size": "div",
-                  "align": "left",
-                  "typography_line_height": {
-                    "unit": "em",
-                    "size": 1.5,
-                    "sizes": []
-                  },
-                  "__globals__": {
-                    "title_color": "globals/colors?id=0a24e50",
-                    "typography_typography": "globals/typography?id=2b1c577"
-                  }
-                },
-                "elements": [],
-                "widgetType": "heading"
-              },
-              {
-                "id": "3a91cfc",
-                "elType": "container",
-                "settings": {
-                  "content_width": "full",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 8,
-                    "column": "8",
-                    "row": "8"
-                  },
-                  "_element_custom_width": {
-                    "unit": "%",
-                    "size": 30,
-                    "sizes": []
-                  },
-                  "_element_width": "initial",
-                  "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                  },
-                  "__globals__": {
-                    "typography_typography": "globals/typography?id=text"
-                  }
-                },
-                "elements": [
-                  {
-                    "id": "0341106",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Lunch & hallway track",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "6",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=fb565c0",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "8f759ad",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Long lunch. No schedule. Meet the people you came to meet.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=c0ea049",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  }
-                ],
-                "isInner": true
-              }
-            ],
-            "isInner": true
+            "elements": [],
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
       },
       {
-        "id": "47efa0a",
+        "id": "6b9d802",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -3102,136 +2626,17 @@
         },
         "elements": [
           {
-            "id": "d4b5331",
-            "elType": "container",
+            "id": "f5a33ac",
+            "elType": "widget",
             "settings": {
-              "content_width": "full",
-              "flex_direction": "row",
-              "flex_justify_content": "flex-start",
-              "flex_align_items": "center",
-              "flex_gap": {
-                "unit": "px",
-                "size": 32,
-                "column": "32",
-                "row": "32"
-              },
-              "padding": {
-                "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
-                "isLinked": true
-              },
+              "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">14:30</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Workshop rotations</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">Four parallel 90-minute workshops on scaling, design systems, observability, and hiring.</span></div>",
+              "align": "left",
               "__globals__": {
                 "typography_typography": "globals/typography?id=text"
               }
             },
-            "elements": [
-              {
-                "id": "c3bc460",
-                "elType": "widget",
-                "settings": {
-                  "title": "14:30",
-                  "header_size": "div",
-                  "align": "left",
-                  "typography_line_height": {
-                    "unit": "em",
-                    "size": 1.5,
-                    "sizes": []
-                  },
-                  "__globals__": {
-                    "title_color": "globals/colors?id=0a24e50",
-                    "typography_typography": "globals/typography?id=2b1c577"
-                  }
-                },
-                "elements": [],
-                "widgetType": "heading"
-              },
-              {
-                "id": "d29de44",
-                "elType": "container",
-                "settings": {
-                  "content_width": "full",
-                  "flex_direction": "column",
-                  "flex_align_items": "center",
-                  "flex_gap": {
-                    "unit": "px",
-                    "size": 8,
-                    "column": "8",
-                    "row": "8"
-                  },
-                  "_element_custom_width": {
-                    "unit": "%",
-                    "size": 30,
-                    "sizes": []
-                  },
-                  "_element_width": "initial",
-                  "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                  },
-                  "__globals__": {
-                    "typography_typography": "globals/typography?id=text"
-                  }
-                },
-                "elements": [
-                  {
-                    "id": "2f4ae85",
-                    "elType": "widget",
-                    "settings": {
-                      "title": "Workshop rotations",
-                      "header_size": "h3",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.5,
-                        "sizes": []
-                      },
-                      "_margin": {
-                        "unit": "px",
-                        "top": "0",
-                        "right": "0",
-                        "bottom": "6",
-                        "left": "0",
-                        "isLinked": false
-                      },
-                      "__globals__": {
-                        "title_color": "globals/colors?id=fb565c0",
-                        "typography_typography": "globals/typography?id=c5a24ec"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "heading"
-                  },
-                  {
-                    "id": "560faf8",
-                    "elType": "widget",
-                    "settings": {
-                      "editor": "<p>Four parallel 90-minute workshops on scaling, design systems, observability, and hiring.</p>",
-                      "align": "left",
-                      "typography_line_height": {
-                        "unit": "em",
-                        "size": 1.6,
-                        "sizes": []
-                      },
-                      "__globals__": {
-                        "text_color": "globals/colors?id=c0ea049",
-                        "typography_typography": "globals/typography?id=437a177"
-                      }
-                    },
-                    "elements": [],
-                    "widgetType": "text-editor"
-                  }
-                ],
-                "isInner": true
-              }
-            ],
-            "isInner": true
+            "elements": [],
+            "widgetType": "text-editor"
           }
         ],
         "isInner": true
@@ -3240,7 +2645,7 @@
     "isInner": false
   },
   {
-    "id": "a5b45c5",
+    "id": "123dae9",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -3270,7 +2675,7 @@
     },
     "elements": [
       {
-        "id": "a1b0923",
+        "id": "3bc52b4",
         "elType": "widget",
         "settings": {
           "title": "Gold sponsors",
@@ -3311,7 +2716,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "4b93595",
+        "id": "bcd24df",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -3346,7 +2751,7 @@
         },
         "elements": [
           {
-            "id": "7b6e806",
+            "id": "7b5b591",
             "elType": "widget",
             "settings": {
               "title": "Stripe",
@@ -3366,7 +2771,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "4ee3e90",
+            "id": "acb662a",
             "elType": "widget",
             "settings": {
               "title": "Vercel",
@@ -3386,7 +2791,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "9869314",
+            "id": "6096554",
             "elType": "widget",
             "settings": {
               "title": "Linear",
@@ -3409,7 +2814,7 @@
         "isInner": true
       },
       {
-        "id": "f3cdfc3",
+        "id": "62314ae",
         "elType": "widget",
         "settings": {
           "title": "Silver sponsors",
@@ -3450,7 +2855,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a1ee90c",
+        "id": "4a82a42",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -3477,7 +2882,7 @@
         },
         "elements": [
           {
-            "id": "b0cd7dc",
+            "id": "4d44b67",
             "elType": "widget",
             "settings": {
               "title": "Raycast",
@@ -3497,7 +2902,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "11d7649",
+            "id": "32ef0c1",
             "elType": "widget",
             "settings": {
               "title": "Cal.com",
@@ -3517,7 +2922,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "f994030",
+            "id": "3871a8e",
             "elType": "widget",
             "settings": {
               "title": "Resend",
@@ -3537,7 +2942,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "97f2c53",
+            "id": "8ea1ff1",
             "elType": "widget",
             "settings": {
               "title": "Clerk",
@@ -3557,7 +2962,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "290a911",
+            "id": "b682c3d",
             "elType": "widget",
             "settings": {
               "title": "Railway",
@@ -3583,7 +2988,7 @@
     "isInner": false
   },
   {
-    "id": "05c5f8b",
+    "id": "99ffec1",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -3611,7 +3016,7 @@
     },
     "elements": [
       {
-        "id": "df4897b",
+        "id": "01a65f4",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -3653,7 +3058,7 @@
         },
         "elements": [
           {
-            "id": "79cbd63",
+            "id": "d33759f",
             "elType": "widget",
             "settings": {
               "title": "Get notified when tickets open.",
@@ -3699,7 +3104,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "3ccfc1d",
+            "id": "2f8c8e8",
             "elType": "widget",
             "settings": {
               "editor": "<p>We release tickets in three batches. Join the list to hear about each one first.</p>",
@@ -3732,7 +3137,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "6a73f2f",
+            "id": "31e700b",
             "elType": "widget",
             "settings": {
               "text": "Join the waitlist",
@@ -3782,7 +3187,7 @@
     "isInner": false
   },
   {
-    "id": "e83d2cc",
+    "id": "75d3563",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -3822,170 +3227,359 @@
     },
     "elements": [
       {
-        "id": "60645f5",
-        "elType": "widget",
+        "id": "ffc88cb",
+        "elType": "container",
         "settings": {
-          "title": "Ship <span style=\"color:#ec4899\">Con</span>",
-          "header_size": "h4",
-          "align": "left",
-          "typography_line_height": {
-            "unit": "em",
-            "size": 1.5,
+          "content_width": "boxed",
+          "flex_direction": "row",
+          "flex_direction_tablet": "row",
+          "flex_direction_mobile": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "stretch",
+          "flex_gap": {
+            "unit": "px",
+            "size": 40,
+            "column": "40",
+            "row": "40"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 40,
+            "column": "40",
+            "row": "40"
+          },
+          "boxed_width": {
+            "unit": "px",
+            "size": 1200,
             "sizes": []
           },
-          "_margin": {
+          "padding": {
             "unit": "px",
             "top": "0",
             "right": "0",
-            "bottom": "12",
+            "bottom": "0",
             "left": "0",
-            "isLinked": false
+            "isLinked": true
           },
           "__globals__": {
-            "title_color": "globals/colors?id=fb565c0",
-            "typography_typography": "globals/typography?id=9dffbf6"
-          }
-        },
-        "elements": [],
-        "widgetType": "heading"
-      },
-      {
-        "id": "dab791f",
-        "elType": "widget",
-        "settings": {
-          "view": "inline",
-          "space_between": {
-            "unit": "px",
-            "size": 20,
-            "sizes": []
-          },
-          "icon_list": [
-            {
-              "text": "Speakers",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Agenda",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Venue",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Code of conduct",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Individual",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Team",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Student",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Scholarships",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            }
-          ],
-          "icon_typography_typography": "custom",
-          "icon_typography_font_family": "Manrope",
-          "icon_typography_font_size": {
-            "unit": "px",
-            "size": "14",
-            "sizes": []
-          },
-          "icon_typography_line_height": {
-            "unit": "em",
-            "size": 1.5,
-            "sizes": []
-          },
-          "__globals__": {
-            "text_color": "globals/colors?id=c0ea049",
             "typography_typography": "globals/typography?id=text"
           }
         },
-        "elements": [],
-        "widgetType": "icon-list"
+        "elements": [
+          {
+            "id": "9c8efca",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "7d68e05",
+                "elType": "widget",
+                "settings": {
+                  "title": "Con",
+                  "header_size": "div",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=0a24e50",
+                    "typography_typography": "globals/typography?id=9dffbf6"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "f3630f2",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>An independent conference for product builders. Run by volunteers, funded by tickets and a handful of great sponsors.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  },
+                  "_element_custom_width": {
+                    "unit": "px",
+                    "size": 280,
+                    "sizes": []
+                  },
+                  "_element_width": "initial",
+                  "__globals__": {
+                    "text_color": "globals/colors?id=c0ea049",
+                    "typography_typography": "globals/typography?id=437a177"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "ef44612",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "925fd34",
+                "elType": "widget",
+                "settings": {
+                  "title": "Event",
+                  "header_size": "h4",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Manrope",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "12",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=fb565c0"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "08a1457",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "9159415",
+                "elType": "widget",
+                "settings": {
+                  "title": "Tickets",
+                  "header_size": "h4",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Manrope",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "12",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=fb565c0"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "42e8768",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "6dd9036",
+                "elType": "widget",
+                "settings": {
+                  "title": "Contact",
+                  "header_size": "h4",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Manrope",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "12",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "16",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=fb565c0"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
       },
       {
-        "id": "a288ebe",
+        "id": "dfa578d",
         "elType": "widget",
         "settings": {
-          "editor": "© 2026 ShipCon. Lisbon, Portugal.",
+          "title": "© 2026 ShipCon. Lisbon, Portugal.",
+          "header_size": "div",
+          "align": "center",
           "typography_line_height": {
             "unit": "em",
             "size": 1.5,
             "sizes": []
           },
           "__globals__": {
-            "text_color": "globals/colors?id=772d8e5",
+            "title_color": "globals/colors?id=772d8e5",
             "typography_typography": "globals/typography?id=433d492"
           }
         },
         "elements": [],
-        "widgetType": "text-editor"
+        "widgetType": "heading"
       }
     ],
     "isInner": false

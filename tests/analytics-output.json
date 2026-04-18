@@ -1,6 +1,6 @@
 [
   {
-    "id": "cb47ab3",
+    "id": "08af307",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -44,7 +44,7 @@
     },
     "elements": [
       {
-        "id": "22a3d96",
+        "id": "efc2572",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -64,7 +64,7 @@
         },
         "elements": [
           {
-            "id": "5f493a5",
+            "id": "3ca46be",
             "elType": "widget",
             "settings": {
               "title": "Lu <span style=\"color:#6366f1\">men</span>",
@@ -87,7 +87,7 @@
         "isInner": true
       },
       {
-        "id": "4cfcbbd",
+        "id": "f22457c",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -114,7 +114,7 @@
         },
         "elements": [
           {
-            "id": "478f13f",
+            "id": "808eb34",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -213,7 +213,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "43168b2",
+            "id": "b931893",
             "elType": "widget",
             "settings": {
               "text": "Start free",
@@ -263,7 +263,7 @@
     "isInner": false
   },
   {
-    "id": "3cba08f",
+    "id": "3f27335",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -300,7 +300,7 @@
     },
     "elements": [
       {
-        "id": "ce346bb",
+        "id": "5267ac4",
         "elType": "widget",
         "settings": {
           "title": "Now with AI-powered insights",
@@ -354,7 +354,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "655b39c",
+        "id": "7659c75",
         "elType": "widget",
         "settings": {
           "title": "The analytics platform <span style=\"color:#6366f1\">product teams</span> actually love.",
@@ -400,7 +400,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "d04a666",
+        "id": "4fbb54b",
         "elType": "widget",
         "settings": {
           "editor": "<p>Lumen ties usage, revenue, and qualitative feedback together — so you can stop guessing what matters next.</p>",
@@ -433,7 +433,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "0a7b2df",
+        "id": "b49f46a",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -460,7 +460,7 @@
         },
         "elements": [
           {
-            "id": "a4a4fd8",
+            "id": "94ff37a",
             "elType": "widget",
             "settings": {
               "text": "Start free trial",
@@ -504,7 +504,7 @@
             "widgetType": "button"
           },
           {
-            "id": "7650726",
+            "id": "a5392b6",
             "elType": "widget",
             "settings": {
               "text": "Book a demo",
@@ -551,7 +551,7 @@
         "isInner": true
       },
       {
-        "id": "7429334",
+        "id": "771c734",
         "elType": "widget",
         "settings": {
           "editor": "<p>No credit card required · 14-day trial · Cancel anytime</p>",
@@ -573,7 +573,7 @@
     "isInner": false
   },
   {
-    "id": "aa20523",
+    "id": "ee045bb",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -613,7 +613,7 @@
     },
     "elements": [
       {
-        "id": "7b520ea",
+        "id": "2efb45f",
         "elType": "widget",
         "settings": {
           "title": "Trusted by product teams at",
@@ -654,7 +654,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "d9bc61b",
+        "id": "cf3731f",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -681,7 +681,7 @@
         },
         "elements": [
           {
-            "id": "d3b47f2",
+            "id": "1263835",
             "elType": "widget",
             "settings": {
               "title": "Atlas",
@@ -701,7 +701,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "6a305c0",
+            "id": "0b4e9ba",
             "elType": "widget",
             "settings": {
               "title": "Nimbus",
@@ -721,7 +721,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "fb02d8b",
+            "id": "151a0f0",
             "elType": "widget",
             "settings": {
               "title": "Ferra",
@@ -741,7 +741,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "973fd41",
+            "id": "9e43d65",
             "elType": "widget",
             "settings": {
               "title": "Kestrel",
@@ -761,7 +761,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "e652a4a",
+            "id": "ff38a28",
             "elType": "widget",
             "settings": {
               "title": "Orbit",
@@ -781,7 +781,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "73a3fdf",
+            "id": "bd61c90",
             "elType": "widget",
             "settings": {
               "title": "Vance",
@@ -807,7 +807,7 @@
     "isInner": false
   },
   {
-    "id": "0815fbf",
+    "id": "767659b",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -835,7 +835,7 @@
     },
     "elements": [
       {
-        "id": "0a837ca",
+        "id": "410d65d",
         "elType": "widget",
         "settings": {
           "title": "Why Lumen",
@@ -876,7 +876,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "4d88465",
+        "id": "af0698e",
         "elType": "widget",
         "settings": {
           "title": "One source of truth for every decision.",
@@ -922,7 +922,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "8a84982",
+        "id": "6dbf1f8",
         "elType": "widget",
         "settings": {
           "editor": "<p>From first activation to expansion revenue — instrument, query, and visualize without stitching five tools together.</p>",
@@ -955,7 +955,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "e5ab8a9",
+        "id": "f59a46e",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -995,7 +995,7 @@
         },
         "elements": [
           {
-            "id": "b424bc0",
+            "id": "a31b6e5",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1031,7 +1031,7 @@
             },
             "elements": [
               {
-                "id": "16c9c33",
+                "id": "f968ec3",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1068,7 +1068,7 @@
                 },
                 "elements": [
                   {
-                    "id": "9f658d3",
+                    "id": "0d0bcb5",
                     "elType": "widget",
                     "settings": {
                       "title": "📊",
@@ -1106,7 +1106,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "6de29c6",
+                    "id": "edd549d",
                     "elType": "widget",
                     "settings": {
                       "title": "Product analytics",
@@ -1134,7 +1134,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "4909a16",
+                    "id": "7b57b66",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Funnels, retention, cohorts, and paths — with unlimited events and no row limits on any plan.</p>",
@@ -1159,7 +1159,7 @@
             "isInner": true
           },
           {
-            "id": "59f662f",
+            "id": "3c41fa6",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1195,7 +1195,7 @@
             },
             "elements": [
               {
-                "id": "cc66095",
+                "id": "8163f79",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1232,7 +1232,7 @@
                 },
                 "elements": [
                   {
-                    "id": "5432ab5",
+                    "id": "f0ca1fa",
                     "elType": "widget",
                     "settings": {
                       "title": "💡",
@@ -1270,7 +1270,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "b0dd02d",
+                    "id": "162605e",
                     "elType": "widget",
                     "settings": {
                       "title": "AI insights",
@@ -1298,7 +1298,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "a163b6f",
+                    "id": "cccdd6d",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Ask questions in plain English. Lumen generates the query, the chart, and a short explanation.</p>",
@@ -1323,7 +1323,7 @@
             "isInner": true
           },
           {
-            "id": "729d9bd",
+            "id": "9475193",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1359,7 +1359,7 @@
             },
             "elements": [
               {
-                "id": "39b786c",
+                "id": "3683c6c",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1396,7 +1396,7 @@
                 },
                 "elements": [
                   {
-                    "id": "a0b45d5",
+                    "id": "b6aa054",
                     "elType": "widget",
                     "settings": {
                       "title": "🔌",
@@ -1434,7 +1434,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "ab04883",
+                    "id": "3b911ac",
                     "elType": "widget",
                     "settings": {
                       "title": "120+ integrations",
@@ -1462,7 +1462,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "62a76c1",
+                    "id": "f4a69b9",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Pipe in data from Stripe, Segment, Snowflake, and more. Two-way sync with your warehouse.</p>",
@@ -1490,7 +1490,7 @@
         "isInner": true
       },
       {
-        "id": "950cb9a",
+        "id": "170937c",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1530,7 +1530,7 @@
         },
         "elements": [
           {
-            "id": "c71daba",
+            "id": "0454d89",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1566,7 +1566,7 @@
             },
             "elements": [
               {
-                "id": "3a50540",
+                "id": "7f1f737",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1603,7 +1603,7 @@
                 },
                 "elements": [
                   {
-                    "id": "90ffdf2",
+                    "id": "c9f2219",
                     "elType": "widget",
                     "settings": {
                       "title": "🔒",
@@ -1641,7 +1641,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "c55c8c2",
+                    "id": "2671ca4",
                     "elType": "widget",
                     "settings": {
                       "title": "Enterprise-grade security",
@@ -1669,7 +1669,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "fb978ea",
+                    "id": "7bc0cd1",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>SOC 2 Type II, HIPAA, and GDPR compliant. SSO, SCIM, and custom data residency available.</p>",
@@ -1694,7 +1694,7 @@
             "isInner": true
           },
           {
-            "id": "dedd9ac",
+            "id": "fa04b8b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1730,7 +1730,7 @@
             },
             "elements": [
               {
-                "id": "63c889a",
+                "id": "059eb7a",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1767,7 +1767,7 @@
                 },
                 "elements": [
                   {
-                    "id": "ccebae5",
+                    "id": "70af8d7",
                     "elType": "widget",
                     "settings": {
                       "title": "⚡",
@@ -1805,7 +1805,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "68f6d59",
+                    "id": "1dd55ba",
                     "elType": "widget",
                     "settings": {
                       "title": "Real-time queries",
@@ -1833,7 +1833,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "206e80b",
+                    "id": "12b1c48",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Sub-second response times over billions of events thanks to our columnar query engine.</p>",
@@ -1858,7 +1858,7 @@
             "isInner": true
           },
           {
-            "id": "5ba5c44",
+            "id": "ccf841b",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -1894,7 +1894,7 @@
             },
             "elements": [
               {
-                "id": "f1d2c68",
+                "id": "9fbfa7d",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -1931,7 +1931,7 @@
                 },
                 "elements": [
                   {
-                    "id": "c02c940",
+                    "id": "5321cda",
                     "elType": "widget",
                     "settings": {
                       "title": "🧪",
@@ -1969,7 +1969,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "8f8a0ca",
+                    "id": "f7792a1",
                     "elType": "widget",
                     "settings": {
                       "title": "Experimentation",
@@ -1997,7 +1997,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "5e19b37",
+                    "id": "2b80ba6",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>Run A/B tests directly on your product analytics — no separate experimentation tool needed.</p>",
@@ -2028,7 +2028,7 @@
     "isInner": false
   },
   {
-    "id": "b131152",
+    "id": "094f7dc",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2058,7 +2058,7 @@
     },
     "elements": [
       {
-        "id": "bc56bb9",
+        "id": "0a095db",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2098,7 +2098,7 @@
         },
         "elements": [
           {
-            "id": "b4f41a8",
+            "id": "a5018be",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2124,7 +2124,7 @@
             },
             "elements": [
               {
-                "id": "dfae7b8",
+                "id": "8b9f15d",
                 "elType": "widget",
                 "settings": {
                   "title": "2.4B",
@@ -2164,7 +2164,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "bb106e2",
+                "id": "d5475c8",
                 "elType": "widget",
                 "settings": {
                   "title": "Events / day",
@@ -2200,7 +2200,7 @@
             "isInner": true
           },
           {
-            "id": "4dc295e",
+            "id": "313588e",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2226,7 +2226,7 @@
             },
             "elements": [
               {
-                "id": "31554e0",
+                "id": "f3a62ed",
                 "elType": "widget",
                 "settings": {
                   "title": "99.99%",
@@ -2266,7 +2266,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "e1781a4",
+                "id": "6745a4b",
                 "elType": "widget",
                 "settings": {
                   "title": "Uptime SLA",
@@ -2302,7 +2302,7 @@
             "isInner": true
           },
           {
-            "id": "86e1b9c",
+            "id": "fadc27a",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2328,7 +2328,7 @@
             },
             "elements": [
               {
-                "id": "dbc4576",
+                "id": "ce0403f",
                 "elType": "widget",
                 "settings": {
                   "title": "180ms",
@@ -2368,7 +2368,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8e9cac0",
+                "id": "4d674c9",
                 "elType": "widget",
                 "settings": {
                   "title": "Median query",
@@ -2404,7 +2404,7 @@
             "isInner": true
           },
           {
-            "id": "d8d8bf4",
+            "id": "3e5d969",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2430,7 +2430,7 @@
             },
             "elements": [
               {
-                "id": "23cc724",
+                "id": "57c08d2",
                 "elType": "widget",
                 "settings": {
                   "title": "4000+",
@@ -2470,7 +2470,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "bec1aba",
+                "id": "345a028",
                 "elType": "widget",
                 "settings": {
                   "title": "Paying teams",
@@ -2512,7 +2512,7 @@
     "isInner": false
   },
   {
-    "id": "e532ebf",
+    "id": "bf41576",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2540,7 +2540,7 @@
     },
     "elements": [
       {
-        "id": "4385025",
+        "id": "9606027",
         "elType": "widget",
         "settings": {
           "title": "Pricing that scales with you.",
@@ -2580,7 +2580,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "fdfca23",
+        "id": "ed884b7",
         "elType": "widget",
         "settings": {
           "editor": "<p>Start free, upgrade when you need more. All plans include unlimited seats and unlimited events.</p>",
@@ -2613,7 +2613,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "f71f797",
+        "id": "746c651",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2653,7 +2653,7 @@
         },
         "elements": [
           {
-            "id": "d3bfe57",
+            "id": "055d67a",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2699,7 +2699,7 @@
             },
             "elements": [
               {
-                "id": "7a248d4",
+                "id": "3603209",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -2736,7 +2736,7 @@
                 },
                 "elements": [
                   {
-                    "id": "ae36cee",
+                    "id": "f49c3de",
                     "elType": "widget",
                     "settings": {
                       "title": "Starter",
@@ -2777,7 +2777,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "607a979",
+                    "id": "69ae1e1",
                     "elType": "widget",
                     "settings": {
                       "title": "Free",
@@ -2805,7 +2805,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "7f73c30",
+                    "id": "253681b",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>For small teams getting started with product analytics.</p>",
@@ -2832,7 +2832,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "892a1c6",
+                    "id": "4c7da2a",
                     "elType": "widget",
                     "settings": {
                       "title": "$0",
@@ -2872,7 +2872,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "93945bf",
+                    "id": "e683835",
                     "elType": "widget",
                     "settings": {
                       "text": "Get started",
@@ -2922,7 +2922,7 @@
             "isInner": true
           },
           {
-            "id": "3349b3c",
+            "id": "8e9fdce",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2968,7 +2968,7 @@
             },
             "elements": [
               {
-                "id": "59a8a79",
+                "id": "924f7a4",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -3005,7 +3005,7 @@
                 },
                 "elements": [
                   {
-                    "id": "598b42a",
+                    "id": "9acd8f0",
                     "elType": "widget",
                     "settings": {
                       "title": "Most popular",
@@ -3046,7 +3046,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "da8d4ce",
+                    "id": "34e757c",
                     "elType": "widget",
                     "settings": {
                       "title": "Growth",
@@ -3074,7 +3074,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "55c6fa3",
+                    "id": "d607a16",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>For growing product teams that need advanced insights and collaboration.</p>",
@@ -3101,7 +3101,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "5c2be0b",
+                    "id": "af32694",
                     "elType": "widget",
                     "settings": {
                       "title": "$399",
@@ -3141,7 +3141,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "ba1fb55",
+                    "id": "f9a8f66",
                     "elType": "widget",
                     "settings": {
                       "text": "Start 14-day trial",
@@ -3191,7 +3191,7 @@
             "isInner": true
           },
           {
-            "id": "cbfea7a",
+            "id": "afe3be9",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -3237,7 +3237,7 @@
             },
             "elements": [
               {
-                "id": "28b2d6b",
+                "id": "8426053",
                 "elType": "container",
                 "settings": {
                   "content_width": "boxed",
@@ -3274,7 +3274,7 @@
                 },
                 "elements": [
                   {
-                    "id": "78bece1",
+                    "id": "147ea8b",
                     "elType": "widget",
                     "settings": {
                       "title": "Enterprise",
@@ -3315,7 +3315,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "a4d63cf",
+                    "id": "27883e0",
                     "elType": "widget",
                     "settings": {
                       "title": "Custom",
@@ -3343,7 +3343,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "a8a8119",
+                    "id": "667a51a",
                     "elType": "widget",
                     "settings": {
                       "editor": "<p>For larger organizations with custom security, compliance, and volume needs.</p>",
@@ -3370,7 +3370,7 @@
                     "widgetType": "text-editor"
                   },
                   {
-                    "id": "66f8823",
+                    "id": "8078d40",
                     "elType": "widget",
                     "settings": {
                       "title": "Let's talk",
@@ -3410,7 +3410,7 @@
                     "widgetType": "heading"
                   },
                   {
-                    "id": "1539c25",
+                    "id": "b6d0bf3",
                     "elType": "widget",
                     "settings": {
                       "text": "Contact sales",
@@ -3466,7 +3466,7 @@
     "isInner": false
   },
   {
-    "id": "e392501",
+    "id": "78556d5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -3496,7 +3496,7 @@
     },
     "elements": [
       {
-        "id": "108d634",
+        "id": "49e6fcb",
         "elType": "widget",
         "settings": {
           "editor": "<p>\"We replaced three separate tools with Lumen in a weekend. The AI insights alone pay for the whole subscription — our PMs are running analyses they used to wait a week for.\"</p>",
@@ -3537,7 +3537,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "16a8ea9",
+        "id": "3d83ead",
         "elType": "widget",
         "settings": {
           "title": "Marcus Alderete",
@@ -3565,7 +3565,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "fccdb83",
+        "id": "8b744c9",
         "elType": "widget",
         "settings": {
           "title": "VP Product, Sundial Health",
@@ -3588,7 +3588,7 @@
     "isInner": false
   },
   {
-    "id": "3089ea0",
+    "id": "f4807a7",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -3616,7 +3616,7 @@
     },
     "elements": [
       {
-        "id": "7b0840a",
+        "id": "7003c06",
         "elType": "widget",
         "settings": {
           "title": "Frequently asked questions",
@@ -3656,7 +3656,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "ee40646",
+        "id": "4c4f9b5",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -3682,7 +3682,7 @@
         },
         "elements": [
           {
-            "id": "c4cd1c1",
+            "id": "8f6e275",
             "elType": "widget",
             "settings": {
               "title": "How is Lumen different from Amplitude or Mixpanel?",
@@ -3710,7 +3710,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "085ba18",
+            "id": "0cdd809",
             "elType": "widget",
             "settings": {
               "editor": "<p>Lumen is built around an AI query layer and a unified data model. You get product analytics, experimentation, and warehouse sync in one tool — priced transparently, with no event caps.</p>",
@@ -3732,7 +3732,7 @@
         "isInner": true
       },
       {
-        "id": "4a34bbe",
+        "id": "cc37c27",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -3758,7 +3758,7 @@
         },
         "elements": [
           {
-            "id": "5617a8a",
+            "id": "422eb36",
             "elType": "widget",
             "settings": {
               "title": "Do you have a free tier?",
@@ -3786,7 +3786,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "dad872a",
+            "id": "0f41a58",
             "elType": "widget",
             "settings": {
               "editor": "<p>Yes. The Starter plan is free forever for teams under 50k monthly tracked users. No credit card required to sign up.</p>",
@@ -3808,7 +3808,7 @@
         "isInner": true
       },
       {
-        "id": "8577367",
+        "id": "5d838e7",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -3834,7 +3834,7 @@
         },
         "elements": [
           {
-            "id": "07bbd26",
+            "id": "bfab582",
             "elType": "widget",
             "settings": {
               "title": "Can I bring my own warehouse?",
@@ -3862,7 +3862,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "fd204e7",
+            "id": "6291fd2",
             "elType": "widget",
             "settings": {
               "editor": "<p>Absolutely. Lumen syncs with Snowflake, BigQuery, Redshift, and Databricks in both directions. Your data stays yours.</p>",
@@ -3884,7 +3884,7 @@
         "isInner": true
       },
       {
-        "id": "00d7156",
+        "id": "6eef02e",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -3910,7 +3910,7 @@
         },
         "elements": [
           {
-            "id": "0377745",
+            "id": "a3d54cf",
             "elType": "widget",
             "settings": {
               "title": "What about data privacy and compliance?",
@@ -3938,7 +3938,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "269d3ce",
+            "id": "021269f",
             "elType": "widget",
             "settings": {
               "editor": "<p>Lumen is SOC 2 Type II, HIPAA, and GDPR compliant. Enterprise customers can choose EU, US, or custom data residency.</p>",
@@ -3963,7 +3963,7 @@
     "isInner": false
   },
   {
-    "id": "dc8cf40",
+    "id": "59c2a66",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -3991,7 +3991,7 @@
     },
     "elements": [
       {
-        "id": "cb69d23",
+        "id": "1f1c48a",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -4040,7 +4040,7 @@
         },
         "elements": [
           {
-            "id": "5739bd0",
+            "id": "f779642",
             "elType": "widget",
             "settings": {
               "title": "See what your product data has been trying to tell you.",
@@ -4086,7 +4086,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "09e2923",
+            "id": "99c3576",
             "elType": "widget",
             "settings": {
               "editor": "<p>14-day trial on the Growth plan. No credit card. Set up in under 10 minutes.</p>",
@@ -4119,7 +4119,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "b653e4a",
+            "id": "806dccd",
             "elType": "widget",
             "settings": {
               "text": "Start free trial",
@@ -4169,7 +4169,7 @@
     "isInner": false
   },
   {
-    "id": "2bd73e1",
+    "id": "42dcefb",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -4199,152 +4199,515 @@
     },
     "elements": [
       {
-        "id": "0c528f2",
-        "elType": "widget",
+        "id": "f34521b",
+        "elType": "container",
         "settings": {
-          "title": "Lu <span style=\"color:#a5b4fc\">men</span>",
-          "header_size": "h4",
-          "align": "left",
-          "typography_line_height": {
-            "unit": "em",
-            "size": 1.5,
+          "content_width": "boxed",
+          "flex_direction": "row",
+          "flex_direction_tablet": "row",
+          "flex_direction_mobile": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "stretch",
+          "flex_gap": {
+            "unit": "px",
+            "size": 40,
+            "column": "40",
+            "row": "40"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 40,
+            "column": "40",
+            "row": "40"
+          },
+          "boxed_width": {
+            "unit": "px",
+            "size": 1200,
             "sizes": []
           },
-          "_margin": {
+          "padding": {
             "unit": "px",
             "top": "0",
             "right": "0",
-            "bottom": "14",
+            "bottom": "0",
             "left": "0",
-            "isLinked": false
+            "isLinked": true
           },
           "__globals__": {
-            "title_color": "globals/colors?id=1561c2d",
-            "typography_typography": "globals/typography?id=9dffbf6"
-          }
-        },
-        "elements": [],
-        "widgetType": "heading"
-      },
-      {
-        "id": "31baf22",
-        "elType": "widget",
-        "settings": {
-          "view": "inline",
-          "space_between": {
-            "unit": "px",
-            "size": 20,
-            "sizes": []
-          },
-          "icon_list": [
-            {
-              "text": "Overview",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Analytics",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Experimentation",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Integrations",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "About",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Careers",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Customers",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            },
-            {
-              "text": "Blog",
-              "link": {
-                "url": "#",
-                "is_external": false
-              },
-              "selected_icon": {
-                "value": "",
-                "library": ""
-              }
-            }
-          ],
-          "icon_typography_typography": "custom",
-          "icon_typography_font_family": "Inter",
-          "icon_typography_font_size": {
-            "unit": "px",
-            "size": "14",
-            "sizes": []
-          },
-          "icon_typography_line_height": {
-            "unit": "em",
-            "size": 1.5,
-            "sizes": []
-          },
-          "__globals__": {
-            "text_color": "globals/colors?id=8338537",
             "typography_typography": "globals/typography?id=text"
           }
         },
-        "elements": [],
-        "widgetType": "icon-list"
+        "elements": [
+          {
+            "id": "fdb64b5",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "26c452b",
+                "elType": "widget",
+                "settings": {
+                  "title": "men",
+                  "header_size": "div",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "14",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=5ab585b",
+                    "typography_typography": "globals/typography?id=9dffbf6"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "496c782",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>The analytics platform product teams actually love. Built in Berlin, trusted worldwide.</p>",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.6,
+                    "sizes": []
+                  },
+                  "_element_custom_width": {
+                    "unit": "px",
+                    "size": 260,
+                    "sizes": []
+                  },
+                  "_element_width": "initial",
+                  "__globals__": {
+                    "text_color": "globals/colors?id=8338537",
+                    "typography_typography": "globals/typography?id=2b1c577"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "2f3cabf",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "9ad92b8",
+                "elType": "widget",
+                "settings": {
+                  "title": "Product",
+                  "header_size": "h4",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "12",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "18",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "cef0cde",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "0cba95f",
+                "elType": "widget",
+                "settings": {
+                  "title": "Company",
+                  "header_size": "h4",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "12",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "18",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "e58176a",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "3b58582",
+                "elType": "widget",
+                "settings": {
+                  "title": "Resources",
+                  "header_size": "h4",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "12",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "18",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "96aab2d",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_gap": {
+                "unit": "px",
+                "size": 12,
+                "column": "12",
+                "row": "12"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "c8374b0",
+                "elType": "widget",
+                "settings": {
+                  "title": "Legal",
+                  "header_size": "h4",
+                  "align": "left",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": "12",
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "typography_letter_spacing": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                  },
+                  "typography_text_transform": "uppercase",
+                  "_margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "18",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=1561c2d"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "160d06c",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "flex_direction": "row",
+          "flex_direction_tablet": "row",
+          "flex_direction_mobile": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "stretch",
+          "flex_gap": {
+            "unit": "px",
+            "size": 40,
+            "column": "40",
+            "row": "40"
+          },
+          "flex_gap_tablet": {
+            "unit": "px",
+            "size": 40,
+            "column": "40",
+            "row": "40"
+          },
+          "boxed_width": {
+            "unit": "px",
+            "size": 1200,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+          },
+          "__globals__": {
+            "typography_typography": "globals/typography?id=text"
+          }
+        },
+        "elements": [
+          {
+            "id": "6e90b3c",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "flex_direction": "row",
+              "flex_justify_content": "space-between",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "unit": "px",
+                "size": 8,
+                "column": "8",
+                "row": "8"
+              },
+              "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "__globals__": {
+                "typography_typography": "globals/typography?id=text"
+              }
+            },
+            "elements": [
+              {
+                "id": "2e6ec12",
+                "elType": "widget",
+                "settings": {
+                  "title": "© 2026 Lumen Analytics GmbH. Made in Berlin.",
+                  "header_size": "div",
+                  "align": "left",
+                  "typography_line_height": {
+                    "unit": "em",
+                    "size": 1.5,
+                    "sizes": []
+                  },
+                  "__globals__": {
+                    "title_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=0d96bbc"
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "94c170f",
+                "elType": "widget",
+                "settings": {
+                  "editor": "Twitter<br>LinkedIn<br>GitHub",
+                  "__globals__": {
+                    "text_color": "globals/colors?id=25a8170",
+                    "typography_typography": "globals/typography?id=text"
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
       }
     ],
     "isInner": false
