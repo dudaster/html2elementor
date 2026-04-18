@@ -66,6 +66,10 @@ def _walk(el: Tag, styles_map: dict, depth: int = 0) -> dict | None:
         node["href"] = el.get("href", "")
     if el.name == "button":
         node["text"] = el.get_text(strip=True)
+    if el.name == "input":
+        node["type"] = el.get("type", "text")
+        node["placeholder"] = el.get("placeholder", "")
+        node["name"] = el.get("name", "")
 
     for child in el.children:
         if isinstance(child, Tag):

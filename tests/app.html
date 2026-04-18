@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Drift — A calmer way to manage your money</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #0c0a09; background: #fffbf5; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ============ HEADER ============ */
+    header { padding: 20px 56px; display: flex; justify-content: space-between; align-items: center; }
+    header .brand { font-size: 22px; font-weight: 800; color: #0c0a09; letter-spacing: -0.5px; }
+    header .brand span { color: #ea580c; }
+    header nav { display: flex; align-items: center; }
+    header nav a { font-size: 14px; color: #57534e; font-weight: 500; margin-right: 28px; }
+    header .cta { background: #0c0a09; color: #fffbf5; padding: 10px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; }
+
+    /* ============ HERO (split) ============ */
+    .hero { padding: 72px 56px 100px; }
+    .hero .row { display: flex; gap: 72px; max-width: 1200px; margin: 0 auto; align-items: center; }
+    .hero .text { flex: 1; }
+    .hero .text .tag { display: inline-block; background: #fed7aa; color: #9a3412; padding: 6px 14px; border-radius: 99px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 24px; }
+    .hero .text h1 { font-size: 60px; font-weight: 800; color: #0c0a09; letter-spacing: -2px; line-height: 1.05; margin-bottom: 24px; }
+    .hero .text h1 em { color: #ea580c; font-style: normal; }
+    .hero .text p { font-size: 19px; color: #44403c; max-width: 500px; margin-bottom: 36px; line-height: 1.6; }
+    .hero .text .ctas { display: flex; gap: 12px; margin-bottom: 16px; }
+    .hero .text .primary { background: #ea580c; color: #fffbf5; padding: 16px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; }
+    .hero .text .secondary { background: #fffbf5; color: #0c0a09; padding: 16px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; border: 1px solid #e7e5e4; }
+    .hero .text .small { font-size: 13px; color: #78716c; }
+    .hero .visual { flex: 1; }
+    .hero .visual .card { background: #ffffff; border: 1px solid #e7e5e4; border-radius: 20px; padding: 32px; box-shadow: 0 12px 40px rgba(12, 10, 9, 0.08); }
+    .hero .visual .card .balance-label { font-size: 13px; color: #78716c; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 8px; }
+    .hero .visual .card .balance { font-size: 48px; font-weight: 800; color: #0c0a09; letter-spacing: -1.5px; margin-bottom: 28px; }
+    .hero .visual .card .balance span { color: #16a34a; font-size: 17px; font-weight: 600; margin-left: 12px; letter-spacing: 0; }
+
+    /* ============ FEATURES ============ */
+    .features { padding: 96px 56px; }
+    .features .intro { max-width: 720px; margin: 0 auto 64px; text-align: center; }
+    .features .intro .kicker { font-size: 13px; color: #ea580c; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    .features .intro h2 { font-size: 44px; font-weight: 800; color: #0c0a09; letter-spacing: -1.2px; }
+    .features .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto; }
+    .features .item { padding: 32px; border-radius: 16px; background: #ffffff; border: 1px solid #e7e5e4; }
+    .features .item .ico { font-size: 32px; margin-bottom: 16px; }
+    .features .item h3 { font-size: 20px; font-weight: 700; color: #0c0a09; margin-bottom: 10px; }
+    .features .item p { font-size: 15px; color: #57534e; line-height: 1.65; }
+
+    /* ============ NEWSLETTER ============ */
+    .newsletter { padding: 96px 56px; background: #0c0a09; }
+    .newsletter .inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .newsletter h2 { font-size: 40px; font-weight: 800; color: #fffbf5; letter-spacing: -1.2px; margin-bottom: 14px; }
+    .newsletter p { font-size: 17px; color: #a8a29e; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .newsletter .form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+    .newsletter .form input { flex: 1; padding: 14px 18px; border-radius: 10px; border: 1px solid #44403c; background: #1c1917; color: #fffbf5; font-size: 14px; font-family: inherit; }
+    .newsletter .form button { background: #ea580c; color: #fffbf5; padding: 14px 24px; border-radius: 10px; font-size: 14px; font-weight: 600; border: none; cursor: pointer; font-family: inherit; }
+    .newsletter .privacy { font-size: 12px; color: #78716c; margin-top: 14px; }
+
+    /* ============ FOOTER ============ */
+    footer { padding: 56px 56px 32px; background: #fffbf5; border-top: 1px solid #e7e5e4; }
+    footer .cols { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
+    footer .about .brand { font-size: 22px; font-weight: 800; color: #0c0a09; letter-spacing: -0.5px; margin-bottom: 12px; }
+    footer .about .brand span { color: #ea580c; }
+    footer .about p { font-size: 14px; color: #57534e; max-width: 280px; line-height: 1.6; }
+    footer .col h4 { font-size: 12px; font-weight: 700; color: #0c0a09; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+    footer .col a { display: block; font-size: 14px; color: #57534e; margin-bottom: 10px; }
+    footer .copy { text-align: center; padding-top: 32px; border-top: 1px solid #e7e5e4; font-size: 13px; color: #78716c; }
+</style>
+</head>
+<body>
+    <header>
+        <div class="brand">Dri<span>ft</span></div>
+        <nav>
+            <a href="#">Product</a>
+            <a href="#">Pricing</a>
+            <a href="#">Security</a>
+            <a href="#">Blog</a>
+            <a href="#" class="cta">Sign in</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="row">
+            <div class="text">
+                <div class="tag">BETA — INVITE ONLY</div>
+                <h1>A <em>calmer</em> way to manage your money.</h1>
+                <p>Drift is a personal finance app for people who hate personal finance apps. No dopamine hits, no aggressive notifications — just the numbers, rendered honestly.</p>
+                <div class="ctas">
+                    <a href="#" class="primary">Request an invite</a>
+                    <a href="#" class="secondary">See how it works</a>
+                </div>
+                <p class="small">Free while in beta. 12,800 people on the waitlist.</p>
+            </div>
+            <div class="visual">
+                <div class="card">
+                    <div class="balance-label">Net worth</div>
+                    <div class="balance">$128,450<span>+2.4% this month</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="intro">
+            <div class="kicker">What makes Drift different</div>
+            <h2>Calm, honest, and yours.</h2>
+        </div>
+        <div class="grid">
+            <div class="item">
+                <div class="ico">🌿</div>
+                <h3>No dark patterns</h3>
+                <p>We don't optimize for engagement. You open Drift when you need to, not when we send a push notification.</p>
+            </div>
+            <div class="item">
+                <div class="ico">🔒</div>
+                <h3>Local-first data</h3>
+                <p>Your financial data lives on your device. We never see your balances, transactions, or goals. Encrypted sync is optional.</p>
+            </div>
+            <div class="item">
+                <div class="ico">📊</div>
+                <h3>Boring by design</h3>
+                <p>Simple charts, text-heavy summaries, no gradients. We'd rather be useful than look impressive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="inner">
+            <h2>Get the beta invite.</h2>
+            <p>Drop your email. We'll send your invite as soon as a spot opens — usually within two weeks.</p>
+            <div class="form">
+                <input type="email" placeholder="you@example.com">
+                <button>Join waitlist</button>
+            </div>
+            <p class="privacy">We don't track you. We never share your email. Unsubscribe in one click.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="cols">
+            <div class="about">
+                <div class="brand">Dri<span>ft</span></div>
+                <p>A personal finance app for people who'd rather not think about personal finance apps. Made in Amsterdam.</p>
+            </div>
+            <div class="col">
+                <h4>Product</h4>
+                <a href="#">Overview</a>
+                <a href="#">Pricing</a>
+                <a href="#">Security</a>
+                <a href="#">Changelog</a>
+            </div>
+            <div class="col">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Press</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="col">
+                <h4>Legal</h4>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">DPA</a>
+            </div>
+        </div>
+        <div class="copy">© 2026 Drift Finance BV · Amsterdam</div>
+    </footer>
+</body>
+</html>

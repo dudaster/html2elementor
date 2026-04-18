@@ -54,6 +54,15 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
         out.append(image_widget(node))
         return
 
+    # Input field (newsletter signup, search) — emit as heading div with
+    # styled placeholder text. Elementor Free doesn't have a generic text
+    # input widget, but a styled text placeholder looks identical visually.
+    if tag == "input":
+        input_type = (node.get("type") or "text").lower()
+        if input_type in ("text", "email", "search", "url", "tel"):
+            out.append(_input_widget(node))
+            return
+
 
     # Div/span with mixed inline content (direct text + inline children like
     # <span>, <em>, <strong>, <b>, <i>). Example: brand "Paper<span>fold</span>".
@@ -393,6 +402,46 @@ def button_widget(node: dict, text: str) -> dict:
         if any(p[k] != "0" for k in ("top", "right", "bottom", "left")):
             settings["text_padding"] = p
     return {"widgetType": "button", "settings": settings}
+
+
+def _input_widget(node: dict) -> dict:
+    """Emit an input field as a heading widget with inline HTML containing a
+    styled <input>. Elementor Free lacks a form input widget but renders inline
+    HTML. This gives a visually identical text-input even though it's not
+    functionally connected to a form backend."""
+    placeholder = (node.get("placeholder") or "").strip() or ""
+    input_type = node.get("type") or "text"
+    name = node.get("name") or ""
+    styles = node.get("styles", {})
+    # Read box styles for visual match
+    bg = to_hex(styles.get("background-color") or styles.get("background") or "")
+    tc = to_hex(styles.get("color"))
+    border_c = to_hex(styles.get("border-color") or styles.get("border-top-color"))
+    radius = px_to_int(styles.get("border-radius", "")) or 8
+    # Build inline HTML input
+    css_parts = [
+        "width:100%", "padding:14px 18px",
+        f"border-radius:{radius}px",
+        f"border:1px solid {border_c or '#d4d4d8'}",
+        f"background:{bg or '#ffffff'}",
+        f"color:{tc or '#111827'}",
+        "font-size:14px", "font-family:inherit", "outline:none",
+        "box-sizing:border-box",
+    ]
+    style_attr = ";".join(css_parts)
+    name_attr = f' name="{_escape(name)}"' if name else ""
+    html = (
+        f'<input type="{input_type}" placeholder="{_escape(placeholder)}"{name_attr} '
+        f'style="{style_attr}">'
+    )
+    return {
+        "widgetType": "text-editor",
+        "settings": {
+            "editor": html,
+            "align": "left",
+            "_flex_size": "grow",
+        },
+    }
 
 
 def _is_link_list(node: dict) -> bool:

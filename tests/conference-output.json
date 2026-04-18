@@ -1,6 +1,6 @@
 [
   {
-    "id": "e4a19e1",
+    "id": "f5d3504",
     "elType": "container",
     "settings": {
       "content_width": "full",
@@ -44,7 +44,7 @@
     },
     "elements": [
       {
-        "id": "71d1cf3",
+        "id": "d51bad8",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -64,7 +64,7 @@
         },
         "elements": [
           {
-            "id": "72bca2e",
+            "id": "f41f20d",
             "elType": "widget",
             "settings": {
               "title": "Ship <span style=\"color:#ec4899\">Con</span>",
@@ -87,7 +87,7 @@
         "isInner": true
       },
       {
-        "id": "8a316ed",
+        "id": "3516cb6",
         "elType": "container",
         "settings": {
           "flex_direction": "row",
@@ -114,7 +114,7 @@
         },
         "elements": [
           {
-            "id": "14c799e",
+            "id": "4c2d47c",
             "elType": "widget",
             "settings": {
               "view": "inline",
@@ -191,7 +191,7 @@
             "widgetType": "icon-list"
           },
           {
-            "id": "a2c89d1",
+            "id": "e533657",
             "elType": "widget",
             "settings": {
               "text": "Get tickets",
@@ -241,7 +241,7 @@
     "isInner": false
   },
   {
-    "id": "6b156ed",
+    "id": "597ed5e",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -271,7 +271,7 @@
     },
     "elements": [
       {
-        "id": "bc42e25",
+        "id": "fe127e3",
         "elType": "widget",
         "settings": {
           "title": "JUNE 18–20, 2026 · LISBON",
@@ -331,7 +331,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "a36dc34",
+        "id": "7d8caf9",
         "elType": "widget",
         "settings": {
           "title": "The conference for people who <span style=\"color:#ec4899\">actually ship</span> .",
@@ -377,7 +377,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "e8c8d76",
+        "id": "4d2a6a5",
         "elType": "widget",
         "settings": {
           "editor": "<p>Three days of hard-won lessons from the builders behind products you use every day. No fluff, no keynotes, no sales pitches.</p>",
@@ -410,7 +410,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "ce94caf",
+        "id": "c3c092b",
         "elType": "widget",
         "settings": {
           "view": "traditional",
@@ -468,7 +468,7 @@
     "isInner": false
   },
   {
-    "id": "20fbd9e",
+    "id": "bc25f7e",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -508,7 +508,7 @@
     },
     "elements": [
       {
-        "id": "6401052",
+        "id": "d89d09b",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -548,7 +548,7 @@
         },
         "elements": [
           {
-            "id": "f4df252",
+            "id": "ef14482",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -585,7 +585,7 @@
             },
             "elements": [
               {
-                "id": "db9cf3f",
+                "id": "e8d6eb6",
                 "elType": "widget",
                 "settings": {
                   "title": "42",
@@ -617,7 +617,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "34e04cb",
+                "id": "aebeaed",
                 "elType": "widget",
                 "settings": {
                   "title": "Days left",
@@ -661,7 +661,7 @@
             "isInner": true
           },
           {
-            "id": "ed82688",
+            "id": "05025bc",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -698,7 +698,7 @@
             },
             "elements": [
               {
-                "id": "d0c472c",
+                "id": "3f28dd5",
                 "elType": "widget",
                 "settings": {
                   "title": "28",
@@ -730,7 +730,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "c48e63e",
+                "id": "b0743ea",
                 "elType": "widget",
                 "settings": {
                   "title": "Speakers",
@@ -774,7 +774,7 @@
             "isInner": true
           },
           {
-            "id": "1522a0e",
+            "id": "bf97539",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -811,7 +811,7 @@
             },
             "elements": [
               {
-                "id": "d2080fa",
+                "id": "41a2595",
                 "elType": "widget",
                 "settings": {
                   "title": "14",
@@ -843,7 +843,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "825fecb",
+                "id": "789bd0a",
                 "elType": "widget",
                 "settings": {
                   "title": "Workshops",
@@ -887,7 +887,7 @@
             "isInner": true
           },
           {
-            "id": "5344505",
+            "id": "640d9ed",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -924,7 +924,7 @@
             },
             "elements": [
               {
-                "id": "85b21ce",
+                "id": "20d730c",
                 "elType": "widget",
                 "settings": {
                   "title": "900",
@@ -956,7 +956,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "d007aee",
+                "id": "88d6385",
                 "elType": "widget",
                 "settings": {
                   "title": "Attendees",
@@ -1006,7 +1006,7 @@
     "isInner": false
   },
   {
-    "id": "5ef929b",
+    "id": "c068e37",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1034,7 +1034,7 @@
     },
     "elements": [
       {
-        "id": "3024208",
+        "id": "f4c96a2",
         "elType": "widget",
         "settings": {
           "title": "Why ShipCon",
@@ -1075,7 +1075,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "68fe665",
+        "id": "7318a7a",
         "elType": "widget",
         "settings": {
           "title": "Built by shippers, for shippers.",
@@ -1115,7 +1115,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "6bc608c",
+        "id": "7bea6ae",
         "elType": "widget",
         "settings": {
           "editor": "<p>ShipCon is a three-day, single-track conference with no sponsored talks and no product demos on stage. Every speaker is someone who has shipped real products at scale and is willing to share what actually worked — and what didn't.</p>",
@@ -1143,7 +1143,7 @@
     "isInner": false
   },
   {
-    "id": "90fe849",
+    "id": "b3ed39d",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1173,7 +1173,7 @@
     },
     "elements": [
       {
-        "id": "ee3ffd8",
+        "id": "c6d13ea",
         "elType": "widget",
         "settings": {
           "title": "Speakers",
@@ -1213,7 +1213,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "9e6b9bb",
+        "id": "2df2c35",
         "elType": "widget",
         "settings": {
           "editor": "<p>Founders, engineers, and designers behind products that millions use.</p>",
@@ -1240,7 +1240,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "b8c13a2",
+        "id": "bb3891e",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -1280,7 +1280,7 @@
         },
         "elements": [
           {
-            "id": "97e6cce",
+            "id": "dcf8ce7",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1317,7 +1317,7 @@
             },
             "elements": [
               {
-                "id": "426b8d1",
+                "id": "1227f9e",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1373,7 +1373,7 @@
                 },
                 "elements": [
                   {
-                    "id": "76ca2c8",
+                    "id": "f6be3c2",
                     "elType": "widget",
                     "settings": {
                       "title": "AL",
@@ -1396,7 +1396,7 @@
                 "isInner": true
               },
               {
-                "id": "3288406",
+                "id": "3aee995",
                 "elType": "widget",
                 "settings": {
                   "title": "Aisha Laurent",
@@ -1424,7 +1424,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b15e46a",
+                "id": "5c5f704",
                 "elType": "widget",
                 "settings": {
                   "title": "VP Eng, Linear",
@@ -1447,7 +1447,7 @@
             "isInner": true
           },
           {
-            "id": "b116603",
+            "id": "418d1f0",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1484,7 +1484,7 @@
             },
             "elements": [
               {
-                "id": "5dc385c",
+                "id": "760ff6e",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1540,7 +1540,7 @@
                 },
                 "elements": [
                   {
-                    "id": "1246192",
+                    "id": "16fcffb",
                     "elType": "widget",
                     "settings": {
                       "title": "DP",
@@ -1563,7 +1563,7 @@
                 "isInner": true
               },
               {
-                "id": "e6cf10e",
+                "id": "eba5663",
                 "elType": "widget",
                 "settings": {
                   "title": "Diego Perez",
@@ -1591,7 +1591,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "779c6a4",
+                "id": "98fd0ba",
                 "elType": "widget",
                 "settings": {
                   "title": "Co-founder, Raycast",
@@ -1614,7 +1614,7 @@
             "isInner": true
           },
           {
-            "id": "3739c63",
+            "id": "3554ad9",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1651,7 +1651,7 @@
             },
             "elements": [
               {
-                "id": "f765bdd",
+                "id": "bcecc39",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1707,7 +1707,7 @@
                 },
                 "elements": [
                   {
-                    "id": "611b631",
+                    "id": "5fe7c99",
                     "elType": "widget",
                     "settings": {
                       "title": "YO",
@@ -1730,7 +1730,7 @@
                 "isInner": true
               },
               {
-                "id": "5cc8f30",
+                "id": "1e3f7f1",
                 "elType": "widget",
                 "settings": {
                   "title": "Yuki Ono",
@@ -1758,7 +1758,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ea2cf25",
+                "id": "81071c1",
                 "elType": "widget",
                 "settings": {
                   "title": "Head of Design, Arc",
@@ -1781,7 +1781,7 @@
             "isInner": true
           },
           {
-            "id": "c075bee",
+            "id": "07dfe4b",
             "elType": "container",
             "settings": {
               "content_width": "boxed",
@@ -1818,7 +1818,7 @@
             },
             "elements": [
               {
-                "id": "8379c49",
+                "id": "44a9eb3",
                 "elType": "container",
                 "settings": {
                   "content_width": "full",
@@ -1874,7 +1874,7 @@
                 },
                 "elements": [
                   {
-                    "id": "3be2769",
+                    "id": "cd47b43",
                     "elType": "widget",
                     "settings": {
                       "title": "MK",
@@ -1897,7 +1897,7 @@
                 "isInner": true
               },
               {
-                "id": "2468072",
+                "id": "b7436af",
                 "elType": "widget",
                 "settings": {
                   "title": "Marcus Kim",
@@ -1925,7 +1925,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "8b07b36",
+                "id": "7fe94d5",
                 "elType": "widget",
                 "settings": {
                   "title": "CTO, Cal.com",
@@ -1954,7 +1954,7 @@
     "isInner": false
   },
   {
-    "id": "6329f82",
+    "id": "fc6eba5",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -1982,7 +1982,7 @@
     },
     "elements": [
       {
-        "id": "38c1680",
+        "id": "9b45d61",
         "elType": "widget",
         "settings": {
           "title": "Day one at a glance",
@@ -2022,7 +2022,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "ec5375b",
+        "id": "0347da6",
         "elType": "widget",
         "settings": {
           "editor": "<p>A preview of the opening day. Full schedule revealed next month.</p>",
@@ -2049,7 +2049,7 @@
         "widgetType": "text-editor"
       },
       {
-        "id": "4f0bcfe",
+        "id": "a724184",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2076,7 +2076,7 @@
         },
         "elements": [
           {
-            "id": "5e18f20",
+            "id": "5c5b333",
             "elType": "widget",
             "settings": {
               "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">09:00</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Registration & breakfast</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">Coffee, pastries, and a lot of name tags. Meet your fellow attendees before the real work begins.</span></div>",
@@ -2092,7 +2092,7 @@
         "isInner": true
       },
       {
-        "id": "2c1ed6d",
+        "id": "95bf6aa",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2119,7 +2119,7 @@
         },
         "elements": [
           {
-            "id": "59df8b6",
+            "id": "4df272c",
             "elType": "widget",
             "settings": {
               "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">10:00</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Opening keynote: What we broke this year</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">An honest retrospective from four founders about the mistakes that almost killed their companies — and how they recovered.</span></div>",
@@ -2135,7 +2135,7 @@
         "isInner": true
       },
       {
-        "id": "93d5b76",
+        "id": "569ebc0",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2162,7 +2162,7 @@
         },
         "elements": [
           {
-            "id": "65ee9e1",
+            "id": "40eedc1",
             "elType": "widget",
             "settings": {
               "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">11:30</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">The economics of shipping</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">How small teams decide what to build, what to cut, and when to stop polishing.</span></div>",
@@ -2178,7 +2178,7 @@
         "isInner": true
       },
       {
-        "id": "f76ed0e",
+        "id": "365e218",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2205,7 +2205,7 @@
         },
         "elements": [
           {
-            "id": "e9ae819",
+            "id": "4ec7d96",
             "elType": "widget",
             "settings": {
               "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">13:00</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Lunch & hallway track</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">Long lunch. No schedule. Meet the people you came to meet.</span></div>",
@@ -2221,7 +2221,7 @@
         "isInner": true
       },
       {
-        "id": "78cc7ce",
+        "id": "7025e31",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2248,7 +2248,7 @@
         },
         "elements": [
           {
-            "id": "43c0e5d",
+            "id": "f14eed8",
             "elType": "widget",
             "settings": {
               "editor": "<div style=\"position:relative;padding-left:132px;min-height:1em\"><strong style=\"position:absolute;left:0;top:0;width:100px;color:#ec4899;font-size:16px;font-weight:800;letter-spacing:1px\">14:30</strong><strong style=\"display:block;font-size:19px;font-weight:700;color:#111827;margin-bottom:6px\">Workshop rotations</strong><span style=\"display:block;font-size:14px;color:#6b7280;line-height:1.6\">Four parallel 90-minute workshops on scaling, design systems, observability, and hiring.</span></div>",
@@ -2267,7 +2267,7 @@
     "isInner": false
   },
   {
-    "id": "42b2b42",
+    "id": "0e3d3d2",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2297,7 +2297,7 @@
     },
     "elements": [
       {
-        "id": "36b07c3",
+        "id": "d82eaa7",
         "elType": "widget",
         "settings": {
           "title": "Gold sponsors",
@@ -2338,7 +2338,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "72ae1dc",
+        "id": "c99a517",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2373,7 +2373,7 @@
         },
         "elements": [
           {
-            "id": "1f03ed5",
+            "id": "f134c2d",
             "elType": "widget",
             "settings": {
               "title": "Stripe",
@@ -2393,7 +2393,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "d0081c5",
+            "id": "b9055c4",
             "elType": "widget",
             "settings": {
               "title": "Vercel",
@@ -2413,7 +2413,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "4b18926",
+            "id": "393de08",
             "elType": "widget",
             "settings": {
               "title": "Linear",
@@ -2436,7 +2436,7 @@
         "isInner": true
       },
       {
-        "id": "7880729",
+        "id": "9e3dbf0",
         "elType": "widget",
         "settings": {
           "title": "Silver sponsors",
@@ -2477,7 +2477,7 @@
         "widgetType": "heading"
       },
       {
-        "id": "5f5baf8",
+        "id": "23c9552",
         "elType": "container",
         "settings": {
           "content_width": "full",
@@ -2504,7 +2504,7 @@
         },
         "elements": [
           {
-            "id": "f37c35c",
+            "id": "1ba95f6",
             "elType": "widget",
             "settings": {
               "title": "Raycast",
@@ -2524,7 +2524,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "7c783f6",
+            "id": "c6ba8af",
             "elType": "widget",
             "settings": {
               "title": "Cal.com",
@@ -2544,7 +2544,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "ab317c2",
+            "id": "47b7567",
             "elType": "widget",
             "settings": {
               "title": "Resend",
@@ -2564,7 +2564,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "e82b2e1",
+            "id": "dd43237",
             "elType": "widget",
             "settings": {
               "title": "Clerk",
@@ -2584,7 +2584,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "da59c0a",
+            "id": "19feeea",
             "elType": "widget",
             "settings": {
               "title": "Railway",
@@ -2610,7 +2610,7 @@
     "isInner": false
   },
   {
-    "id": "355a21c",
+    "id": "0b0a5e8",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2638,7 +2638,7 @@
     },
     "elements": [
       {
-        "id": "ed43042",
+        "id": "eb3ffd8",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2680,7 +2680,7 @@
         },
         "elements": [
           {
-            "id": "fee9117",
+            "id": "eac4dab",
             "elType": "widget",
             "settings": {
               "title": "Get notified when tickets open.",
@@ -2726,7 +2726,7 @@
             "widgetType": "heading"
           },
           {
-            "id": "7ab9f48",
+            "id": "0aa0118",
             "elType": "widget",
             "settings": {
               "editor": "<p>We release tickets in three batches. Join the list to hear about each one first.</p>",
@@ -2759,7 +2759,7 @@
             "widgetType": "text-editor"
           },
           {
-            "id": "5c449ce",
+            "id": "5b8bbf8",
             "elType": "widget",
             "settings": {
               "text": "Join the waitlist",
@@ -2809,7 +2809,7 @@
     "isInner": false
   },
   {
-    "id": "ac702c2",
+    "id": "89f2e02",
     "elType": "container",
     "settings": {
       "content_width": "boxed",
@@ -2849,7 +2849,7 @@
     },
     "elements": [
       {
-        "id": "650e61a",
+        "id": "7f07343",
         "elType": "container",
         "settings": {
           "content_width": "boxed",
@@ -2889,7 +2889,7 @@
         },
         "elements": [
           {
-            "id": "fc9ddfd",
+            "id": "22f5c92",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2916,7 +2916,7 @@
             },
             "elements": [
               {
-                "id": "072cb12",
+                "id": "26b8b88",
                 "elType": "widget",
                 "settings": {
                   "title": "Ship <span style=\"color:#ec4899\">Con</span>",
@@ -2944,7 +2944,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "ef03728",
+                "id": "c4521f8",
                 "elType": "widget",
                 "settings": {
                   "editor": "<p>An independent conference for product builders. Run by volunteers, funded by tickets and a handful of great sponsors.</p>",
@@ -2972,7 +2972,7 @@
             "isInner": true
           },
           {
-            "id": "236f6fc",
+            "id": "a28a5b8",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -2999,7 +2999,7 @@
             },
             "elements": [
               {
-                "id": "254b6d7",
+                "id": "816622d",
                 "elType": "widget",
                 "settings": {
                   "title": "Event",
@@ -3040,7 +3040,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "b91d2d4",
+                "id": "b7c961d",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -3119,7 +3119,7 @@
             "isInner": true
           },
           {
-            "id": "58d1ac8",
+            "id": "ff7169d",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -3146,7 +3146,7 @@
             },
             "elements": [
               {
-                "id": "6b4fd3c",
+                "id": "c046d08",
                 "elType": "widget",
                 "settings": {
                   "title": "Tickets",
@@ -3187,7 +3187,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "7d57287",
+                "id": "ae013b0",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -3266,7 +3266,7 @@
             "isInner": true
           },
           {
-            "id": "ce3c3c9",
+            "id": "21af08f",
             "elType": "container",
             "settings": {
               "content_width": "full",
@@ -3293,7 +3293,7 @@
             },
             "elements": [
               {
-                "id": "d9b9862",
+                "id": "add12a4",
                 "elType": "widget",
                 "settings": {
                   "title": "Contact",
@@ -3334,7 +3334,7 @@
                 "widgetType": "heading"
               },
               {
-                "id": "e8dd8b1",
+                "id": "b7b7b8a",
                 "elType": "widget",
                 "settings": {
                   "view": "traditional",
@@ -3405,7 +3405,7 @@
         "isInner": true
       },
       {
-        "id": "6cc71a6",
+        "id": "929e32f",
         "elType": "widget",
         "settings": {
           "title": "© 2026 ShipCon. Lisbon, Portugal.",
