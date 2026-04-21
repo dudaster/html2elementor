@@ -5,18 +5,57 @@ from typing import Any
 from .colors import to_hex
 
 
+_CLAMP_RE = re.compile(r"clamp\(\s*([^,]+),\s*([^,]+),\s*([^)]+)\)")
+_VW_RE = re.compile(r"(-?\d+(?:\.\d+)?)vw")
+_REM_RE = re.compile(r"(-?\d+(?:\.\d+)?)rem")
+
+_DESKTOP_W = 1440  # viewport width used to evaluate vw units
+
+
+def _resolve_length(val: str) -> float | None:
+    """Resolve a CSS length to px. Handles px, vw, rem, clamp().
+
+    Returns None for context-dependent units (ch, em, %) that cannot be
+    resolved without knowing the parent font-size or container width.
+    """
+    val = val.strip()
+    # Bail early on units that require font/container context
+    if re.search(r"\d(ch|em|%|ex|lh)$", val):
+        return None
+    # clamp(min, preferred, max) → evaluate preferred at desktop viewport
+    m = _CLAMP_RE.match(val)
+    if m:
+        lo = _resolve_length(m.group(1))
+        mid = _resolve_length(m.group(2))
+        hi = _resolve_length(m.group(3))
+        if None not in (lo, mid, hi):
+            return max(lo, min(mid, hi))
+        # Fallback: use the max value (desktop preferred)
+        return hi if hi is not None else lo
+    # vw
+    mv = _VW_RE.match(val)
+    if mv:
+        return float(mv.group(1)) * _DESKTOP_W / 100
+    # rem (assume 1rem = 16px)
+    mr = _REM_RE.match(val)
+    if mr:
+        return float(mr.group(1)) * 16
+    # plain number / px
+    mp = re.match(r"(-?\d+(?:\.\d+)?)", val)
+    return float(mp.group(1)) if mp else None
+
+
 def px_to_int(css: str | None) -> int | None:
     if not css:
         return None
-    m = re.match(r"(-?\d+(?:\.\d+)?)", str(css))
-    return int(float(m.group(1))) if m else None
+    v = _resolve_length(str(css))
+    return int(v) if v is not None else None
 
 
 def px_to_float(css: str | None) -> float | None:
     if not css:
         return None
-    m = re.match(r"(-?\d+(?:\.\d+)?)", str(css))
-    return float(m.group(1)) if m else None
+    return _resolve_length(str(css))
 
 
 def normalize_weight(css: str | None) -> str | None:

@@ -3,7 +3,7 @@
 > **Open-source HTML → Elementor JSON converter, packaged as both a Claude Code and an openclaw skill.** Paste HTML + CSS, get a `_elementor_data` payload you can import into WordPress. Works as a standalone Python CLI or as a skill that Claude auto-invokes when you ask to "import this design into Elementor".
 
 [![Claude Code skill](https://img.shields.io/badge/claude%20code-skill-d97757.svg)](https://docs.anthropic.com/en/docs/claude-code)
-[![openclaw skill](https://img.shields.io/badge/openclaw-skill-6366f1.svg)](https://github.com/openclaw/openclaw)
+[![openclaw skill](https://img.shields.io/badge/openclaw-skill-6366f1.svg)](https://github.com/humanlayer/claude-code-skills)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Elementor](https://img.shields.io/badge/elementor-3.x+-ec4899.svg)](https://elementor.com/)
@@ -86,11 +86,12 @@ After that, prompts like *"convert landing.html to Elementor"* or *"import this 
 
 ### Install as an openclaw skill
 
-The same `SKILL.md` is valid for [openclaw](https://github.com/openclaw/openclaw) — the frontmatter declares `metadata.openclaw.requires` (Python bin + pip deps) so openclaw can install dependencies automatically.
+The same `SKILL.md` is valid for [openclaw](https://github.com/humanlayer/claude-code-skills) — the frontmatter declares `metadata.openclaw.requires` (Python bins + deps) so openclaw can install dependencies automatically.
 
 ```bash
+# From your openclaw skills folder (or symlink from anywhere)
 git clone https://github.com/dudaster/html2elementor.git ~/.openclaw/skills/html2elementor
-openclaw install  # resolves bins + pip deps declared in frontmatter
+openclaw install  # resolves python bin + pip deps declared in frontmatter
 ```
 
 ---
@@ -107,6 +108,18 @@ This produces:
 - `output.json` — the Elementor data payload
 - `output.kit.json` — site-kit globals (custom colors, custom typography)
 
+**External stylesheets are loaded automatically.** If `input.html` links `<link rel="stylesheet" href="styles.css">`, the converter resolves that file relative to the HTML file's directory and includes it in the CSS cascade. CSS custom properties (`var(--accent)`) are resolved before mapping to Elementor settings.
+
+For designs where the stylesheet can't be auto-detected (e.g. HTML piped via stdin, or a CDN URL), pass it explicitly:
+
+```bash
+# Extra CSS file
+python3 -m html2elementor input.html --css styles.css -o output.json
+
+# Multiple CSS files
+python3 -m html2elementor input.html --css reset.css --css design.css -o output.json
+```
+
 ### Python API
 
 ```python
@@ -115,9 +128,15 @@ from html2elementor import convert
 with open("landing.html") as f:
     html = f.read()
 
-result = convert(html)
+# Pass html_path so linked stylesheets are resolved automatically
+result = convert(html, html_path="landing.html")
 # result["layout"]     → list[dict] (sections → containers → widgets)
 # result["kit"]        → dict (custom_colors + custom_typography)
+
+# Or pass CSS strings directly
+with open("styles.css") as f:
+    css = f.read()
+result = convert(html, extra_css=[css])
 ```
 
 ### Importing into WordPress

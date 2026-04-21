@@ -117,12 +117,20 @@ def _walk_resolve(el: Tag, element_styles: dict, result: dict,
     entry = element_styles.get(id(el), {})
     layers = entry.get("_specificity_layers", [])
     for _spec, decls in sorted(layers, key=lambda x: x[0]):
-        styles.update(decls)
+        for k, v in decls.items():
+            if str(v).strip().lower() == "inherit":
+                # Keep already-inherited value from step 1; don't overwrite with literal "inherit"
+                pass
+            else:
+                styles[k] = v
 
     # 3. Inline styles (highest priority)
     inline = el.get("style", "")
     if inline:
-        styles.update(_parse_inline(inline))
+        parsed_inline = _parse_inline(inline)
+        for k, v in parsed_inline.items():
+            if str(v).strip().lower() != "inherit":
+                styles[k] = v
 
     # 4. Substitute CSS var() references AFTER cascade so declarations that
     # override will still use resolved variables. Also re-expand shorthand

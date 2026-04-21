@@ -18,7 +18,16 @@ def main():
     ap.add_argument("--url", help="Fetch URL via Playwright instead of reading a file")
     ap.add_argument("--no-kit", action="store_true", help="Skip kit.json generation")
     ap.add_argument("--upload", action="store_true", help="Upload external images to WP media library via Playsand")
+    ap.add_argument("--css", action="append", metavar="FILE",
+                    help="Extra CSS file(s) to include (may be repeated). Useful when the HTML links external stylesheets that can't be auto-resolved.")
     args = ap.parse_args()
+
+    extra_css: list[str] | None = None
+    if args.css:
+        extra_css = []
+        for css_file in args.css:
+            with open(css_file) as f:
+                extra_css.append(f.read())
 
     if args.url:
         try:
@@ -30,10 +39,10 @@ def main():
     elif args.input and args.input != "-":
         with open(args.input) as f:
             html = f.read()
-        result = convert(html)
+        result = convert(html, html_path=args.input, extra_css=extra_css)
     elif not sys.stdin.isatty():
         html = sys.stdin.read()
-        result = convert(html)
+        result = convert(html, extra_css=extra_css)
     else:
         ap.print_help()
         sys.exit(1)

@@ -290,9 +290,9 @@ def _build_custom_typography_from_tree(capture: dict, system_typo: dict) -> tupl
             family = (styles.get("font-family") or "").split(",")[0].strip().strip('"').strip("'")
             weight = styles.get("font-weight") or "400"
             size_raw = styles.get("font-size") or ""
-            import re
-            size_match = re.match(r"(\d+)", str(size_raw))
-            size = size_match.group(1) if size_match else "16"
+            from .styles import _resolve_length
+            resolved = _resolve_length(str(size_raw)) if size_raw else None
+            size = str(int(resolved)) if resolved else "16"
 
             if not family:
                 continue

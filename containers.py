@@ -1,9 +1,26 @@
 """Build Elementor container structures from sections."""
 from __future__ import annotations
+import re as _re
 from typing import Any
 from .colors import to_hex, is_dark
 from .styles import css_padding_to_elementor, px_to_int
 from .widgets import walk_and_emit, is_hero_bg_image, is_icon_box, _iter
+
+
+def _parse_grid_columns(grid_template_columns: str) -> int:
+    """Parse grid-template-columns and return the number of explicit columns."""
+    if not grid_template_columns:
+        return 1
+    val = grid_template_columns.strip()
+    # repeat(N, ...) → N columns
+    m = _re.match(r"repeat\(\s*(\d+)\s*,", val)
+    if m:
+        return int(m.group(1))
+    # repeat(auto-fill/auto-fit, ...) → can't determine statically, return 0
+    if "auto-fill" in val or "auto-fit" in val:
+        return 0
+    # Space-separated list of track sizes: "1fr 2fr 1fr" → 3
+    return len(val.split())
 
 
 def map_section(section: dict) -> tuple[dict[str, Any], list[dict]]:
@@ -275,7 +292,8 @@ def _section_settings(section: dict) -> dict[str, Any]:
     bg = (styles.get("background-color") or styles.get("backgroundColor") or
           styles.get("background") or styles.get("bg"))
 
-    is_flex = (w_styles.get("display") or "") in ("flex", "inline-flex", "grid")
+    display = (w_styles.get("display") or "")
+    is_flex = display in ("flex", "inline-flex", "grid")
     flex_dir = "column"
     # For column (vertical) sections, use stretch so child widgets take full
     # width — then each widget's own align setting (from text-align) controls
@@ -285,7 +303,15 @@ def _section_settings(section: dict) -> dict[str, Any]:
     align = "stretch"
     justify = "flex-start"
 
-    if is_flex:
+    if display == "grid":
+        # CSS grid → Elementor row container. Determine column count from
+        # grid-template-columns so _group_into_grids can chunk correctly.
+        gtc = w_styles.get("grid-template-columns", "")
+        ncols = _parse_grid_columns(gtc)
+        if ncols >= 2:
+            flex_dir = "row"
+
+    elif is_flex:
         fd = w_styles.get("flex-direction") or w_styles.get("flexDirection") or "column"
         flex_dir = "row" if fd.startswith("row") else "column"
         ai = w_styles.get("align-items") or w_styles.get("alignItems")
@@ -448,6 +474,25 @@ def _find_content_wrapper(section: dict) -> dict | None:
             return node
         ch = children[0]
         if ch.get("tag") in ("div", "section", "article"):
+            # Stop before descending into a multi-column grid/flex container.
+            # Those are content grids that walk_and_emit() should handle via
+            # _is_card_grid() — promoting their direction to the section level
+            # collapses the grid into a flat row of mixed widgets.
+            ch_styles = ch.get("styles", {})
+            ch_display = ch_styles.get("display", "")
+            if ch_display == "grid":
+                ncols = _parse_grid_columns(ch_styles.get("grid-template-columns", ""))
+                if ncols >= 2:
+                    return node
+            elif ch_display in ("flex", "inline-flex"):
+                fd = ch_styles.get("flex-direction", "row")
+                if not fd.startswith("column") and len(ch.get("children", [])) >= 2:
+                    # Flex-row with 2+ children — this is a content row, stop here.
+                    # Exception: if child has a .container-style class (max-width wrapper)
+                    # it's just a centering shell, keep descending.
+                    cls = " ".join(ch.get("classes", [])).lower()
+                    if not any(k in cls for k in ("container", "wrapper", "inner", "content")):
+                        return node
             node = ch
         else:
             return node
@@ -545,10 +590,16 @@ def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None
     for w in widgets:
         w_copy = dict(w)
         s = dict(w_copy.get("settings", {}))
-        # For inner containers: use 'width' property
-        # For widgets: use '_element_width' + '_element_custom_width'
-        if not w_copy.get("__inner_container__"):
-            # Widgets: use _element_custom_width
+        if w_copy.get("__inner_container__"):
+            # Inner containers inside a row: force content_width=full so Elementor
+            # doesn't insert .e-con-inner wrapper, which breaks flex-grow width calc.
+            s["content_width"] = "full"
+            # Elementor 4.x containers use `width` (not _element_custom_width) for sizing.
+            s["width"] = {"unit": "%", "size": desktop_pct, "sizes": []}
+            s["width_tablet"] = {"unit": "%", "size": 47, "sizes": []}
+            s["width_mobile"] = {"unit": "%", "size": 100, "sizes": []}
+        else:
+            # Widgets: explicit percentage widths
             s["_element_width"] = "initial"
             s["_element_width_tablet"] = "initial"
             s["_element_width_mobile"] = "initial"

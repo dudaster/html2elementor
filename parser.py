@@ -4,6 +4,7 @@ Node format matches the Playwright dom_capture output so downstream
 code (widgets, containers, sections) works without changes.
 """
 from __future__ import annotations
+import os
 from typing import Any
 from bs4 import BeautifulSoup, Tag, NavigableString
 from .resolver import resolve_all
@@ -11,10 +12,32 @@ from .resolver import resolve_all
 SKIP_TAGS = {"script", "style", "noscript", "meta", "link", "template", "head"}
 
 
-def parse_html(html: str) -> dict[str, Any]:
+def parse_html(html: str, html_path: str | None = None,
+               extra_css: list[str] | None = None) -> dict[str, Any]:
     soup = BeautifulSoup(html, "html.parser")
 
+    # Inline <style> blocks
     css_sources = [tag.string for tag in soup.find_all("style") if tag.string]
+
+    # External stylesheets via <link rel="stylesheet" href="...">
+    if html_path:
+        base_dir = os.path.dirname(os.path.abspath(html_path))
+        for link in soup.find_all("link", rel=lambda r: r and "stylesheet" in (r if isinstance(r, list) else [r])):
+            href = link.get("href", "")
+            if not href or href.startswith("http") or href.startswith("//"):
+                continue
+            css_file = os.path.join(base_dir, href)
+            if os.path.isfile(css_file):
+                try:
+                    with open(css_file) as f:
+                        css_sources.append(f.read())
+                except OSError:
+                    pass
+
+    # Caller-supplied extra CSS (e.g. passed via --css CLI flag)
+    if extra_css:
+        css_sources.extend(extra_css)
+
     styles_map = resolve_all(soup, css_sources)
 
     body = soup.find("body") or soup

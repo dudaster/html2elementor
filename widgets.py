@@ -201,13 +201,15 @@ def looks_like_button(node: dict) -> bool:
     has_padding = bool(has_padding_val and has_padding_val not in ("0px", "0"))
     has_border_val = styles.get("border-top-width") or styles.get("borderTopWidth") or ""
     has_border = bool(has_border_val and has_border_val not in ("0px", "0"))
-    # Class hint alone is not enough — "cta" appears in "nav-cta-secondary"
-    # (a styled text link without bg/border/padding). Require at least some
-    # button-like styling alongside the hint.
+    # A button must have background or border — radius+padding alone is a styled link.
     has_hint = any(h in classes for h in BUTTON_HINTS)
-    if has_hint and (has_bg or has_radius or has_padding or has_border):
+    if has_hint and (has_bg or has_border):
         return True
-    return sum([has_bg, has_radius, has_padding, has_border]) >= 2
+    if has_bg and (has_radius or has_padding or has_border):
+        return True  # solid button
+    if has_border and has_padding:
+        return True  # ghost/outline button
+    return False
 
 
 def is_icon_box(node: dict) -> bool:
@@ -436,38 +438,55 @@ def _input_widget(node: dict) -> dict:
     }
 
 
+def _collect_link_nodes(node: dict) -> list[dict]:
+    """Collect <a> tags from direct children or from a <ul>/<ol> → <li> → <a> subtree."""
+    children = node.get("children", [])
+    direct = [c for c in children if c.get("tag") == "a"]
+    if direct:
+        return direct
+    for c in children:
+        if c.get("tag") in ("ul", "ol"):
+            links = []
+            for li in c.get("children", []):
+                if li.get("tag") == "li":
+                    for a in li.get("children", []):
+                        if a.get("tag") == "a":
+                            links.append(a)
+                            break
+            if links:
+                return links
+    return []
+
+
 def _is_link_list(node: dict) -> bool:
-    """A div whose children are: 0 or 1 heading (h1-h6 or similar) + N anchors.
-    Common footer-column or sidebar pattern.
-    Excludes anchor groups where any anchor looks like a button (styled as CTA) —
-    those are button rows and should be emitted as individual button widgets."""
+    """A div whose meaningful children are: 0-1 heading + N plain anchors (or ul/li/a).
+    Button-like anchors are allowed alongside plain links — they'll be emitted separately."""
     children = node.get("children", [])
     if len(children) < 2:
         return False
-    anchors = [c for c in children if c.get("tag") == "a"]
-    if len(anchors) < 2:
+    link_nodes = _collect_link_nodes(node)
+    plain_links = [a for a in link_nodes if not looks_like_button(a)]
+    if len(plain_links) < 2:
         return False
-    allowed_tags = {"a", "h1", "h2", "h3", "h4", "h5", "h6"}
+    allowed_tags = {"a", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol"}
     for c in children:
         if c.get("tag") not in allowed_tags:
             return False
-    # If ANY anchor is styled like a button, this is a CTA row, not a link list.
-    if any(looks_like_button(a) for a in anchors):
-        return False
     return True
 
 
 def _link_list_widgets(node: dict) -> list[dict]:
-    """Emit an optional heading widget + icon-list widget for a footer/sidebar link list."""
+    """Emit: optional heading + icon-list of plain links + button for any CTA anchor."""
     from .styles import apply_typography as _at, px_to_int as _px
     out: list[dict] = []
     heading_node = None
-    link_nodes: list[dict] = []
     for c in node.get("children", []):
         if c.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6") and heading_node is None:
             heading_node = c
-        elif c.get("tag") == "a":
-            link_nodes.append(c)
+    all_links = _collect_link_nodes(node)
+    link_nodes = [a for a in all_links if not looks_like_button(a)]
+    btn_nodes = [a for a in all_links if looks_like_button(a)]
+
     # Heading
     if heading_node:
         h_styles = heading_node.get("styles", {})
@@ -482,10 +501,10 @@ def _link_list_widgets(node: dict) -> list[dict]:
         _at(h_settings, h_styles)
         _apply_margin(h_settings, h_styles)
         out.append({"widgetType": "heading", "settings": h_settings})
-    # Icon list
+
+    # Icon list of plain links
     if link_nodes:
-        first = link_nodes[0]
-        first_styles = first.get("styles", {})
+        first_styles = link_nodes[0].get("styles", {})
         items = []
         for a in link_nodes:
             items.append({
@@ -509,6 +528,11 @@ def _link_list_widgets(node: dict) -> list[dict]:
             elif k.startswith("typography_"):
                 list_settings["icon_" + k] = v
         out.append({"widgetType": "icon-list", "settings": list_settings})
+
+    # Button-like anchors (e.g. nav CTA) emitted as button widgets
+    for a in btn_nodes:
+        out.append(button_widget(a, (a.get("text") or "").strip()))
+
     return out
 
 
