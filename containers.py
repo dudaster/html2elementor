@@ -540,12 +540,13 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                 grid_cols = group[0].get("_grid_cols") if group else None
                 grid_max_width = group[0].get("_grid_max_width") if group else None
                 grid_gap = group[0].get("_grid_gap") if group else None
+                grid_margin = group[0].get("_grid_margin") if group else None
                 if grid_cols and grid_cols < len(group):
                     for chunk_start in range(0, len(group), grid_cols):
                         chunk = group[chunk_start:chunk_start + grid_cols]
-                        out.append(_wrap_row(chunk, grid_max_width, grid_gap))
+                        out.append(_wrap_row(chunk, grid_max_width, grid_gap, grid_margin))
                 else:
-                    out.append(_wrap_row(group, grid_max_width, grid_gap))
+                    out.append(_wrap_row(group, grid_max_width, grid_gap, grid_margin))
                 i = j
                 continue
         # Group 2+ consecutive buttons into an inline row
@@ -582,7 +583,8 @@ def _wrap_buttons(buttons: list[dict], parent_align: str = "flex-start") -> dict
     }
 
 
-def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None = None) -> dict:
+def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None = None,
+              margin: dict | None = None) -> dict:
     n = max(len(widgets), 1)
     desktop_pct = int((100 - (n - 1) * 2) / n)
 
@@ -625,6 +627,18 @@ def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None
         row_settings["boxed_width"] = {"unit": "px", "size": max_width, "sizes": []}
     else:
         row_settings["width"] = {"unit": "%", "size": 100, "sizes": []}
+    # CSS margins on the grid wrapper (e.g. `.editions-grid { margin-top: 48px }`)
+    # must be carried onto the row container so sibling widgets keep their
+    # intended spacing from headings/eyebrows above or paragraphs below.
+    if margin and (margin.get("top") or margin.get("bottom")):
+        row_settings["margin"] = {
+            "unit": "px",
+            "top": str(margin.get("top") or 0),
+            "right": "0",
+            "bottom": str(margin.get("bottom") or 0),
+            "left": "0",
+            "isLinked": False,
+        }
 
     return {
         "__inner_container__": True,

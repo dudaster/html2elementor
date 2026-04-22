@@ -139,13 +139,14 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                 grid_cols = _get_grid_columns(node)
                 grid_max_width = px_to_int(parent_styles.get("max-width"))
                 grid_gap = px_to_int(parent_styles.get("gap"))
+                # Margins on the grid wrapper itself (margin-top: 48px below
+                # headings, margin-bottom before the next section) must ride
+                # along to the row container. Otherwise sibling spacing is lost.
+                grid_mt = px_to_int(parent_styles.get("margin-top"))
+                grid_mb = px_to_int(parent_styles.get("margin-bottom"))
                 for card in cards:
-                    # Parent is a grid/row layout, so cards SHOULD be grouped into
-                    # rows by _group_into_grids. If a card came from a styled
-                    # wrapper (bg/radius preserving) its _no_group flag was set
-                    # defensively; clear it here so grouping actually happens.
                     card.pop("_no_group", None)
-                if grid_cols or grid_max_width or grid_gap:
+                if grid_cols or grid_max_width or grid_gap or grid_mt or grid_mb:
                     for card in cards:
                         if grid_cols:
                             card["_grid_cols"] = grid_cols
@@ -153,6 +154,8 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                             card["_grid_max_width"] = grid_max_width
                         if grid_gap:
                             card["_grid_gap"] = grid_gap
+                        if grid_mt or grid_mb:
+                            card["_grid_margin"] = {"top": grid_mt or 0, "bottom": grid_mb or 0}
             else:
                 # Block / flex-column parent: mark cards so _group_into_grids skips them.
                 for card in cards:
