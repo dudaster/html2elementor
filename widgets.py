@@ -462,6 +462,10 @@ def _list_widget(node: dict, items: list[dict], ordered: bool = False) -> dict:
             settings["icon_typography_typography"] = v
         elif k.startswith("typography_"):
             settings["icon_" + k] = v
+    # The <ul>/<ol> itself may carry margin (e.g. `.proband-points
+    # { margin: 24px 0 32px }` — 24px breathing room above, 32px to the
+    # button below). Apply it on the widget so sibling spacing survives.
+    _apply_margin(settings, list_styles)
     return {"widgetType": "icon-list", "settings": settings}
 
 
