@@ -809,8 +809,10 @@ def _invert_text_colors(elements: list[dict]) -> None:
     CSS (e.g., gold #d4c5a9), keep it. Only default dark text gets inverted."""
     from .globals import short_id
     from .colors import relative_luminance, to_hex as _to_hex
-    white_id = short_id("White")
-    white80_id = short_id("White 80")
+    # These IDs must match what globals.py registers as custom colors
+    # (title + hex_val, see globals._build_kit_settings).
+    white_id = short_id("White" + "#ffffff")
+    white80_id = short_id("White 80" + "#ffffffcc")
     for el in elements:
         if el.get("__inner_container__"):
             _invert_text_colors(el["children"])

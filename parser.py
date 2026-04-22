@@ -45,11 +45,42 @@ def parse_html(html: str, html_path: str | None = None,
     title = title_tag.string.strip() if title_tag and title_tag.string else ""
 
     sections: list[dict] = []
+    _SEMANTIC_SECTION_TAGS = {"section", "header", "footer", "nav", "main",
+                               "article", "aside"}
     for child in body.children:
-        if isinstance(child, Tag) and child.name not in SKIP_TAGS:
-            node = _walk(child, styles_map)
-            if node:
+        if not (isinstance(child, Tag) and child.name not in SKIP_TAGS):
+            continue
+        node = _walk(child, styles_map)
+        if not node:
+            continue
+        # Semantic tags always count. Top-level <div>s only count as sections
+        # when they contain substantial content (headings, paragraphs, images,
+        # or card-like nested divs). Otherwise they're decorative wrappers
+        # (marquees, sticky banners, skip-links) that the converter won't emit
+        # as sections — and keeping them here would misalign verify's positional
+        # matching between parser and layout.
+        if child.name in _SEMANTIC_SECTION_TAGS:
+            sections.append(node)
+        elif child.name == "div":
+            has_content = any(
+                t.name in ("h1", "h2", "h3", "h4", "h5", "h6", "p", "img",
+                           "ul", "ol", "table", "form", "figure")
+                for t in child.find_all(True, recursive=True)
+            )
+            # Or nested divs with their own real content (card grids etc.)
+            if not has_content:
+                has_content = any(
+                    d.name == "div" and any(
+                        t.name in ("h1", "h2", "h3", "h4", "h5", "h6", "p", "img")
+                        for t in d.find_all(True, recursive=True)
+                    )
+                    for d in child.children
+                    if isinstance(d, Tag)
+                )
+            if has_content:
                 sections.append(node)
+        else:
+            sections.append(node)
 
     body_styles = styles_map.get(id(body), {})
     page_bg = body_styles.get("background-color") or body_styles.get("background") or "#ffffff"

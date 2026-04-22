@@ -54,6 +54,15 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
         out.append(image_widget(node))
         return
 
+    # <ul> / <ol> with <li> items — emit as icon-list widget so bullets/numbers
+    # and per-item typography render correctly. Without this, list items were
+    # silently dropped because <li> had no dedicated handler.
+    if tag in ("ul", "ol"):
+        items = [c for c in node.get("children", []) if c.get("tag") == "li"]
+        if items:
+            out.append(_list_widget(node, items, ordered=(tag == "ol")))
+            return
+
     # Input field (newsletter signup, search) — emit as heading div with
     # styled placeholder text. Elementor Free doesn't have a generic text
     # input widget, but a styled text placeholder looks identical visually.
@@ -396,6 +405,49 @@ def button_widget(node: dict, text: str) -> dict:
         if any(p[k] != "0" for k in ("top", "right", "bottom", "left")):
             settings["text_padding"] = p
     return {"widgetType": "button", "settings": settings}
+
+
+def _list_widget(node: dict, items: list[dict], ordered: bool = False) -> dict:
+    """Emit <ul>/<ol> + <li> as an Elementor icon-list widget.
+    Each <li>'s text becomes an item; per-item CSS styling isn't preserved
+    beyond color + font from the list or first item.
+    Ordered lists use numeric markers, unordered ones use default arrow/dot."""
+    from .styles import apply_typography as _at, px_to_int as _px
+    list_styles = node.get("styles", {})
+    first_item_styles = items[0].get("styles", {}) if items else {}
+    icon_items = []
+    for li in items:
+        text = _all_text_html(li).strip()
+        if not text:
+            continue
+        icon_items.append({
+            "text": text,
+            "link": {"url": "", "is_external": False},
+            "selected_icon": {"value": "", "library": ""},
+        })
+    if not icon_items:
+        return {"widgetType": "text-editor", "settings": {"editor": ""}}
+    # Space between items from CSS gap or li margin-bottom
+    gap = _px(list_styles.get("gap", "")) or _px(first_item_styles.get("margin-bottom", "")) or 10
+    settings: dict[str, Any] = {
+        "view": "traditional",
+        "space_between": {"unit": "px", "size": gap, "sizes": []},
+        "icon_list": icon_items,
+    }
+    # Color: from list-level CSS or first li (both are valid cascade paths)
+    color = to_hex(list_styles.get("color")) or to_hex(first_item_styles.get("color"))
+    if color:
+        settings["text_color"] = color
+    # Typography (font family/size/weight) — apply with icon-list prefix so
+    # Elementor targets the item labels, not the icon glyph.
+    tmp: dict = {}
+    _at(tmp, first_item_styles)
+    for k, v in tmp.items():
+        if k == "typography_typography":
+            settings["icon_typography_typography"] = v
+        elif k.startswith("typography_"):
+            settings["icon_" + k] = v
+    return {"widgetType": "icon-list", "settings": settings}
 
 
 def _input_widget(node: dict) -> dict:
@@ -1658,6 +1710,23 @@ def _styled_wrapper_container(node: dict, children: list[dict]) -> dict:
             "bottom": str(br_val), "left": str(br_val),
             "isLinked": True,
         }
+    # Border (width + style + color). CSS shorthand `border: 1px solid X`
+    # already expands to per-side width/color in the resolver; we pick per-side
+    # here so uneven borders (e.g. border-bottom only) are preserved.
+    border_widths = {side: px_to_int(styles.get(f"border-{side}-width", "")) or 0
+                      for side in ("top", "right", "bottom", "left")}
+    if any(border_widths.values()):
+        settings["border_border"] = styles.get("border-style") or "solid"
+        settings["border_width"] = {
+            "unit": "px",
+            **{s: str(w) for s, w in border_widths.items()},
+            "isLinked": len(set(border_widths.values())) == 1,
+        }
+        bc = (to_hex(styles.get("border-top-color"))
+              or to_hex(styles.get("border-color"))
+              or to_hex(styles.get("border-right-color")))
+        if bc:
+            settings["border_color"] = bc
     # Max-width
     mw = px_to_int(styles.get("max-width") or "")
     if mw:

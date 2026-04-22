@@ -230,18 +230,38 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict, p
 
     if wtype == "heading":
         title = _strip_html(s.get("title", ""))
-        # Try h1-h6 first, fall back to div/span/p (for badges, short-text headings)
         header_size = s.get("header_size", "")
-        if header_size == "div":
+        el_size = _resolved_typo_size(s, "typography_font_size", kit_maps)
+        # Tag search strategy — a small heading widget (h5/h6) with bg styling
+        # is almost always emitted from a <span> badge in source. Searching only
+        # h1-h6 would match it to a semantically-real h-tag with the same text
+        # but completely different size.
+        is_badge_like = (header_size in ("h5", "h6")
+                          and (s.get("_background_background") or s.get("_border_radius")))
+        if header_size == "div" or is_badge_like:
             tags = {"div", "span", "p"}
         else:
             tags = {"h1", "h2", "h3", "h4", "h5", "h6"}
-        node = _find_html_node(html_tree, title, tags)
-        if not node and (s.get("_background_background") or s.get("_border_radius")):
-            # Fallback for badges (heading widget with bg/radius styling, source is usually a div)
-            node = _find_html_node(html_tree, title, {"div", "span"})
-        if not node:
+        candidates = _find_html_nodes(html_tree, title, tags)
+        if not candidates and (s.get("_background_background") or s.get("_border_radius")):
+            candidates = _find_html_nodes(html_tree, title, {"div", "span"})
+        if not candidates:
             return
+        # When multiple candidates share the same text, rank by combined
+        # similarity of font-size + color to the widget's resolved values.
+        # Handles "Free" appearing as an h3 (48px), 7 mod-tag spans (11px
+        # #141414), and a tier div (11px #6b6b6b) — all at once.
+        if len(candidates) > 1:
+            el_color_hex = _resolved_color(s, "title_color", kit_maps)
+            el_color_norm = (to_hex(el_color_hex).lower() if el_color_hex else None)
+            def _match_score(n):
+                css_sz = px_to_int(n.get("styles", {}).get("font-size", "")) or 0
+                size_dist = abs(css_sz - el_size) if el_size else 0
+                css_color = to_hex(n.get("styles", {}).get("color", "")) if n.get("styles", {}).get("color") else None
+                color_mismatch = 0 if (el_color_norm and css_color and css_color.lower() == el_color_norm) else 100
+                return size_dist + color_mismatch
+            candidates = sorted(candidates, key=_match_score)
+        node = candidates[0]
         tag = node.get("tag", "")
         css = node.get("styles", {})
         # Color: resolve global, skip check on dark bg (inversion to white is intentional)
@@ -253,7 +273,6 @@ def _check_widget(widget: dict, html_tree: dict, issues: list, kit_maps: dict, p
             pass  # decorative emoji/symbol heading — no color to enforce
         elif not (is_dark_bg and el_color and to_hex(el_color).lower().startswith("#ffffff")):
             _cmp_color(el_color, css.get("color", ""), f"heading[{tag}]\"{title[:30]}\".color", issues)
-        el_size = _resolved_typo_size(s, "typography_font_size", kit_maps)
         css_size = px_to_int(css.get("font-size", ""))
         if css_size and el_size and not _close(el_size, css_size, FONT_TOLERANCE):
             issues.append(f"heading[{tag}]\"{title[:30]}\".font-size: elementor={el_size}px vs css={css_size}px")
