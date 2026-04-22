@@ -1285,7 +1285,37 @@ def _badge_widget(node: dict) -> dict:
     from .styles import apply_card_styling
     apply_card_styling(settings, styles)
     _apply_margin(settings, styles)
+    _apply_absolute_position(settings, styles)
     return {"widgetType": "heading", "settings": settings}
+
+
+def _apply_absolute_position(settings: dict, styles: dict) -> None:
+    """If the element has `position: absolute` in CSS, translate to Elementor
+    advanced positioning. Common for image overlays (captions on screenshots,
+    hero badges pinned to corners, etc.) where the visual layout depends on
+    the element floating over a sibling image."""
+    if (styles.get("position") or "").lower() != "absolute":
+        return
+    settings["_position"] = "absolute"
+    from .styles import px_to_int as _pxi
+    # Elementor uses _offset_x/_y + _offset_orientation_h/_v (start|end).
+    # start = left/top, end = right/bottom.
+    left = _pxi(styles.get("left", ""))
+    right = _pxi(styles.get("right", ""))
+    top = _pxi(styles.get("top", ""))
+    bottom = _pxi(styles.get("bottom", ""))
+    if left is not None:
+        settings["_offset_orientation_h"] = "start"
+        settings["_offset_x"] = {"unit": "px", "size": left, "sizes": []}
+    elif right is not None:
+        settings["_offset_orientation_h"] = "end"
+        settings["_offset_x_end"] = {"unit": "px", "size": right, "sizes": []}
+    if bottom is not None:
+        settings["_offset_orientation_v"] = "end"
+        settings["_offset_y_end"] = {"unit": "px", "size": bottom, "sizes": []}
+    elif top is not None:
+        settings["_offset_orientation_v"] = "start"
+        settings["_offset_y"] = {"unit": "px", "size": top, "sizes": []}
 
 
 def image_widget(node: dict) -> dict:
