@@ -541,12 +541,15 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                 grid_max_width = group[0].get("_grid_max_width") if group else None
                 grid_gap = group[0].get("_grid_gap") if group else None
                 grid_margin = group[0].get("_grid_margin") if group else None
+                grid_padding = group[0].get("_grid_padding") if group else None
+                grid_border_top = group[0].get("_grid_border_top") if group else None
+                extras = {"margin": grid_margin, "padding": grid_padding, "border_top": grid_border_top}
                 if grid_cols and grid_cols < len(group):
                     for chunk_start in range(0, len(group), grid_cols):
                         chunk = group[chunk_start:chunk_start + grid_cols]
-                        out.append(_wrap_row(chunk, grid_max_width, grid_gap, grid_margin))
+                        out.append(_wrap_row(chunk, grid_max_width, grid_gap, extras))
                 else:
-                    out.append(_wrap_row(group, grid_max_width, grid_gap, grid_margin))
+                    out.append(_wrap_row(group, grid_max_width, grid_gap, extras))
                 i = j
                 continue
         # Group 2+ consecutive buttons into an inline row
@@ -584,7 +587,7 @@ def _wrap_buttons(buttons: list[dict], parent_align: str = "flex-start") -> dict
 
 
 def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None = None,
-              margin: dict | None = None) -> dict:
+              extras: dict | None = None) -> dict:
     n = max(len(widgets), 1)
     desktop_pct = int((100 - (n - 1) * 2) / n)
 
@@ -627,18 +630,37 @@ def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None
         row_settings["boxed_width"] = {"unit": "px", "size": max_width, "sizes": []}
     else:
         row_settings["width"] = {"unit": "%", "size": 100, "sizes": []}
-    # CSS margins on the grid wrapper (e.g. `.editions-grid { margin-top: 48px }`)
-    # must be carried onto the row container so sibling widgets keep their
-    # intended spacing from headings/eyebrows above or paragraphs below.
+    # Wrapper-level spacing inherited from the grid div itself.
+    # Margin (above/below the row), padding (inside, usually padding-top
+    # between a hero headline and its stats), and border-top (a horizontal
+    # divider line) are all part of the source's vertical rhythm.
+    extras = extras or {}
+    margin = extras.get("margin")
+    padding = extras.get("padding")
+    border_top = extras.get("border_top")
     if margin and (margin.get("top") or margin.get("bottom")):
         row_settings["margin"] = {
             "unit": "px",
-            "top": str(margin.get("top") or 0),
-            "right": "0",
-            "bottom": str(margin.get("bottom") or 0),
-            "left": "0",
+            "top": str(margin.get("top") or 0), "right": "0",
+            "bottom": str(margin.get("bottom") or 0), "left": "0",
             "isLinked": False,
         }
+    if padding and (padding.get("top") or padding.get("bottom")):
+        row_settings["padding"] = {
+            "unit": "px",
+            "top": str(padding.get("top") or 0), "right": "0",
+            "bottom": str(padding.get("bottom") or 0), "left": "0",
+            "isLinked": False,
+        }
+    if border_top and border_top.get("width"):
+        row_settings["border_border"] = "solid"
+        row_settings["border_width"] = {
+            "unit": "px",
+            "top": str(border_top["width"]), "right": "0",
+            "bottom": "0", "left": "0", "isLinked": False,
+        }
+        if border_top.get("color"):
+            row_settings["border_color"] = border_top["color"]
 
     return {
         "__inner_container__": True,

@@ -144,9 +144,17 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                 # along to the row container. Otherwise sibling spacing is lost.
                 grid_mt = px_to_int(parent_styles.get("margin-top"))
                 grid_mb = px_to_int(parent_styles.get("margin-bottom"))
+                # Padding-top/bottom (e.g. .hero-bottom { padding-top: 48px }
+                # provides the gap between hero headline and stats row).
+                grid_pt = px_to_int(parent_styles.get("padding-top"))
+                grid_pb = px_to_int(parent_styles.get("padding-bottom"))
+                # Border-top (often a horizontal divider line above a stats
+                # or action row — purely visual but part of the spacing rhythm).
+                grid_bt = px_to_int(parent_styles.get("border-top-width"))
+                grid_btc = to_hex(parent_styles.get("border-top-color")) if grid_bt else None
                 for card in cards:
                     card.pop("_no_group", None)
-                if grid_cols or grid_max_width or grid_gap or grid_mt or grid_mb:
+                if grid_cols or grid_max_width or grid_gap or grid_mt or grid_mb or grid_pt or grid_pb or grid_bt:
                     for card in cards:
                         if grid_cols:
                             card["_grid_cols"] = grid_cols
@@ -156,6 +164,10 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                             card["_grid_gap"] = grid_gap
                         if grid_mt or grid_mb:
                             card["_grid_margin"] = {"top": grid_mt or 0, "bottom": grid_mb or 0}
+                        if grid_pt or grid_pb:
+                            card["_grid_padding"] = {"top": grid_pt or 0, "bottom": grid_pb or 0}
+                        if grid_bt:
+                            card["_grid_border_top"] = {"width": grid_bt, "color": grid_btc or "#e5e5e5"}
             else:
                 # Block / flex-column parent: mark cards so _group_into_grids skips them.
                 for card in cards:
@@ -1668,12 +1680,17 @@ def _styled_wrapper_container(node: dict, children: list[dict]) -> dict:
     flex_dir = "column"
     if (styles.get("flex-direction") or "").lower().startswith("row"):
         flex_dir = "row"
+    # Read CSS gap: flex/grid containers commonly use `gap:` to space children,
+    # and collapsing to 0 makes stacked widgets touch (e.g. .edition card with
+    # `gap: 20px` lost the spacing between h3, p, list, and CTA).
+    gap_val = px_to_int(styles.get("gap") or styles.get("row-gap", "")) or 0
+    gap_str = str(gap_val)
     settings: dict[str, Any] = {
         "content_width": "boxed",
         "flex_direction": flex_dir,
         "flex_align_items": ai_map.get(css_ai, "center"),
         "flex_justify_content": jc_map.get(css_jc, "center"),
-        "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
+        "flex_gap": {"unit": "px", "size": gap_val, "column": gap_str, "row": gap_str},
     }
     # min-height from CSS (for large feature cards)
     mh = px_to_int(styles.get("min-height", ""))
