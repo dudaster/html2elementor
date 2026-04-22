@@ -1179,15 +1179,20 @@ def _apply_container_card_styling(settings: dict, styles: dict) -> None:
         settings["background_background"] = "classic"
         settings["background_color"] = bg
 
-    # Border
-    bw = px_to_int(styles.get("border-top-width") or styles.get("border-width")) or 0
-    if bw:
-        border_col = to_hex(styles.get("border-top-color") or styles.get("border-color"))
-        settings["border_border"] = "solid"
+    # Border — read per-side so patterns like `border-top: 1px solid X`
+    # (divider line between list rows) don't become a full 4-side box.
+    widths = {side: px_to_int(styles.get(f"border-{side}-width", "")) or 0
+              for side in ("top", "right", "bottom", "left")}
+    if any(widths.values()):
+        settings["border_border"] = styles.get("border-style") or "solid"
         settings["border_width"] = {
-            "unit": "px", "top": str(bw), "right": str(bw),
-            "bottom": str(bw), "left": str(bw), "isLinked": True,
+            "unit": "px",
+            **{s: str(w) for s, w in widths.items()},
+            "isLinked": len(set(widths.values())) == 1,
         }
+        border_col = (to_hex(styles.get("border-top-color"))
+                      or to_hex(styles.get("border-color"))
+                      or to_hex(styles.get("border-right-color")))
         if border_col:
             settings["border_color"] = border_col
 

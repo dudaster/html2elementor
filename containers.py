@@ -540,16 +540,24 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                 grid_cols = group[0].get("_grid_cols") if group else None
                 grid_max_width = group[0].get("_grid_max_width") if group else None
                 grid_gap = group[0].get("_grid_gap") if group else None
-                grid_margin = group[0].get("_grid_margin") if group else None
-                grid_padding = group[0].get("_grid_padding") if group else None
-                grid_border_top = group[0].get("_grid_border_top") if group else None
-                extras = {"margin": grid_margin, "padding": grid_padding, "border_top": grid_border_top}
+                def _extras_from(cards_list):
+                    # Read spacing extras from the FIRST card of each chunk — not
+                    # from the first of the whole group. When a section mixes
+                    # showcase-header (no per-row padding) with repeated .mod
+                    # rows (padding: 72px 0; border-top: 1px), each chunk needs
+                    # its own source-of-truth for per-row padding/border.
+                    first = cards_list[0] if cards_list else {}
+                    return {
+                        "margin": first.get("_grid_margin"),
+                        "padding": first.get("_grid_padding"),
+                        "border_top": first.get("_grid_border_top"),
+                    }
                 if grid_cols and grid_cols < len(group):
                     for chunk_start in range(0, len(group), grid_cols):
                         chunk = group[chunk_start:chunk_start + grid_cols]
-                        out.append(_wrap_row(chunk, grid_max_width, grid_gap, extras))
+                        out.append(_wrap_row(chunk, grid_max_width, grid_gap, _extras_from(chunk)))
                 else:
-                    out.append(_wrap_row(group, grid_max_width, grid_gap, extras))
+                    out.append(_wrap_row(group, grid_max_width, grid_gap, _extras_from(group)))
                 i = j
                 continue
         # Group 2+ consecutive buttons into an inline row
