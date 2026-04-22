@@ -333,14 +333,19 @@ def _build_custom_typography_from_tree(capture: dict, system_typo: dict) -> tupl
             else:
                 name = "Text"
 
-            # Deduplicate names
+            # Deduplicate DISPLAY name for the kit UI, but derive the global
+            # _id from the actual (family, weight, size) triplet so the same
+            # ID never maps to two different sizes across pages. Otherwise
+            # importing pricing.html (h3 = 72px) overwrites index.html's
+            # same-named "Card Title" global (48px), and index's widgets
+            # referencing it silently render too large.
             base = name
             counter = 2
             while name in {e["title"] for e in custom_list}:
                 name = f"{base} {counter}"
                 counter += 1
 
-            gid = short_id(name)
+            gid = short_id(f"{family}|{weight}|{size}")
             seen[key] = gid
             custom_list.append({
                 "_id": gid,
