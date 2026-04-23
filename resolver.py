@@ -85,6 +85,17 @@ def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> tuple[dict[int, 
     result: dict[int, dict] = {}
     body = soup.find("body") or soup
     _walk_resolve(body, element_styles, result, parent_styles=None, css_vars=css_vars)
+
+    # Filter hover: inline style beats selector-level :hover, so any property
+    # the element has set inline should not appear in hover_result.
+    for eid, styles in result.items():
+        inline_keys = styles.get("_inline_keys") or set()
+        if not inline_keys or eid not in hover_result:
+            continue
+        for k in list(hover_result[eid].keys()):
+            if k in inline_keys:
+                del hover_result[eid][k]
+
     return result, hover_result
 
 
@@ -174,11 +185,20 @@ def _walk_resolve(el: Tag, element_styles: dict, result: dict,
 
     # 3. Inline styles (highest priority)
     inline = el.get("style", "")
+    inline_keys: set[str] = set()
     if inline:
         parsed_inline = _parse_inline(inline)
         for k, v in parsed_inline.items():
             if str(v).strip().lower() != "inherit":
                 styles[k] = v
+                inline_keys.add(k)
+                # Also track longhands that this shorthand expanded to, so a
+                # later inline `background: var(--ink)` correctly marks
+                # `background-color` as inline-set too. Used downstream to
+                # filter :hover rules (inline beats selector-level :hover).
+                tmp: dict[str, str] = {}
+                _expand_shorthand(tmp, k, v)
+                inline_keys.update(tmp.keys())
 
     # 4. Substitute CSS var() references AFTER cascade so declarations that
     # override will still use resolved variables. Also re-expand shorthand
@@ -192,7 +212,20 @@ def _walk_resolve(el: Tag, element_styles: dict, result: dict,
                 styles[k] = new_val
                 if new_val != v:
                     _expand_shorthand(styles, k, new_val)
+                    # If this was an inline-set shorthand, the longhands it
+                    # now expands to are also inline-authoritative. Without
+                    # this, inline `background: var(--ink)` would only mark
+                    # `background` as inline, missing `background-color`.
+                    if k in inline_keys:
+                        tmp2: dict[str, str] = {}
+                        _expand_shorthand(tmp2, k, new_val)
+                        inline_keys.update(tmp2.keys())
 
+    # Stash inline-set property names under a private key so downstream
+    # callers (hover filter) know which props can't be overridden by
+    # selector-level :hover rules.
+    if inline_keys:
+        styles["_inline_keys"] = inline_keys
     result[id(el)] = styles
 
     for child in el.children:

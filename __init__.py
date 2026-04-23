@@ -79,7 +79,7 @@ def _apply_globals_to_element(el: dict, color_map: dict, font_map: dict, typo_ma
         "title_color": "color",
         "text_color": "color",
         "button_text_color": "color",
-        "button_hover_text_color": "color",
+        "hover_color": "color",
         "background_color": "color",
         "button_background_hover_color": "color",
         "border_color": "color",

@@ -400,7 +400,7 @@ def button_widget(node: dict, text: str) -> dict:
         text_hex = to_hex(styles.get("color"))
         if text_hex:
             settings["button_text_color"] = text_hex
-            settings["button_hover_text_color"] = darken(text_hex, 0.15)
+            settings["hover_color"] = darken(text_hex, 0.15)
     else:
         bg_hex = to_hex(bg)
         if bg_hex:
@@ -409,7 +409,7 @@ def button_widget(node: dict, text: str) -> dict:
         text_hex = to_hex(styles.get("color"))
         if text_hex:
             settings["button_text_color"] = text_hex
-            settings["button_hover_text_color"] = text_hex
+            settings["hover_color"] = text_hex
 
     apply_typography(settings, styles)
 
@@ -424,7 +424,7 @@ def button_widget(node: dict, text: str) -> dict:
             settings["button_background_hover_color"] = hbg
         hcol = to_hex(hover.get("color"))
         if hcol:
-            settings["button_hover_text_color"] = hcol
+            settings["hover_color"] = hcol
         hbc = to_hex(hover.get("border-color") or hover.get("border-top-color"))
         if hbc:
             settings["button_hover_border_color"] = hbc
