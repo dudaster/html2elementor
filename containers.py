@@ -23,6 +23,42 @@ def _parse_grid_columns(grid_template_columns: str) -> int:
     return len(val.split())
 
 
+def _parse_grid_tracks(grid_template_columns: str) -> list[float] | None:
+    """Parse grid-template-columns into a list of relative fr weights.
+
+    "1.5fr 1fr 1fr" → [1.5, 1.0, 1.0]
+    "repeat(3, 1fr)" → [1.0, 1.0, 1.0]
+    Non-fr tracks (px, %, auto) fall back to equal weights so we don't
+    mis-proportion rows. Returns None when the grid is indeterminate
+    (auto-fit / auto-fill / empty).
+    """
+    if not grid_template_columns:
+        return None
+    val = grid_template_columns.strip()
+    if "auto-fill" in val or "auto-fit" in val:
+        return None
+    # Expand repeat(N, TRACKS) once so "repeat(3, 1fr)" becomes "1fr 1fr 1fr"
+    m = _re.match(r"repeat\(\s*(\d+)\s*,\s*(.+)\)\s*$", val)
+    if m:
+        n = int(m.group(1))
+        inner = m.group(2).strip()
+        val = " ".join([inner] * n)
+    parts = val.split()
+    weights: list[float] = []
+    for p in parts:
+        fr = _re.match(r"([\d.]+)fr$", p)
+        if fr:
+            try:
+                weights.append(float(fr.group(1)))
+            except ValueError:
+                weights.append(1.0)
+        else:
+            # Unknown unit (px/%/auto/minmax(...)) → treat as equal-weight.
+            # Still preserves column count, just loses proportional sizing.
+            weights.append(1.0)
+    return weights if weights else None
+
+
 def map_section(section: dict) -> tuple[dict[str, Any], list[dict]]:
     container = _section_settings(section)
 
@@ -551,6 +587,8 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                         "margin": first.get("_grid_margin"),
                         "padding": first.get("_grid_padding"),
                         "border_top": first.get("_grid_border_top"),
+                        "tracks": first.get("_grid_tracks"),
+                        "align_items": first.get("_grid_align_items"),
                     }
                 if grid_cols and grid_cols < len(group):
                     for chunk_start in range(0, len(group), grid_cols):
@@ -597,10 +635,25 @@ def _wrap_buttons(buttons: list[dict], parent_align: str = "flex-start") -> dict
 def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None = None,
               extras: dict | None = None) -> dict:
     n = max(len(widgets), 1)
-    desktop_pct = int((100 - (n - 1) * 2) / n)
+    extras = extras or {}
+
+    # Proportional widths from grid-template-columns fr tracks (e.g.
+    # "1.5fr 1fr 1fr" → first col ~43%, others ~28%). Falls back to equal
+    # split when tracks are absent or counts don't match the widget count.
+    tracks = extras.get("tracks")
+    if tracks and len(tracks) == n and sum(tracks) > 0:
+        # Reserve 2% per gap between columns for visual breathing room,
+        # matching the equal-split heuristic, then distribute the remainder
+        # by track weights.
+        available = 100 - (n - 1) * 2
+        total = sum(tracks)
+        pcts = [max(5, int(round(available * t / total))) for t in tracks]
+    else:
+        equal = int((100 - (n - 1) * 2) / n)
+        pcts = [equal] * n
 
     widgets_with_widths = []
-    for w in widgets:
+    for w, desktop_pct in zip(widgets, pcts):
         w_copy = dict(w)
         s = dict(w_copy.get("settings", {}))
         if w_copy.get("__inner_container__"):
@@ -630,7 +683,7 @@ def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None
         "flex_direction_tablet": "row",
         "flex_direction_mobile": "column",
         "flex_justify_content": "center",
-        "flex_align_items": "stretch",
+        "flex_align_items": extras.get("align_items") or "stretch",
         "flex_gap": {"unit": "px", "size": gap_px, "column": gap_str, "row": gap_str},
         "flex_gap_tablet": {"unit": "px", "size": gap_px, "column": gap_str, "row": gap_str},
     }

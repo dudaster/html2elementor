@@ -139,6 +139,18 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                 grid_cols = _get_grid_columns(node)
                 grid_max_width = px_to_int(parent_styles.get("max-width"))
                 grid_gap = px_to_int(parent_styles.get("gap"))
+                # Capture fr proportions from grid-template-columns so
+                # non-equal layouts (e.g. "1.5fr 1fr 1fr" for hero-bottom)
+                # assign proportional widths instead of 32/32/32.
+                from .containers import _parse_grid_tracks as _tracks
+                grid_tracks = _tracks(parent_styles.get("grid-template-columns", ""))
+                # align-items on the grid maps to Elementor's flex_align_items
+                # ("end" → "flex-end" bottoms the columns, e.g. hero-bottom
+                # where the stat numbers should line up with the CTA row).
+                _AI_MAP = {"end": "flex-end", "start": "flex-start",
+                           "center": "center", "stretch": "stretch",
+                           "baseline": "baseline"}
+                grid_align_items = _AI_MAP.get((parent_styles.get("align-items") or "").strip())
                 # Margins on the grid wrapper itself (margin-top: 48px below
                 # headings, margin-bottom before the next section) must ride
                 # along to the row container. Otherwise sibling spacing is lost.
@@ -168,6 +180,10 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                             card["_grid_padding"] = {"top": grid_pt or 0, "bottom": grid_pb or 0}
                         if grid_bt:
                             card["_grid_border_top"] = {"width": grid_bt, "color": grid_btc or "#e5e5e5"}
+                        if grid_tracks and len(grid_tracks) >= 2:
+                            card["_grid_tracks"] = grid_tracks
+                        if grid_align_items:
+                            card["_grid_align_items"] = grid_align_items
             else:
                 # Block / flex-column parent: mark cards so _group_into_grids skips them.
                 for card in cards:
