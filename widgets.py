@@ -26,6 +26,18 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
     text = (node.get("text") or "").strip()
     class_str = " ".join(node.get("classes", [])).lower()
 
+    # <div> wrapping a group of <details> → accordion widget (Elementor Free).
+    # Common for FAQ sections where each <details> has a <summary> (question)
+    # and following content (answer).
+    if tag == "div":
+        detail_kids = [c for c in node.get("children", []) if c.get("tag") == "details"]
+        # Only treat as accordion if ALL content children are <details>
+        non_details = [c for c in node.get("children", [])
+                       if c.get("tag") not in ("details", "script", "style")]
+        if len(detail_kids) >= 2 and not non_details:
+            out.append(_accordion_widget(detail_kids))
+            return
+
     if tag == "div" and is_icon_box(node):
         out.append(icon_box_widget(node))
         return
@@ -1776,6 +1788,63 @@ def _iter(node: dict, max_depth: int = 20, _d: int = 0) -> Iterator[dict]:
 
 def _escape(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _accordion_widget(detail_nodes: list[dict]) -> dict:
+    """Build an Elementor `accordion` widget (free) from a list of <details>
+    nodes. Each <details> must contain a <summary> (title) and the remaining
+    children (answer). Handles basic typography and colors from the first
+    details/summary node's resolved styles."""
+    import uuid
+    from .colors import to_hex
+
+    tabs = []
+    for d in detail_nodes:
+        summary = None
+        body_parts = []
+        for c in d.get("children", []):
+            if c.get("tag") == "summary" and summary is None:
+                summary = c
+            else:
+                body_parts.append(c)
+        title = (summary.get("text") if summary else "") or _all_text(d)
+        # Body: concatenate text of remaining children as HTML paragraphs.
+        body_html_parts = []
+        for b in body_parts:
+            txt = _all_text_html(b) if b.get("children") else (b.get("text") or "")
+            txt = txt.strip()
+            if txt:
+                body_html_parts.append(f"<p>{txt}</p>")
+        content_html = "\n".join(body_html_parts) or "<p></p>"
+        tabs.append({
+            "tab_title": _escape(title.strip()),
+            "tab_content": content_html,
+            "_id": uuid.uuid4().hex[:7],
+        })
+
+    # Pick up styling from the first summary for title color/typography
+    settings: dict[str, Any] = {"tabs": tabs}
+    if detail_nodes:
+        first = detail_nodes[0]
+        summary = next((c for c in first.get("children", []) if c.get("tag") == "summary"), None)
+        if summary:
+            s_styles = summary.get("styles", {})
+            tc = to_hex(s_styles.get("color"))
+            if tc:
+                settings["title_color"] = tc
+                settings["tab_active_color"] = tc
+            # Accordion uses its own control names for typography; the kit's
+            # globals still cover family/weight rendering, so skip a detailed
+            # typography mapping here.
+        # Body color from first non-summary child
+        body = next((c for c in first.get("children", []) if c.get("tag") != "summary"), None)
+        if body:
+            b_styles = body.get("styles", {})
+            bc = to_hex(b_styles.get("color"))
+            if bc:
+                settings["description_color"] = bc
+
+    return {"widgetType": "accordion", "settings": settings}
 
 
 def _avatar_widget(node: dict, size: int, radius_override: int | None = None) -> dict:
