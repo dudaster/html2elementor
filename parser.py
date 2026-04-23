@@ -121,6 +121,11 @@ def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = No
         "_order": _child_order(el),
     }
 
+    # Tables: preserve raw outer HTML so widgets.py can emit a complete
+    # <table> via the `html` widget (Elementor Free). Rebuilding from the
+    # children tree loses the tr/th/td structure.
+    if el.name == "table":
+        node["html"] = str(el)
     if el.name == "img":
         node["src"] = el.get("src", "")
         node["alt"] = el.get("alt", "")

@@ -26,6 +26,13 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
     text = (node.get("text") or "").strip()
     class_str = " ".join(node.get("classes", [])).lower()
 
+    # <table> → html widget (Elementor Free has no native table widget).
+    # Serialized outer HTML preserves the full thead/tbody/tr/td structure.
+    # The parser stashes the outer HTML on `node["html"]`.
+    if tag == "table" and node.get("html"):
+        out.append(_table_widget(node))
+        return
+
     # <div> wrapping a group of <details> → accordion widget (Elementor Free).
     # Common for FAQ sections where each <details> has a <summary> (question)
     # and following content (answer).
@@ -1788,6 +1795,44 @@ def _iter(node: dict, max_depth: int = 20, _d: int = 0) -> Iterator[dict]:
 
 def _escape(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _table_widget(node: dict) -> dict:
+    """Emit a raw <table> via Elementor's `html` widget (bundled in Free).
+    Injects a small baseline stylesheet so tables render with readable
+    typography, aligned columns, and a clear header row even when the
+    source's .compare-table classes aren't carried into Elementor's
+    stylesheet. Keeps source class attributes so author CSS can still take
+    over if manually added to the kit."""
+    import uuid
+    raw_html = node.get("html", "") or ""
+    # Scope the baseline CSS so it doesn't leak to other html widgets
+    scope = f"h2e-table-{uuid.uuid4().hex[:6]}"
+    # Wrap in a scoping div
+    scoped_html = f'<div class="{scope}">\n{raw_html}\n</div>'
+    # Baseline styling that mimics a clean comparison table. Thin top/bottom
+    # borders on each row, centered value columns, bold feature names.
+    baseline_css = f"""
+<style>
+.{scope} table {{ width: 100%; border-collapse: collapse; font-family: inherit; }}
+.{scope} thead th {{ text-align: left; padding: 16px 12px; font-weight: 600; border-bottom: 1px solid #ddd; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; }}
+.{scope} thead th.col-value {{ text-align: center; }}
+.{scope} tbody td {{ padding: 16px 12px; border-bottom: 1px solid #eee; vertical-align: top; font-size: 15px; line-height: 1.5; }}
+.{scope} tbody td.col-value {{ text-align: center; }}
+.{scope} tbody td strong {{ display: block; font-weight: 600; margin-bottom: 4px; }}
+.{scope} tbody td p {{ margin: 0; font-size: 13px; opacity: 0.7; }}
+.{scope} .check {{ font-size: 18px; color: #3b5bdb; }}
+.{scope} .dash {{ font-size: 18px; color: #999; }}
+.{scope} .featured {{ background: rgba(0,0,0,0.02); }}
+@media (max-width: 640px) {{
+  .{scope} thead th, .{scope} tbody td {{ padding: 10px 6px; font-size: 13px; }}
+}}
+</style>
+"""
+    settings: dict[str, Any] = {
+        "html": baseline_css + scoped_html,
+    }
+    return {"widgetType": "html", "settings": settings}
 
 
 def _accordion_widget(detail_nodes: list[dict]) -> dict:
