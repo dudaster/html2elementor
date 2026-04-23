@@ -24,6 +24,28 @@ def to_hex(css: str | None) -> str | None:
         return None
     if s in _NAMED_COLORS:
         return _NAMED_COLORS[s]
+    # color-mix(in <space>, <colorA> <pct>, <colorB>): CSS 4 feature we can't
+    # evaluate, but it nearly always means "tint colorA toward colorB". Fall
+    # back to colorA so translucent sticky navs (color-mix(--bg 88%, transparent))
+    # still emit a solid-enough approximation instead of dropping the bg entirely.
+    if s.startswith("color-mix("):
+        inside = s[len("color-mix("):].rsplit(")", 1)[0]
+        # Try hex first (most reliable after var() substitution)
+        m = re.search(r"#[0-9a-f]{3,8}\b", inside)
+        if m:
+            return to_hex(m.group(0))
+        # Then rgb/rgba
+        m = re.search(r"rgba?\([^)]+\)", inside)
+        if m:
+            return to_hex(m.group(0))
+        # Last resort: named color (skip CSS-space keywords like "in", "oklab")
+        _SKIP = {"in", "srgb", "oklab", "oklch", "lab", "lch", "hsl", "rgb",
+                 "transparent", "longer", "shorter", "hue"}
+        for m in re.finditer(r"\b[a-z]+\b", inside):
+            tok = m.group(0)
+            if tok not in _SKIP and tok in _NAMED_COLORS:
+                return _NAMED_COLORS[tok]
+        return None
     if s.startswith("#"):
         hx = s[1:]
         if len(hx) == 3:
