@@ -23,12 +23,19 @@ _CSS_COLOR_KEYWORDS = {
 }
 
 
-def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> dict[int, dict]:
-    """Resolve styles for every element. Returns id(tag) → styles dict."""
+def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> tuple[dict[int, dict], dict[int, dict]]:
+    """Resolve styles for every element.
+
+    Returns (styles_map, hover_map) where:
+      styles_map[id(tag)] = resolved base styles (cascade + inherit + inline + vars)
+      hover_map[id(tag)]  = hover-state overlay (just the declarations from :hover
+                            rules matching that element; meant to be applied on top
+                            of base styles for hover_* widget settings).
+    """
     # Extract CSS custom properties defined on :root / html / body so we can
     # substitute var(--x) references in later styles.
     css_vars = _extract_css_vars(css_sources)
-    rules = _parse_all_rules(css_sources)
+    rules, hover_rules = _parse_all_rules(css_sources)
 
     # Pre-compute: for each CSS rule, find matching elements via BS4 select
     element_styles: dict[int, dict] = {}
@@ -42,11 +49,52 @@ def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> dict[int, dict]:
             entry = element_styles.setdefault(eid, {"_specificity_layers": []})
             entry["_specificity_layers"].append((specificity, declarations))
 
+    # Hover rules: match selector with :hover stripped, attach declarations
+    # to each element. Specificity order preserved so later rules win.
+    hover_map: dict[int, dict] = {}
+    for selector, specificity, declarations in hover_rules:
+        base_sel = _strip_hover(selector)
+        if not base_sel:
+            continue
+        try:
+            matches = soup.select(base_sel)
+        except Exception:
+            continue
+        for el in matches:
+            eid = id(el)
+            bucket = hover_map.setdefault(eid, {"_layers": []})
+            bucket["_layers"].append((specificity, declarations))
+
+    # Flatten hover layers into merged dicts, then substitute vars
+    hover_result: dict[int, dict] = {}
+    for eid, bucket in hover_map.items():
+        merged: dict[str, str] = {}
+        for _spec, decls in sorted(bucket["_layers"], key=lambda x: x[0]):
+            merged.update(decls)
+        if css_vars:
+            for k in list(merged.keys()):
+                v = merged[k]
+                if isinstance(v, str) and "var(" in v:
+                    new_val = _substitute_vars(v, css_vars)
+                    merged[k] = new_val
+                    if new_val != v:
+                        _expand_shorthand(merged, k, new_val)
+        hover_result[eid] = merged
+
     # Resolve: flatten specificity layers + merge inline + inherit from parent
     result: dict[int, dict] = {}
     body = soup.find("body") or soup
     _walk_resolve(body, element_styles, result, parent_styles=None, css_vars=css_vars)
-    return result
+    return result, hover_result
+
+
+def _strip_hover(selector: str) -> str:
+    """Strip :hover/:focus/:active pseudo-classes for BS4 matching.
+    `.btn:hover` → `.btn`; `a:hover span` → `a span`. Returns empty string if
+    nothing remains (e.g. just `:hover`)."""
+    cleaned = re.sub(r":(?:hover|focus|active|focus-visible|focus-within)\b", "", selector)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    return cleaned
 
 
 def _extract_css_vars(css_sources: list[str]) -> dict[str, str]:
@@ -152,10 +200,16 @@ def _walk_resolve(el: Tag, element_styles: dict, result: dict,
             _walk_resolve(child, element_styles, result, styles, css_vars)
 
 
-def _parse_all_rules(css_sources: list[str]) -> list[tuple[str, tuple, dict]]:
-    """Parse CSS into (selector_str, specificity, declarations) tuples."""
+def _parse_all_rules(css_sources: list[str]) -> tuple[list[tuple[str, tuple, dict]], list[tuple[str, tuple, dict]]]:
+    """Parse CSS into (base_rules, hover_rules).
+
+    base_rules: selectors without :hover/:focus/:active — applied to static styles
+    hover_rules: selectors that include one of those pseudo-classes — collected
+                 separately so they can be overlaid on hover widget settings."""
     rules: list[tuple[str, tuple, dict]] = []
+    hover_rules: list[tuple[str, tuple, dict]] = []
     order = 0
+    hover_re = re.compile(r":(?:hover|focus|active|focus-visible|focus-within)\b")
     for css_text in css_sources:
         parsed = tinycss2.parse_stylesheet(css_text, skip_whitespace=True)
         for rule in parsed:
@@ -168,12 +222,15 @@ def _parse_all_rules(css_sources: list[str]) -> list[tuple[str, tuple, dict]]:
             # Split comma-separated selectors
             for sel in selector_str.split(","):
                 sel = sel.strip()
-                if not sel or sel.startswith("@") or ":hover" in sel or ":focus" in sel:
-                    continue  # skip pseudo-states (can't resolve statically)
+                if not sel or sel.startswith("@"):
+                    continue
                 spec = _estimate_specificity(sel, order)
-                rules.append((sel, spec, declarations))
+                if hover_re.search(sel):
+                    hover_rules.append((sel, spec, declarations))
+                else:
+                    rules.append((sel, spec, declarations))
                 order += 1
-    return rules
+    return rules, hover_rules
 
 
 def _parse_declarations(tokens: list) -> dict[str, str]:

@@ -413,6 +413,22 @@ def button_widget(node: dict, text: str) -> dict:
 
     apply_typography(settings, styles)
 
+    # Hover: if source CSS has an explicit :hover rule on this button, prefer
+    # those values over the darken-heuristic defaults above. Covers the
+    # common case of a color flip (.btn-lime:hover { background: var(--ink);
+    # color: var(--lime); }) where "darken by 12%" produces the wrong color.
+    hover = node.get("hover_styles") or {}
+    if hover:
+        hbg = to_hex(hover.get("background-color") or hover.get("background"))
+        if hbg:
+            settings["button_background_hover_color"] = hbg
+        hcol = to_hex(hover.get("color"))
+        if hcol:
+            settings["button_hover_text_color"] = hcol
+        hbc = to_hex(hover.get("border-color") or hover.get("border-top-color"))
+        if hbc:
+            settings["button_hover_border_color"] = hbc
+
     # Read padding from CSS (if not already set by ghost text-link path)
     if "_padding" not in settings:
         from .styles import css_padding_to_elementor as _pad
