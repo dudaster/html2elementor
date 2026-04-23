@@ -23,19 +23,19 @@ _CSS_COLOR_KEYWORDS = {
 }
 
 
-def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> tuple[dict[int, dict], dict[int, dict]]:
+def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> tuple[dict[int, dict], dict[int, dict], dict[int, dict], dict[int, dict]]:
     """Resolve styles for every element.
 
-    Returns (styles_map, hover_map) where:
+    Returns (styles_map, hover_map, tablet_map, mobile_map) where:
       styles_map[id(tag)] = resolved base styles (cascade + inherit + inline + vars)
-      hover_map[id(tag)]  = hover-state overlay (just the declarations from :hover
-                            rules matching that element; meant to be applied on top
-                            of base styles for hover_* widget settings).
+      hover_map[id(tag)]  = hover-state overlay
+      tablet_map[id(tag)] = DIFF — only properties that change at tablet (≤1024px)
+      mobile_map[id(tag)] = DIFF — only properties that change at mobile (≤767px)
     """
     # Extract CSS custom properties defined on :root / html / body so we can
     # substitute var(--x) references in later styles.
     css_vars = _extract_css_vars(css_sources)
-    rules, hover_rules = _parse_all_rules(css_sources)
+    rules, hover_rules, media_rules = _parse_all_rules(css_sources)
 
     # Pre-compute: for each CSS rule, find matching elements via BS4 select
     element_styles: dict[int, dict] = {}
@@ -96,7 +96,57 @@ def resolve_all(soup: BeautifulSoup, css_sources: list[str]) -> tuple[dict[int, 
             if k in inline_keys:
                 del hover_result[eid][k]
 
-    return result, hover_result
+    # Apply media-query rules to compute tablet/mobile DIFF maps.
+    # Elementor breakpoints: tablet applies to ≤1024, mobile to ≤767.
+    # A source @media (max-width: N) rule applies at a breakpoint if N >= that
+    # breakpoint's max-width floor. We approximate: rules with N >= 768 apply
+    # at tablet; rules with N >= 390 apply at mobile.
+    tablet_map: dict[int, dict] = {}
+    mobile_map: dict[int, dict] = {}
+    for bp in ("tablet", "mobile"):
+        bp_rules = [r for r in media_rules if _media_applies(r[0], bp)]
+        if not bp_rules:
+            continue
+        # Layer the matching rules onto each element (higher-specificity wins)
+        bp_elem: dict[int, list] = {}
+        for _mq, selector, specificity, declarations in bp_rules:
+            try:
+                matches = soup.select(selector)
+            except Exception:
+                continue
+            for el in matches:
+                bp_elem.setdefault(id(el), []).append((specificity, declarations))
+        target_map = tablet_map if bp == "tablet" else mobile_map
+        for eid, layers in bp_elem.items():
+            base_styles = result.get(eid, {})
+            override: dict[str, str] = {}
+            for _spec, decls in sorted(layers, key=lambda x: x[0]):
+                for k, v in decls.items():
+                    val = v
+                    if isinstance(val, str) and "var(" in val:
+                        val = _substitute_vars(val, css_vars)
+                    # Only include if it differs from base
+                    if base_styles.get(k) != val:
+                        override[k] = val
+            if override:
+                target_map[eid] = override
+
+    return result, hover_result, tablet_map, mobile_map
+
+
+def _media_applies(mq: str, breakpoint: str) -> bool:
+    """Check if a media query's max-width applies to an Elementor breakpoint.
+    breakpoint ∈ {'tablet', 'mobile'}."""
+    m = re.search(r"max-width:\s*(\d+)", mq)
+    if not m:
+        # Treat non-max-width queries (e.g. prefers-color-scheme) as not applicable
+        return False
+    n = int(m.group(1))
+    if breakpoint == "tablet":
+        return n >= 768
+    if breakpoint == "mobile":
+        return n >= 380
+    return False
 
 
 def _strip_hover(selector: str) -> str:
@@ -233,37 +283,51 @@ def _walk_resolve(el: Tag, element_styles: dict, result: dict,
             _walk_resolve(child, element_styles, result, styles, css_vars)
 
 
-def _parse_all_rules(css_sources: list[str]) -> tuple[list[tuple[str, tuple, dict]], list[tuple[str, tuple, dict]]]:
-    """Parse CSS into (base_rules, hover_rules).
+def _parse_all_rules(css_sources: list[str]) -> tuple[list[tuple[str, tuple, dict]], list[tuple[str, tuple, dict]], list[tuple[str, str, tuple, dict]]]:
+    """Parse CSS into (base_rules, hover_rules, media_rules).
 
-    base_rules: selectors without :hover/:focus/:active — applied to static styles
-    hover_rules: selectors that include one of those pseudo-classes — collected
-                 separately so they can be overlaid on hover widget settings."""
+    base_rules:  selectors without :hover/:focus/:active — applied to static styles
+    hover_rules: selectors that include one of those pseudo-classes
+    media_rules: rules inside @media blocks, returned as (media_query, sel, spec, decls)
+    """
     rules: list[tuple[str, tuple, dict]] = []
     hover_rules: list[tuple[str, tuple, dict]] = []
-    order = 0
+    media_rules: list[tuple[str, str, tuple, dict]] = []
+    order = [0]  # mutable holder for nested helper
     hover_re = re.compile(r":(?:hover|focus|active|focus-visible|focus-within)\b")
+
+    def _process_qualified(rule, media_query: str | None):
+        selector_str = tinycss2.serialize(rule.prelude).strip()
+        declarations = _parse_declarations(rule.content)
+        if not declarations:
+            return
+        for sel in selector_str.split(","):
+            sel = sel.strip()
+            if not sel or sel.startswith("@"):
+                continue
+            spec = _estimate_specificity(sel, order[0])
+            if media_query is not None:
+                media_rules.append((media_query, sel, spec, declarations))
+            elif hover_re.search(sel):
+                hover_rules.append((sel, spec, declarations))
+            else:
+                rules.append((sel, spec, declarations))
+            order[0] += 1
+
     for css_text in css_sources:
         parsed = tinycss2.parse_stylesheet(css_text, skip_whitespace=True)
         for rule in parsed:
-            if rule.type != "qualified-rule":
-                continue
-            selector_str = tinycss2.serialize(rule.prelude).strip()
-            declarations = _parse_declarations(rule.content)
-            if not declarations:
-                continue
-            # Split comma-separated selectors
-            for sel in selector_str.split(","):
-                sel = sel.strip()
-                if not sel or sel.startswith("@"):
+            if rule.type == "qualified-rule":
+                _process_qualified(rule, None)
+            elif rule.type == "at-rule" and rule.lower_at_keyword == "media":
+                mq = tinycss2.serialize(rule.prelude).strip()
+                if rule.content is None:
                     continue
-                spec = _estimate_specificity(sel, order)
-                if hover_re.search(sel):
-                    hover_rules.append((sel, spec, declarations))
-                else:
-                    rules.append((sel, spec, declarations))
-                order += 1
-    return rules, hover_rules
+                inner = tinycss2.parse_rule_list(rule.content, skip_whitespace=True)
+                for sub in inner:
+                    if sub.type == "qualified-rule":
+                        _process_qualified(sub, mq)
+    return rules, hover_rules, media_rules
 
 
 def _parse_declarations(tokens: list) -> dict[str, str]:
@@ -317,6 +381,21 @@ def _expand_shorthand(result: dict, prop: str, value: str) -> None:
             elif p.startswith("#") or p.startswith("rgb"):
                 for side in ("top", "right", "bottom", "left"):
                     result[f"border-{side}-color"] = p
+    elif prop == "border-color" and parts:
+        # Expand to per-side so per-side rules override correctly (common case:
+        # `.card { border: 1px solid var(--line) }` expands to per-side;
+        # `.card.variant { border-color: var(--accent) }` must override per-side too)
+        n = len(parts)
+        if n == 1:
+            vals = [parts[0]] * 4
+        elif n == 2:
+            vals = [parts[0], parts[1], parts[0], parts[1]]
+        elif n == 3:
+            vals = [parts[0], parts[1], parts[2], parts[1]]
+        else:
+            vals = parts[:4]
+        for side, val in zip(("top", "right", "bottom", "left"), vals):
+            result[f"border-{side}-color"] = val
     elif prop == "gap" and parts:
         result["row-gap"] = parts[0]
         result["column-gap"] = parts[1] if len(parts) > 1 else parts[0]

@@ -38,7 +38,7 @@ def parse_html(html: str, html_path: str | None = None,
     if extra_css:
         css_sources.extend(extra_css)
 
-    styles_map, hover_map = resolve_all(soup, css_sources)
+    styles_map, hover_map, tablet_map, mobile_map = resolve_all(soup, css_sources)
 
     body = soup.find("body") or soup
     title_tag = soup.find("title")
@@ -50,7 +50,8 @@ def parse_html(html: str, html_path: str | None = None,
     for child in body.children:
         if not (isinstance(child, Tag) and child.name not in SKIP_TAGS):
             continue
-        node = _walk(child, styles_map, hover_map=hover_map)
+        node = _walk(child, styles_map, hover_map=hover_map,
+                     tablet_map=tablet_map, mobile_map=mobile_map)
         if not node:
             continue
         # Semantic tags always count. Top-level <div>s only count as sections
@@ -94,7 +95,8 @@ def parse_html(html: str, html_path: str | None = None,
     }
 
 
-def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = None) -> dict | None:
+def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = None,
+          tablet_map: dict | None = None, mobile_map: dict | None = None) -> dict | None:
     if not isinstance(el, Tag):
         return None
     if el.name in SKIP_TAGS:
@@ -104,6 +106,8 @@ def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = No
 
     styles = styles_map.get(id(el), {})
     hover_styles = (hover_map or {}).get(id(el), {})
+    tablet_styles = (tablet_map or {}).get(id(el), {})
+    mobile_styles = (mobile_map or {}).get(id(el), {})
 
     node: dict[str, Any] = {
         "tag": el.name,
@@ -111,6 +115,8 @@ def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = No
         "text": _direct_text(el),
         "styles": styles,
         "hover_styles": hover_styles,
+        "tablet_styles": tablet_styles,
+        "mobile_styles": mobile_styles,
         "children": [],
         "_order": _child_order(el),
     }
@@ -129,7 +135,8 @@ def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = No
 
     for child in el.children:
         if isinstance(child, Tag):
-            child_node = _walk(child, styles_map, depth + 1, hover_map=hover_map)
+            child_node = _walk(child, styles_map, depth + 1, hover_map=hover_map,
+                               tablet_map=tablet_map, mobile_map=mobile_map)
             if child_node:
                 node["children"].append(child_node)
 

@@ -158,6 +158,24 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                            "center": "center", "stretch": "stretch",
                            "baseline": "baseline"}
                 grid_align_items = _AI_MAP.get((parent_styles.get("align-items") or "").strip())
+                # Responsive: if @media query collapses grid-template-columns to
+                # a single track (e.g. "1fr"), emit flex_direction=column at that
+                # breakpoint. Node carries tablet_styles/mobile_styles dicts.
+                parent_tablet = node.get("tablet_styles") or {}
+                parent_mobile = node.get("mobile_styles") or {}
+                def _is_single_col(s):
+                    gtc = (s.get("grid-template-columns") or "").strip()
+                    if not gtc:
+                        return False
+                    # "1fr", "auto", "100%", "minmax(0,1fr)" — all single col
+                    tracks_ = _tracks(gtc)
+                    if tracks_ is not None and len(tracks_) == 1:
+                        return True
+                    # Explicit 1-token value
+                    tokens = [t for t in gtc.split() if t]
+                    return len(tokens) == 1
+                stack_tablet = _is_single_col(parent_tablet)
+                stack_mobile = _is_single_col(parent_mobile)
                 # Margins on the grid wrapper itself (margin-top: 48px below
                 # headings, margin-bottom before the next section) must ride
                 # along to the row container. Otherwise sibling spacing is lost.
@@ -191,6 +209,10 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
                             card["_grid_tracks"] = grid_tracks
                         if grid_align_items:
                             card["_grid_align_items"] = grid_align_items
+                        if stack_tablet:
+                            card["_grid_stack_tablet"] = True
+                        if stack_mobile:
+                            card["_grid_stack_mobile"] = True
             else:
                 # Block / flex-column parent: mark cards so _group_into_grids skips them.
                 for card in cards:
@@ -1790,10 +1812,15 @@ def _avatar_widget(node: dict, size: int, radius_override: int | None = None) ->
         # inner containers stretch to the parent's full width regardless
         # of the requested px size.
         "width": {"unit": "px", "size": size, "sizes": []},
+        "width_tablet": {"unit": "px", "size": size, "sizes": []},
+        "width_mobile": {"unit": "px", "size": size, "sizes": []},
         # Prevent this fixed-size box from stretching inside a flex parent.
         "flex_grow": 0, "flex_shrink": 0,
+        "_flex_align_self": "flex-start",
         "min_height": {"unit": "px", "size": size, "sizes": []},
         "height": {"unit": "px", "size": size, "sizes": []},
+        "height_tablet": {"unit": "px", "size": size, "sizes": []},
+        "height_mobile": {"unit": "px", "size": size, "sizes": []},
         "border_radius": {
             "unit": "px",
             "top": str(radius_val), "right": str(radius_val),

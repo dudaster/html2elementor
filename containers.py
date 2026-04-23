@@ -576,6 +576,8 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                     c.get("_grid_gap"),
                     tuple(c.get("_grid_tracks") or ()),
                     c.get("_grid_align_items"),
+                    bool(c.get("_grid_stack_tablet")),
+                    bool(c.get("_grid_stack_mobile")),
                 )
             head_key = _grid_key(el)
             j = i + 1
@@ -604,11 +606,28 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
                         "border_top": first.get("_grid_border_top"),
                         "tracks": first.get("_grid_tracks"),
                         "align_items": first.get("_grid_align_items"),
+                        "stack_tablet": first.get("_grid_stack_tablet"),
+                        "stack_mobile": first.get("_grid_stack_mobile"),
                     }
                 if grid_cols and grid_cols < len(group):
-                    for chunk_start in range(0, len(group), grid_cols):
-                        chunk = group[chunk_start:chunk_start + grid_cols]
-                        out.append(_wrap_row(chunk, grid_max_width, grid_gap, _extras_from(chunk)))
+                    # Check if all cards share uniform per-row properties (no
+                    # per-chunk padding/border differences). If so, emit a
+                    # single wrapping row with width-per-card = 1/grid_cols,
+                    # letting flex-wrap produce clean N-per-row breaks at all
+                    # breakpoints (desktop 3-col, tablet 2-col, mobile 1-col).
+                    # Otherwise fall back to explicit chunking.
+                    uniform = all(
+                        c.get("_grid_padding") == group[0].get("_grid_padding") and
+                        c.get("_grid_border_top") == group[0].get("_grid_border_top")
+                        for c in group
+                    )
+                    if uniform:
+                        out.append(_wrap_row(group, grid_max_width, grid_gap,
+                                             _extras_from(group), cols_per_row=grid_cols))
+                    else:
+                        for chunk_start in range(0, len(group), grid_cols):
+                            chunk = group[chunk_start:chunk_start + grid_cols]
+                            out.append(_wrap_row(chunk, grid_max_width, grid_gap, _extras_from(chunk)))
                 else:
                     out.append(_wrap_row(group, grid_max_width, grid_gap, _extras_from(group)))
                 i = j
@@ -648,23 +667,37 @@ def _wrap_buttons(buttons: list[dict], parent_align: str = "flex-start") -> dict
 
 
 def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None = None,
-              extras: dict | None = None) -> dict:
+              extras: dict | None = None, cols_per_row: int | None = None) -> dict:
     n = max(len(widgets), 1)
     extras = extras or {}
+
+    # When cols_per_row is set (multi-row wrap mode), widths are based on the
+    # intended per-row count, not the total card count.
+    width_n = cols_per_row if cols_per_row else n
+    tablet_width_pct = 100 if extras.get("stack_tablet") else 47
 
     # Proportional widths from grid-template-columns fr tracks (e.g.
     # "1.5fr 1fr 1fr" → first col ~43%, others ~28%). Falls back to equal
     # split when tracks are absent or counts don't match the widget count.
     tracks = extras.get("tracks")
-    if tracks and len(tracks) == n and sum(tracks) > 0:
+    if tracks and len(tracks) == width_n and sum(tracks) > 0 and not cols_per_row:
         # Reserve 2% per gap between columns for visual breathing room,
         # matching the equal-split heuristic, then distribute the remainder
         # by track weights.
-        available = 100 - (n - 1) * 2
+        available = 100 - (width_n - 1) * 2
         total = sum(tracks)
         pcts = [max(5, int(round(available * t / total))) for t in tracks]
     else:
-        equal = int((100 - (n - 1) * 2) / n)
+        # Leave more breathing room when wrapping: gaps are in px (not %) and
+        # at larger gaps (40-48px) they consume enough space that tight %
+        # widths push the last card onto a new row.
+        if cols_per_row:
+            # Budget ~5% per gap so 3-col with 48px gap still fits at 1240px:
+            # (100 - 2*5)/3 = 30% × 3 = 90% + 2×~4% gap ≈ 98% < 100%.
+            reserve_per_gap = 5
+        else:
+            reserve_per_gap = 2
+        equal = int((100 - (width_n - 1) * reserve_per_gap) / width_n)
         pcts = [equal] * n
 
     widgets_with_widths = []
@@ -677,7 +710,7 @@ def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None
             s["content_width"] = "full"
             # Elementor 4.x containers use `width` (not _element_custom_width) for sizing.
             s["width"] = {"unit": "%", "size": desktop_pct, "sizes": []}
-            s["width_tablet"] = {"unit": "%", "size": 47, "sizes": []}
+            s["width_tablet"] = {"unit": "%", "size": tablet_width_pct, "sizes": []}
             s["width_mobile"] = {"unit": "%", "size": 100, "sizes": []}
         else:
             # Widgets: explicit percentage widths
@@ -685,18 +718,26 @@ def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None
             s["_element_width_tablet"] = "initial"
             s["_element_width_mobile"] = "initial"
             s["_element_custom_width"] = {"unit": "%", "size": desktop_pct, "sizes": []}
-            s["_element_custom_width_tablet"] = {"unit": "%", "size": 47, "sizes": []}
+            s["_element_custom_width_tablet"] = {"unit": "%", "size": tablet_width_pct, "sizes": []}
             s["_element_custom_width_mobile"] = {"unit": "%", "size": 100, "sizes": []}
         w_copy["settings"] = s
         widgets_with_widths.append(w_copy)
 
     gap_px = gap or 16
     gap_str = str(gap_px)
+    tablet_dir = "column" if extras.get("stack_tablet") else "row"
+    mobile_dir = "column"  # Mobile always stacks by default
+    # Wrap when there are 3+ cards or multi-row mode — at tablet their 47%
+    # widths need to wrap into 2-per-row, otherwise they overflow.
+    wrap_desktop = "wrap" if cols_per_row and len(widgets) > cols_per_row else "nowrap"
+    wrap_tablet = "wrap" if (n >= 3 or wrap_desktop == "wrap") and tablet_dir == "row" else "nowrap"
     row_settings: dict = {
         "content_width": "boxed" if max_width else "full",
         "flex_direction": "row",
-        "flex_direction_tablet": "row",
-        "flex_direction_mobile": "column",
+        "flex_direction_tablet": tablet_dir,
+        "flex_direction_mobile": mobile_dir,
+        "flex_wrap": wrap_desktop,
+        "flex_wrap_tablet": wrap_tablet,
         "flex_justify_content": "center",
         "flex_align_items": extras.get("align_items") or "stretch",
         "flex_gap": {"unit": "px", "size": gap_px, "column": gap_str, "row": gap_str},
