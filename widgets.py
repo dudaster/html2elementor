@@ -1479,6 +1479,19 @@ def image_widget(node: dict) -> dict:
                 "isLinked": False,
             }
 
+    # CSS filter: turn dark logos white for dark footers and similar patterns.
+    # Elementor's Image CSS Filters group has brightness/contrast/saturate/hue
+    # sliders, but no `invert` slider. Map the common `filter: invert(1) ...`
+    # recipe (used by dudaster footer to whiten a dark logo) to CSS Filters
+    # group with invert switched on via `custom_css` as fallback for non-Pro.
+    raw_filter = (styles.get("filter") or "").strip().lower()
+    if raw_filter and raw_filter != "none":
+        # Detect invert(1 or 100%): emit per-image custom CSS so the filter
+        # survives without needing Pro's filter group controls.
+        if "invert(1" in raw_filter or "invert(100%" in raw_filter:
+            settings["_element_custom_css"] = f"selector img {{ filter: {raw_filter}; }}"
+            settings["custom_css"] = f"selector img {{ filter: {raw_filter}; }}"
+
     return {"widgetType": "image", "settings": settings}
 
 
