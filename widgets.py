@@ -1074,17 +1074,27 @@ def _is_card_grid(node: dict) -> bool:
     # similar divs) — that's a meta-container, should descend instead.
     # Example: .container has .feature-header + .feature-grid (where
     # .feature-grid has 3 card divs).
-    for c in children:
-        gc_divs = [gc for gc in c.get("children", []) if gc.get("tag") == "div"]
-        if len(gc_divs) >= 3:
-            # Check if those grandchildren are "card-shaped" (have content)
-            nested_cards = sum(
-                1 for gc in gc_divs
-                if any(n.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6", "p")
-                       for n in _iter(gc, max_depth=3))
-            )
-            if nested_cards >= 3:
-                return False
+    #
+    # BUT: when the parent has explicit `display: grid` + `grid-template-columns`,
+    # the CSS has already committed to a specific column count — trust it and
+    # skip the meta-container heuristic. Otherwise a 2-col grid like
+    # .safety-grid { grid-template-columns: 0.9fr 1.1fr } gets rejected just
+    # because one of its two children happens to contain 3+ nested cards.
+    explicit_grid = (
+        display == "grid"
+        and bool(styles.get("grid-template-columns"))
+    )
+    if not explicit_grid:
+        for c in children:
+            gc_divs = [gc for gc in c.get("children", []) if gc.get("tag") == "div"]
+            if len(gc_divs) >= 3:
+                nested_cards = sum(
+                    1 for gc in gc_divs
+                    if any(n.get("tag") in ("h1", "h2", "h3", "h4", "h5", "h6", "p")
+                           for n in _iter(gc, max_depth=3))
+                )
+                if nested_cards >= 3:
+                    return False
     # A card counts as having content if it has a heading/text tag, an
     # image, or any leaf text. Without `img` here, purely-visual columns
     # (side-by-side split: text left, image right) falsely reject as
