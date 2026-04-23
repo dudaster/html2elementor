@@ -1007,7 +1007,11 @@ def _is_card_grid(node: dict) -> bool:
             )
             if nested_cards >= 3:
                 return False
-    CARD_CONTENT_TAGS = HEADING_TAGS | TEXT_TAGS | {"blockquote"}
+    # A card counts as having content if it has a heading/text tag, an
+    # image, or any leaf text. Without `img` here, purely-visual columns
+    # (side-by-side split: text left, image right) falsely reject as
+    # card grids and the whole row collapses into a single column stack.
+    CARD_CONTENT_TAGS = HEADING_TAGS | TEXT_TAGS | {"blockquote", "img", "svg", "picture"}
     for c in children:
         has_tag_content = any(
             n.get("tag") in CARD_CONTENT_TAGS for n in _iter(c, max_depth=3)
