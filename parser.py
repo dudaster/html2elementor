@@ -92,6 +92,7 @@ def parse_html(html: str, html_path: str | None = None,
         "viewport": {"w": 1440, "h": 900},
         "pageBg": page_bg,
         "sections": sections,
+        "_raw_css_sources": css_sources,
     }
 
 
@@ -126,6 +127,26 @@ def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = No
     # children tree loses the tr/th/td structure.
     if el.name == "table":
         node["html"] = str(el)
+    # Extract source CSS rules referencing the element's classes (and inner
+    # descendants' classes) so a raw html widget can inline the exact
+    # visual styling. Stored only for tables + terminal blocks.
+    # Terminal/console/code blocks: complex divs with .terminal /
+    # .terminal-body / monospace content that the widget mapper would
+    # otherwise flatten into plain text widgets. Stash raw outer HTML so
+    # downstream can emit an html widget preserving traffic lights,
+    # code formatting, per-line syntax colors, etc.
+    if el.name == "div":
+        cls = " ".join(el.get("class") or []).lower()
+        if any(k in cls for k in ("terminal", "console", "code-block", "mcpbox")):
+            # Only flag the OUTER wrapper (avoid stashing on inner
+            # .terminal-head / .terminal-body that would duplicate content)
+            if not any(p and p.name == "div" and any(
+                    k in " ".join(p.get("class") or []).lower()
+                    for k in ("terminal", "console", "code-block", "mcpbox"))
+                    for p in el.parents):
+                node["html"] = str(el)
+                node["_raw_html_block"] = True
+                node["_raw_css"] = _scoped_css_for(el, styles_map)
     if el.name == "img":
         node["src"] = el.get("src", "")
         node["alt"] = el.get("alt", "")
@@ -146,6 +167,59 @@ def _walk(el: Tag, styles_map: dict, depth: int = 0, hover_map: dict | None = No
                 node["children"].append(child_node)
 
     return node
+
+
+_VISUAL_PROPS = {
+    "background", "background-color", "background-image",
+    "color", "font-family", "font-size", "font-weight", "font-style",
+    "line-height", "letter-spacing", "text-align", "text-transform",
+    "padding", "padding-top", "padding-right", "padding-bottom", "padding-left",
+    "margin", "margin-top", "margin-right", "margin-bottom", "margin-left",
+    "border", "border-radius", "border-width", "border-style", "border-color",
+    "border-top", "border-top-width", "border-top-color", "border-top-style",
+    "border-bottom", "border-bottom-width", "border-bottom-color", "border-bottom-style",
+    "border-left", "border-left-width", "border-left-color",
+    "border-right", "border-right-width", "border-right-color",
+    "display", "flex-direction", "flex-wrap", "align-items", "justify-content",
+    "gap", "row-gap", "column-gap", "flex", "flex-grow", "flex-shrink",
+    "width", "height", "min-width", "min-height", "max-width", "max-height",
+    "position", "top", "right", "bottom", "left", "z-index",
+    "overflow", "white-space", "box-shadow", "opacity",
+    "grid-template-columns", "grid-template-rows", "place-items",
+}
+
+
+def _scoped_css_for(root: Tag, styles_map: dict[int, dict]) -> str:
+    """Walk root + descendants, emit CSS rules that replay the resolved
+    visual styles per-element, selected by class path. Meant for raw HTML
+    blocks (terminal, code viewers) so html widgets reproduce the source
+    look without bundling the full stylesheet."""
+    rules: list[str] = []
+    seen: set[str] = set()
+    stack = [root]
+    while stack:
+        el = stack.pop()
+        if not isinstance(el, Tag):
+            continue
+        classes = el.get("class") or []
+        if classes:
+            selector = "." + ".".join(classes)
+        else:
+            selector = el.name
+        if selector not in seen:
+            styles = styles_map.get(id(el), {})
+            decls = []
+            for k in _VISUAL_PROPS:
+                v = styles.get(k)
+                if v and not str(v).startswith("var("):
+                    decls.append(f"  {k}: {v};")
+            if decls:
+                rules.append(f"{{SCOPE}} {selector} {{\n" + "\n".join(decls) + "\n}")
+            seen.add(selector)
+        for child in el.children:
+            if isinstance(child, Tag):
+                stack.append(child)
+    return "\n".join(rules)
 
 
 def _direct_text(el: Tag) -> str:

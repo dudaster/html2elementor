@@ -26,6 +26,13 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
     text = (node.get("text") or "").strip()
     class_str = " ".join(node.get("classes", [])).lower()
 
+    # Raw HTML blocks (terminal/console/code viewers): parser flagged these
+    # on the outer wrapper. Emit via html widget with source CSS for matching
+    # class patterns injected scoped, so the styled look survives conversion.
+    if node.get("_raw_html_block") and node.get("html"):
+        out.append(_raw_html_widget(node))
+        return
+
     # <table> → html widget (Elementor Free has no native table widget).
     # Serialized outer HTML preserves the full thead/tbody/tr/td structure.
     # The parser stashes the outer HTML on `node["html"]`.
@@ -1795,6 +1802,23 @@ def _iter(node: dict, max_depth: int = 20, _d: int = 0) -> Iterator[dict]:
 
 def _escape(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _raw_html_widget(node: dict) -> dict:
+    """Emit a raw HTML block (terminal/console/code viewer) as an `html`
+    widget. Scopes the precomputed per-element CSS inside a unique wrapper
+    class so the visual survives conversion without leaking styles to the
+    rest of the page."""
+    import uuid
+    raw_html = node.get("html", "") or ""
+    raw_css = node.get("_raw_css", "") or ""
+    scope = f"h2e-raw-{uuid.uuid4().hex[:6]}"
+    scoped_css = raw_css.replace("{SCOPE}", f".{scope}")
+    scoped_html = f'<div class="{scope}">\n{raw_html}\n</div>'
+    settings: dict[str, Any] = {
+        "html": f"<style>{scoped_css}</style>\n{scoped_html}",
+    }
+    return {"widgetType": "html", "settings": settings}
 
 
 def _table_widget(node: dict) -> dict:
