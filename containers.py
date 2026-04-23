@@ -851,12 +851,30 @@ def _invert_text_colors(elements: list[dict]) -> None:
     """On dark sections: only override widget colors if they don't already have
     an explicit light color. If the widget already extracted a light color from
     CSS (e.g., gold #d4c5a9), keep it. Only default dark text gets inverted."""
-    from .globals import short_id
+    from .globals import short_id, resolve_global_color
     from .colors import relative_luminance, to_hex as _to_hex
     # These IDs must match what globals.py registers as custom colors
     # (title + hex_val, see globals._build_kit_settings).
     white_id = short_id("White" + "#ffffff")
     white80_id = short_id("White 80" + "#ffffffcc")
+
+    def _existing_hex(raw: str | None, global_ref: str | None) -> str | None:
+        """Return hex of whichever color source is set (raw wins if both)."""
+        if raw:
+            h = _to_hex(raw)
+            if h:
+                return h
+        if global_ref:
+            return resolve_global_color(global_ref)
+        return None
+
+    def _has_own_bg(s: dict) -> bool:
+        """Widget has its own classic background set — skip invert (self-contained island)."""
+        if s.get("_background_background") != "classic":
+            return False
+        g = s.get("__globals__", {})
+        return bool(s.get("_background_color") or g.get("_background_color"))
+
     for el in elements:
         if el.get("__inner_container__"):
             _invert_text_colors(el["children"])
@@ -865,21 +883,21 @@ def _invert_text_colors(elements: list[dict]) -> None:
         g = s.setdefault("__globals__", {})
         wt = el.get("widgetType")
 
+        # Widget with its own background (badges, pill captions) is a visual
+        # island — don't flip its text to white just because the section is dark.
+        if _has_own_bg(s):
+            continue
+
         if wt == "heading":
-            # Check if heading already has an explicit light color
-            existing = s.get("title_color")
-            if existing and _to_hex(existing):
-                lum = relative_luminance(_to_hex(existing))
-                if lum > 0.3:
-                    continue  # already light, keep it
+            hex_val = _existing_hex(s.get("title_color"), g.get("title_color"))
+            if hex_val and relative_luminance(hex_val) > 0.3:
+                continue  # already light, keep it
             g["title_color"] = f"globals/colors?id={white_id}"
             s.pop("title_color", None)
         elif wt == "text-editor":
-            existing = s.get("text_color")
-            if existing and _to_hex(existing):
-                lum = relative_luminance(_to_hex(existing))
-                if lum > 0.3:
-                    continue
+            hex_val = _existing_hex(s.get("text_color"), g.get("text_color"))
+            if hex_val and relative_luminance(hex_val) > 0.3:
+                continue
             g["text_color"] = f"globals/colors?id={white_id}"
             s.pop("text_color", None)
         elif wt == "icon-box":

@@ -15,6 +15,21 @@ from .colors import to_hex, is_dark, relative_luminance
 from .sections import iter_tree
 
 
+# id → hex registry populated by build_kit() so downstream code (e.g.
+# _invert_text_colors) can resolve `globals/colors?id=...` refs back to a hex
+# value without re-plumbing the kit through every call.
+_ID_TO_HEX: dict[str, str] = {}
+
+
+def resolve_global_color(ref: str | None) -> str | None:
+    """Resolve a 'globals/colors?id=<id>' reference back to its hex value.
+    Returns None if the ref is malformed or the id isn't registered."""
+    if not ref or "id=" not in ref:
+        return None
+    cid = ref.split("id=", 1)[1].split("&", 1)[0]
+    return _ID_TO_HEX.get(cid)
+
+
 def short_id(title: str) -> str:
     return hashlib.md5(title.encode()).hexdigest()[:7]
 
@@ -139,6 +154,10 @@ def build_kit(capture: dict) -> tuple[dict[str, Any], dict[str, str], dict[str, 
         {"_id": short_id(title + hex_val), "title": title, "color": hex_val}
         for title, hex_val in all_custom
     ]
+    # Populate module-level id→hex registry for downstream resolvers.
+    _ID_TO_HEX.clear()
+    for title, hex_val in all_custom:
+        _ID_TO_HEX[short_id(title + hex_val)] = hex_val
 
     # Like colors: widgets should never reference system_typography slots
     # (primary/secondary/text/accent) because those are shared site-wide.
