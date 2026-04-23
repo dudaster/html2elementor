@@ -1446,6 +1446,16 @@ def image_widget(node: dict) -> dict:
         settings["width"] = {"unit": "px", "size": str(w), "sizes": []}
     elif w:
         settings["width"] = {"unit": "px", "size": str(w), "sizes": []}
+    elif h:
+        # CSS specifies height only (e.g. `.nav-logo img { height: 28px }`)
+        # + `width: auto`. Elementor's Image widget has no height-only control
+        # — use custom_css so the native aspect ratio is preserved from the
+        # natural image. Prevents nav logos rendering stretched or footer
+        # logos blowing up to 398px wide.
+        css = f"selector img {{ height: {h}px; width: auto; }}"
+        existing = settings.get("custom_css", "")
+        settings["custom_css"] = (existing + " " + css).strip() if existing else css
+        settings["_element_custom_css"] = settings["custom_css"]
 
     # Non-circular border-radius
     if not is_circular and br:
@@ -1489,8 +1499,10 @@ def image_widget(node: dict) -> dict:
         # Detect invert(1 or 100%): emit per-image custom CSS so the filter
         # survives without needing Pro's filter group controls.
         if "invert(1" in raw_filter or "invert(100%" in raw_filter:
-            settings["_element_custom_css"] = f"selector img {{ filter: {raw_filter}; }}"
-            settings["custom_css"] = f"selector img {{ filter: {raw_filter}; }}"
+            rule = f"selector img {{ filter: {raw_filter}; }}"
+            existing = settings.get("custom_css", "")
+            settings["custom_css"] = (existing + " " + rule).strip() if existing else rule
+            settings["_element_custom_css"] = settings["custom_css"]
 
     return {"widgetType": "image", "settings": settings}
 

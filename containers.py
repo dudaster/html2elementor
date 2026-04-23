@@ -733,10 +733,12 @@ def _wrap_row(widgets: list[dict], max_width: int | None = None, gap: int | None
 def _build_header_elements(section: dict) -> list[dict]:
     from .widgets import image_widget, looks_like_button, _first_text
     logo_src = None
+    logo_node = None
     nav_items: list[tuple[str, str]] = []
     for n in _iter(section):
         if n.get("tag") == "img" and n.get("src") and not logo_src:
             logo_src = n["src"]
+            logo_node = n
         if n.get("tag") == "a" and n.get("href"):
             txt = (n.get("text") or _first_text(n)).strip()
             if txt and 2 <= len(txt) <= 30 and not looks_like_button(n):
@@ -754,14 +756,19 @@ def _build_header_elements(section: dict) -> list[dict]:
 
     elements: list[dict] = []
     if logo_src:
-        elements.append({
-            "widgetType": "image",
-            "settings": {
-                "image": {"url": logo_src, "id": ""},
-                "image_size": "full", "align": "left",
-                "width": {"unit": "px", "size": 80, "sizes": []},
-            },
-        })
+        # Route through image_widget so it reads actual CSS dimensions
+        # (e.g., .nav-logo img { height: 28px }) instead of the old
+        # hardcoded 80px that ignored source styling.
+        if logo_node:
+            elements.append(image_widget(logo_node))
+        else:
+            elements.append({
+                "widgetType": "image",
+                "settings": {
+                    "image": {"url": logo_src, "id": ""},
+                    "image_size": "full", "align": "left",
+                },
+            })
     elif logo_text:
         from .styles import apply_typography, px_to_int as _px
         from .widgets import _all_text_html, _apply_margin
