@@ -232,6 +232,15 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
 # --- detection ---
 
 def looks_like_button(node: dict) -> bool:
+    # Card-link: an <a> that wraps a heading + paragraph block (like
+    # `.docs-hub-card` with h3/p/span inside) is a styled card, not a button.
+    # Buttons never contain a heading or a paragraph.
+    kids_iter = _iter(node, max_depth=3)
+    has_heading = any(c is not node and c.get("tag") in HEADING_TAGS for c in kids_iter)
+    has_para = any(c is not node and c.get("tag") in TEXT_TAGS for c in _iter(node, max_depth=3))
+    if has_heading or has_para:
+        return False
+
     classes = " ".join(node.get("classes", [])).lower()
     styles = node.get("styles", {})
     bg = styles.get("background-color") or styles.get("backgroundColor")
@@ -563,7 +572,11 @@ def _collect_link_nodes(node: dict) -> list[dict]:
 
 def _is_link_list(node: dict) -> bool:
     """A div whose meaningful children are: 0-1 heading + N plain anchors (or ul/li/a).
-    Button-like anchors are allowed alongside plain links — they'll be emitted separately."""
+    Button-like anchors are allowed alongside plain links — they'll be emitted separately.
+
+    Card-link grids (each <a> wraps a heading + paragraph) are explicitly NOT
+    link lists. Those should flow through the card-grid path so each card
+    preserves its visual structure (icon + title + description + metadata)."""
     children = node.get("children", [])
     if len(children) < 2:
         return False
@@ -571,6 +584,15 @@ def _is_link_list(node: dict) -> bool:
     plain_links = [a for a in link_nodes if not looks_like_button(a)]
     if len(plain_links) < 2:
         return False
+    # If any plain link contains a heading or paragraph, treat it as a card,
+    # not a nav link — bail out so the card-grid path picks it up.
+    for a in plain_links:
+        has_block_content = any(
+            c is not a and c.get("tag") in (*HEADING_TAGS, *TEXT_TAGS)
+            for c in _iter(a, max_depth=3)
+        )
+        if has_block_content:
+            return False
     allowed_tags = {"a", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol"}
     for c in children:
         if c.get("tag") not in allowed_tags:
@@ -1004,7 +1026,20 @@ def _is_card_grid(node: dict) -> bool:
     - Children with structurally different shapes (one has direct heading,
       another has grid of sub-cards)."""
     all_children = node.get("children", [])
-    children = [c for c in all_children if c.get("tag") == "div"]
+    # Cards are usually <div>s, but card-link grids (docs-hub-style) use
+    # <a> as the outer wrapper when each card is also the click target.
+    # Count those too — an <a> with block content (heading/paragraph) is a
+    # card wrapper, not a button or nav link.
+    def _is_card_wrapper(c):
+        if c.get("tag") == "div":
+            return True
+        if c.get("tag") == "a":
+            return any(
+                n is not c and n.get("tag") in (*HEADING_TAGS, *TEXT_TAGS)
+                for n in _iter(c, max_depth=3)
+            )
+        return False
+    children = [c for c in all_children if _is_card_wrapper(c)]
     if len(children) < 2:
         return False
     # Non-div siblings (h1-h6, p) OUTSIDE the card divs must NOT be content
@@ -1058,8 +1093,19 @@ def _is_card_grid(node: dict) -> bool:
 
 
 def _emit_card_grid(node: dict, consumed: set[int]) -> list[dict]:
-    """Emit child divs as individual card containers (each walks its content)."""
-    children = [c for c in node.get("children", []) if c.get("tag") == "div"]
+    """Emit child divs as individual card containers (each walks its content).
+    <a> children with block content are also treated as cards (docs-hub-style
+    clickable cards); the href is preserved on the container's link setting."""
+    def _is_card(c):
+        if c.get("tag") == "div":
+            return True
+        if c.get("tag") == "a":
+            return any(
+                n is not c and n.get("tag") in (*HEADING_TAGS, *TEXT_TAGS)
+                for n in _iter(c, max_depth=3)
+            )
+        return False
+    children = [c for c in node.get("children", []) if _is_card(c)]
     cards: list[dict] = []
     for child in children:
         # Check if it's an icon-box (has svg)

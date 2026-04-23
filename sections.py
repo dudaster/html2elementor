@@ -51,7 +51,14 @@ def detect_sections(capture: dict) -> list[dict]:
     if len(kept) >= 2:
         return kept
 
-    # Fallback: direct children of first root
+    # Single semantic section (e.g. a lone <footer> or <nav> being converted
+    # in isolation, like when building header/footer theme parts): keep it
+    # as-is. Descending into its children would drop the outer bg/padding
+    # that belong to the section itself.
+    if len(kept) == 1:
+        return kept
+
+    # Fallback (no semantic sections found): use direct children of first root
     roots = capture.get("sections", [])
     if roots and roots[0].get("children"):
         return [c for c in roots[0]["children"] if c.get("children")]
