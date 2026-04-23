@@ -99,8 +99,15 @@ def _walk(node: dict, out: list[dict], consumed: set[int]) -> None:
         h_px = px_to_int(styles.get("height", ""))
         br_raw = styles.get("border-radius", "") or ""
         is_circular = "50%" in br_raw or "100%" in br_raw
-        if has_bg and w_px and h_px and is_circular and abs(w_px - h_px) <= 2:
-            out.append(_avatar_widget(node, w_px))
+        # Fixed-size square/rounded badge: bg + radius + square px dimensions.
+        # Circular path covers avatar; this branch covers rounded-square boxes
+        # like .docs-hub-card .icon { width:56; height:56; border-radius:14 }.
+        if has_bg and w_px and h_px and abs(w_px - h_px) <= 2:
+            if is_circular:
+                out.append(_avatar_widget(node, w_px))
+            else:
+                br_px = px_to_int(br_raw)
+                out.append(_avatar_widget(node, w_px, radius_override=br_px or None))
             return
         if has_bg and has_radius:
             out.append(_badge_widget(node))
@@ -1724,9 +1731,11 @@ def _escape(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def _avatar_widget(node: dict, size: int) -> dict:
-    """Emit a circular avatar: fixed-size inner container with bg + radius 50% wrapping
-    a heading widget for the initials/text inside."""
+def _avatar_widget(node: dict, size: int, radius_override: int | None = None) -> dict:
+    """Emit a fixed-size square box (avatar/icon badge) with bg + radius
+    wrapping a heading widget for the initials/text inside. When
+    radius_override is None, defaults to fully circular (size/2). Pass a
+    px value for rounded-square icons like docs-hub .icon (56px, radius 14)."""
     from .colors import to_hex
     styles = node.get("styles", {})
     text = (node.get("text") or "").strip()
@@ -1742,18 +1751,24 @@ def _avatar_widget(node: dict, size: int) -> dict:
     apply_typography(heading_settings, styles)
     inner_heading = {"widgetType": "heading", "settings": heading_settings}
 
-    # Outer circular container
+    # Outer container — circular unless a specific radius is given.
     bg_hex = to_hex(styles.get("background-color") or styles.get("background"))
-    radius_val = size // 2
+    radius_val = radius_override if radius_override is not None else size // 2
     container_settings: dict[str, Any] = {
         "content_width": "full",
         "flex_direction": "column",
         "flex_align_items": "center",
         "flex_justify_content": "center",
         "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
-        "_element_custom_width": {"unit": "px", "size": size, "sizes": []},
-        "_element_width": "initial",
+        # Elementor 4.x containers: `width` is the sizing field (not
+        # _element_custom_width, which is for widgets). Without this,
+        # inner containers stretch to the parent's full width regardless
+        # of the requested px size.
+        "width": {"unit": "px", "size": size, "sizes": []},
+        # Prevent this fixed-size box from stretching inside a flex parent.
+        "flex_grow": 0, "flex_shrink": 0,
         "min_height": {"unit": "px", "size": size, "sizes": []},
+        "height": {"unit": "px", "size": size, "sizes": []},
         "border_radius": {
             "unit": "px",
             "top": str(radius_val), "right": str(radius_val),
