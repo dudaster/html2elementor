@@ -92,6 +92,19 @@ Whatever the transport, **two invariants always apply**:
 
 If the user reports "my page looks empty" or "colors are wrong after import", one of those two invariants was missed.
 
+**Internal links still point at the source HTML filenames.** The converter preserves `href` values verbatim — `href="pricing.html"` stays `href="pricing.html"`. After import, rewrite those to the WP page slugs before flushing CSS. Safest approach: preprocess the JSON files on disk with `sed`:
+
+```bash
+sed -i '' \
+  -e 's|"docs/index\.html"|"/dudaster-docs/"|g' \
+  -e 's|"index\.html"|"/dudaster-index/"|g' \
+  -e 's|"modules\.html"|"/dudaster-modules/"|g' \
+  -e 's|"pricing\.html"|"/dudaster-pricing/"|g' \
+  page.json
+```
+
+Process the most specific paths first (`docs/index.html` before `index.html`) so short names don't clobber longer ones. **Do not** try this with regex in PHP via `update_post_meta` — a bad pattern returning `null` will silently wipe `_elementor_data` on every matched post. Rewrite on disk, then re-import.
+
 **Kit bloat.** Every re-import merges new `custom_colors` / `custom_typography` IDs into the kit (dedupe by `_id`) but never removes orphans from intermediate runs. After many iterations the kit accumulates hundreds of unused entries. Garbage-collect by scanning every post's `_elementor_data` for referenced `globals/colors?id=` + `globals/typography?id=` IDs and filtering the kit to just those. See `playsand/cleanup_kit.sh` in this repo for a reference implementation — safe to run anytime, only prunes IDs no post references, flags orphans where a post references a missing ID.
 
 ### Step 4 (optional) — Visual verify
