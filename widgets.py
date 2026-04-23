@@ -320,8 +320,12 @@ def is_hero_bg_image(node: dict, section: dict) -> bool:
 
 def heading_widget(node: dict) -> dict:
     tag = node["tag"]
-    # Collect ALL text including children (spans, em, strong, etc.)
-    text = _all_text(node).strip()
+    # Collect ALL text including children, preserving inline markup
+    # (`<em>` for italics, `<strong>` for bold, `<span style="color">` for
+    # tinted accents). Elementor Heading widget renders inline HTML inside
+    # `title`, so this keeps spans like "Your site, <em>commanded</em> by AI"
+    # instead of flattening to plain "Your site, commanded by AI".
+    text = _all_text_html(node).strip()
     styles = node.get("styles", {})
     # If the heading has an explicit color in CSS, use it.
     # If it inherits (no color set), default to "text" global (body color).
@@ -1633,14 +1637,25 @@ def _all_text_html(node: dict, parent_color: str | None = None) -> str:
     children = node.get("children", [])
 
     def _wrap_inline(inner: str, child: dict, tag: str) -> str:
-        child_color = _to_hex(child.get("styles", {}).get("color") or "") if child.get("styles") else None
+        child_styles = child.get("styles") or {}
+        child_color = _to_hex(child_styles.get("color") or "")
         needs_span = child_color and child_color.lower() != (effective_color or "").lower()
-        if tag in ("strong", "b"):
-            out = f"<strong>{inner}</strong>"
-        elif tag in ("em", "i"):
-            out = f"<em>{inner}</em>"
-        else:
-            out = inner
+        # Italic detection: <em>/<i>, or resolved CSS font-style: italic
+        # (covers `<span class="italic">` which the resolver flattened into
+        # `font-style: italic` on the child's computed styles).
+        is_italic = (
+            tag in ("em", "i") or
+            str(child_styles.get("font-style") or "").strip().lower() == "italic"
+        )
+        is_bold = (
+            tag in ("strong", "b") or
+            str(child_styles.get("font-weight") or "").strip() in ("bold", "700", "800", "900")
+        )
+        out = inner
+        if is_italic:
+            out = f"<em>{out}</em>"
+        if is_bold:
+            out = f"<strong>{out}</strong>"
         if needs_span:
             out = f'<span style="color:{child_color}">{out}</span>'
         return out
