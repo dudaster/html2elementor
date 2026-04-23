@@ -49,7 +49,10 @@ def main():
 
     if args.upload:
         from .media import upload_all_images
-        n = upload_all_images(result["layout"])
+        # Pass the input path so relative <img src="..."> paths get resolved
+        # against the HTML's own directory and uploaded from local disk.
+        html_path = args.input if args.input and args.input != "-" else None
+        n = upload_all_images(result["layout"], html_path=html_path)
         if n:
             print(f"Uploaded {n} images to WP media library", file=sys.stderr)
 
