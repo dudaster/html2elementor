@@ -86,7 +86,7 @@ This step depends on the user's WordPress setup, so **ask them how they want to 
 
 Whatever the transport, **two invariants always apply**:
 
-1. **Merge `.kit.json` custom globals** into the active kit's `_elementor_page_settings` post meta. Look up the active kit ID with `get_option("elementor_active_kit")`, then append each entry from `.kit.json`'s `custom_colors` and `custom_typography` (dedupe by `_id`). Skipping this makes widgets that reference globals render with default colors/fonts.
+1. **Merge `.kit.json` custom globals** into the active kit's `_elementor_page_settings` post meta. Look up the active kit ID with `get_option("elementor_active_kit")`, then append each entry from `.kit.json`'s `custom_colors` and `custom_typography` (dedupe by `_id`). Also copy scalar site settings when present: `body_background_background` (`"classic"`) and `body_background_color` (hex from the HTML's body `background` CSS). Skipping the custom arrays makes widgets render with default colors/fonts; skipping the body scalars leaves the site on the Elementor default white instead of the source page's background.
 
 2. **Flush Elementor's CSS cache** after updating `_elementor_data`: `wp elementor flush_css --allow-root`. Elementor builds per-post CSS files under `wp-content/uploads/elementor/css/` and serves those instead of reading settings live. Without flushing, visual changes won't appear on next page load.
 
