@@ -92,6 +92,8 @@ Whatever the transport, **two invariants always apply**:
 
 If the user reports "my page looks empty" or "colors are wrong after import", one of those two invariants was missed.
 
+**Kit bloat.** Every re-import merges new `custom_colors` / `custom_typography` IDs into the kit (dedupe by `_id`) but never removes orphans from intermediate runs. After many iterations the kit accumulates hundreds of unused entries. Garbage-collect by scanning every post's `_elementor_data` for referenced `globals/colors?id=` + `globals/typography?id=` IDs and filtering the kit to just those. See `playsand/cleanup_kit.sh` in this repo for a reference implementation — safe to run anytime, only prunes IDs no post references, flags orphans where a post references a missing ID.
+
 ### Step 4 (optional) — Visual verify
 
 After import, screenshot both the source HTML and the rendered Elementor page at the same viewport (1440×auto for desktop). Compare side-by-side. The verifier catches semantic drift but some Elementor quirks (see below) only show in a real browser.
