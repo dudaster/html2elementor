@@ -564,10 +564,25 @@ def _group_into_grids(elements: list[dict], parent_align: str = "center") -> lis
             continue
         if is_card:
             group = [el]
+            # Sentinel values that identify which source grid a card came
+            # from — we only merge cards into one group if they share all
+            # of these, otherwise a section with two grids (e.g. a 2-col
+            # .showcase-header followed by a 3-col .aicom-mod-grid) would
+            # get chunked uniformly by whichever grid appeared first.
+            def _grid_key(c):
+                return (
+                    c.get("_grid_cols"),
+                    c.get("_grid_max_width"),
+                    c.get("_grid_gap"),
+                    tuple(c.get("_grid_tracks") or ()),
+                    c.get("_grid_align_items"),
+                )
+            head_key = _grid_key(el)
             j = i + 1
             while j < len(elements):
                 nxt = elements[j]
-                if nxt.get("widgetType") in ("icon-box", "image-box") or nxt.get("__inner_container__"):
+                if (nxt.get("widgetType") in ("icon-box", "image-box") or nxt.get("__inner_container__")) \
+                        and _grid_key(nxt) == head_key:
                     group.append(nxt)
                     j += 1
                 else:
