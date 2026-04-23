@@ -115,6 +115,13 @@ def _resolve_url(src: str, html_dir: Path | None) -> tuple[str, Path | None]:
         return ("http", None)
     if src.startswith("data:"):
         return ("skip", None)
+    # Absolute filesystem path (e.g. /private/tmp/assets/logo.png). Common
+    # when the caller rewrote `../assets/` paths to point at a real local
+    # directory before conversion.
+    if src.startswith("/"):
+        candidate = Path(src)
+        if candidate.exists() and candidate.is_file():
+            return ("local", candidate)
     # Relative / root-relative path — try to resolve from HTML dir
     if html_dir:
         candidate = (html_dir / src.lstrip("/")).resolve()
