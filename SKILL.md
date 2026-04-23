@@ -123,6 +123,17 @@ These aren't in Elementor's docs but trip up every integration. If the user repo
 
 - **CSS cache.** Every time `_elementor_data` changes on a post, Elementor expects a CSS regeneration pass. Always flush after import.
 
+- **Unicode arrows / symbols replaced with Twemoji PNGs.** Characters like `↗` (U+2197), `↘`, `✓`, `★` render as `<img src="https://s.w.org/images/core/emoji/.../xxxx.svg">` instead of the glyph. Cause: WordPress core's `convert_smilies` / `wp_staticize_emoji` filter runs on `the_content` and widget text, swapping any codepoint in its emoji range with a Twemoji CDN image. Not an Elementor or html2elementor bug. Disable site-wide with a mu-plugin:
+  ```php
+  add_action('init', function () {
+      remove_action('wp_head', 'print_emoji_detection_script', 7);
+      remove_action('wp_print_styles', 'print_emoji_styles');
+      remove_filter('the_content', 'convert_smilies');
+      remove_filter('widget_text', 'convert_smilies');
+  });
+  ```
+  Or one-shot for a sandbox: `wp eval 'update_option("use_smilies", 0);'` plus the `remove_action` calls above via `wp eval`.
+
 - **Images uploaded but not loaded.** Elementor adds `loading="lazy"` on `<img>` tags. A fullPage screenshot may show broken images below the fold until you scroll. Scroll through the page before screenshotting, or check the images are uploaded via `wp post list --post_type=attachment`.
 
 ## Dev setup (one-time)
